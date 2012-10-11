@@ -1,0 +1,35 @@
+/* ============================== */
+/* ===  http://www.solid.sn/  === */
+/* = copyright : senticad(2010) = */
+/* =========== hack IE ========= */
+
+/*
+Pour cibler les différentes versions :
+
+Sélecteurs
+==========
+
+*+html {}  // IE7 only
+* html {}  // IE6 only
+
+attributs
+=========
+
+body {
+ color : orange\9;  IE8 et inferieur
+*color : yellow; IE7 and below
+ _color : orange;  IE6
+}
+*/
+
+	
+* html .dp50 {margin-right:-1px;}
+
+input[type=text], input[type=password], textarea, select {
+  _width: 100%;
+}
+
+/* hover effect */
+.grid-1-12:hover, .grid-2-12:hover, .grid-3-12:hover, .grid-4-12:hover, .grid-5-12:hover, .grid-6-12:hover, .grid-7-12:hover, .grid-8-12:hover, .grid-9-12:hover, .grid-10-12:hover, .grid-11-12:hover, .grid-12-12:hover {background:inherit;}
+
+

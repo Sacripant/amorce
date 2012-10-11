@@ -1,0 +1,13 @@
+AddDefaultCharset utf-8
+
+# Décommenter pour mettre le site en maintenance
+# DirectoryIndex maintenance.html
+
+# Décommenter pour choisir une page 404 personnalisée
+# ErrorDocument 404 error404.php 
+
+# BEGIN GZIP
+#<ifmodule mod_deflate.c>
+#AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+#</ifmodule>
+# END GZIP

@@ -1,0 +1,123 @@
+/* ========================== */
+/* === styles ecran pour ==== */
+/* === http://www.site.com  = */
+/* copyright : senticad.com = */
+/* ========================== */
+
+
+/*Grilles
+-------------------------------*/
+/* table layout */
+/* ------------------ */
+.row {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.row > *,
+.col {
+	display: table-cell;
+	vertical-align: top;
+	padding: 1em;
+}
+
+/*Blocks en float*/
+.line			{ margin: 0 -10px; }
+.col1-6, .col2-6, .col3-6, .col4-6, .col5-6, .col6-6 
+				{ float: left; margin: 0 10px; }
+.col1-6		{  }
+.col2-6		{  }
+.col3-6		{  }
+.col4-6		{  }
+.col5-6		{  }
+.col6-6		{  }
+
+
+/*blocs
+-------------------------------*/
+#keur       {/*id du body index*/}
+#container  {  }
+#wrapper    {  }
+               
+#header     {  }
+#main_nav   {  }
+#section    {  }
+#footer     {  }
+
+/*commun à toutes les navs
+-------------------------------*/
+.ul-nav {  }
+.li-nav {  }
+.a-nav  {  }
+.fii    { /* ici en wolof, pour lien actifs*/ }  
+
+/*main_nav
+-------------------------------*/
+.main_nav			{  }
+.li-main_nav    	{  }
+.a-main_nav     	{  }
+.sub-main_nav   	{  }         
+.li-sub-main_nav	{  }
+.a-sub-main_nav 	{  }
+
+/*header
+-------------------------------*/
+#header     {  }
+.brand		{  } /*wrap .logo + .baseline*/
+.logo       {  }
+.site_title	{  }
+.baseline   {  }
+
+#nav_header     {  }
+.li-nav_header  {  }
+.a-nav_header   {  }
+                   
+/*Section
+-------------------------------*/
+#sidebar        {  }
+                   
+#nav_section    {  }
+.li-nav_section {  }
+.a-nav_section  {  }
+                   
+#content        {  }
+.article        {  /*div englobant un article*/}
+.main_title     {  }
+.meta-article   {  /*div englobant les informations sur l'article (date,auteur,catégories,etc.*/}
+date            {  /*abbr*/}
+.auteur         {  }
+.invit-comment  {  /*lien vers le form de commentaire*/}
+.nb-comment     {  }
+.categorie      {  }
+.resume         {  }
+.article-img    {  }
+.body           {  }
+
+/*Images et galerie
+--------------------------------*/
+.thumb      {/*pour toutes les vignettes*/}
+.fullsize   {/*pour toutes les img full size*/}
+        
+.galimg		   {/*ul ou ol de galerie images*/}
+.li-galimg     {  }
+.a-galimg      {  }
+
+/*footer
+-------------------------------*/
+#nav_footer     {  }
+.li-nav_footer  {  }
+.a-nav_footer   {  }
+
+/*misc
+-------------------------------*/
+.clear      { clear: both; }
+.hide       { display: none; visibility: hidden; }
+/*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
+.clearfix:before, .clearfix:after	{ content: ""; display: table; }
+.clearfix:after 							{ clear: both; }
+/*Pour diviser en 2 un conteneur*/
+.dp50       { width:50%;  float:left;  display: inline; }
+/* image replacement */
+.ir 			{ display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+

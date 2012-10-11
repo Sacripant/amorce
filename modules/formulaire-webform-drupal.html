@@ -1,0 +1,116 @@
+<form class="webform-client-form" enctype="multipart/form-data" action="/proassur/trunk/?q=assurance_autres_risques" method="post" id="webform-client-form-8" accept-charset="UTF-8">
+	<div>
+		<fieldset class="webform-component-fieldset collapsible form-wrapper" id="webform-component-informations-generales">
+			<legend><span class="fieldset-legend">Informations générales</span></legend>
+			
+			<div class="fieldset-wrapper">
+				<div class="form-6-12 form-item webform-component webform-component-textfield" id="webform-component-informations-generales--prenom-nom">
+ 						<label for="edit-submitted-informations-generales-prenom-nom">Prénom &amp; Nom / Raison sociale <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+						<input type="text" id="edit-submitted-informations-generales-prenom-nom" name="submitted[informations_generales][prenom_nom]" value="" size="20" maxlength="255" class="form-text required" />
+				</div>
+				<div class="form-6-12 form-item webform-component webform-component-autocomplete" id="webform-component-informations-generales--profession">
+ 						<label for="edit-submitted-informations-generales-profession">Profession <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+						<input type="text" id="edit-submitted-informations-generales-profession" name="submitted[informations_generales][profession]" value="" size="20" maxlength="128" class="form-text required form-autocomplete" /><input type="hidden" id="edit-submitted-informations-generales-profession-autocomplete" value="http://192.168.1.2/proassur/trunk/?q=webform_autocomplete/js/8/22" disabled="disabled" class="autocomplete" />
+				</div>
+				<div class="form-4-12 form-item webform-component webform-component-textfield " id="webform-component-informations-generales--telephone-fixe">
+ 						<label for="edit-submitted-informations-generales-telephone-fixe">Téléphone fixe </label>
+						<input type="text" id="edit-submitted-informations-generales-telephone-fixe" name="submitted[informations_generales][telephone_fixe]" value="" size="20" maxlength="128" class="form-text" />
+				</div>
+				<div class="form-4-12 form-item webform-component webform-component-textfield " id="webform-component-informations-generales--telephone-mobile">
+ 						<label for="edit-submitted-informations-generales-telephone-mobile">Téléphone mobile <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+						<input type="text" id="edit-submitted-informations-generales-telephone-mobile" name="submitted[informations_generales][telephone_mobile]" value="" size="20" maxlength="128" class="form-text required" />
+				</div>
+				<div class="form-4-12 form-item webform-component webform-component-textfield " id="webform-component-informations-generales--fax">
+ 						<label for="edit-submitted-informations-generales-fax">Fax </label>
+						<input type="text" id="edit-submitted-informations-generales-fax" name="submitted[informations_generales][fax]" value="" size="20" maxlength="128" class="form-text" />
+				</div>
+				<div class="form-6-12 form-item webform-component webform-component-webform_email " id="webform-component-informations-generales--email">
+ 						<label for="edit-submitted-informations-generales-email">Email <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+						<input class="email form-text form-email required" type="email" id="edit-submitted-informations-generales-email" name="submitted[informations_generales][email]" size="20" />
+				</div>
+				
+				<fieldset class="webform-component-fieldset collapsible form-wrapper" id="webform-component-informations-generales--coordonnees-adresse">
+					<legend><span class="fieldset-legend">Coordonnées / Adresse</span></legend>
+					
+					<div class="fieldset-wrapper">
+						<div class="form-item webform-component webform-component-select " id="webform-component-informations-generales--coordonnees-adresse--pays">
+  							<label for="edit-submitted-informations-generales-coordonnees-adresse-pays">Pays <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+ 							<select id="edit-submitted-informations-generales-coordonnees-adresse-pays" name="submitted[informations_generales][coordonnees_adresse][pays]" class="form-select required">
+								<option value="" selected="selected">- Sélectionner -</option>
+								<option value="AF">Afghanistan</option><option value="ZA">Afrique du Sud</option>
+								<option value="AL">Albanie</option>
+								<option value="DZ">Algérie</option><option value="DE">Allemagne</option>
+								<option value="AD">Andorre</option><option value="AO">Angola</option>
+								<option value="AI">Anguilla</option><option value="AQ">Antarctique</option>
+								<option value="AG">Antigua et Barbuda</option>
+							</select>
+						</div>
+						<div class="form-item webform-component webform-component-autocomplete " id="webform-component-informations-generales--coordonnees-adresse--ville">
+							<label for="edit-submitted-informations-generales-coordonnees-adresse-ville">Ville </label>
+							<input type="text" id="edit-submitted-informations-generales-coordonnees-adresse-ville" name="submitted[informations_generales][coordonnees_adresse][ville]" value="" size="20" maxlength="128" class="form-text form-autocomplete" />
+							<input type="hidden" id="edit-submitted-informations-generales-coordonnees-adresse-ville-autocomplete" value="http://192.168.1.2/proassur/trunk/?q=webform_autocomplete/js/8/28" disabled="disabled" class="autocomplete" />
+						</div>
+						<div class="form-item webform-component webform-component-textarea" id="webform-component-informations-generales--coordonnees-adresse--adresse">
+  							<label for="edit-submitted-informations-generales-coordonnees-adresse-adresse">Adresse <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+ 							<div class="form-textarea-wrapper resizable">
+								<textarea id="edit-submitted-informations-generales-coordonnees-adresse-adresse" name="submitted[informations_generales][coordonnees_adresse][adresse]" cols="20" rows="2" class="form-textarea required"></textarea>
+							</div>
+						</div>
+					</div><!-- .fieldset-wrapper -->
+				</fieldset>
+			</div> <!-- .fieldset-wrapper -->
+		</fieldset>
+
+		<fieldset class="webform-component-fieldset collapsible form-wrapper" id="webform-component-devis">
+			<legend><span class="fieldset-legend">Devis</span></legend>
+		
+			<div class="fieldset-wrapper">
+				<!-- BOUTON RADIO -->
+				<div class="form-item webform-component webform-component-radios inline" id="webform-component-devis--type-de-risque">
+  					<label for="edit-submitted-devis-type-de-risque">Type de risque <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+ 					<div id="edit-submitted-devis-type-de-risque" class="form-radios">
+						<div class="form-item form-type-radio form-item-submitted-devis-type-de-risque">
+ 							<input type="radio" id="edit-submitted-devis-type-de-risque-1" name="submitted[devis][type_de_risque]" value="0" checked="checked" class="form-radio" />  
+							<label class="option" for="edit-submitted-devis-type-de-risque-1">Assistance </label>
+						</div>
+						<div class="form-item form-type-radio form-item-submitted-devis-type-de-risque">
+							<input type="radio" id="edit-submitted-devis-type-de-risque-2" name="submitted[devis][type_de_risque]" value="1" class="form-radio" />  
+							<label class="option" for="edit-submitted-devis-type-de-risque-2">Responsabilité civile </label>
+						</div>
+						<div class="form-item form-type-radio form-item-submitted-devis-type-de-risque">
+							<input type="radio" id="edit-submitted-devis-type-de-risque-3" name="submitted[devis][type_de_risque]" value="2" class="form-radio" />
+							<label class="option" for="edit-submitted-devis-type-de-risque-3">Scolaire &amp; parascolaire </label>
+						</div>
+					</div>
+				</div>
+			
+				<div class="form-item webform-component webform-component-webform_number " id="webform-component-devis--nombre-dadultes">
+					<label for="edit-submitted-devis-nombre-dadultes">Nombre d'adultes </label>
+					<input type="number" id="edit-submitted-devis-nombre-dadultes" name="submitted[devis][nombre_dadultes]" step="0" class="form-text form-number" />
+				</div>
+				<div class="form-item webform-component webform-component-webform_number " id="webform-component-devis--nombre-enfants">
+					<label for="edit-submitted-devis-nombre-enfants">Nombre d'enfants </label>
+					<input type="number" id="edit-submitted-devis-nombre-enfants" name="submitted[devis][nombre_enfants]" step="0" class="form-text form-number" />
+				</div>
+				<div class="form-item webform-component webform-component-webform_number " id="webform-component-devis--nombre-dadultes-rc">
+					<label for="edit-submitted-devis-nombre-dadultes-rc">Nombre d'adultes </label>
+					<input type="number" id="edit-submitted-devis-nombre-dadultes-rc" name="submitted[devis][nombre_dadultes_rc]" step="0" class="form-text form-number" />
+				</div>
+				<div class="form-item webform-component webform-component-webform_number " id="webform-component-devis--nombre-deleves">
+					<label for="edit-submitted-devis-nombre-deleves">Nombre d'élèves / étudiants </label>
+					<input type="number" id="edit-submitted-devis-nombre-deleves" name="submitted[devis][nombre_deleves]" step="0" class="form-text form-number" />
+				</div>
+			</div>
+		</fieldset>
+		<input type="hidden" name="details[sid]" value="" />
+		<input type="hidden" name="details[page_num]" value="1" />
+		<input type="hidden" name="details[page_count]" value="1" />
+		<input type="hidden" name="details[finished]" value="0" />
+		<input type="hidden" name="form_build_id" value="form-mIaSkGxQ0gjG2x7Zv4CX-NB9QO4zrUXB7SEqIxQONww" />
+		<input type="hidden" name="form_id" value="webform_client_form_8" />
+
+		<div class="form-actions form-wrapper" id="edit-actions">
+			<input type="submit" id="edit-submit" name="op" value="Soumettre" class="form-submit" />
+		</div>
+	</div>
+</form> 
