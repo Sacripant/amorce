@@ -46,9 +46,10 @@
 	
 
 
-<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON
-	LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS -->
-	<script src="js/cssrefresh.js"></script>
+<!-- LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS-->
+	<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON --> 
+	<script src="js/live.js"></script>
+
 
 </head>
 
@@ -64,6 +65,10 @@
 	
 	  <section role="main">
 
+		<div class="img-wrapper">
+			<img class="town" src="img/picture-2x3.svg" alt="placeholder" />			
+		</div>
+		
 	  </section>
 	
 	  <footer>

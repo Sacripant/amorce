@@ -4,6 +4,23 @@
 /* copyright : senticad.com = */
 /* ========================== */
 
+/*misc
+-------------------------------*/
+.clear      { clear: both; }
+.hide       { display: none; visibility: hidden; }
+/*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
+.clearfix:before, .clearfix:after	{ content: ""; display: table; }
+.clearfix:after 							{ clear: both; }
+/* image replacement */
+.ir 			{ display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/*img Placeholder*/
+.img-wrapper						{ width: 45%; }
+img[alt="placeholder"]			{ background-size: cover; }
+img[alt="placeholder"].gray	{ background-color: #ddd; }
+img[alt="placeholder"].music	{ background-image : url(../img/music.jpg); }
+img[alt="placeholder"].food	{ background-image : url(../img/food.jpg); }
+img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 
 /*Grilles
 -------------------------------*/
@@ -107,17 +124,4 @@ date            {  /*abbr*/}
 #nav_footer     {  }
 .li-nav_footer  {  }
 .a-nav_footer   {  }
-
-/*misc
--------------------------------*/
-.clear      { clear: both; }
-.hide       { display: none; visibility: hidden; }
-/*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
-.clearfix:before, .clearfix:after	{ content: ""; display: table; }
-.clearfix:after 							{ clear: both; }
-/*Pour diviser en 2 un conteneur*/
-.dp50       { width:50%;  float:left;  display: inline; }
-/* image replacement */
-.ir 			{ display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
-
 
