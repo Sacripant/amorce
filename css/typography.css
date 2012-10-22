@@ -9,7 +9,7 @@ Color1	#000		rgb(0,0,0)
 -------------------------------------------------------------- */
 
 /* Default font settings. 
-   The font-size percentage is of 14px. (0.875 * 16px = 12px) */
+   The font-size percentage is of 14px. (0.875 * 16px = 14px) */
 body { 
   font-size: 87.5%;
   color: #222; 
