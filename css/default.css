@@ -8,14 +8,19 @@
 -------------------------------*/
 .clear      { clear: both; }
 .hide       { display: none; visibility: hidden; }
+.visuallyhidden	{ border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }
+
 /*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
 .clearfix:before, .clearfix:after	{ content: ""; display: table; }
 .clearfix:after 							{ clear: both; }
 /* image replacement */
-.ir 			{ display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir { background-color: transparent; border: 0; overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before { content: ""; display: block; width: 0; height: 100%; }
 
 /*img Placeholder*/
-.img-wrapper						{ width: 45%; }
 img[alt="placeholder"]			{ background-size: cover; }
 img[alt="placeholder"].gray	{ background-color: #ddd; }
 img[alt="placeholder"].music	{ background-image : url(../img/music.jpg); }
@@ -24,8 +29,7 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 
 /*Grilles
 -------------------------------*/
-/* table layout */
-/* ------------------ */
+/* table layout grid */
 .row {
 	display: table;
 	table-layout: fixed;
@@ -38,7 +42,7 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 	padding: 1em;
 }
 
-/*Blocks en float*/
+/* float grid */
 .line			{ margin: 0 -10px; }
 .col1-6, .col2-6, .col3-6, .col4-6, .col5-6, .col6-6 
 				{ float: left; margin: 0 10px; }

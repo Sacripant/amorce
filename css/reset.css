@@ -20,7 +20,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
+audio:not([controls]) { display: none; height: 0; }
 [hidden] { display: none; }
 
 /* Responsive images and other embedded objects
@@ -28,13 +28,21 @@ audio:not([controls]) { display: none; }
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
 img,object, embed { max-width: 100%; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-
+/* SVG Corrects overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+/* FIGURE Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
+figure { margin: 0; }
 
 /* force a vertical scrollbar to prevent a jumpy page */
 html {font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow-y: scroll;}
 
 /*NAV*/
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+/*Links*/
+a:focus { outline: thin dotted; }
+a:active,
+a:hover { outline: 0; }
 
 /*RESET TYPO*/
 blockquote, q {quotes: none;}
@@ -51,9 +59,12 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-small {font-size: 85%;}
+small { font-size: 85%; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* Addresses styling not present in IE 6/7/8/9. */
+mark { background: #ff0; color: #000; }
 
 /* Tables still need 'cellspacing="0"' in the markup. */
 table { border-collapse: separate; border-spacing: 0; }

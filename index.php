@@ -24,7 +24,7 @@
 
 	<link rel="stylesheet" href="css/reset.css" media="all" />
 	<link rel="stylesheet" href="css/typography.css" media="all" />
-	<link rel="stylesheet" href="css/forms.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/forms.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
 	
 
