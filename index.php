@@ -12,6 +12,10 @@
 	<meta name="copyright" content="© sacripant.fr" />
 	<meta name="description" content="content" />
 	
+	<!-- Viewport for Iphone ipad -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   
+	
 	<title>Titre</title>
 
 <!-- microformats	 -->
@@ -82,7 +86,7 @@
 	<!-- chercher Jquery sur le CDN google -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
-	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
 	<!--[if lte IE 7]>
 		<script type="text/javascript" charset="utf-8" src="http://www.joonis.de/shared/ie6update/ie6update.js"></script>
 		<script src="js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
