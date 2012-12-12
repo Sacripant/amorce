@@ -1,13 +1,22 @@
 /* --------------------------------------------------------------
    forms.css
-   * Sets up some default styling for forms
-   * Gives you classes to enhance your forms
-	* Use Formee1.2
+	* Normalize Form CSS with boilerplate
+	* Use Formee1.2 for grind
 
    Usage:
    * For inline forms, use .inline (even when using columns)
 	
--------------------------------------------------------------- */
+-------------------------------------------------------------- */ 
+
+
+/*RESET FORMS*/
+/* hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], button {cursor: pointer;}
+button[disabled], input[disabled] { cursor: default; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+
+
 label       { font-weight: bold; }
 fieldset    { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
 legend      { font-weight: bold; font-size:1.2em; margin-left:1%; padding: 0.5% 0.5%;}

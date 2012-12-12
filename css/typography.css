@@ -2,6 +2,7 @@
    
    typography.css
    * Sets up some sensible default typography.
+	* Thanks to Boilerplate, Knacss and blueprint
    
 -------------------------------------------------------------- */
 /* Colors
@@ -51,22 +52,41 @@ p           { margin: 0 0 1.5em; }
 p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
 p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
 
+
+/*Links*/
+a:focus 		{ outline: thin dotted; }
+a:active,a:hover
+				{ outline: 0; }
 a:focus, 
 a:hover     { color: #000; }
 a           { color: #009; text-decoration: underline; }
 
-blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+/*citations*/
+blockquote, q 	{ quotes: none; }
+blockquote:before, blockquote:after, 
+q:before, q:after 
+					{ content: ''; content: none; }
+blockquote  	{ margin: 1.5em; color: #666; font-style: italic; }
+
+
 strong      { font-weight: bold; }
 em,dfn      { font-style: italic; }
 dfn         { font-weight: bold; }
-sup, sub    { line-height: 0; }
 
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup 		{ top: -0.5em; }
+sub 		{ bottom: -0.25em; }
+    	
 abbr			{ border-bottom: 1px dotted #666; }
 address     { margin: 0 0 1.5em; font-style: italic; }
 del         { color:#666; }
 
-pre 			{ margin: 1.5em 0; white-space: pre; }
-pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+/*Code / pre*/
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: 1.5;}
+pre 						{ margin: 1.5em 0;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Addresses styling not present in IE 6/7/8/9. */
+mark { background: #ff0; color: #000; }
 
 
 /* Lists
@@ -94,21 +114,27 @@ li ol {
 
 /* Tables
 -------------------------------------------------------------- */
+/* Tables still need 'cellspacing="0"' in the markup. */
 
-table       	{ margin-bottom: 1.4em; width:100%; }
+table       	{ border-collapse: separate; border-spacing: 0; margin-bottom: 1.5em; width:100%; }
+table, td, th	{ vertical-align: middle; }
 th          	{ font-weight: bold; }
 thead th 		{ background: #c3d9ff; }
-th,td,caption	{ padding: 4px 10px 4px 5px; }
+th,td,caption	{ text-align: left; font-weight: normal; padding: 4px 10px 4px 5px; }
 tr.even td  	{ background: #e5ecf9; }
 tfoot       	{ font-style: italic; }
 caption     	{ background: #eee; }
+
+
 
 /* Text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) 
 -------------------------------------------------------------- */
 ::-moz-selection, ::selection { background: #fcd700; color: #fff; text-shadow: none; }
 
-/* Typo Misc classes
+/* Divers
 -------------------------------------------------------------- */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
-.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+small, 
+.small      { font-size: .85em; }
+.large      { font-size: 1.2em; }
