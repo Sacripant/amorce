@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------
    forms.css
 	* Normalize Form CSS with boilerplate
-	* Use Formee1.2 for grind
+	* Use Formee1.2 for grid
 
    Usage:
    * For inline forms, use .inline (even when using columns)
@@ -17,7 +17,7 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 
 label       { font-weight: bold; }
 fieldset    { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
-legend      { font-weight: bold; font-size:1.2em; margin-left:1%; padding: 0.5% 0.5%;}
+legend      { font-weight: bold; font-size:1.2em; margin-left:1%; padding: 0.5% 0.5%; white-space: nowrap; }
 
 /* Form fields
 -------------------------------------------------------------- */
