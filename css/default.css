@@ -43,15 +43,26 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 }
 
 /* float grid */
-.line			{ margin: 0 -10px; }
-.col1-6, .col2-6, .col3-6, .col4-6, .col5-6, .col6-6 
-				{ float: left; margin: 0 10px; }
-.col1-6		{  }
-.col2-6		{  }
-.col3-6		{  }
-.col4-6		{  }
-.col5-6		{  }
-.col6-6		{  }
+.grid		{ 
+	margin: 0 -1.428%;
+	overflow: hidden;
+	background-color: yellow;
+}
+.w1-6, .w2-6, .w3-6, .w4-6, .w5-6, .w6-6 
+			{ 
+	float: left; 	
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box; 
+	        box-sizing: border-box;
+	padding: 1.3889%;
+	
+}
+.w1-6		{ width: 16.666%; }
+.w2-6		{ width: 33.333%; }
+.w3-6		{ width: 50%; }
+.w4-6		{ width: 66.666%; }
+.w5-6		{ width: 83.333%; }
+.w6-6		{ width: 100%; }
 
 
 /*blocs

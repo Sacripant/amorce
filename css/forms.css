@@ -15,8 +15,6 @@
 button[disabled], input[disabled] { cursor: default; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 
-
-
 label       { font-weight: bold; }
 fieldset    { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
 legend      { font-weight: bold; font-size:1.2em; margin-left:1%; padding: 0.5% 0.5%;}

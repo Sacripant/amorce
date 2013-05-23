@@ -62,7 +62,7 @@
 	
 	<div id="wrapper">
 		
-	  <header>
+	  <header role="banner">
 		<h1>Squelette d'intégration HTML5</h1>
 
 	  </header>
@@ -84,7 +84,7 @@
 
 <!-- Javascript bottom -->
 	<!-- chercher Jquery sur le CDN google -->
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
 	<script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
 	<!--[if lte IE 7]>
