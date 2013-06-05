@@ -9,10 +9,10 @@
 Color1	#000		rgb(0,0,0)
 -------------------------------------------------------------- */
 
-/* Default font settings. 
-   The font-size percentage is of 14px. (0.875 * 16px = 14px) */
+/* Default font settings. */
+html {font-size: 62.5%;} /*equivalent 10px*/
 body { 
-  font-size: 87.5%;
+  font-size: 1.6em 
   color: #222; 
   background: #fff;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -38,7 +38,6 @@ h3:first-child, h4:first-child,
 h5:first-child, h6:first-child {
 	margin-top: 0;
 }
-
 h1 img, h2 img, h3 img, 
 h4 img, h5 img, h6 img {
   margin: 0;
@@ -48,9 +47,12 @@ h4 img, h5 img, h6 img {
 /* Text elements
 -------------------------------------------------------------- */
 
-p           { margin: 0 0 1.5em; }
-p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
-p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+p           { 
+	margin: 0 0 1.5em; 
+  -moz-hyphens: auto;
+   -ms-hyphens: auto;
+	    hyphens: auto;
+}
 
 
 /*Links*/
