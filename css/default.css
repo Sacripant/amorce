@@ -43,33 +43,69 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 }
 
 /* float grid */
+/*
+Calcul de la goutière en %
+(1) margin neg = x%
+(2) padding = x*(100+2x)/100
+*/
 .grid		{ 
-	margin: 0 -1.428%;
+	margin: 0 -1.428%; /*(1)*/
 	overflow: hidden;
-	background-color: yellow;
+/*	background-color: yellow;*/
 }
-.w1-6, .w2-6, .w3-6, .w4-6, .w5-6, .w6-6 
+
+/*.w1-1,
+.w1-2, .w2-2,
+.w1-3, .w2-3, .w3-3,
+.w1-4, .w2-4, .w3-4, .w4-4,
+.w1-5, .w2-5, .w3-5, .w4-5, .w5-5,
+.w1-6, .w2-6, .w3-6, .w4-6, .w5-6, .w6-6,
+.w1-7, .w2-7, .w3-7, .w4-7, .w5-7, .w6-7, .w7-7*/
+
+[class*=span]
 			{ 
 	float: left; 	
 	-webkit-box-sizing: border-box; 
 	   -moz-box-sizing: border-box; 
 	        box-sizing: border-box;
-	padding: 1.3889%;
-	
+	padding: 1.3889%; /*(2)*/
+	width: 100%;
 }
-.w1-6		{ width: 16.666%; }
-.w2-6		{ width: 33.333%; }
-.w3-6		{ width: 50%; }
-.w4-6		{ width: 66.666%; }
-.w5-6		{ width: 83.333%; }
-.w6-6		{ width: 100%; }
+.all-span1-7							{ width: 14.285%; }
+.all-span1-6							{ width: 16.666%; }
+.all-span1-5							{ width: 20%; }
+.all-span1-4							{ width: 25%; }
+.all-span2-7							{ width: 28.571%; }
+.all-span1-3, .span2-6				{ width: 33.333%; }
+.all-span2-5							{ width: 40%; }
+.all-span3-7							{ width: 42.857%; }
+.all-span1-2, .span3-6, .span2-4	{ width: 50%; }
+.all-span4-7							{ width: 57.142%; }
+.all-span3-5							{ width: 60%; }
+.all-span2-3, .span4-6				{ width: 66.666%; }
+.all-span5-7							{ width: 71.428%; }
+.all-span4-5							{ width: 80%; }	
+.all-span5-6							{ width: 83.333%; }
+.all-span6-7							{ width: 85.714%; }
+.all-span1-1, .span2-2, .span3-3, 
+.all-span4-4, .span5-5, .span6-6,
+.all-span7-7							{ width: 100%; }
 
+.grid.no-gutter {
+	margin: 0;
+}
+.grid.no-gutter [class*=span] {
+	padding: 0;
+}
 
 /*blocs
 -------------------------------*/
-#keur       {/*id du body index*/}
+#home       {/*id du body index*/}
 #container  {  }
-#wrapper    {  }
+#wrapper    {  
+	max-width: 90%;
+	margin: 0 auto;
+}
                
 #header     {  }
 #main_nav   {  }
