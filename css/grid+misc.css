@@ -1,0 +1,171 @@
+/*
+*	misc class
+*/
+.clear      		{ clear: both; }
+.hide       		{ display: none; visibility: hidden; }
+.visuallyhidden	{ border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }
+
+/*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
+.clearfix:before, .clearfix:after	{ content: ""; display: table; }
+.clearfix:after 							{ clear: both; }
+
+/* image replacement */
+.ir { background-color: transparent; border: 0; overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before { content: ""; display: block; width: 0; height: 100%; }
+
+/*img Placeholder*/
+img[alt="placeholder"]			{ background-size: cover; }
+img[alt="placeholder"].gray	{ background-color: #ddd; }
+img[alt="placeholder"].music	{ background-image : url(../img/music.jpg); }
+img[alt="placeholder"].food	{ background-image : url(../img/food.jpg); }
+img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
+
+/*
+*	Grilles
+*	- display table (knacss)
+*	- float:left 1 à 7 colonnes imbricable
+*/
+
+/* table layout grid */
+.row {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.row > *,
+.col {
+	display: table-cell;
+	vertical-align: top;
+	padding: 1em;
+}
+
+/* float grid
+Calcul de la goutière en %
+(1) margin neg = x%
+(2) padding = x*(100+2x)/100
+*/
+.grid		{ 
+	margin: 0 -1.428%; /*(1)*/
+	overflow: hidden;
+/*	background-color: yellow;*/
+}
+
+[class*=span]
+			{ 
+	float: left; 	
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box; 
+	        box-sizing: border-box;
+	padding: 1.3889%; /*(2)*/
+	width: 100%;
+}
+
+/*grid for all viewport*/
+.all-span1-7										{ width: 14.285%; }
+.all-span1-6										{ width: 16.666%; }
+.all-span1-5										{ width: 20%; }
+.all-span1-4										{ width: 25%; }
+.all-span2-7										{ width: 28.571%; }
+.all-span1-3, .all-span2-6						{ width: 33.333%; }
+.all-span2-5										{ width: 40%; }
+.all-span3-7										{ width: 42.857%; }
+.all-span1-2, .all-span3-6, .all-span2-4	{ width: 50%; }
+.all-span4-7										{ width: 57.142%; }
+.all-span3-5										{ width: 60%; }
+.all-span2-3, .all-span4-6						{ width: 66.666%; }
+.all-span5-7										{ width: 71.428%; }
+.all-span4-5										{ width: 80%; }	
+.all-span5-6										{ width: 83.333%; }
+.all-span6-7										{ width: 85.714%; }
+.all-span1-1, .all-span2-2, .all-span3-3, 
+.all-span4-4, .all-span5-5, .all-span6-6,
+.all-span7-7										{ width: 100%; }
+
+.grid.no-gutter {
+	margin: 0;
+}
+.grid.no-gutter [class*=span] {
+	padding: 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 and + =================================================== */
+	.small-span1-7												{ width: 14.285%; }
+	.small-span1-6												{ width: 16.666%; }
+	.small-span1-5												{ width: 20%; }
+	.small-span1-4												{ width: 25%; }
+	.small-span2-7												{ width: 28.571%; }
+	.small-span1-3, .small-span2-6						{ width: 33.333%; }
+	.small-span2-5												{ width: 40%; }
+	.small-span3-7												{ width: 42.857%; }
+	.small-span1-2, .small-span3-6, .small-span2-4	{ width: 50%; }
+	.small-span4-7												{ width: 57.142%; }
+	.small-span3-5												{ width: 60%; }
+	.small-span2-3, .small-span4-6						{ width: 66.666%; }
+	.small-span5-7												{ width: 71.428%; }
+	.small-span4-5												{ width: 80%; }	
+	.small-span5-6												{ width: 83.333%; }
+	.small-span6-7												{ width: 85.714%; }
+	.small-span1-1, .small-span2-2, .small-span3-3, 
+	.small-span4-4, .small-span5-5, .small-span6-6,
+	.small-span7-7												{ width: 100%; }
+	
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+}
+@media only screen and (min-width: 768px) {
+  /* 768 and + =================================================== */
+	.med-span1-7										{ width: 14.285%; }
+	.med-span1-6										{ width: 16.666%; }
+	.med-span1-5										{ width: 20%; }
+	.med-span1-4										{ width: 25%; }
+	.med-span2-7										{ width: 28.571%; }
+	.med-span1-3, .med-span2-6						{ width: 33.333%; }
+	.med-span2-5										{ width: 40%; }
+	.med-span3-7										{ width: 42.857%; }
+	.med-span1-2, .med-span3-6, .med-span2-4	{ width: 50%; }
+	.med-span4-7										{ width: 57.142%; }
+	.med-span3-5										{ width: 60%; }
+	.med-span2-3, .med-span4-6						{ width: 66.666%; }
+	.med-span5-7										{ width: 71.428%; }
+	.med-span4-5										{ width: 80%; }	
+	.med-span5-6										{ width: 83.333%; }
+	.med-span6-7										{ width: 85.714%; }
+	.med-span1-1, .med-span2-2, .med-span3-3, 
+	.med-span4-4, .med-span5-5, .med-span6-6,
+	.med-span7-7										{ width: 100%; }
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 and more =================================================== */
+	.big-span1-7										{ width: 14.285%; }
+	.big-span1-6										{ width: 16.666%; }
+	.big-span1-5										{ width: 20%; }
+	.big-span1-4										{ width: 25%; }
+	.big-span2-7										{ width: 28.571%; }
+	.big-span1-3, .big-span2-6						{ width: 33.333%; }
+	.big-span2-5										{ width: 40%; }
+	.big-span3-7										{ width: 42.857%; }
+	.big-span1-2, .big-span3-6, .big-span2-4	{ width: 50%; }
+	.big-span4-7										{ width: 57.142%; }
+	.big-span3-5										{ width: 60%; }
+	.big-span2-3, .big-span4-6						{ width: 66.666%; }
+	.big-span5-7										{ width: 71.428%; }
+	.big-span4-5										{ width: 80%; }	
+	.big-span5-6										{ width: 83.333%; }
+	.big-span6-7										{ width: 85.714%; }
+	.big-span1-1, .big-span2-2, .big-span3-3, 
+	.big-span4-4, .big-span5-5, .big-span6-6,
+	.big-span7-7										{ width: 100%; }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}
+
