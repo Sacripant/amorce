@@ -1,0 +1,162 @@
+<section id="doc-forms" class="doc-section">
+	<h1>Forms</h1>
+
+	<h2>Simple formulaire</h2>
+
+	<div class="demo-form code-demo">
+<form action="index_submit" method="get" accept-charset="utf-8" class="w3-6">
+	<fieldset>
+		<legend>Fieldset legend</legend>
+		<div class="form-item">
+			<label for="inputText1">Input type text</label>
+			<input class="" name="inputText1" value="" />
+		</div>
+		<div class="form-item">
+			<label for="select1">Select</label>
+			<select name="select1" id="select1">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+		<div class="form-item">
+			<label for="textarea1">Textarea</label>
+	      <textarea name="textarea1" id="textarea1"></textarea>
+		</div>					
+		<div class="form-item">
+			<label for="inputFile1">Input type file</label>
+	      <input name="inputFile1" type="file" id="inputFile1">
+		</div>					
+		<div class="form-item">
+			<ul class="form-list-chk inline-form clearfix">
+				<li><input type="checkbox" name="checkbox-01"> <label>Checkbox 01</label></li>
+				<li><input type="checkbox" name="checkbox-01"> <label>Checkbox 01</label></li>
+				<li><input type="checkbox" name="checkbox-01"> <label>Checkbox 01</label></li>
+				<li><input type="checkbox" name="checkbox-01"> <label>Checkbox 01</label></li>
+			</ul>						
+		</div>
+		<div class="form-item">
+			<input type="submit" value="send" title="send">				
+		</div>
+	</fieldset>
+</form>	
+	</div>
+	
+	<h2>Fieldset border</h2>
+
+	<div class="demo-form code-demo">
+<form action="index_submit" method="get" accept-charset="utf-8" class="w3-6">
+	<fieldset class="fieldset-border">
+		<legend>Fieldset legend</legend>
+		<div class="form-item">
+			<label for="inputText1">Input type text</label>
+			<input class="" name="inputText1" value="" />
+		</div>
+		<div class="form-item">
+			<label for="inputText1">Input type password</label>
+			<input class="" type="password" name="inputText1" value="password" />
+		</div>
+		<div class="form-item">
+			<input type="submit" value="send" title="send">				
+		</div>
+	</fieldset>
+</form>	
+	</div>
+	
+	<h2>Inline form</h2>
+
+	<div class="demo-form code-demo">
+<form action="index_submit" method="get" accept-charset="utf-8" class="w3-6">
+<div class="form-item inline-form">
+	<select name="select1" id="select1">
+		<option value="">Mlle</option>
+		<option value="">Mme</option>
+		<option value="">M</option>
+	</select>
+	<input class="" name="inputText1" value="" />
+	<input class="" type="password" name="inputText1" value="password" />
+	<input type="submit" value="send" title="send">				
+</div>
+</form>	
+	</div>
+	
+	<h2>form with grid</h2>
+	
+	<div class="grid-demo code-demo">
+
+<form action="index_submit" method="get" accept-charset="utf-8" class="w3-6">
+	<fieldset>
+		<legend>fieldset legend</legend>	
+		<div class="grid">
+			<div class="form-item all-span1-2">
+				<label for="form-item1">name</label>
+				<input name="form-item1" value="" />
+			</div>
+			<div class="form-item all-span1-2">
+				<label for="form-item2">lastname</label>
+				<input name="form-item2" type="text" />
+			</div>				
+			<div class="form-item all-span1-3">
+				<label for="select1">Select</label>
+				<select name="select1" id="select1">
+					<option value="">option 1</option>
+					<option value="">option 2</option>
+					<option value="">option 3</option>
+					<option value="">option 4</option>
+					<option value="">option 5</option>
+				</select>
+			</div>
+			<div class="form-item all-span1-3">
+				<label for="select1">Select</label>
+				<select name="select1" id="select1">
+					<option value="">option 1</option>
+					<option value="">option 2</option>
+					<option value="">option 3</option>
+					<option value="">option 4</option>
+					<option value="">option 5</option>
+				</select>
+			</div>		
+			<div class="form-item all-span1-3">
+				<label for="form-item2">Other</label>
+				<input type="text" value="" />						
+			</div>
+			<div class="form-item">
+				<ul class="form-list-chk clearfix">
+					<li class="all-span1-5"><input type="checkbox" name="checkbox-01"> <label>Checkbox 01</label></li>
+					<li class="all-span1-5"><input type="checkbox" name="checkbox-01"> <label>Checkbox 02</label></li>
+					<li class="all-span1-5"><input type="checkbox" name="checkbox-01"> <label>Checkbox 03</label></li>
+					<li class="all-span1-5"><input type="checkbox" name="checkbox-01"> <label>Checkbox 04</label></li>
+					<li class="all-span1-5"><input type="checkbox" name="checkbox-01"> <label>Checkbox 05</label></li>
+				</ul>						
+			</div>
+		</div>
+			<div class="form-item">
+				<input type="submit" value="send" title="send" />						
+			</div>
+	</fieldset>
+</form>	
+	</div>
+	
+	<h2>Input group</h2>
+	
+	<div class="form-demo code-demo">
+<div class="form-item input-group">
+  <span class="input-addon">@</span>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+<div class="form-item input-group">
+  <input type="text" class="form-control">
+  <span class="input-addon">.00</span>
+</div>
+<div class="form-item input-group">
+  <span class="input-addon">$</span>
+  <input type="text" class="form-control">
+  <span class="input-addon">.00</span>
+</div>		
+	</div>
+	
+	
+</section> <!-- #doc-forms -->
+

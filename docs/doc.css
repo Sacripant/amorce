@@ -1,0 +1,57 @@
+/*
+*	Blocs
+*/
+
+#wrapper {
+	margin-left: 150px;
+}
+#section {
+	margin-right: 2em;
+	max-width: 45em;
+}
+aside {
+	position: fixed;
+	top: 100px; left: 0;
+	height: 100%;
+	width: 200px;
+}
+
+nav {
+	margin: 0 2em;
+}
+
+.code-demo {
+	margin-bottom: 1.5em;
+}
+
+/*
+*	blocs de code
+*/
+
+.bloc-code {
+	background-color: #EBEEDC;
+	padding: 0 1em;
+	border: 1px solid #ccc;
+	font-size: 0.8em;
+	-moz-tab-size : 4;
+	     tab-size : 4;
+	overflow: auto;
+	white-space: pre;
+}
+
+/*
+*	grid demo
+*/
+
+
+.demo-grid .grid > div {
+/*	margin: 0.5em 0;	*/
+}
+.demo-grid .grid > div:before {
+	content: "." attr(class);
+	display: block;
+	line-height: 2.5em;
+	background-color: #ddd;
+	border: 1px solid;
+	padding-left: 0.4em;
+}
