@@ -23,6 +23,10 @@ img[alt="placeholder"].music	{ background-image : url(../img/music.jpg); }
 img[alt="placeholder"].food	{ background-image : url(../img/food.jpg); }
 img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 
+/*Initialize list*/
+.nude { list-style-type: none; margin: 0; }
+
+
 /*
 *	Grilles
 *	- display table (knacss)
