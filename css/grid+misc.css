@@ -67,6 +67,16 @@ Calcul de la goutière en %
 	width: 100%;
 }
 
+/*Inline-bloc grid*/
+.inline-grid {
+/*	font-size: 0;*/
+}
+.inline-grid > [class*=span] {
+/*	font-size: 1em;*/
+	display: inline-block;
+	float: none;
+}
+
 /*grid for all viewport*/
 .all-span1-7										{ width: 14.285%; }
 .all-span1-6										{ width: 16.666%; }
@@ -81,6 +91,7 @@ Calcul de la goutière en %
 .all-span3-5										{ width: 60%; }
 .all-span2-3, .all-span4-6						{ width: 66.666%; }
 .all-span5-7										{ width: 71.428%; }
+.all-span3-4										{ width: 75%; }
 .all-span4-5										{ width: 80%; }	
 .all-span5-6										{ width: 83.333%; }
 .all-span6-7										{ width: 85.714%; }
@@ -88,10 +99,14 @@ Calcul de la goutière en %
 .all-span4-4, .all-span5-5, .all-span6-6,
 .all-span7-7										{ width: 100%; }
 
-.grid.no-gutter {
+.grid.no-gutter
+,.inline-grid.no-gutter
+{
 	margin: 0;
 }
-.grid.no-gutter [class*=span] {
+.grid.no-gutter [class*=span] 
+,.inline-grid.no-gutter [class*=span] 
+{
 	padding: 0;
 }
 
@@ -111,6 +126,7 @@ Calcul de la goutière en %
 	.small-span3-5												{ width: 60%; }
 	.small-span2-3, .small-span4-6						{ width: 66.666%; }
 	.small-span5-7												{ width: 71.428%; }
+	.small-span3-4												{ width: 75%; }
 	.small-span4-5												{ width: 80%; }	
 	.small-span5-6												{ width: 83.333%; }
 	.small-span6-7												{ width: 85.714%; }
@@ -137,6 +153,7 @@ Calcul de la goutière en %
 	.med-span3-5										{ width: 60%; }
 	.med-span2-3, .med-span4-6						{ width: 66.666%; }
 	.med-span5-7										{ width: 71.428%; }
+	.med-span3-4										{ width: 75%; }
 	.med-span4-5										{ width: 80%; }	
 	.med-span5-6										{ width: 83.333%; }
 	.med-span6-7										{ width: 85.714%; }
@@ -162,6 +179,7 @@ Calcul de la goutière en %
 	.big-span3-5										{ width: 60%; }
 	.big-span2-3, .big-span4-6						{ width: 66.666%; }
 	.big-span5-7										{ width: 71.428%; }
+	.big-span3-4										{ width: 75%; }
 	.big-span4-5										{ width: 80%; }	
 	.big-span5-6										{ width: 83.333%; }
 	.big-span6-7										{ width: 85.714%; }
