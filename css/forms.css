@@ -23,12 +23,13 @@ label       {
 
 /*Default fieldset : as a title*/
 fieldset    { 
+	margin-bottom: 1em;
 }
 legend      { 
 /*	font-weight: bold; */
 	font-size:1.2em; 
 	white-space: nowrap; 
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid;
 	display: block;
 	width: 100%;
 	padding-bottom: 0.33em;
@@ -56,6 +57,9 @@ input, textarea, select {
 	-webkit-box-sizing: border-box; 
 	   -moz-box-sizing: border-box; 
 	        box-sizing: border-box;
+}
+select {
+	width: 100%;
 }
 input:focus, textarea:focus, select:focus {
 	border-color:#666;
@@ -93,6 +97,7 @@ input[type=file] { }
 
 .inline-form input, .inline-form textarea, .inline-form select { 
 	min-width: 0;
+	width: auto;
 	vertical-align: middle;
 }
 .inline-form li {
@@ -113,7 +118,7 @@ input[type=file] { }
 .input-group input {
 	width: 100%;
 }
-.input-group .input-addon {
+.input-addon {
 	text-align: center;
 	width: 1%;
 	padding: 0 0.33em;
@@ -124,10 +129,10 @@ input[type=file] { }
 
 /* Success, notice and error boxes
 -------------------------------------------------------------- */
-.error,.notice,.success	{ padding: .5em .5em .5em 30px; margin-bottom: 1em; border: 2px solid #ddd; }
-.error       				{ background: #FBE3E4 url(../img/form/error-trans.png) no-repeat 7px 9px; color: #8a1f11; border-color: #FBC2C4; }
-.notice                 { background: #d1ecf7 url(../img/form/notice-trans.png) no-repeat 7px 9px; border-color:#bcdfef; color:#11689e; }
-.success, 					{ background: #E6EFC2 url(../img/form/success-trans.png) no-repeat 7px 9px; color: #264409; border-color: #C6D880; }
+.error,.notice,.success	{ padding: .5em; margin-bottom: 1em; border: 2px solid #ddd; }
+.error       				{ background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice                 { background: #d1ecf7; color: #11689e; border-color: #bcdfef; }
+.success, 					{ background: #E6EFC2; color: #264409; border-color: #C6D880; }
 
 .error a,				   { color: #8a1f11; }
 .notice a               { color: #514721; }
