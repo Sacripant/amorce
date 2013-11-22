@@ -18,7 +18,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
    HTML5 display definitions
    ========================================================================== */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden] { display: none; }
@@ -26,7 +26,7 @@ audio:not([controls]) { display: none; height: 0; }
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-img,object, embed { max-width: 100%; }
+img,object, embed { max-width: 100%; height: auto; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 /* SVG Corrects overflow displayed oddly in IE 9. */
 svg:not(:root) { overflow: hidden; }

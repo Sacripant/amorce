@@ -47,7 +47,7 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 }
 
 /* float grid
-Calcul de la goutière en %
+Calcul de la gouttière en %
 (1) margin neg = x%
 (2) padding = x*(100+2x)/100
 */
