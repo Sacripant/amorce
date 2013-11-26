@@ -106,7 +106,8 @@ input[type=file] { }
 	display: inline; 
 }
 
-/* Input group
+/** 
+// Input group
 -------------------------------------------------------------- */
 .input-group {
 	display: table;
@@ -114,16 +115,21 @@ input[type=file] { }
 }
 .input-group > * {
 	display: table-cell;
+	vertical-align: middle;
 }
 .input-group input {
 	width: 100%;
 }
 .input-addon {
-	text-align: center;
 	width: 1%;
-	padding: 0 0.33em;
 	background-color: #ddd;
 	border: 1px solid #999;
+}
+span.input-addon {
+	padding: 0 0.33em;	
+}
+select.input-addon option {
+	padding-right: 2em;
 }
 
 
