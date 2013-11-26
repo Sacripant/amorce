@@ -78,6 +78,10 @@ input[type=checkbox], input[type=radio], textarea {
 }
 input[type=file] { }
 
+input[type=date] { 
+	font: inherit; /*for chrome display*/
+}
+
 
 /* Field form */
 .form-item	{ 
