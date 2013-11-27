@@ -54,6 +54,7 @@
 			<aside>
 				
 			</aside>
+			<?php include("typo.html"); ?>
 			<?php include("grille.html"); ?>
 			<?php include("forms.html"); ?>
 		</section>

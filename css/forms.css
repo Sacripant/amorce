@@ -1,33 +1,30 @@
 /* --------------------------------------------------------------
    forms.css
-	* Normalize Form CSS with boilerplate
-	* Use Formee1.2 for grid
-
-   Usage:
-   * For inline forms, use .inline (even when using columns)
+	* Thanks boilerplate for Normalize Form CSS
 	
 -------------------------------------------------------------- */ 
 
 
-/*RESET FORMS*/
+/*
+//	RESET FORMS
+*/
+
 /* hand cursor on clickable elements */
 .clickable, label, input[type=button], input[type=submit], button {cursor: pointer;}
 button[disabled], input[disabled] { cursor: default; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 
-label       { 
-	text-transform: uppercase; 
-	font-size: 0.8em; 
-	color: #666;
-}
+
+/*
+//	Fieldset + legend
+*/
 
 /*Default fieldset : as a title*/
 fieldset    { 
 	margin-bottom: 1em;
 }
 legend      { 
-/*	font-weight: bold; */
-	font-size:1.2em; 
+	font-size: 1.36em; /*.h5*/
 	white-space: nowrap; 
 	border-bottom: 1px solid;
 	display: block;
@@ -46,9 +43,31 @@ legend      {
 	width: auto;
 }
 
-/* Form fields
--------------------------------------------------------------- */
-input, textarea, select {
+
+/* 
+//	Form item 
+*/
+
+.form-item	{ 
+	padding-bottom: 0.33em;
+	padding-top: 0.33em;
+}
+
+label       { 
+	text-transform: uppercase; 
+	font-size: .85em;  /* .small */
+	color: #666;
+}
+
+
+/* 
+//	Form fields
+*/
+
+input
+, textarea
+, select 
+{
 	background-color:#eee;
 	min-width: 100%; max-width: 100%;
 	padding: 0.33em;
@@ -61,11 +80,18 @@ input, textarea, select {
 select {
 	width: 100%;
 }
-input:focus, textarea:focus, select:focus {
+input:focus
+, textarea:focus
+, select:focus 
+{
 	border-color:#666;
 	background-color: #fff;
 }
-input[type=checkbox], input[type=radio], input[type=submit], input[type="reset"] {
+input[type=checkbox]
+, input[type=radio]
+, input[type=submit]
+, input[type="reset"] 
+{
 	min-width: 0;
 	max-width: none;
 }
@@ -73,21 +99,24 @@ textarea {
 	font: inherit;
 	resize: vertical;
 }
-input[type=checkbox], input[type=radio], textarea {
+input[type=checkbox]
+, input[type=radio]
+, textarea
+, select[multiple]
+{
 	height: auto;	
 }
-input[type=file] { }
-
+input[type=file] { 
+	border: 0 none; padding: 0; /*for firefox display*/ 
+}
 input[type=date] { 
 	font: inherit; /*for chrome display*/
 }
 
 
-/* Field form */
-.form-item	{ 
-	padding-bottom: 0.33em;
-	padding-top: 0.33em;
-}
+/*
+//	Radio / checkbox list
+*/
 
 .form-list-chk, .form-list-rdo {
    height: 100%;
@@ -96,8 +125,9 @@ input[type=date] {
 }
 
 
-/* Form item inline
--------------------------------------------------------------- */
+/* 
+//	Form item inline
+*/
 
 .inline-form input, .inline-form textarea, .inline-form select { 
 	min-width: 0;
@@ -110,9 +140,11 @@ input[type=date] {
 	display: inline; 
 }
 
-/** 
-// Input group
--------------------------------------------------------------- */
+
+/* 
+//	Input group
+*/
+
 .input-group {
 	display: table;
 	width: 100%;
@@ -137,8 +169,10 @@ select.input-addon option {
 }
 
 
-/* Success, notice and error boxes
--------------------------------------------------------------- */
+/* 
+//	Success, notice and error boxes
+*/
+
 .error,.notice,.success	{ padding: .5em; margin-bottom: 1em; border: 2px solid #ddd; }
 .error       				{ background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
 .notice                 { background: #d1ecf7; color: #11689e; border-color: #bcdfef; }
@@ -150,6 +184,3 @@ select.input-addon option {
 
 /* add * after required label */
 label.required:after	{ content: " *"; color: red;}
-
-/*Txp only*/
-.errorElement {}
