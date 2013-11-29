@@ -28,7 +28,7 @@ body {
 /* 
 *	Headings
 
-* quotient : 1.667
+* quotient : 1.1667 (http://instacalc.com/17574)
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,
@@ -148,7 +148,7 @@ caption     	{ background: #eee; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 small, 
-.small	{ font-size: .85em; }
+.small	{ font-size: .85em; } /* *small size */
 .xsmall	{ font-size: .73em; }
 .big		{ font-size: 1.167em; }
 .xbig		{ font-size: 1.36em; }

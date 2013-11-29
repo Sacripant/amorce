@@ -53,7 +53,7 @@
 
 <!-- LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS-->
 	<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON --> 
-	<script src="js/live.js"></script>
+	<!-- // <script src="js/live.js"></script> -->
 
 
 </head>

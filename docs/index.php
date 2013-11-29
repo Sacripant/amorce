@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
    
 	
-	<title>Titre</title>
+	<title>Front Documentation</title>
 	
 <!-- affichage favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -36,7 +36,7 @@
 	
 <!-- LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS-->
 	<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON --> 
-	<script src="../js/live.js"></script>
+	<!-- // <script src="../js/live.js"></script> -->
 
 
 </head>
@@ -50,14 +50,23 @@
 			<h1>Documention</h1>
 		</header>
 	
-		<section id="section" role="main">
-			<aside>
+			<main id="section" role="main">
+				<aside>
+					<nav>
+						<h1 class="p">TOC</h1>
+						<ul>
+							<li><a class="a-toc active" href="typo.html">Typography</a></li>
+							<li><a class="a-toc" href="grille.html">Grid</a></li>
+							<li><a class="a-toc" href="forms.html">Forms</a></li>
+						</ul>
+					</nav>
+				</aside>
+
+				<section id="ajax-wrapper">
+					<!-- Laod content with Ajax -->
+				</section>	
 				
-			</aside>
-			<?php include("typo.html"); ?>
-			<?php include("grille.html"); ?>
-			<?php include("forms.html"); ?>
-		</section>
+			</main>
 
 		<footer>
 
