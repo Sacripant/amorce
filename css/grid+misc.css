@@ -33,7 +33,8 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 *	- float:left 1 à 7 colonnes imbricable
 */
 
-/* table layout grid */
+/* table layout grid 
+---------------------*/
 .row {
 	display: table;
 	table-layout: fixed;
@@ -42,14 +43,14 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 .row > *,
 .col {
 	display: table-cell;
-	vertical-align: top;
-	padding: 1em;
+	vertical-align: bottom;
+	float: none;
 }
 
-/* float grid
-Calcul de la gouttière en %
-(1) margin neg = x%
-(2) padding = x*(100+2x)/100
+/* Grid (inline-block & f-left)
+* Calcul de la gouttière en %
+* (1) margin neg = x%
+* (2) padding = x*(100+2x)/100
 */
 .grid
 , .inline-grid	
@@ -59,27 +60,74 @@ Calcul de la gouttière en %
 /*	background-color: yellow;*/
 }
 
-[class*=span]
-			{ 
-	float: left; 	
-	-webkit-box-sizing: border-box; 
-	   -moz-box-sizing: border-box; 
-	        box-sizing: border-box;
+.grid  > [class*=span]
+, .inline-grid  > [class*=span]
+{
 	padding: 1.3889%; /*(2)*/
-	width: 100%;
 }
 
-/*Inline-bloc grid*/
+
+
+/* Float-left grid
+--------------------*/
+
+/*CLEARFIX for grid*/
+.grid:before, .grid:after	{ content: ""; display: table; }
+.grid:after 					{ clear: both; }
+
+.grid > [class*=span] {
+	float: left;
+	display: block;
+}
+
+
+
+/* Inline-block grid
+----------------------*/
 .inline-grid {
 /*	font-size: 0;*/
 }
-.inline-grid > [class*=span] {
+.inline-grid > [class*=-span] {
 /*	font-size: 1em;*/
 	display: inline-block;
 	float: none;
 }
 
-/*grid for all viewport*/
+
+/*Collapsed grid (no gutter)
+-----------------------------*/
+
+.no-gutter
+, .grid.no-gutter
+, .inline-grid.no-gutter
+{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.row > [class*=-span]
+, .col[class*=-span]
+, .no-gutter > [class*=-span] 
+, .grid.no-gutter > [class*=-span] 
+,.inline-grid.no-gutter > [class*=-span] 
+{
+	padding: 0;
+}
+
+
+
+/*
+**	SPAN
+*/
+
+[class*=-span] { 
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box; 
+	        box-sizing: border-box;
+	width: 100%;
+}
+
+/* grid for all viewport */
 .all-span1-7										{ width: 14.285%; }
 .all-span1-6										{ width: 16.666%; }
 .all-span1-5										{ width: 20%; }
@@ -101,20 +149,9 @@ Calcul de la gouttière en %
 .all-span4-4, .all-span5-5, .all-span6-6,
 .all-span7-7										{ width: 100%; }
 
-.grid.no-gutter
-,.inline-grid.no-gutter
-{
-	margin: 0;
-}
-.grid.no-gutter [class*=span] 
-,.inline-grid.no-gutter [class*=span] 
-{
-	padding: 0;
-}
-
 
 @media only screen and (min-width: 480px) {
-  /* 480 and + =================================================== */
+	/* 480 and + =================================================== */
 	.small-span1-7												{ width: 14.285%; }
 	.small-span1-6												{ width: 16.666%; }
 	.small-span1-5												{ width: 20%; }
