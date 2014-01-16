@@ -1,4 +1,4 @@
-/**
+o/**
  * hashgrid (jQuery version)
  * http://github.com/dotjay/hashgrid
  * Version 5, 3 Nov 2010

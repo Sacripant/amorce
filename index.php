@@ -88,21 +88,10 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
 	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-	<!--[if lte IE 7]>
+	<!--[if lte IE 8]>
 		<script type="text/javascript" charset="utf-8" src="http://www.joonis.de/shared/ie6update/ie6update.js"></script>
-		<script src="js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
-		<script type="text/javascript" charset="utf-8">
-			DD_belatedPNG.fix('.png24');
 		</script>
 	<![endif]-->
-	
-	<!-- Génération de la grille de mise en page, utilise hashgrid.css
-		G		Show the grid until you release.
-		G + H	Show and hold the grid (G will remove it again).
-		G + F	Toggle the grid to the foreground and back. Pressing F while the grid is held also works.
-		G + J	Jump to the next grid. Pressing J while the grid is held also works.		
-		LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS 
-	<script src="js/hashgrid.js" type="text/javascript"></script>-->
 </body>
 
 </html>
