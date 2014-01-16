@@ -4,8 +4,8 @@
 
 /* TEAM */
   Web Agency : *****
-  Site: http://www.senticad.com
-  Twitter: @senticad
+  Site: http://www.sacripant.fr
+  Twitter: @_sacripant
   Location: Dakar — Sénégal
 
 /* THANKS */
