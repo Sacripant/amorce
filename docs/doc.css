@@ -47,11 +47,18 @@ nav {
 .demo-grid .grid > div {
 /*	margin: 0.5em 0;	*/
 }
-.demo-grid .grid > div:before {
-	content: "." attr(class);
-	display: block;
-	line-height: 2.5em;
+.demo-grid .grid > div:before 
+, .demo-grid .row > div
+{
 	background-color: #ddd;
 	border: 1px solid;
 	padding-left: 0.4em;
 }
+
+.demo-grid .grid > div:before {
+	display: block;
+	content: "." attr(class);
+	line-height: 2.5em;	
+}
+
+
