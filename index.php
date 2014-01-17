@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
@@ -13,7 +13,7 @@
 	<meta name="description" content="content" />
 	
 	<!-- Viewport for Iphone ipad -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
    
 	
 	<title>Titre</title>
@@ -31,11 +31,6 @@
 	<link rel="stylesheet" href="css/grid+misc.css" media="all" />
 	<link rel="stylesheet" href="css/forms.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
-	
-
-	<!-- Feuille de style de la grille de mise en page - FACILITE L'INTEGRAITON
-		LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS -->
-	<link rel="stylesheet" href="css/hashgrid.css" media="screen" />
 
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
@@ -63,22 +58,19 @@
 	
 	<div id="wrapper">
 		
-	  <header role="banner">
-		<h1>Squelette d'intégration HTML5</h1>
-
-	  </header>
+		<header role="banner">
+			<h1>Squelette d'intégration HTML5</h1>
+		</header>
 	
-	  <section role="main">
-
-		<div class="img-wrapper">
-			<img class="town" src="img/picture-2x3.svg" alt="placeholder" />			
-		</div>
-		
-	  </section>
+		<main role="main">
+			<div class="img-wrapper">
+				<img class="town" src="img/picture-2x3.svg" alt="placeholder" />			
+			</div>
+		</main>
 	
-	  <footer>
+		<footer>
 
-	  </footer>
+		</footer>
 		
 	</div><!-- #wrapper -->
 
