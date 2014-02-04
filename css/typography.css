@@ -19,7 +19,7 @@ Color1	#000		rgb(0,0,0)
 html {font-size: 62.5%;} /*equivalent 10px*/
 body { 
   font-size: 1.6em;
-  color: #222; 
+  color: hsl(0, 0%, 30%); 
   background: #fff;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
@@ -32,7 +32,7 @@ body {
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,
-.h1,.h2,.h3,.h4,.h5,.h6	{ font-weight: normal; color: #111; }
+.h1,.h2,.h3,.h4,.h5,.h6	{ font-weight: normal; color: hsl(0, 0%, 15%); }
 
 h1, .h1 { font-size: 3.44em;	line-height: 1;		margin-bottom: 0.44em; }
 h2, .h2 { font-size: 2.52em;	line-height: 1.1;		margin-bottom: 0.6em; }

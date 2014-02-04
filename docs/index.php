@@ -55,7 +55,8 @@
 					<nav>
 						<h1 class="p">TOC</h1>
 						<ul>
-							<li><a class="a-toc active" href="typo.html">Typography</a></li>
+							<li><a class="a-toc active" href="colors.html">Colors</a></li>
+							<li><a class="a-toc" href="typo.html">Typography</a></li>
 							<li><a class="a-toc" href="grille.html">Grid</a></li>
 							<li><a class="a-toc" href="forms.html">Forms</a></li>
 						</ul>
@@ -80,6 +81,8 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
 	<script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+	
+	<script src="tinycolor-min.js"></script>
 	<script src="doc.js"></script>
 </body>
 

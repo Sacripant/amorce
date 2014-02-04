@@ -62,3 +62,14 @@ nav {
 }
 
 
+/*
+**	Color blocs
+*/
+.ul-doc-colors li {
+	margin-bottom: 1em;
+}
+.bloc-color {
+	height: 50px;
+}
+
+

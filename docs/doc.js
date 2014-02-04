@@ -14,15 +14,16 @@ $(function() {
 		console.log(link);
 		if (link) 
 		{
-			var target = link.href
+			var target = link.href;
 
 			ajaxWrapper.load(target, function(){
 				blocsCodes();   // Stuff to do after the page is loaded
+				colors();
 			});			
 		}		
 	}
 	
-	loadPage( $( aToc).filter('.active')[0] );
+	loadPage( $(aToc).filter('.active')[0] );
 	
 	aToc.click(function() {
 		loadPage(this);
@@ -59,7 +60,35 @@ $(function() {
 			$(xpre).append(xcode);
 			$(this).append($(xpre));
 		});		
-	}	
+	}
+	
+	/*
+	//	Display Colors
+	*/
+	
+	function colors() {
+		var colors = $('.ul-doc-colors li')
+		, 	 colorbloc = $('<div class="color-bloc" />');
+		;
+	
+		if (colors.length) 
+		{
+			colors.each(function(index) {
+				var c = $(this).text()
+				,	 colorbloc = document.createElement('div')
+				, 	 hex = tinycolor(c).toHexString()
+				;
+				colorbloc.setAttribute('class', 'bloc-color');
+				colorbloc.style.backgroundColor= c;
+			
+				console.log(hex);
+			
+				$(this).prepend(hex +'<br />');
+				$(this).prepend(colorbloc);
+			});
+		}		
+	}
+	
 	
 	
 });
