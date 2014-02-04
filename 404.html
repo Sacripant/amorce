@@ -1,12 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   <meta name="author" content="senticad.com" />
-	<meta name="copyright" content="senticad.com" />
+	<meta charset="utf-8" />
+	<meta name="author" content="nom du client" />
+	<meta name="copyright" content="© sacripant.fr" />
 	<meta name="description" content="content" />
+	
+	<!-- Viewport for Iphone ipad -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+   
 	
 	<title>Titre</title>
 
@@ -16,31 +24,65 @@
 <!-- affichage favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
+<!-- CSS -->
+
+	<link rel="stylesheet" href="css/reset.css" media="all" />
+	<link rel="stylesheet" href="css/typography.css" media="all" />
+	<link rel="stylesheet" href="css/grid+misc.css" media="all" />
+	<link rel="stylesheet" href="css/forms.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<![endif]-->
+	
+	<!-- MODERNIZR, VERSION DE DEV, NON COMPRESSÉ ET FULL -->
+	<script src="js/modernizr-2.5.3.js"></script>
+	<!-- Noter les fonctionnalités utilisé pour charger une version custom :
+		* html5shiv
+		* YepNope
+		* Class js/no-js 
+	-->
+	
 
 
-<style type="text/css" media="screen">
-@import url(css/screen.css);
-</style>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!--[if lte IE 8]>
-<link rel="stylesheet" href="_css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<![endif]-->
-
-<!--[if lte IE 6]>
-<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
-<script type="text/javascript" charset="utf-8" src="http://www.joonis.de/shared/ie6update/ie6update.js"></script>
-<![endif]-->
+<!-- LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS-->
+	<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON --> 
+	<!-- // <script src="js/live.js"></script> -->
 
 
 </head>
 
-<body id="index">
+
+<body id="home">
+	
+	<div id="wrapper">
+		
+		<header role="banner">
+			<h1>Squelette d'intégration HTML5</h1>
+		</header>
+	
+		<main role="main">
+			<h2>Error 404 !</h2>
+			<h3>Oups, le mage demandée n'a pas été trouvée</h3>
+		</main>
+	
+		<footer>
+
+		</footer>
+		
+	</div><!-- #wrapper -->
 
 
-
-
+<!-- Javascript bottom -->
+	<!-- chercher Jquery sur le CDN google -->
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<!--[if lte IE 8]>
+		<script type="text/javascript" charset="utf-8" src="http://www.joonis.de/shared/ie6update/ie6update.js"></script>
+		</script>
+	<![endif]-->
 </body>
 
 </html>
