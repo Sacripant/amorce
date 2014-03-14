@@ -5,23 +5,18 @@
 	* Thanks to Boilerplate, Knacss and blueprint
    
 -------------------------------------------------------------- */
-/* Colors
-Color1	#000		rgb(0,0,0)
-
-
-
-
-
-
--------------------------------------------------------------- */
 
 /* Default font settings. */
-html {font-size: 62.5%;} /*equivalent 10px*/
+html {
+	font-size: 100%; /*default 16px*/
+}
 body { 
-  font-size: 1.6em;
-  color: hsl(0, 0%, 30%); 
-  background: #fff;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+	color: hsl(0, 0%, 30%); 
+	background: #fff;
 }
 
 
@@ -31,15 +26,15 @@ body {
 * quotient : 1.1667 (http://instacalc.com/17574)
 -------------------------------------------------------------- */
 
-h1,h2,h3,h4,h5,h6,
-.h1,.h2,.h3,.h4,.h5,.h6	{ font-weight: normal; color: hsl(0, 0%, 15%); }
+h1,h2,h3,h4,h5,h6
+	{ font-weight: normal; color: hsl(0, 0%, 15%); }
 
 h1, .h1 { font-size: 3.44em;	line-height: 1;		margin-bottom: 0.44em; }
 h2, .h2 { font-size: 2.52em;	line-height: 1.1;		margin-bottom: 0.6em; }
 h3, .h3 { font-size: 1.85em;	line-height: 1.1;		margin-bottom: 0.81em; }
 h4, .h4 { font-size: 1.59em;	line-height: 1.2;		margin-bottom: 0.94em; }
 h5, .h5 { font-size: 1.36em;	line-height: 1.2;		margin-bottom: 1.10em; }
-h6, .h6 { font-size: 1.167em;	line-height: 1.285;	margin-bottom: 0em; }
+h6, .h6 { font-size: 1.167em;	line-height: 1.285;	margin-bottom: 1.285em; }
 
 /* avoid collapsing margins on headings */
 h1:first-child, h2:first-child,
