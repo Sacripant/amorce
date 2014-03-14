@@ -19,6 +19,7 @@ $(function() {
 			ajaxWrapper.load(target, function(){
 				blocsCodes();   // Stuff to do after the page is loaded
 				colors();
+				fontSize();
 			});			
 		}		
 	}
@@ -88,6 +89,26 @@ $(function() {
 			});
 		}		
 	}
+	
+	/*
+	//	 Display Computed Style Font Size
+	*/
+	
+	function	fontSize() {
+		var Sizes = $('#headers .font-size')
+		;
+	
+		Sizes.each(function(index) {
+			var styles = window.getComputedStyle(this,null)
+			,	 Fsize = styles.getPropertyValue("font-size")
+			, 	 content = $(this).html()
+			;
+		
+			$(this).html(content +" / "+ Fsize)
+		
+		});		
+	}
+	
 	
 	
 	
