@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------- 
   
-   reset.css for HTML5
-   Mélange maison de boilerplate @ htlm5reset
+  reset.css for HTML5
+  Mélange maison de boilerplate @ htlm5reset
    
 -------------------------------------------------------------- */
 
@@ -40,10 +40,6 @@ html {font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
 /*Box model*/
-* {
--webkit-box-sizing: border-box; 
-   -moz-box-sizing: border-box; 
-        box-sizing: border-box;	
-}
+* { box-sizing: border-box; }
 
 

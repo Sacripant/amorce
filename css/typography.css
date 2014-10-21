@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------- 
    
-   typography.css
-   * Sets up some sensible default typography.
+	typography.css
+	* Sets up some sensible default typography.
 	* Thanks to Boilerplate, Knacss and blueprint
    
 -------------------------------------------------------------- */
@@ -29,12 +29,12 @@ body {
 h1,h2,h3,h4,h5,h6
 	{ font-weight: normal; color: hsl(0, 0%, 15%); }
 
-h1, .h1 { font-size: 3.44em;	line-height: 1;		margin-bottom: 0.44em; }
+h1, .h1 { font-size: 3.44em;	line-height: 1;			margin-bottom: 0.44em; }
 h2, .h2 { font-size: 2.52em;	line-height: 1.1;		margin-bottom: 0.6em; }
 h3, .h3 { font-size: 1.85em;	line-height: 1.1;		margin-bottom: 0.81em; }
 h4, .h4 { font-size: 1.59em;	line-height: 1.2;		margin-bottom: 0.94em; }
 h5, .h5 { font-size: 1.36em;	line-height: 1.2;		margin-bottom: 1.10em; }
-h6, .h6 { font-size: 1.167em;	line-height: 1.285;	margin-bottom: 1.285em; }
+h6, .h6 { font-size: 1.167em;	line-height: 1.285;		margin-bottom: 1.285em; }
 
 /* avoid collapsing margins on headings */
 h1:first-child, h2:first-child,
@@ -54,10 +54,7 @@ h4 img, h5 img, h6 img {
 p, .p 		{
 	font-size: 1em; 
 	margin: 0 0 1.5em; 
-	-webkit-hyphens: auto;
-      -moz-hyphens: auto;
-       -ms-hyphens: auto;
-           hyphens: auto;
+	hyphens: auto;
 }
 
 /*Links*/
@@ -72,7 +69,7 @@ a           { color: #009; text-decoration: underline; }
 blockquote, q 	{ quotes: none; }
 blockquote:before, blockquote:after, 
 q:before, q:after 
-					{ content: ''; content: none; }
+				{ content: ''; content: none; }
 blockquote  	{ margin: 1.5em; color: #666; font-style: italic; }
 
 
@@ -80,17 +77,17 @@ strong      { font-weight: bold; }
 em,dfn      { font-style: italic; }
 dfn         { font-weight: bold; }
 
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub, sup 	{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup 		{ top: -0.5em; }
 sub 		{ bottom: -0.25em; }
     	
-abbr			{ border-bottom: 1px dotted #666; }
+abbr		{ border-bottom: 1px dotted #666; }
 address     { margin: 0 0 1.5em; font-style: italic; }
 del         { color:#666; }
 
 /*Code / pre*/
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: 1.5;}
-pre 						{ margin: 1.5em 0;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+pre, code, kbd, samp 	{ font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: 1.5;}
+pre 					{ margin: 1.5em 0;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 /* Addresses styling not present in IE 6/7/8/9. */
 mark { background: #ff0; color: #000; }
@@ -143,7 +140,7 @@ caption     	{ background: #eee; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 small, 
-.small	{ font-size: .85em; } /* *small size */
-.xsmall	{ font-size: .73em; }
+.small		{ font-size: .85em; } /* *small size */
+.xsmall		{ font-size: .73em; }
 .big		{ font-size: 1.167em; }
 .xbig		{ font-size: 1.36em; }
