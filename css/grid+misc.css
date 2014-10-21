@@ -7,7 +7,7 @@
 
 /*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
 .clearfix:before, .clearfix:after	{ content: ""; display: table; }
-.clearfix:after 							{ clear: both; }
+.clearfix:after 					{ clear: both; }
 
 /* image replacement */
 .ir { background-color: transparent; border: 0; overflow: hidden;
