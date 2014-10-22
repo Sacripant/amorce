@@ -29,15 +29,16 @@
 	<link rel="stylesheet" href="css/reset.css" media="all" />
 	<link rel="stylesheet" href="css/typography.css" media="all" />
 	<link rel="stylesheet" href="css/grid+misc.css" media="all" />
-	<link rel="stylesheet" href="css/forms.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/forms.css" media="all" />
+	<link rel="stylesheet" href="css/components.css" media="screen" />
+	<link rel="stylesheet" href="css/layout+skin.css" media="screen" />
 
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 	<![endif]-->
 	
 	<!-- MODERNIZR, VERSION DE DEV, NON COMPRESSÉ ET FULL -->
-	<script src="js/modernizr-2.5.3.js"></script>
+	<script src="js/modernizr.custom.2.8.3.js"></script>
 	<!-- Noter les fonctionnalités utilisé pour charger une version custom :
 		* html5shiv
 		* YepNope
@@ -77,13 +78,10 @@
 
 <!-- Javascript bottom -->
 	<!-- chercher Jquery sur le CDN google -->
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
-	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-	<!--[if lte IE 8]>
-		<script type="text/javascript" charset="utf-8" src="http://www.joonis.de/shared/ie6update/ie6update.js"></script>
-		</script>
-	<![endif]-->
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+
 </body>
 
 </html>
