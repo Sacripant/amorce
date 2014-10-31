@@ -174,25 +174,8 @@ input[type=date] {
 span.input-addon {
 	padding: 0 0.33em;	
 }
-
-
-/*	submit btn in input-addon
-	ex : Search form
-	// use input group
-	<form>
-		<div class="form-item input-group">
-			<input type="search">					  
-			<span class="input-addon submit-addon">
-				<button type="submit">OK</button>
-			</span>
-		</div>
-	</form>
-*/
-/*.submit-addon {
-	vertical-align: middle;
-}*/
-.submit-addon button 
-, .submit-addon input[type=submit]
+.input-addon button 
+, .input-addon input[type=submit]
 {
 	background: none;
 	border: 0 none;
