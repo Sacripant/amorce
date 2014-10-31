@@ -1,7 +1,7 @@
 {
   "name": "your-project",
   "version": "0.1.0",
-  "author": "Sacripant - Thomas Jund",
+  "author": "Thomas Jund — sacripant.fr",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",

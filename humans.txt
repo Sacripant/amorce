@@ -3,13 +3,10 @@
 
 
 /* TEAM */
-  Web Agency : *****
+  Web Designer : Thomas jund
   Site: http://www.sacripant.fr
   Twitter: @_sacripant
-  Location: Dakar — Sénégal
-
-/* THANKS */
-  Names (& URL): 
+  Location: Dakar — Senegal
 
 /* SITE */
   Standards: HTML5, CSS3
