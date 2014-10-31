@@ -23,11 +23,12 @@
 
 <!-- CSS -->
 
-	<link rel="stylesheet" href="../css/reset.css" media="all" />
-	<link rel="stylesheet" href="../css/typography.css" media="all" />
-	<link rel="stylesheet" href="../css/grid+misc.css" media="all" />
-	<link rel="stylesheet" href="../css/forms.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="../css/default.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/src/reset.css" media="all" />
+	<link rel="stylesheet" href="../css/src/typography.css" media="all" />
+	<link rel="stylesheet" href="../css/src/grid+misc.css" media="all" />
+	<link rel="stylesheet" href="../css/src/forms.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../css/src/components.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../css/src/layout+skin.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="doc.css" type="text/css" media="screen" />
 
 	<!--[if lte IE 8]>
