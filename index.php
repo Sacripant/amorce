@@ -26,12 +26,12 @@
 
 <!-- CSS -->
 
-	<link rel="stylesheet" href="css/reset.css" media="all" />
-	<link rel="stylesheet" href="css/typography.css" media="all" />
-	<link rel="stylesheet" href="css/grid+misc.css" media="all" />
-	<link rel="stylesheet" href="css/forms.css" media="all" />
-	<link rel="stylesheet" href="css/components.css" media="screen" />
-	<link rel="stylesheet" href="css/layout+skin.css" media="screen" />
+	<link rel="stylesheet" href="css/output/reset.css" media="all" />
+	<link rel="stylesheet" href="css/output/typography.css" media="all" />
+	<link rel="stylesheet" href="css/output/utils+grid.css" media="all" />
+	<link rel="stylesheet" href="css/output/forms.css" media="all" />
+	<link rel="stylesheet" href="css/output/components.css" media="screen" />
+	<link rel="stylesheet" href="css/output/layout+skin.css" media="screen" />
 
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
@@ -65,7 +65,7 @@
 	
 		<main role="main">
 			<div class="img-wrapper">
-				<img class="town" src="img/picture-2x3.svg" alt="placeholder" />			
+				<img class="town" src="img/placeholder/picture-2x3.svg" alt="placeholder" />			
 			</div>
 		</main>
 	

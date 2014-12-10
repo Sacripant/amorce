@@ -9,7 +9,7 @@ module.exports = function(grunt){
 				src : [
 					'css/src/reset.css', 
 					'css/src/typography.css', 
-					'css/src/grid+misc.css', 
+					'css/src/utils+grid.css', 
 					'css/src/forms.css', 
 					'css/src/components.css', 
 					'css/src/layout+skin.css'
@@ -17,7 +17,7 @@ module.exports = function(grunt){
 				output : [
 					'css/output/reset.css', 
 					'css/output/typography.css', 
-					'css/output/grid+misc.css', 
+					'css/output/utils+grid.css', 
 					'css/output/forms.css', 
 					'css/output/components.css', 
 					'css/output/layout+skin.css'
@@ -33,7 +33,7 @@ module.exports = function(grunt){
 
 		autoprefixer: {
     		all_css: {
-      			browser : "last 3 version",
+      			browser : 'last 3 version',
       			cascade : true,
     			expand: true,
       			flatten: true,
@@ -100,7 +100,8 @@ module.exports = function(grunt){
 
 	
 	// Run plugins
-	grunt.registerTask('default', ['autoprefixer', 'cssmin']);
+	grunt.registerTask('default', ['autoprefixer']);
+	grunt.registerTask('buildcss', ['autoprefixer', 'cssmin']);
 
 
 };
