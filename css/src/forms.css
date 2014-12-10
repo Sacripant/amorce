@@ -16,7 +16,8 @@ button[disabled], input[disabled] { cursor: default; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 
 /*Debug input submit btn height*/
-input::-moz-focus-inner { 
+input[type="submit"]::-moz-focus-inner
+{ 
 	border: 0; 
 	padding: 0; 
 }

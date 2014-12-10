@@ -1,36 +1,57 @@
 /*
-*	misc class
+**	misc class
 */
+
 .clear      		{ clear: both; }
 .hide       		{ display: none; visibility: hidden; }
 .visuallyhidden	{ border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }
 
-/*CLEARFIX pour redonner 1 height aux blocs contenant des float*/
+/* CLEARFIX 
+-------------*/
 .clearfix:before, .clearfix:after	{ content: ""; display: table; }
 .clearfix:after 					{ clear: both; }
 
-/* image replacement */
+/* image replacement 
+---------------------*/
 .ir { background-color: transparent; border: 0; overflow: hidden;
     /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
 .ir:before { content: ""; display: block; width: 0; height: 100%; }
 
-/*img Placeholder*/
+/* img Placeholder
+--------------------*/
 img[alt="placeholder"]		{ background-size: cover; }
 img[alt="placeholder"].gray	{ background-color: #ddd; }
 img[alt="placeholder"].music{ background-image : url(../img/music.jpg); }
 img[alt="placeholder"].food	{ background-image : url(../img/food.jpg); }
 img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 
-/*Initialize list*/
+/* Initialize list
+------------------*/
 .nude { list-style-type: none; margin: 0; }
+
+/* bloc link
+--------------*/
+.bloc_link {
+  position: relative;
+}
+.a--bloc_link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 
 /*
-*	Grilles
+*	Grids
 *	- display table (knacss)
 *	- float:left 1 à 7 colonnes imbricable
+*	- display:inline 1 à 7 colonnes imbricable
 */
 
 /* table layout grid 
@@ -48,10 +69,10 @@ img[alt="placeholder"].town	{ background-image : url(../img/town.jpg); }
 }
 
 /* Grid (inline-block & f-left)
-* Calcul de la gouttière en %
-* (1) margin neg = x%
-* (2) padding = x*(100+2x)/100
-*/
+** Calcul de la gouttière en %
+** (1) margin neg = x%
+** (2) padding = x*(100+2x)/100
+-------------------------------*/
 .grid
 , .inline-grid	
 { 
