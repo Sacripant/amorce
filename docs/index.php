@@ -23,12 +23,12 @@
 
 <!-- CSS -->
 
-	<link rel="stylesheet" href="../css/src/reset.css" media="all" />
-	<link rel="stylesheet" href="../css/src/typography.css" media="all" />
-	<link rel="stylesheet" href="../css/src/grid+misc.css" media="all" />
-	<link rel="stylesheet" href="../css/src/forms.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="../css/src/components.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="../css/src/layout+skin.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/output/reset.css" media="all" />
+	<link rel="stylesheet" href="../css/output/typography.css" media="all" />
+	<link rel="stylesheet" href="../css/output/utils+grid.css" media="all" />
+	<link rel="stylesheet" href="../css/output/forms.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../css/output/components.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../css/output/layout+skin.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="doc.css" type="text/css" media="screen" />
 
 	<!--[if lte IE 8]>
@@ -79,9 +79,9 @@
 
 <!-- Javascript bottom -->
 	<!-- chercher Jquery sur le CDN google -->
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../js/jquery-2.1.1.min.js"></script>
 	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
-	<script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+	<!-- // <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script> -->
 	
 	<script src="tinycolor-min.js"></script>
 	<script src="doc.js"></script>
