@@ -3,21 +3,18 @@
 */
 
 #wrapper {
-	margin-left: 150px;
+	margin-left: 11em;
 }
 main {
-	margin-right: 2em;
+	margin-right: 1em;
 	max-width: 45em;
 }
-aside {
+header {
 	position: fixed;
-	top: 100px; left: 0;
+	top: 0; left: 0;
 	height: 100%;
-	width: 200px;
-}
-
-nav {
-	margin: 0 2em;
+	width: 10em;
+	padding: 3em 1em 0 1em;
 }
 
 .code-demo {

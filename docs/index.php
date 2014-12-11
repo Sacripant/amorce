@@ -48,27 +48,24 @@
 	<div id="wrapper">
 		
 		<header role="banner">
-			<h1>Documention</h1>
+			<h1 class="h6">Code Style Guide</h1>
+			<nav role="navigation">
+				<ul>
+					<li><a class="a-toc active" href="colors.html">Colors</a></li>
+					<li><a class="a-toc" href="typo.html">Typography</a></li>
+					<li><a class="a-toc" href="grille.html">Grid</a></li>
+					<li><a class="a-toc" href="forms.html">Forms</a></li>
+				</ul>
+			</nav>
 		</header>
 	
-			<main id="section" role="main">
-				<aside>
-					<nav>
-						<h1 class="p">TOC</h1>
-						<ul>
-							<li><a class="a-toc active" href="colors.html">Colors</a></li>
-							<li><a class="a-toc" href="typo.html">Typography</a></li>
-							<li><a class="a-toc" href="grille.html">Grid</a></li>
-							<li><a class="a-toc" href="forms.html">Forms</a></li>
-						</ul>
-					</nav>
-				</aside>
+		<main id="section" role="main">
 
-				<section id="ajax-wrapper">
-					<!-- Laod content with Ajax -->
-				</section>	
-				
-			</main>
+			<section id="ajax-wrapper">
+				<!-- Laod content with Ajax -->
+			</section>	
+			
+		</main>
 
 		<footer>
 
