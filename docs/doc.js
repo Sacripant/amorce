@@ -70,7 +70,7 @@ $(function() {
     */
     
     function fontSize() {
-        var Sizes = $('#headers .font-size')
+        var Sizes = $('.font-size')
         ;
     
         Sizes.each(function() {

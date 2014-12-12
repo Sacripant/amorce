@@ -51,7 +51,8 @@
 			<h1 class="h6">Code Style Guide</h1>
 			<nav role="navigation">
 				<ul>
-					<li><a class="a-toc active" href="colors.html">Colors</a></li>
+					<li><a class="a-toc" href="colors.html">Colors</a></li>
+					<li><a class="a-toc" href="size.html">Sizes</a></li>
 					<li><a class="a-toc" href="typo.html">Typography</a></li>
 					<li><a class="a-toc" href="grille.html">Grid</a></li>
 					<li><a class="a-toc" href="forms.html">Forms</a></li>

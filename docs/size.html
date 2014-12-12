@@ -1,0 +1,102 @@
+<section id="doc-size" class="donc-section">
+	<h1>Size</h1>
+
+	
+	<p>
+		Toutes les tailles (espaces, textes et composants) sont gérées à partir des tailles des fonts définies dans <code>typography.css</code>.
+		Pour profiter de ce systeme, l'unité de référence devra être <code>em</code>.
+	</p>
+
+	<p>
+		La taille de base est laissé à l'apreciation de l'internaute en laissant un valeur de <code>100%</code> sur l'élément <code>html</code>.
+		Les tailles utilisent un ratio unique entre elles, ce qui permet de réduire ou agrandir la taille de tous les élément d'un composant vers la taille supérieur ou inférieur.
+	</p>
+
+	<div id="sizes">
+		<h2>Les tailles avec un ration de <code>1.1667</code></h2>
+
+		<p>Un tableau de calcul permettant de faire varié ce ratio est disponible sur <a href="http://instacalc.com/17574">instacalc</a></p>
+
+
+		<h1 class="font-size">
+			<code>h1, .h1</code> <br>
+			Taille d'un h1
+		</h1>
+
+		<h2 class="font-size">
+			<code>h2, .h2</code> <br>
+			Taille d'un h2
+		</h2>
+
+		<h3 class="font-size">
+			<code>h3, .h3</code> <br>
+			Taille d'un h3
+		</h3>
+
+		<h4 class="font-size">
+			<code>h4, .h4</code> <br>
+			Taille d'un h4
+		</h4>
+
+		<h5 class="font-size">
+			<code>h5, .h5</code> <br>
+			Taille d'un h5
+		</h5>
+
+		<h6 class="font-size">
+			<code>h6, .h6</code> <br>
+			Taille d'un h6
+		</h6>
+
+		<p class="font-size">
+			<code>p, .p</code> <br>
+			Taille d'un p
+		</p>
+
+		<small class="font-size">
+			<code>small, .small</code> <br>
+			Taille d'un small
+		</small>
+
+		<p class="font-size xsmall">
+			<code>.xsmall</code> <br>
+			Taille d'un x-small
+		</p>
+	</div>
+
+	<div id="size-exemples">
+		<h2>Exemple</h3>
+
+		<h3>Adaptation de la taille d'un texte sans touché à sa sémantique</h3>
+
+		<p>La première utilisation des class de taille, permet de visuellement donner une taille différente tout en conservant la bonne sémantique à l'élément</p>
+
+		<div class="code-demo">
+			
+<h1 class="h4">Voici un titre de niveau 1, mais avec la taille d'un titre de niveau 4</h1>
+
+		</div>
+
+		<h3>Exemple d'un composant réduit avec <code>.x-small</code></h3>
+
+
+		<div class="code-demo">
+			
+<div>
+	<h5>Composant taille normal</h5>
+	<p>Voir un composant, composé d'un titre <code>h5</code> et d'un <code>p</code>.</p>
+</div>
+
+<hr>
+
+<div class="xsmall">
+	<h5>Même composant mais avec <code>.xsmall</code> sur le wrapper</h5>
+	<p>Du coup, le titre <code>h5</code> aura exactement la taille d'un <code>p</code> et le <code>p</code> la taille d'un <code>x-small</code>.</p>
+</div>
+
+		</div>
+
+	</div>
+
+
+</section>
