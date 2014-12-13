@@ -56,6 +56,7 @@
 					<li><a class="a-toc" href="typo.html">Typography</a></li>
 					<li><a class="a-toc" href="grille.html">Grid</a></li>
 					<li><a class="a-toc" href="forms.html">Forms</a></li>
+					<li><a class="a-toc" href="composants.html">Composants</a></li>
 				</ul>
 			</nav>
 		</header>
