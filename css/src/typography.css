@@ -4,6 +4,7 @@
 	* Sets up some sensible default typography.
 	* Thanks to Boilerplate, Knacss and blueprint
 	© sacripant.fr
+
 -------------------------------------------------------------- */
 
 /* Default font settings. */
@@ -22,7 +23,7 @@ body {
 
 /* 
 *	Headings
-
+*
 * quotient : 1.1667 (http://instacalc.com/17574)
 -------------------------------------------------------------- */
 
@@ -44,7 +45,7 @@ h5:first-child, h6:first-child {
 }
 h1 img, h2 img, h3 img, 
 h4 img, h5 img, h6 img {
-  margin: 0;
+	margin: 0;
 }
 
 

@@ -43,16 +43,16 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 /* bloc link
 --------------*/
 .bloc_link {
-  position: relative;
+    position: relative;
 }
 .a--bloc_link:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -61,6 +61,8 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 *   - display table (knacss)
 *   - float:left 1 à 7 colonnes imbricable
 *   - display:inline 1 à 7 colonnes imbricable
+*
+*   - gouttière = 1.428%
 */
 
 /* table layout grid 
@@ -68,7 +70,16 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .row {
     display: table;
     table-layout: fixed;
+
+    border-collapse: separate;
+    border-spacing: 1.5em; /* % don't work */
+
+
     width: 100%;
+
+    /*delet visualy border between table and cells*/
+    width: calc( 100% + 3em );
+    margin-left: -1.5em;
 }
 .row > *,
 .col {
@@ -85,7 +96,7 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .grid
 , .inline-grid  
 { 
-    margin: 0 -1.428%; /*(1)*/
+    margin: 0 -.75em; /*(1)*/
     overflow: hidden;
 /*  background-color: yellow;*/
 }
@@ -93,7 +104,7 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .grid  > [class*=span]
 , .inline-grid  > [class*=span]
 {
-    padding: 1.3889%; /*(2)*/
+    padding: .75em; /*(2)*/
 }
 
 
@@ -130,16 +141,21 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .no-gutter
 , .grid.no-gutter
 , .inline-grid.no-gutter
+, .row.no-gutter
 {
     margin-left: 0;
     margin-right: 0;
+    /*remove gutter for table grid*/
+    width: 100%;
+    border-collapse: collapse;
+
 }
 
 .row > [class*=-span]
 , .col[class*=-span]
 , .no-gutter > [class*=-span] 
 , .grid.no-gutter > [class*=-span] 
-,.inline-grid.no-gutter > [class*=-span] 
+, .inline-grid.no-gutter > [class*=-span] 
 {
     padding: 0;
 }
