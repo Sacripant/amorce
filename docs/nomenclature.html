@@ -1,0 +1,70 @@
+<section id="doc-nomenclature" class="doc-section">
+	<h1>Nomenclature</h1>
+
+	<p>
+		Le system de nomenclature de class CSS est un dérivé du système BEM (Block--Element--modifier) <br>
+
+		Il utilise l'<em>Element</em> en suffixe qui est inspiré de la sémantique des balise html. <br>
+		Le suffixe est séparer par 2 tirets du nom du bloc <code>--</code>. <br>
+		Le nom du block peut être composé avec des <em>underscore</em>.
+
+	</p>
+
+	<h2>Liste des suffixes element</h2>
+
+	<ul>
+		<li><strong>h</strong> : pour le titre principale</li>
+		<li><strong>l</strong> : pour une liste de block</li>
+		<li><strong>i</strong> : pour l'item d'une liste de block</li>
+		<li><strong>a</strong> : pour le lien principal du block</li>
+		<li><strong>img</strong> : image du block</li>
+		<li><strong>metas</strong> : pour le <em>wrapper</em> listant les metas de l'item (date, auteur, catégories, …)</li>
+	</ul>
+
+	<p>D'autres suffixes pourront être créés pour les besoins du projet</p>
+
+
+
+	<h2>Exemples</h2>
+
+	<h3>Block de menu principal</h3>
+
+	<pre class="bloc-code">
+		<code>
+&lt;nav class=&quot;main_nav&quot;&gt;
+	&lt;ul class=&quot;l--main_nav&quot;&gt;
+		&lt;li class=&quot;i--main_nav&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;a--main_nav&quot;&gt;Link&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</code>
+	</pre>
+
+	<h3>Liste d'articles</h3>
+
+	<p>Les prefixes peuvent être cumulés, essentiellement dans listes de résultats</p>
+
+
+	<pre class="bloc-code">
+		<code>
+&lt;sections class=&quot;articles&quot;&gt;
+	&lt;ul class=&quot;l--articles&quot;&gt;
+		&lt;li class=&quot;i--articles&quot;&gt;
+			&lt;h2 class=&quot;h--i--articles&quot;&gt;Titre de l&#039;article&lt;/h2&gt;
+			&lt;div class=&quot;img--i--articles&quot;&gt;
+				&lt;img src=&quot;#&quot; alt=&quot;#&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;metas--i--articles&quot;&gt;
+				Auteur + Date
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&hellip;
+	&lt;/ul&gt;
+&lt;/sections&gt;
+		</code>
+	</pre>
+
+
+
+	
+</section>

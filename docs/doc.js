@@ -17,7 +17,7 @@ $(function() {
 
     function blocsCodes()
     {
-        console.log('start blocscodes');
+        // console.log('start blocscodes');
         var codeDemo = $('.code-demo')
         ,   codesHtml = []
         ;
@@ -27,7 +27,7 @@ $(function() {
             codesHtml.push(htmlEntities(this.innerHTML));
         
             var xpre = document.createElement('pre')
-            ,    xcode = document.createElement('code')
+            ,   xcode = document.createElement('code')
             ;
         
             xpre.setAttribute('class', 'bloc-code');
