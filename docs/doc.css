@@ -34,6 +34,7 @@ header {
 	     tab-size : 4;
 	overflow: auto;
 	white-space: pre;
+	margin: 1.5em 0;
 }
 
 /*
@@ -41,21 +42,28 @@ header {
 */
 
 
-.demo-grid .grid > div {
+.demo-grid [class*='_grid'] > div {
 /*	margin: 0.5em 0;	*/
 }
-.demo-grid .grid > div:before 
-, .demo-grid .row > div
+.demo-grid .fl_grid > div:before 
+, .demo-grid .il_grid > div:before 
+, .demo-grid .tb_grid > div
 {
 	background-color: #ddd;
-	border: 1px solid;
-	padding-left: 0.4em;
+	border: 1px solid #aaa;
+	padding: 0.4em;
+	line-height: 1.2em;	
 }
 
-.demo-grid .grid > div:before {
+.demo-grid .fl_grid > div:before 
+, .demo-grid .il_grid > div:before 
+{
 	display: block;
 	content: "." attr(class);
-	line-height: 2.5em;	
+}
+
+.demo-grid [class*="-span"] {
+	word-wrap: break-word;
 }
 
 

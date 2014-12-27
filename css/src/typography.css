@@ -1,3 +1,4 @@
+@import "config.min.css";
 /* -------------------------------------------------------------- 
    
 	typography.css
@@ -13,7 +14,7 @@ html {
 }
 body { 
 	font-size: 1em;
-	line-height: 1.5;
+	line-height: var(--vr);
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 	color: hsl(0, 0%, 30%); 
@@ -30,12 +31,12 @@ body {
 h1,h2,h3,h4,h5,h6
 	{ font-weight: normal; color: hsl(0, 0%, 15%); }
 
-h1, .h1 { font-size: 3.44em;	line-height: 1;			margin-bottom: 0.44em; }
-h2, .h2 { font-size: 2.52em;	line-height: 1.1;		margin-bottom: 0.6em; }
-h3, .h3 { font-size: 1.85em;	line-height: 1.1;		margin-bottom: 0.81em; }
-h4, .h4 { font-size: 1.59em;	line-height: 1.2;		margin-bottom: 0.94em; }
-h5, .h5 { font-size: 1.36em;	line-height: 1.2;		margin-bottom: 1.10em; }
-h6, .h6 { font-size: 1.167em;	line-height: 1.285;		margin-bottom: 1.285em; }
+h1, .h1 { font-size: var(--fs-h1)em;	line-height: 1;			margin-bottom: var(--vr)rem; }
+h2, .h2 { font-size: var(--fs-h2)em;	line-height: 1.1;		margin-bottom: var(--vr)rem; }
+h3, .h3 { font-size: var(--fs-h3)em;	line-height: 1.1;		margin-bottom: var(--vr)rem; }
+h4, .h4 { font-size: var(--fs-h4)em;	line-height: 1.2;		margin-bottom: var(--vr)rem; }
+h5, .h5 { font-size: var(--fs-h5)em;	line-height: 1.2;		margin-bottom: var(--vr)rem; }
+h6, .h6 { font-size: var(--fs-h6)em;	line-height: 1.285;		margin-bottom: var(--vr)rem; }
 
 /* avoid collapsing margins on headings */
 h1:first-child, h2:first-child,
@@ -48,13 +49,21 @@ h4 img, h5 img, h6 img {
 	margin: 0;
 }
 
+/*Complementary sizes*/
+
+small, 
+.small		{ font-size: var(--fs-small)em } /* *small size */
+.xsmall		{ font-size: var(--fs-xsmall)em }
+.big		{ font-size: var(--fs-h6)em }
+.xbig		{ font-size: var(--fs-h5)em }
+
 
 /* Text elements
 -------------------------------------------------------------- */
 
 p, .p 		{
 	font-size: 1em; 
-	margin: 0 0 1.5em; 
+	margin-bottom: var(--vr)em; 
 	hyphens: auto;
 }
 
@@ -71,7 +80,7 @@ blockquote, q 	{ quotes: none; }
 blockquote:before, blockquote:after, 
 q:before, q:after 
 				{ content: ''; content: none; }
-blockquote  	{ margin: 1.5em; color: #666; font-style: italic; }
+blockquote  	{ margin: var(--vr)em; color: #666; font-style: italic; }
 
 
 strong      { font-weight: bold; }
@@ -83,12 +92,12 @@ sup 		{ top: -0.5em; }
 sub 		{ bottom: -0.25em; }
     	
 abbr		{ border-bottom: 1px dotted #666; }
-address     { margin: 0 0 1.5em; font-style: italic; }
+address     { margin-bottom: var(--vr)em; font-style: italic; }
 del         { color:#666; }
 
 /*Code / pre*/
-pre, code, kbd, samp 	{ font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: 1.5;}
-pre 					{ margin: 1.5em 0;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+pre, code, kbd, samp 	{ font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: var(--vr);}
+pre 					{ margin-bottom: var(--vr)em;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 /* Addresses styling not present in IE 6/7/8/9. */
 mark { background: #ff0; color: #000; }
@@ -98,15 +107,15 @@ mark { background: #ff0; color: #000; }
 -------------------------------------------------------------- */
 
 li ul, 
-li ol       { margin:0 1.5em; }
-ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+li ol       { margin:0 var(--vr)em; }
+ul, ol      { margin: 0 var(--vr)em var(--vr)em var(--vr)em; }
 
 ul          { list-style-type: disc; }
 ol          { list-style-type: decimal; }
 
-dl          { margin: 0 0 1.5em 0; }
+dl          { margin: 0 0 var(--vr)em 0; }
 dl dt       { font-weight: bold; }
-dd          { margin-left: 1.5em;}
+dd          { margin-left: var(--vr)em;}
 
 /* avoid margins on nested elements */
 li p,
@@ -134,14 +143,8 @@ caption     	{ background: #eee; }
 
 /* Text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) 
 -------------------------------------------------------------- */
-::-moz-selection, ::selection { background: #fcd700; color: #fff; text-shadow: none; }
+::selection { background: #fcd700; color: #fff; text-shadow: none; }
 
 /* Divers
 -------------------------------------------------------------- */
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-small, 
-.small		{ font-size: .85em; } /* *small size */
-.xsmall		{ font-size: .73em; }
-.big		{ font-size: 1.167em; }
-.xbig		{ font-size: 1.36em; }

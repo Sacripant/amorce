@@ -6,9 +6,9 @@
 	</p>
 
 	<ul>
-		<li>Basée sur le <em>table</em> layout.</li>
-		<li>Basée sur un layout en <em>float left</em>.</li>
-		<li>Basée sur un layout en <em>inline-grid</em>.</li>
+		<li> <code>.tb_grid</code> Basée sur le <em>table</em> layout.</li>
+		<li> <code>.fl_grid</code> Basée sur un layout en <em>float left</em>.</li>
+		<li> <code>.il_grid</code> Basée sur un layout en <em>inline-grid</em>.</li>
 	</ul>
 
 	<p>
@@ -23,7 +23,7 @@
 	</p>
 	
 	<div class="demo-grid code-demo">
-<div class="row">
+<div class="tb_grid">
 	<div class="all-span1-5">
 		<p>Pellentesque habitant morbi tristique.</p>
 	</div>
@@ -42,7 +42,7 @@
 	<h3>Collpased table grid. Sans gouttière</h3>
 
 		<div class="demo-grid code-demo">
-<div class="row no-gutter">
+<div class="tb_grid no-gutter">
 	<div class="all-span1-5">
 		<p>Pellentesque habitant morbi tristique.</p>
 	</div>
@@ -58,11 +58,11 @@
 </div>		
 	</div>
 
-	<h2>Float Grid 2 - 7 cols</h2>
+	<h2>Inline Grid 2 - 7 cols</h2>
 	<h3>With gutters</h3>
 	
 	<div class="demo-grid code-demo">				
-<div class="grid">
+<div class="il_grid">
    <div class="all-span1-2"></div>
    <div class="all-span1-2"></div>
    <div class="all-span1-3"></div>
@@ -93,9 +93,9 @@
 </div>		
 	</div>
 
-	<h3>Sans gouttière</h3>
+	<h3>Inline grid - No gutters</h3>
 	<div class="demo-grid code-demo">				
-<div class="grid no-gutter">
+<div class="il_grid no-gutter">
 	<div class="all-span1-2"></div>
 	<div class="all-span1-2"></div>
 	<div class="all-span1-3"></div>
@@ -126,9 +126,9 @@
 </div>		
 	</div>
 
-	<h2>Grille de 7 colonnes</h2>
+	<h2>Grille <em>inline</em> de 7 colonnes</h2>
 	<div class="demo-grid code-demo">				
-<div class="grid">
+<div class="il_grid">
 	<div class="all-span1-7"></div>
 	<div class="all-span6-7"></div>
 	<div class="all-span2-7"></div>
@@ -141,37 +141,24 @@
 </div>
 	</div>
 	
-	<h2>Grille de 5 colonnes sans gouttière</h2>
-	<div class="demo-grid code-demo">				
-<div class="grid no-gutter">
-	<div class="all-span1-5"></div>
-	<div class="all-span4-5"></div>
-	<div class="all-span2-5"></div>
-	<div class="all-span3-5"></div>
-</div>
-	</div>
 	
 	<h2>Grilles imbriqués</h2>
-	<h3>2x5 colonnes</h3>
+	<h3>Float grid 2 cols, with a inline grid 3 cols and a table grid 5 cols</h3>
 	
 	<div class="demo-grid code-demo">
-<div class="grid">
+<div class="fl_grid">
 	<div class="all-span1-2">
-		<div class="grid">
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>			
+		<div class="il_grid">
+			<div class="all-span1-3"></div>
+			<div class="all-span2-3"></div>		
 		</div>
 	</div>
 	<div class="all-span1-2">
-		<div class="grid">
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
-			<div class="all-span1-5"></div>
+		<div class="tb_grid">
+			<div class="all-span1-5">all-span1-5</div>
+			<div class="all-span2-5">all-span2-5</div>
+			<div class="all-span2-5">all-span2-5</div>
+
 		</div>	
 	</div>
 </div>	
@@ -181,11 +168,11 @@
 	<h3>différentes grilles pour différents viewports</h3>
 	
 	<div class="demo-grid code-demo">
-<div class="grid">
-	<div class="small-span1-2 med-span1-4"></div>
-	<div class="small-span1-2 med-span1-4"></div>
-	<div class="small-span1-2 med-span1-4"></div>
-	<div class="small-span1-2 med-span1-4"></div>
+<div class="il_grid">
+	<div class="m-span1-2 l-span1-4"></div>
+	<div class="m-span1-2 l-span1-4"></div>
+	<div class="m-span1-2 l-span1-4"></div>
+	<div class="m-span1-2 l-span1-4"></div>
 </div>
 	</div>
 	

@@ -1,3 +1,4 @@
+@import "config.min.css";
 /* --------------------------------------------------------------
     utils+grid.css
         define default form styles
@@ -67,22 +68,21 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 /* table layout grid 
 ---------------------*/
-.row {
+.tb_grid {
     display: table;
     table-layout: fixed;
 
     border-collapse: separate;
-    border-spacing: 1.5em; /* % don't work */
-
+    border-spacing: var(--gutter)em 0; /* don't work with % */
 
     width: 100%;
 
     /*delet visualy border between table and cells*/
     width: calc( 100% + 3em );
-    margin-left: -1.5em;
+    margin-left: -var(--gutter)em;
 }
-.row > *,
-.col {
+.tb_grid > *,
+.tb_grid > [class*=span] {
     display: table-cell;
     vertical-align: bottom;
     float: none;
@@ -93,18 +93,19 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 ** (1) margin neg = x%
 ** (2) padding = x*(100+2x)/100
 -------------------------------*/
-.grid
-, .inline-grid  
+.fl_grid
+, .il_grid  
 { 
-    margin: 0 -.75em; /*(1)*/
+    margin: 0 -var(--gutter-half)rem; /*(1)*/
     overflow: hidden;
-/*  background-color: yellow;*/
+    /*background-color: yellow;*/
 }
 
-.grid  > [class*=span]
-, .inline-grid  > [class*=span]
+.fl_grid  > [class*=-span]
+, .il_grid  > [class*=-span]
 {
-    padding: .75em; /*(2)*/
+    padding-left: var(--gutter-half)em; /*(2)*/
+    padding-right: var(--gutter-half)em; /*(2)*/
 }
 
 
@@ -113,10 +114,10 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 --------------------*/
 
 /*CLEARFIX for grid*/
-.grid:before, .grid:after   { content: ""; display: table; }
-.grid:after                 { clear: both; }
+.fl_grid:before, .fl_grid:after { content: ""; display: table; }
+.fl_grid:after                  { clear: both; }
 
-.grid > [class*=span] {
+.fl_grid > [class*=-span] {
     float: left;
     display: block;
 }
@@ -125,11 +126,11 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 /* Inline-block grid
 ----------------------*/
-.inline-grid {
-    /*  font-size: 0; */
+.il_grid {
+    font-size: 0; 
 }
-.inline-grid > [class*=-span] {
-    /*  font-size: 1rem; */
+.il_grid > [class*=-span] {
+    font-size: 1rem; 
     display: inline-block;
     float: none;
 }
@@ -139,9 +140,9 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 -----------------------------*/
 
 .no-gutter
-, .grid.no-gutter
-, .inline-grid.no-gutter
-, .row.no-gutter
+, .fl_grid.no-gutter
+, .il_grid.no-gutter
+, .tb_grid.no-gutter
 {
     margin-left: 0;
     margin-right: 0;
@@ -151,11 +152,7 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 }
 
-.row > [class*=-span]
-, .col[class*=-span]
-, .no-gutter > [class*=-span] 
-, .grid.no-gutter > [class*=-span] 
-, .inline-grid.no-gutter > [class*=-span] 
+.no-gutter > [class*=-span]  
 {
     padding: 0;
 }
@@ -167,9 +164,6 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 */
 
 [class*=-span] { 
-    -webkit-box-sizing: border-box; 
-       -moz-box-sizing: border-box; 
-            box-sizing: border-box;
     width: 100%;
 }
 
@@ -196,83 +190,100 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .all-span7-7                                { width: 100%; }
 
 
-@media only screen and (min-width: 480px) {
+@media only screen and (--minS) {
     /* 480 and + =================================================== */
-    .small-span1-7                                              { width: 14.285%; }
-    .small-span1-6                                              { width: 16.666%; }
-    .small-span1-5                                              { width: 20%; }
-    .small-span1-4                                              { width: 25%; }
-    .small-span2-7                                              { width: 28.571%; }
-    .small-span1-3, .small-span2-6                      { width: 33.333%; }
-    .small-span2-5                                              { width: 40%; }
-    .small-span3-7                                              { width: 42.857%; }
-    .small-span1-2, .small-span3-6, .small-span2-4  { width: 50%; }
-    .small-span4-7                                              { width: 57.142%; }
-    .small-span3-5                                              { width: 60%; }
-    .small-span2-3, .small-span4-6                      { width: 66.666%; }
-    .small-span5-7                                              { width: 71.428%; }
-    .small-span3-4                                              { width: 75%; }
-    .small-span4-5                                              { width: 80%; } 
-    .small-span5-6                                              { width: 83.333%; }
-    .small-span6-7                                              { width: 85.714%; }
-    .small-span1-1, .small-span2-2, .small-span3-3, 
-    .small-span4-4, .small-span5-5, .small-span6-6,
-    .small-span7-7                                              { width: 100%; }
+    .s-span1-7                                  { width: 14.285%; }
+    .s-span1-6                                  { width: 16.666%; }
+    .s-span1-5                                  { width: 20%; }
+    .s-span1-4                                  { width: 25%; }
+    .s-span2-7                                  { width: 28.571%; }
+    .s-span1-3, .s-span2-6                      { width: 33.333%; }
+    .s-span2-5                                  { width: 40%; }
+    .s-span3-7                                  { width: 42.857%; }
+    .s-span1-2, .s-span3-6, .s-span2-4          { width: 50%; }
+    .s-span4-7                                  { width: 57.142%; }
+    .s-span3-5                                  { width: 60%; }
+    .s-span2-3, .s-span4-6                      { width: 66.666%; }
+    .s-span5-7                                  { width: 71.428%; }
+    .s-span3-4                                  { width: 75%; }
+    .s-span4-5                                  { width: 80%; } 
+    .s-span5-6                                  { width: 83.333%; }
+    .s-span6-7                                  { width: 85.714%; }
+    .s-span1-1, .s-span2-2, .s-span3-3, 
+    .s-span4-4, .s-span5-5, .s-span6-6,
+    .s-span7-7                                  { width: 100%; }
     
 }
-@media only screen and (min-width: 600px) {
-  /* 600 =================================================== */
-}
-@media only screen and (min-width: 768px) {
+
+
+@media only screen and (--minM) {
   /* 768 and + =================================================== */
-    .med-span1-7                                        { width: 14.285%; }
-    .med-span1-6                                        { width: 16.666%; }
-    .med-span1-5                                        { width: 20%; }
-    .med-span1-4                                        { width: 25%; }
-    .med-span2-7                                        { width: 28.571%; }
-    .med-span1-3, .med-span2-6                      { width: 33.333%; }
-    .med-span2-5                                        { width: 40%; }
-    .med-span3-7                                        { width: 42.857%; }
-    .med-span1-2, .med-span3-6, .med-span2-4    { width: 50%; }
-    .med-span4-7                                        { width: 57.142%; }
-    .med-span3-5                                        { width: 60%; }
-    .med-span2-3, .med-span4-6                      { width: 66.666%; }
-    .med-span5-7                                        { width: 71.428%; }
-    .med-span3-4                                        { width: 75%; }
-    .med-span4-5                                        { width: 80%; } 
-    .med-span5-6                                        { width: 83.333%; }
-    .med-span6-7                                        { width: 85.714%; }
-    .med-span1-1, .med-span2-2, .med-span3-3, 
-    .med-span4-4, .med-span5-5, .med-span6-6,
-    .med-span7-7                                        { width: 100%; }
+    .m-span1-7                              { width: 14.285%; }
+    .m-span1-6                              { width: 16.666%; }
+    .m-span1-5                              { width: 20%; }
+    .m-span1-4                              { width: 25%; }
+    .m-span2-7                              { width: 28.571%; }
+    .m-span1-3, .m-span2-6                  { width: 33.333%; }
+    .m-span2-5                              { width: 40%; }
+    .m-span3-7                              { width: 42.857%; }
+    .m-span1-2, .m-span3-6, .m-span2-4      { width: 50%; }
+    .m-span4-7                              { width: 57.142%; }
+    .m-span3-5                              { width: 60%; }
+    .m-span2-3, .m-span4-6                  { width: 66.666%; }
+    .m-span5-7                              { width: 71.428%; }
+    .m-span3-4                              { width: 75%; }
+    .m-span4-5                              { width: 80%; } 
+    .m-span5-6                              { width: 83.333%; }
+    .m-span6-7                              { width: 85.714%; }
+    .m-span1-1, .m-span2-2, .m-span3-3, 
+    .m-span4-4, .m-span5-5, .m-span6-6,
+    .m-span7-7                              { width: 100%; }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (--minL) {
   /* 992 =================================================== */
+    .l-span1-7                              { width: 14.285%; }
+    .l-span1-6                              { width: 16.666%; }
+    .l-span1-5                              { width: 20%; }
+    .l-span1-4                              { width: 25%; }
+    .l-span2-7                              { width: 28.571%; }
+    .l-span1-3, .l-span2-6                  { width: 33.333%; }
+    .l-span2-5                              { width: 40%; }
+    .l-span3-7                              { width: 42.857%; }
+    .l-span1-2, .l-span3-6, .l-span2-4      { width: 50%; }
+    .l-span4-7                              { width: 57.142%; }
+    .l-span3-5                              { width: 60%; }
+    .l-span2-3, .l-span4-6                  { width: 66.666%; }
+    .l-span5-7                              { width: 71.428%; }
+    .l-span3-4                              { width: 75%; }
+    .l-span4-5                              { width: 80%; } 
+    .l-span5-6                              { width: 83.333%; }
+    .l-span6-7                              { width: 85.714%; }
+    .l-span1-1, .l-span2-2, .l-span3-3, 
+    .l-span4-4, .l-span5-5, .l-span6-6,
+    .l-span7-7                              { width: 100%; }
 }
-@media only screen and (min-width: 1382px) {
-  /* 1382 and more =================================================== */
-    .big-span1-7                                        { width: 14.285%; }
-    .big-span1-6                                        { width: 16.666%; }
-    .big-span1-5                                        { width: 20%; }
-    .big-span1-4                                        { width: 25%; }
-    .big-span2-7                                        { width: 28.571%; }
-    .big-span1-3, .big-span2-6                      { width: 33.333%; }
-    .big-span2-5                                        { width: 40%; }
-    .big-span3-7                                        { width: 42.857%; }
-    .big-span1-2, .big-span3-6, .big-span2-4    { width: 50%; }
-    .big-span4-7                                        { width: 57.142%; }
-    .big-span3-5                                        { width: 60%; }
-    .big-span2-3, .big-span4-6                      { width: 66.666%; }
-    .big-span5-7                                        { width: 71.428%; }
-    .big-span3-4                                        { width: 75%; }
-    .big-span4-5                                        { width: 80%; } 
-    .big-span5-6                                        { width: 83.333%; }
-    .big-span6-7                                        { width: 85.714%; }
-    .big-span1-1, .big-span2-2, .big-span3-3, 
-    .big-span4-4, .big-span5-5, .big-span6-6,
-    .big-span7-7                                        { width: 100%; }
+@media only screen and (--minXL) {
+  /* 992 =================================================== */
+    .xl-span1-7                              { width: 14.285%; }
+    .xl-span1-6                              { width: 16.666%; }
+    .xl-span1-5                              { width: 20%; }
+    .xl-span1-4                              { width: 25%; }
+    .xl-span2-7                              { width: 28.571%; }
+    .xl-span1-3, .xl-span2-6                 { width: 33.333%; }
+    .xl-span2-5                              { width: 40%; }
+    .xl-span3-7                              { width: 42.857%; }
+    .xl-span1-2, .xl-span3-6, .xl-span2-4    { width: 50%; }
+    .xl-span4-7                              { width: 57.142%; }
+    .xl-span3-5                              { width: 60%; }
+    .xl-span2-3, .xl-span4-6                 { width: 66.666%; }
+    .xl-span5-7                              { width: 71.428%; }
+    .xl-span3-4                              { width: 75%; }
+    .xl-span4-5                              { width: 80%; } 
+    .xl-span5-6                              { width: 83.333%; }
+    .xl-span6-7                              { width: 85.714%; }
+    .xl-span1-1, .xl-span2-2, .xl-span3-3, 
+    .xl-span4-4, .xl-span5-5, .xl-span6-6,
+    .xl-span7-7                              { width: 100%; }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* 2x =================================================== */
-}
+
 
