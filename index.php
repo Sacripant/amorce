@@ -77,10 +77,9 @@
 
 
 <!-- Javascript bottom -->
-	<!-- chercher Jquery sur le CDN google -->
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<!-- Si le CDN google n'est pas dispo, utilise Jquery locale -->
-	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<!-- Jquery -->
+	<!-- // <script src="js/jquery-1.11.2.min.js"></script> -->
+	<script src="js/jquery-2.1.3.min.js"></script>
 
 </body>
 
