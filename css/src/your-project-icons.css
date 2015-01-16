@@ -1,0 +1,66 @@
+
+/* Template created by @sacripant for WAPPA */
+/* Used with grunt-webfont */
+/* Based on https://github.com/endtwist/fontcustom/blob/master/lib/fontcustom/templates/fontcustom.css */
+
+
+
+
+@font-face {
+	font-family:"your-project-icons";
+	src:url("../../fonts/your-project-icons.eot?5078b0713d3211bc05678251fc7ff4e1");
+	src:url("../../fonts/your-project-icons.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/your-project-icons.woff?5078b0713d3211bc05678251fc7ff4e1") format("woff"),
+		url("../../fonts/your-project-icons.ttf?5078b0713d3211bc05678251fc7ff4e1") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+
+
+
+/* Bootstrap Overrides */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family:"your-project-icons";
+	display:inline-block;
+	vertical-align:middle;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+
+
+
+/* Icons */
+
+.icon-home:before {
+	content:"\f101";
+}
+
+.icon-minus:before {
+	content:"\f102";
+}
+
+.icon-plus:before {
+	content:"\f103";
+}
+
+.icon-x-cross:before {
+	content:"\f104";
+}
+
+
+[class^="icon-"] i,
+[class*=" icon-"] i,
+.visuallyhidden	{ border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }    
+

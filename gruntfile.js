@@ -8,7 +8,8 @@ module.exports = function(grunt){
             css : {
                 src : [
                     'css/src/config.css',
-                    'css/src/reset.css', 
+                    'css/src/reset.css',
+                    'css/src/your-project-icons.css',
                     'css/src/typography.css', 
                     'css/src/utils+grid.css', 
                     'css/src/forms.css', 
@@ -17,6 +18,7 @@ module.exports = function(grunt){
                 ],
                 output : [
                     'css/output/reset.css', 
+                    'css/output/your-project-icons.css',
                     'css/output/typography.css', 
                     'css/output/utils+grid.css', 
                     'css/output/forms.css', 

@@ -77,4 +77,12 @@ header {
 	height: 50px;
 }
 
+/*
+**	Icons list
+*/
+.i--icons {
+	max-width: 8em;
+	text-align: center;
+}
+
 

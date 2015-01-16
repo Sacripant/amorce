@@ -24,6 +24,7 @@
 <!-- CSS -->
 
 	<link rel="stylesheet" href="../css/output/reset.css" media="all" />
+	<link rel="stylesheet" href="../css/output/your-project-icons.css" media="all" />
 	<link rel="stylesheet" href="../css/output/typography.css" media="all" />
 	<link rel="stylesheet" href="../css/output/utils+grid.css" media="all" />
 	<link rel="stylesheet" href="../css/output/forms.css" type="text/css" media="all" />
@@ -57,6 +58,7 @@
 					<li><a class="a-toc" href="typo.html">Typography</a></li>
 					<li><a class="a-toc" href="grille.html">Grid</a></li>
 					<li><a class="a-toc" href="forms.html">Forms</a></li>
+					<li><a class="a-toc" href="your-project-icons.html">Icons</a></li>
 					<li><a class="a-toc" href="composants.html">Composants</a></li>
 				</ul>
 			</nav>
