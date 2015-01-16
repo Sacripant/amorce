@@ -93,6 +93,24 @@ module.exports = function(grunt){
                 }]
             }
         },
+
+        webfont: {
+            icons: {
+                src: 'img/icons/*.svg',
+                dest: 'fonts',
+                destCss: 'css/src',
+                options: {
+                    font: '<%= pkg.name %>-icons',
+                    hashes: true,
+                    syntax: 'bootstrap',
+                    template: 'img/icons/icons-tmpl.css',
+                    templateOptions: {
+                        htmlDemoTemplate: 'img/icons/demoicons-tmpl.html',
+                        destHtml: 'docs'
+                    }
+                }
+            }
+        },
         
         watch: {
             options: {
@@ -114,12 +132,14 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-cssnext');
+    grunt.loadNpmTasks('grunt-webfont');
 
 
-    
     // Run plugins
     grunt.registerTask('default', ['cssmin:vars','cssnext']);
     grunt.registerTask('buildcss', ['cssmin:vars','cssnext', 'cssmin:combine']);
+    grunt.registerTask('icons', ['svgmin:icons','webfont:icons']);
+
 
 
 };
