@@ -56,6 +56,14 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
     left: 0;
 }
 
+/*
+*   Vertical rythme
+*   Default vertical rythme and gutter size are identic
+*/
+.v_space {
+    margin-bottom: var(--vr)em;
+    margin-bottom: var(--vr)rem;
+}
 
 /*
 *   Grids
@@ -96,12 +104,15 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .fl_grid
 , .il_grid  
 { 
-    margin: 0 -var(--gutter-half)rem; /*(1)*/
+    margin-left: -var(--gutter-half)rem; /*(1)*/
+    margin-right: -var(--gutter-half)rem; /*(1)*/
     overflow: hidden;
     /*background-color: yellow;*/
 }
 
-.fl_grid  > [class*=-span]
+.fl_grid  > *
+, .fl_grid  > [class*=-span]
+, .il_grid  > *
 , .il_grid  > [class*=-span]
 {
     padding-left: var(--gutter-half)em; /*(2)*/
@@ -129,7 +140,9 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .il_grid {
     font-size: 0; 
 }
-.il_grid > [class*=-span] {
+.il_grid > * 
+, .il_grid > [class*=-span] 
+{
     font-size: 1rem; 
     display: inline-block;
     float: none;
@@ -152,7 +165,8 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 }
 
-.no-gutter > [class*=-span]  
+.no-gutter > *  
+, .no-gutter > [class*=-span]  
 {
     padding: 0;
 }

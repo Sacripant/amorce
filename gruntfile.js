@@ -31,17 +31,6 @@ module.exports = function(grunt){
                 'includes/*.php'
             ]
         },
-
-        // autoprefixer: {
-        //     all_css: {
-        //         browser : 'last 3 version',
-        //         cascade : true,
-        //         expand: true,
-        //         flatten: true,
-        //         src  : '<%= files.css.src %>',
-        //         dest : 'css/output/'
-        //     }
-        // },
         
         cssmin: 
         {
