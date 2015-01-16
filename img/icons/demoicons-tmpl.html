@@ -1,0 +1,35 @@
+<section id="doc-icons" class="doc-section">
+
+
+		<h1><%= fontBaseName %></h1>
+
+		<ul class="l--icons il_grid v-space" id="icons">
+			<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+				<li class="i--icons ">
+					<label for="<%= classPrefix %><%= glyph %>" class="h1 <%= classPrefix %><%= glyph %>"></label>
+					<input class="small" type="text" id="<%= classPrefix %><%= glyph %>" value="<%= classPrefix %><%= glyph %>" />
+				</li>
+			<% } %>
+		</ul>
+
+		<% if (addLigatures) { %>
+		<div class="ligature-icons" style="display:none">
+			<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx]; %>
+				<%= glyph %>
+			<% } %>
+		</div>
+		<% } %>
+
+		<h2>Usage</h2>
+		<pre><code>&lt;i class=&quot;<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></pre>
+		<% if (addLigatures) { %>
+		<pre><code>&lt;i class=&quot;ligature-icons&quot;&gt;<span id="name2">name</span>&lt;/i&gt;</code></pre>
+		<% } %>
+
+		<footer>
+			<p>
+				Font icon are generated with <a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a>.				
+			</p>
+		</footer>
+
+</section>

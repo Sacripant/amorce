@@ -1,0 +1,60 @@
+
+/* Template created by @sacripant for WAPPA */
+/* Used with grunt-webfont */
+/* Based on https://github.com/endtwist/fontcustom/blob/master/lib/fontcustom/templates/fontcustom.css */
+
+<% if (fontfaceStyles) { %>
+
+<% if (fontSrc1 && embed.length) { %>
+@font-face {
+    font-family:"<%= fontBaseName %>";
+    src:<%= fontSrc1 %>;
+    font-weight:normal;
+    font-style:normal;
+}
+<% } %>
+@font-face {
+	font-family:"<%= fontBaseName %>";<% if (fontSrc1) { %>
+	src:<%= fontSrc1 %>;<% }%>
+	src:<%= fontSrc2 %>;
+	font-weight:normal;
+	font-style:normal;
+}
+
+<% } %>
+
+
+
+<% if (baseStyles) { %>
+/* Bootstrap Overrides */
+[class^="<%= classPrefix %>"]:before,
+[class*=" <%= classPrefix %>"]:before<% if (addLigatures) { %>,
+.ligature-icons<% } %> {
+	font-family:"<%= fontBaseName %>";
+	display:inline-block;
+	vertical-align:middle;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+<% } %>
+
+
+<% if (iconsStyles) { %>
+/* Icons */
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.<%= classPrefix %><%= glyphs[glyphIdx] %>:before {
+	content:"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
+}
+<% } } %>
+
+[class^="<%= classPrefix %>"] i,
+[class*=" <%= classPrefix %>"] i,
+.visuallyhidden	{ border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }    
+
