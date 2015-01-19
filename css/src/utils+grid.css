@@ -37,9 +37,6 @@ img[alt="placeholder"].music{ background-image : url(../../img/placeholder/music
 img[alt="placeholder"].food { background-image : url(../../img/placeholder/food.jpg); }
 img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.jpg); }
 
-/* Initialize list
-------------------*/
-.nude { list-style-type: none; margin: 0; }
 
 /* bloc link
 --------------*/
