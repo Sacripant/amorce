@@ -16,14 +16,14 @@
 <!-- microformats	 -->
 	<link rel="home" href="http://www.adresse_production.com/" />
 	
-<!-- affichage favicon -->
+<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
 <!-- CSS -->
 
 	<link rel="stylesheet" href="css/output/reset.css" media="all" />
 	<link rel="stylesheet" href="css/output/your-project-icons.css" media="all" />
-	<link rel="stylesheet" href="css/output/typography.css" media="all" />
+	<link rel="stylesheet" href="css/output/typography+colors.css" media="all" />
 	<link rel="stylesheet" href="css/output/utils+grid.css" media="all" />
 	<link rel="stylesheet" href="css/output/forms.css" media="all" />
 	<link rel="stylesheet" href="css/output/components.css" media="screen" />

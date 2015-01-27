@@ -25,7 +25,7 @@
 
 	<link rel="stylesheet" href="../css/output/reset.css" media="all" />
 	<link rel="stylesheet" href="../css/output/your-project-icons.css" media="all" />
-	<link rel="stylesheet" href="../css/output/typography.css" media="all" />
+	<link rel="stylesheet" href="../css/output/typography+colors.css" media="all" />
 	<link rel="stylesheet" href="../css/output/utils+grid.css" media="all" />
 	<link rel="stylesheet" href="../css/output/forms.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="../css/output/components.css" type="text/css" media="all" />

@@ -1,14 +1,27 @@
 @import "config.min.css";
 /* -------------------------------------------------------------- 
    
-	typography.css
+	typography+colors.css
+	* Default colors class
 	* Sets up some sensible default typography.
 	* Thanks to Boilerplate, Knacss and blueprint
 	© sacripant.fr
 
 -------------------------------------------------------------- */
 
-/* Default font settings. */
+/*	
+*	Colors
+*/
+
+.txt-color	{ color: var(--txt-color); }
+.h-color	{ color: var(--h-color); }
+
+
+
+
+/* 
+*	Default font settings. 
+*/
 html {
 	font-size: 100%; /*default 16px*/
 }
@@ -17,7 +30,7 @@ body {
 	line-height: var(--vr);
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
-	color: hsl(0, 0%, 30%); 
+	color: var(--txt-color); 
 	background: #fff;
 }
 
@@ -29,7 +42,7 @@ body {
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6
-	{ font-weight: normal; color: hsl(0, 0%, 15%); }
+	{ font-weight: normal; color: var(--h-color); }
 
 h1, .h1 { font-size: var(--fs-h1)em;	line-height: 1;			margin-bottom: var(--vr)rem; }
 h2, .h2 { font-size: var(--fs-h2)em;	line-height: 1.1;		margin-bottom: var(--vr)rem; }

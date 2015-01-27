@@ -26,6 +26,10 @@
 	--gutter : var(--vr);
 	--gutter-half : calc( var(--gutter) / 2 );
 
+	/*Colors*/
+	--txt-color : hsl(0, 0%, 30%);
+	--h-color : hsl(0, 0%, 15%);
+
 }
 
 /*custom-medias*/

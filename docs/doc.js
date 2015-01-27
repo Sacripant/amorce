@@ -40,6 +40,11 @@ $(function() {
     /*
     //  Display Colors
     */
+
+    function getColor(el){
+        var color = window.getComputedStyle(el,null).getPropertyValue('color');
+        return color;
+    }
     
     function colors() {
         var colorsList = $('.ul-doc-colors li')
@@ -48,19 +53,27 @@ $(function() {
     
         if (colorsList.length) 
         {
+
             colorsList.each(function() {
-                var c = $(this).text()
+                var c = getColor(this)
+                ,   classN = this.className
                 ,   colorbloc = document.createElement('div')
                 ,   hex = tinycolor(c).toHexString()
+                ,   hsl = tinycolor(c).toHslString()
                 ;
+
+                console.log(c);
 
                 colorbloc.setAttribute('class', 'bloc-color');
                 colorbloc.style.backgroundColor = c;
             
                 console.log(hex);
             
-                $(this).prepend(hex +'<br />');
-                $(this).prepend(colorbloc);
+                $(this).append(colorbloc);
+                $(this).append(classN + '<br />' + hsl + '<br />' + hex);
+
+                this.className = 'small';
+                // $(this).prepend(colorbloc);
             });
         }       
     }
