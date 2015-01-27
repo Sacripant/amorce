@@ -143,14 +143,43 @@ li ol {
 -------------------------------------------------------------- */
 /* Tables still need 'cellspacing="0"' in the markup. */
 
-table       	{ border-collapse: separate; border-spacing: 0; margin-bottom: 1.5em; width:100%; }
-table, td, th	{ vertical-align: middle; }
-th          	{ font-weight: bold; }
-thead th 		{ background: #c3d9ff; }
-th,td,caption	{ text-align: left; font-weight: normal; padding: 4px 10px 4px 5px; }
-tr.even td  	{ background: #e5ecf9; }
-tfoot       	{ font-style: italic; }
-caption     	{ background: #eee; }
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: var(--vr)em;
+	width: 100%
+}
+
+table,td,th {
+	vertical-align:middle
+}
+thead th {
+	border-bottom: 1px solid;
+}
+
+th,td,caption {
+	text-align:left;
+	font-weight:400;
+	padding:4px 10px 4px 5px
+}
+th {
+	font-weight:700;
+}
+
+tr.even td {
+	background: hsla(0, 0%, 0%, 0.05);
+}
+
+tfoot {
+	font-style:italic
+}
+
+caption {
+	font-size: var(--fs-small)em;
+	text-transform: uppercase;
+	border-bottom: 1px solid;
+}
+
 
 
 
