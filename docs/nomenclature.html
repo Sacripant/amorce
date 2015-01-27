@@ -2,11 +2,11 @@
 	<h1>Nomenclature</h1>
 
 	<p>
-		Le system de nomenclature de class CSS est un dérivé du système BEM (Block--Element--modifier) <br>
+		Le system de nomenclature de class CSS est un dérivé du système BEM (Block__Element--modifier) <br>
 
 		Il utilise l'<em>Element</em> en suffixe qui est inspiré de la sémantique des balise html. <br>
-		Le suffixe est séparer par 2 tirets du nom du bloc <code>--</code>. <br>
-		Le nom du block peut être composé avec des <em>underscore</em>.
+		Le suffixe est séparer par 2 <em>underscores</em> du nom du bloc <code>__</code>. <br>
+		Le nom du block peut être composé avec des <em>tiret</em> <code>main-nav</code>.
 
 	</p>
 
@@ -31,10 +31,10 @@
 
 	<pre class="bloc-code">
 		<code>
-&lt;nav class=&quot;main_nav&quot;&gt;
-	&lt;ul class=&quot;l--main_nav&quot;&gt;
-		&lt;li class=&quot;i--main_nav&quot;&gt;
-			&lt;a href=&quot;#&quot; class=&quot;a--main_nav&quot;&gt;Link&lt;/a&gt;
+&lt;nav class=&quot;main-nav&quot;&gt;
+	&lt;ul class=&quot;l__main_nav&quot;&gt;
+		&lt;li class=&quot;i__main-nav&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;a__main-nav&quot;&gt;Link&lt;/a&gt;
 		&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/nav&gt;</code>
@@ -42,19 +42,19 @@
 
 	<h3>Liste d'articles</h3>
 
-	<p>Les prefixes peuvent être cumulés, essentiellement dans listes de résultats</p>
+	<p>Les prefixes peuvent être cumulés, essentiellement dans les boucles (listes de résultats)</p>
 
 
 	<pre class="bloc-code">
 		<code>
 &lt;sections class=&quot;articles&quot;&gt;
-	&lt;ul class=&quot;l--articles&quot;&gt;
-		&lt;li class=&quot;i--articles&quot;&gt;
-			&lt;h2 class=&quot;h--i--articles&quot;&gt;Titre de l&#039;article&lt;/h2&gt;
-			&lt;div class=&quot;img--i--articles&quot;&gt;
+	&lt;ul class=&quot;l__articles&quot;&gt;
+		&lt;li class=&quot;i__articles&quot;&gt;
+			&lt;h2 class=&quot;h__i__articles&quot;&gt;Titre de l&#039;article&lt;/h2&gt;
+			&lt;div class=&quot;img__i__articles&quot;&gt;
 				&lt;img src=&quot;#&quot; alt=&quot;#&quot; /&gt;
 			&lt;/div&gt;
-			&lt;div class=&quot;metas--i--articles&quot;&gt;
+			&lt;div class=&quot;metas__i__articles&quot;&gt;
 				Auteur + Date
 			&lt;/div&gt;
 		&lt;/li&gt;
