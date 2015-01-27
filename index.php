@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<html class="no-js" lang="fr">
 
 <head>
 	<meta charset="utf-8" />
@@ -38,19 +33,13 @@
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 	<![endif]-->
 	
-	<!-- MODERNIZR, VERSION DE DEV, NON COMPRESSÉ ET FULL -->
-	<script src="js/modernizr.custom.2.8.3.js"></script>
-	<!-- Noter les fonctionnalités utilisé pour charger une version custom :
+	<!-- MODERNIZR, VERSION CUSTOM
+		Noter les fonctionnalités utilisé pour charger une version custom :
 		* html5shiv
 		* YepNope
 		* Class js/no-js 
 	-->
-	
-
-
-<!-- LIGNES À EFFACER LORS DE L'INCORPORATION AU CMS-->
-	<!-- Script permettant de rafraichir la page auto après mise à jour des css - FACILITE L'INTEGRAITON --> 
-	<!-- // <script src="js/live.js"></script> -->
+	<script src="js/modernizr.custom.2.8.3.js"></script>
 
 
 </head>
@@ -58,7 +47,7 @@
 
 <body id="home">
 	
-	<div id="wrapper">
+	<div class="wrapper">
 		
 		<header role="banner">
 			<h1>Squelette d'intégration HTML5</h1>
