@@ -31,6 +31,11 @@ module.exports = function(grunt){
                 '*.php',
                 'includes/*.html',
                 'includes/*.php'
+            ],
+            docs : [
+                'docs/*.html',
+                'docs/*.css',
+                'docs.*.js'
             ]
         },
         
@@ -124,6 +129,9 @@ module.exports = function(grunt){
             },
             html : {
                 files : '<%= files.html %>'
+            },
+            docs : {
+                files: '<%= files.docs %>'     
             }
         },
       
