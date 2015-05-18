@@ -149,4 +149,5 @@ module.exports = function(grunt){
     grunt.registerTask('default', ['cssmin:vars','cssnext']);
     grunt.registerTask('buildcss', ['cssmin:vars','cssnext', 'cssmin:combine']);
     grunt.registerTask('icons', ['svgmin:icons','webfont:icons']);
+    grunt.registerTask('init', ['buildcss','icons']);
 };
