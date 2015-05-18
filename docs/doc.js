@@ -105,7 +105,7 @@ $(function() {
     */ 
     
     var ajaxWrapper = $('#ajax-wrapper')
-    ,   aToc   = $('.a-toc')
+    ,   aToc   = $('.a__toc')
     ,   pageHash = location.hash
     ;
 
