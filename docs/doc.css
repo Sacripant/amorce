@@ -41,13 +41,9 @@ header {
 *	grid demo
 */
 
-
-.demo-grid [class*='_grid'] > div {
-/*	margin: 0.5em 0;	*/
-}
-.demo-grid .fl_grid > div:before 
-, .demo-grid .il_grid > div:before 
-, .demo-grid .tb_grid > div
+.demo-grid .fl-grid > div:before 
+, .demo-grid .il-grid > div:before 
+, .demo-grid .tb-grid > div
 {
 	background-color: #ddd;
 	border: 1px solid #aaa;
@@ -55,14 +51,14 @@ header {
 	line-height: 1.2em;	
 }
 
-.demo-grid .fl_grid > div:before 
-, .demo-grid .il_grid > div:before 
+.demo-grid .fl-grid > div:before 
+, .demo-grid .il-grid > div:before 
 {
 	display: block;
 	content: "." attr(class);
 }
 
-.demo-grid [class*="-span"] {
+.demo-grid [class*="span--"] {
 	word-wrap: break-word;
 }
 
