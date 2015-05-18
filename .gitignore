@@ -1,4 +1,8 @@
 css/src/config.min.css
+css/src/your-project-icons.css
 css/output/
 css/your-project.min.css
+docs/your-project-icons.html
+fonts/*
+img/icons/*.svg
 node_modules/
