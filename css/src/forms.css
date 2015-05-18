@@ -1,3 +1,4 @@
+@import "config.min.css";
 /* --------------------------------------------------------------
 	forms.css
 		define default form styles
@@ -28,10 +29,10 @@ input[type="submit"]::-moz-focus-inner
 
 /*Default fieldset : as a title*/
 fieldset    { 
-	margin-bottom: 1em;
+	margin-bottom: var(--vr)em;
 }
 legend      { 
-	font-size: 1.36em; /*.h5*/
+	font-size: var(--fs-h6);
 	white-space: nowrap; 
 	border-bottom: 1px solid;
 	display: block;
@@ -40,7 +41,7 @@ legend      {
 }
 /*Fieldset border*/
 .fieldset-border {
-	margin: 0 0 1.5em 0; 
+	/*margin: 0 0 1.5em 0; */
 	border: 1px solid #ccc; 
 	padding: 0 1em 0.66em 1em;	
 }
@@ -56,14 +57,15 @@ legend      {
 */
 
 .form-item	{ 
-	padding-bottom: 0.33em;
-	padding-top: 0.33em;
+	margin-bottom: calc( var(--vr) / 3 )em;
+	margin-top: calc( var(--vr) / 3 )em; 
 }
 
 label       { 
-	text-transform: uppercase; 
-	font-size: .85em;  /* .small */
+	/*text-transform: uppercase; */
+	font-size: var(--fs-small)em;
 	color: #666;
+	line-height: normal;
 }
 
 
@@ -75,7 +77,6 @@ input
 , textarea
 , select 
 {
-	background-color:#eee;
 	min-width: 100%; max-width: 100%;
 	padding: 0.33em;
 	border: 1px solid #ccc;
@@ -89,7 +90,6 @@ input:focus
 , select:focus 
 {
 	border-color:#666;
-	background-color: #fff;
 }
 input[type=checkbox]
 , input[type=radio]
@@ -118,17 +118,6 @@ input[type=date] {
 }
 
 
-/*
-//	Radio / checkbox list
-*/
-
-.form-list-chk, .form-list-rdo {
-	height: 100%;
-	list-style: none outside none;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 /*For correct input alignement with sibling form-item if no label (for submit per ex)*/
 .no-label input	{
 	margin-top: 1.5em; /*cf typo line-height*/
@@ -139,16 +128,9 @@ input[type=date] {
 /* 
 //	Form item inline
 */
-
 .inline-form input, .inline-form textarea, .inline-form select { 
 	min-width: 0;
 	width: auto;
-	vertical-align: middle;
-}
-.inline-form li {
-	margin-right: 1em; 
-	float: left; 
-	display: inline; 
 }
 
 
@@ -170,7 +152,7 @@ input[type=date] {
 .input-addon {
 	width: 1%;
 	background-color: #ddd;
-	border: 1px solid #999;
+	/*border: 1px solid #999;*/
 }
 span.input-addon {
 	padding: 0 0.33em;	
@@ -186,19 +168,56 @@ span.input-addon {
 
 
 
-/* 
-//	Success, notice and error boxes
+/*
+*	Notifications
+*	* Error
+*	* notif
+*	* success
 */
 
-.error,.notice,.success	{ padding: .5em; margin-bottom: 1em; border: 2px solid #ddd; }
-.error       			{ background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
-.notice                 { background: #d1ecf7; color: #11689e; border-color: #bcdfef; }
-.success 				{ background: #E6EFC2; color: #264409; border-color: #C6D880; }
+/*colors*/
 
-.error a,				{ color: #8a1f11; }
-.notice a               { color: #514721; }
-.success a              { color: #264409; }
 
+.notif	{ 
+	padding: .5em; 
+	margin-bottom: 1em; 
+	border: 1px solid; 
+}
+
+/* ERROR */
+.color-error		{ color: var(--color-error); }
+.color-error-bg		{ color: var(--color-error-bg); }
+
+.error		{ 
+	color: var(--color-error);
+}
+
+.notif.error 
+, .error input
+, .error textarea
+, .error select
+{
+	background: var(--color-error-bg); 	
+}
+
+/* NOTICE */
+.color-notice		{ color: var(--color-notice); }
+.color-notice-bg	{ color: var(--color-notice-bg); }
+
+.notif.notice
+{ 
+	background-color: var(--color-notice-bg);
+	color: var(--color-notice); 
+}
+
+/* SUCCESS */
+.color-success		{ color: var(--color-succes); }
+.color-success-bg	{ color: var(--color-success-bg); }
+
+.notif.success	{ 
+	background-color: var(--color-success-bg); 
+	color: var(--color-success); 
+}
 
 /* 
 //	Required field
