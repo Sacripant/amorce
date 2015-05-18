@@ -36,7 +36,6 @@
 	<!-- MODERNIZR, VERSION CUSTOM
 		Noter les fonctionnalités utilisé pour charger une version custom :
 		* html5shiv
-		* YepNope
 		* Class js/no-js 
 	-->
 	<script src="js/modernizr.custom.2.8.3.js"></script>
@@ -50,7 +49,7 @@
 	<div class="wrapper">
 		
 		<header role="banner">
-			<h1>Squelette d'intégration HTML5</h1>
+			<h1>Amorce, un stater kit pour vos intégrations web</h1>
 		</header>
 	
 		<main role="main">
