@@ -58,6 +58,7 @@ module.exports = function(grunt){
         cssnext: {
             options: {
                 sourcemap: true,
+                map: { inline: false },
                 features: {
                     calc: {
                         preserve: false,
