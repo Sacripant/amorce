@@ -6,7 +6,7 @@
 	© sacripant.fr
 	List of reusable design components
 
-	* item 1
+	* buttons
 	* Item 2
 -------------------------------------------------------------- */ 
 
@@ -16,11 +16,6 @@
 .btn 
 , [class*=btn--]
 {
-	/*border: 1px solid;*/
-	color: var(--color2);
-	background-color: var(--color2-lightgrey);
-
-
 	display: inline-block;
 	vertical-align: middle;
 

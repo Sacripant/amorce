@@ -211,7 +211,7 @@ span.input-addon {
 }
 
 /* SUCCESS */
-.color-success		{ color: var(--color-succes); }
+.color-success		{ color: var(--color-success); }
 .color-success-bg	{ color: var(--color-success-bg); }
 
 .notif.success	{ 
