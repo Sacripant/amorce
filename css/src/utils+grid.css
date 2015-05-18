@@ -113,11 +113,11 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 /* Float-left grid
 --------------------*/
 
-/*CLEARFIX for grid*/
+/*CLEARFIX for float grid*/
 .fl-grid:before, .fl-grid:after { content: ""; display: table; }
 .fl-grid:after                  { clear: both; }
 
-.fl_grid > [class*=span--] {
+.fl-grid > [class*=span--] {
     float: left;
     display: block;
 }
