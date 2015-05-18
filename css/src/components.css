@@ -16,6 +16,9 @@
 .btn 
 , [class*=btn--]
 {
+	color: var(--txt-color);
+	background-color: #fff;
+
 	display: inline-block;
 	vertical-align: middle;
 
