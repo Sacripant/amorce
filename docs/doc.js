@@ -130,27 +130,24 @@ $(function() {
         }       
     }
 
-    function changePagewHash(hash, link)
+    function changePagewHash(hash)
     {
 
         var nhash = hash.slice(1)
         ,   regexp = new RegExp(nhash, 'g')
         ;
 
-        if (link) 
-        {
-            changePage(link);
-        }
-        else
-        {
-            var newlink = aToc.filter(function() {
+        console.log(nhash);
+
+        var checklink = aToc.filter(function() {
                 var href = this.getAttribute('href');
                 return regexp.test(href);
-            })[0].href; 
+            });
 
+        if (checklink.length) {
+            var newlink = checklink[0].href;
             changePage(newlink);       
         }
-
     }
 
 
@@ -181,19 +178,12 @@ $(function() {
     }());
 
     
-    // Charge page when hach change
+    // Charge page when hash change
     $(window).on('hashchange', function() {
         var pageHash = location.hash;
-        changePagewHash(pageHash, false);
+        changePagewHash(pageHash);
     });
-
-
-
-
-
-    
-    
-    
+   
     
 });
 
