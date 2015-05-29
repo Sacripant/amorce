@@ -148,10 +148,10 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 {
     margin-left: 0;
     margin-right: 0;
-    /*remove gutter for table grid*/
+}
+.tb-grid.no-gutter {
     width: 100%;
-    border-collapse: collapse;
-
+    border-collapse: collapse;    
 }
 
 .no-gutter > *  
