@@ -205,3 +205,22 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
     white-space: nowrap;     
     text-overflow: ellipsis;
 }
+
+/*	Initialize list (remove list-type type and margin) */
+.nude { list-style-type: none; margin: 0; }
+
+
+/*	add ... for too long one line text  */
+.ellipsis {
+    overflow: hidden;        
+    white-space: nowrap;     
+    text-overflow: ellipsis;
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.txt-center {
+	text-align: center;
+}
