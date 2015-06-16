@@ -111,7 +111,7 @@ input[type=checkbox]
 	height: auto;	
 }
 input[type=file] { 
-	border: 0 none; padding: 0; /*for firefox display*/ 
+	border: 0 none; padding: 0; width: 100%;/*for firefox display*/ 
 }
 input[type=date] { 
 	font: inherit; /*for chrome display*/
