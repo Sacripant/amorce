@@ -32,10 +32,10 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 /* bloc link
 --------------*/
-.bloc_link {
+.bloc-link {
     position: relative;
 }
-.a--bloc_link:before {
+.a__bloc-link:before {
     content: "";
     display: block;
     position: absolute;
