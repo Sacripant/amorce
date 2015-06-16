@@ -1,8 +1,8 @@
 @import "config.min.css";
 /* --------------------------------------------------------------
     utils+grid.css
-        define default form styles
-        * Thanks boilerplate for Normalize Form CSS
+        define some utils class
+        define grids system
         © sacripant.fr
 -------------------------------------------------------------- */ 
 
@@ -56,11 +56,8 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 /*
 *   Grids
-*   - display table (knacss)
-*   - float:left 1 à 7 colonnes imbricable
-*   - display:inline 1 à 7 colonnes imbricable
-*
-*   - gouttière = 1.428%
+*   - table, float & inline-block grids
+*   - 1 à 7 colonnes imbricable
 */
 
 /* table layout grid 
