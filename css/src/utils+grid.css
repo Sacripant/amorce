@@ -45,14 +45,6 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
     left: 0;
 }
 
-/*
-*   Vertical rythme
-*   Default vertical rythme and gutter size are identic
-*/
-.v-space {
-    margin-bottom: var(--vr)em;
-    margin-bottom: var(--vr)rem;
-}
 
 /*
 *   Grids

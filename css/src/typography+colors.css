@@ -9,6 +9,7 @@
 
 	TOC :
 	* Colors
+	* Vertical rythme
 	* Default font settings
 	* Sizes
 	* Text elements
@@ -26,6 +27,18 @@
 
 .txt-color	{ color: var(--txt-color); }
 .h-color	{ color: var(--h-color); }
+
+
+/*
+*   Vertical rythme
+*   Default vertical rythme and gutter size are identic
+*/
+.v-space,
+.vsapce
+{
+    margin-bottom: var(--vr)em;
+    margin-bottom: var(--vr)rem;
+}
 
 
 
@@ -206,12 +219,6 @@ caption {
 *	HR
 */
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-
-
-
-
-
 
 
 /*
