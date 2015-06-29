@@ -7,6 +7,17 @@
 	* Thanks to Boilerplate, Knacss and blueprint
 	© sacripant.fr
 
+	TOC :
+	* Colors
+	* Default font settings
+	* Sizes
+	* Text elements
+	* Lists
+	* Tables
+	* Texte selection
+	* hr
+	* typographic utils class
+
 -------------------------------------------------------------- */
 
 /*	
@@ -37,7 +48,7 @@ body {
 
 /* 
 *	Headings
-*
+*	Define modules size
 * quotient : 1.1667 (http://instacalc.com/17574)
 -------------------------------------------------------------- */
 
@@ -71,8 +82,9 @@ small,
 .xbig		{ font-size: var(--fs-h5)em }
 
 
-/* Text elements
--------------------------------------------------------------- */
+/* 
+*	Text elements
+*/
 
 p, .p 		{
 	font-size: 1em; 
@@ -116,8 +128,9 @@ pre 					{ margin-bottom: var(--vr)em;  white-space: pre; white-space: pre-wrap;
 mark { background: #ff0; color: #000; }
 
 
-/* Lists
--------------------------------------------------------------- */
+/* 
+*	Lists
+*/
 
 li ul, 
 li ol       { margin:0 var(--vr)em; }
@@ -139,9 +152,9 @@ li ol {
 }
 
 
-/* Tables
--------------------------------------------------------------- */
-/* Tables still need 'cellspacing="0"' in the markup. */
+/* 
+*	Tables
+*/
 
 table {
 	border-collapse: separate;
@@ -183,17 +196,27 @@ caption {
 
 
 
-/* Text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) 
--------------------------------------------------------------- */
+/* 
+*	Text-selection colors 
+*	* remove any text shadows: twitter.com/miketaylr/status/12228805301) 
+*/
 ::selection { background: #fcd700; color: #fff; text-shadow: none; }
 
-/* HR
--------------------------------------------------------------- */
+/* 
+*	HR
+*/
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 
-/*typographic utils class
----------------------------*/
+
+
+
+
+
+
+/*
+*	typographic utils class
+*/
 
 /*	Initialize list (remove list-type type and margin) */
 .nude { list-style-type: none; margin: 0; }
@@ -206,10 +229,6 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
     text-overflow: ellipsis;
 }
 
-/*	Initialize list (remove list-type type and margin) */
-.nude { list-style-type: none; margin: 0; }
-
-
 /*	add ... for too long one line text  */
 .ellipsis {
     overflow: hidden;        
@@ -217,10 +236,10 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
     text-overflow: ellipsis;
 }
 
+/*	Texte align */
 .txt-right {
 	text-align: right;
 }
-
 .txt-center {
 	text-align: center;
 }
