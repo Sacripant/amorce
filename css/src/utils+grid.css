@@ -47,6 +47,39 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 
 
 /*
+*   Define Breakpoints
+*   hese values will not show up in content, but can be 
+*   queried by JavaScript to know which breakpoint is active.
+*   https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+*/
+
+body:before {
+  content: "xs";
+  display: none; /* Prevent from displaying. */
+}
+@media (--minS) {
+  body:before {
+    content: "s";
+  }
+}
+@media (--minM) {
+  body:before {
+    content: "m";
+  }
+}
+@media (--minL) {
+  body:before {
+    content: "l";
+  }
+}
+@media (--minXL) {
+  body:before {
+    content: "xl";
+  }
+}
+
+
+/*
 *   Grids
 *   - table, float & inline-block grids
 *   - 1 à 7 colonnes imbricable
