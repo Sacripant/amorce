@@ -86,8 +86,6 @@ body:before {
 { 
     margin-left: -var(--gutter-half)rem; /*(1)*/
     margin-right: -var(--gutter-half)rem; /*(1)*/
-    overflow: hidden;
-    /*background-color: yellow;*/
 }
 
 .fl-grid  > *
