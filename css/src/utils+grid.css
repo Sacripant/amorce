@@ -59,22 +59,22 @@ body:before {
 }
 @media (--minS) {
   body:before {
-    content: "s";
+    content: "minS";
   }
 }
 @media (--minM) {
   body:before {
-    content: "m";
+    content: "minM";
   }
 }
 @media (--minL) {
   body:before {
-    content: "l";
+    content: "minL";
   }
 }
 @media (--minXL) {
   body:before {
-    content: "xl";
+    content: "minXL";
   }
 }
 
