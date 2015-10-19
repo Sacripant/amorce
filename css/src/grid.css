@@ -73,7 +73,6 @@ body:before {
 .tb-grid > *,
 .tb-grid > [class*=span] {
     display: table-cell;
-    vertical-align: bottom;
     float: none;
 }
 
