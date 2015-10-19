@@ -130,7 +130,12 @@ body:before {
 }
 
 
-/*Collapsed grid (no gutter)
+/*
+*   Grids Option
+*/
+
+
+/* Unguttered grid (no gutter)
 -----------------------------*/
 
 .no-gutter
