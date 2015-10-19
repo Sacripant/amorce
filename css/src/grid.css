@@ -2,13 +2,23 @@
 /* --------------------------------------------------------------
     grid.css
         define grids system
+        Amorce Framework
         © sacripant.fr
+
+        * Body breakpoint
+        * Grids
+        ** Table grid
+        ** Float grid
+        ** Inline grid
+        * Option: 
+            unguttered;
+        
 -------------------------------------------------------------- */ 
 
 
 /*
-*   Define Breakpoints
-*   hese values will not show up in content, but can be 
+*   Define Breakpoints in Body.
+*   These values will not show up in content, but can be 
 *   queried by JavaScript to know which breakpoint is active.
 *   https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
 */
