@@ -19,7 +19,7 @@
 */
 
 .clear              { clear: both; }
-.hide               { display: none; visibility: hidden; }
+.hide               { display: none; }
 .visuallyhidden     { border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }
 
 /* CLEARFIX 
@@ -51,6 +51,7 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
     bottom: 0;
     left: 0;
 }
+
 /* center a block horizontally */
 .center-bloc {
     display: block;
