@@ -51,3 +51,13 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
     bottom: 0;
     left: 0;
 }
+/* center a block horizontally */
+.center-bloc {
+    display: block;
+    margin-right: auto; 
+    margin-left: auto;
+}
+/* Full size for inline-block, usefull for btn */
+.fit {
+    width: 100%;
+}
