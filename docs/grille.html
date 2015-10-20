@@ -1,26 +1,54 @@
 <section id="doc-grille" class="doc-section">
-	<h1>Grid</h1>
+	<h1>Grids</h1>
 
 	<p>
 		3 systèmes de grilles sont disponibles : 
 	</p>
 
 	<ul>
-		<li> <code>.tb-grid</code> Basée sur le <em>table</em> layout.</li>
-		<li> <code>.fl-grid</code> Basée sur un layout en <em>float left</em>.</li>
-		<li> <code>.il-grid</code> Basée sur un layout en <em>inline-grid</em>.</li>
+		<li> <code>.tb-grid</code> Basée sur un <em>table layout</em>.</li>
+		<li> <code>.fl-grid</code> Basée sur un <em>float left layout</em>.</li>
+		<li> <code>.il-grid</code> Basée sur un <em>inline-grid layout</em>.</li>
 	</ul>
 
+	<h3>Gouttière</h3>
+
 	<p>
-		Le system de grille permet de composer avec un système de 2 à 7 colonnes imbricables, avec ou sans gouttières. <br />
-		Pour supprimer les gouttières à un système de grille, simplement ajouter la class <code>no-gutter</code> sur le wrapper de la grille.
+		La taille de la gouttière est par défaut équivalente au rythme vertical. <br/>
+		Cette valeur est gérée par la <code>var(--gutter)</code>
 	</p>
 	
-	<h2>Table grid</h2>
-	
+	<h3>Colonnes</h3>
+
 	<p>
-		By default table-grid is <code>vertical-align:bottom</code>
+		Les grilles permettent diverses compositions avec un système de 2 à 7 colonnes imbricables, avec gouttières par défault. <br />
+		Les taille des colonnes sont gérés grâce aux class <code>span--*</code>. <br/>
+		La taille de la colonne s'ajoute en option. Ex: <code>span--1-3</code>. <br/>
+		<strong>Astuce :</strong> cette class est optionnelle (voir exemple 1). <br/> 
+		Une class <code>span--auto</code> est également disponible.
 	</p>
+
+	<h3>Blocs options</h3>
+
+	<p>
+		<ul>
+			<li><code>.no-gutter</code> pour une grille sans colonnes</li>
+			<li><code>.half-gutter</code> pour des tailles de gouttières réduites de moitier</li>
+			<li>
+				<code>.va-top .va-middle .va-top</code> pour modifier l'alignement vertical des colonnes. <br/>
+				Fonctionne uniquement avec les <code>table-grid</code> et <code>il-gird</code>.
+			</li>
+		</ul>
+	</p>
+
+	<p>
+	</p>
+	
+	<h2>
+		Exemples
+	</h2>
+	
+	<h3><em>Table grid</em> 5 colonnes</h3>
 	
 	<div class="demo-grid code-demo">
 <div class="tb-grid">
@@ -39,7 +67,7 @@
 </div>		
 	</div>
 
-	<h3>Collpased table grid. Sans gouttière</h3>
+	<h3>Table grid + option <code>no-gutter</code></h3>
 
 		<div class="demo-grid code-demo">
 <div class="tb-grid no-gutter">
