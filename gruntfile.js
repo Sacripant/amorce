@@ -11,8 +11,9 @@ module.exports = function(grunt){
                     'css/src/reset.css',
                     'css/src/your-project-icons.css',
                     'css/src/typography+colors.css', 
-                    'css/src/utils+grid.css', 
                     'css/src/forms.css', 
+                    'css/src/grid.css', 
+                    'css/src/utils.css', 
                     'css/src/components.css', 
                     'css/src/layout+skin.css'
                 ],
@@ -20,8 +21,9 @@ module.exports = function(grunt){
                     'css/output/reset.css', 
                     'css/output/your-project-icons.css',
                     'css/output/typography+colors.css', 
-                    'css/output/utils+grid.css', 
                     'css/output/forms.css', 
+                    'css/output/grid.css', 
+                    'css/output/utils.css', 
                     'css/output/components.css', 
                     'css/output/layout+skin.css'
                 ],
