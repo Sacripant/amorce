@@ -41,11 +41,14 @@
 
 	--color-success   : hsl(91, 77%, 15%);
 	--color-success-bg: hsl(72, 58%, 85%);
-
 }
 
 /*custom-medias*/
+@custom-media --maxXS (max-width: 29.999em);
 @custom-media --minS (min-width: 30em);
-@custom-media --minM (min-width: 50em);
+@custom-media --maxS (max-width: 47.999em);
+@custom-media --minM (min-width: 48em);
+@custom-media --maxM (max-width: 59.999em);
 @custom-media --minL (min-width: 60em);
+@custom-media --maxL (max-width: 79.999em);
 @custom-media --minXL (min-width: 80em);
