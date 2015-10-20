@@ -62,3 +62,49 @@ img[alt="placeholder"].town { background-image : url(../../img/placeholder/town.
 .fit {
     width: 100%;
 }
+
+
+/*
+*   Responsive Hidden class
+*/
+@media (--maxXS) {
+    .hidden--maxXS {
+        display: none !important;
+    }
+}
+@media (--maxS) {
+    .hidden--maxS {
+        display: none !important;
+    }
+}
+@media (--maxM) {
+    .hidden--maxM {
+        display: none !important;
+    }
+}
+@media (--maxL) {
+    .hidden--maxL {
+        display: none !important;
+    }
+}
+@media (--minS) {
+    .hidden--minS {
+        display: none !important;
+    }
+}
+@media (--minM) {
+    .hidden--minM {
+        display: none !important;
+    }
+}
+@media (--minL) {
+    .hidden--minL {
+        display: none !important;
+    }
+}
+@media (--minXL) {
+    .hidden--minXL {
+        display: none !important;
+    }
+}
+
