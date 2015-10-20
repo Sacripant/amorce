@@ -133,6 +133,12 @@ body:before {
 *   Grids Option
 */
 
+/*vertical-align for table and inline grid
+-------------------------------------------*/
+.va-top > *     { vertical-align: top; }
+.va-bottom > *  { vertical-align: bottom; }
+.va-middle > *  { vertical-align: middle; }
+
 
 /* Unguttered grid (no gutter)
 -----------------------------*/
