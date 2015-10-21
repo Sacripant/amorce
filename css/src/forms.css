@@ -14,7 +14,7 @@
 /* hand cursor on clickable elements */
 .clickable, label, input[type=button], input[type=submit], button {cursor: pointer;}
 button[disabled], input[disabled] { cursor: default; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; color: inherit; font: inherit;}
 
 /*Debug input submit btn height*/
 input[type="submit"]::-moz-focus-inner
