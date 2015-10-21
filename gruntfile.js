@@ -110,6 +110,7 @@ module.exports = function(grunt){
                 dest: 'fonts',
                 destCss: 'css/src',
                 options: {
+                    engine: 'node',
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
