@@ -66,14 +66,14 @@ body {
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6
-	{ font-weight: normal; color: var(--h-color); }
+	{ font-weight: normal; color: var(--h-color); margin-bottom: var(--vr)rem; }
 
-h1, .h1 { font-size: var(--fs-h1)em;	line-height: 1;			margin-bottom: var(--vr)rem; }
-h2, .h2 { font-size: var(--fs-h2)em;	line-height: 1.1;		margin-bottom: var(--vr)rem; }
-h3, .h3 { font-size: var(--fs-h3)em;	line-height: 1.1;		margin-bottom: var(--vr)rem; }
-h4, .h4 { font-size: var(--fs-h4)em;	line-height: 1.2;		margin-bottom: var(--vr)rem; }
-h5, .h5 { font-size: var(--fs-h5)em;	line-height: 1.2;		margin-bottom: var(--vr)rem; }
-h6, .h6 { font-size: var(--fs-h6)em;	line-height: 1.285;		margin-bottom: var(--vr)rem; }
+h1, .h1 { font-size: var(--fs-h1)em;	line-height: 1;		 }
+h2, .h2 { font-size: var(--fs-h2)em;	line-height: 1.1;	 }
+h3, .h3 { font-size: var(--fs-h3)em;	line-height: 1.1;	 }
+h4, .h4 { font-size: var(--fs-h4)em;	line-height: 1.2;	 }
+h5, .h5 { font-size: var(--fs-h5)em;	line-height: 1.2;	 }
+h6, .h6 { font-size: var(--fs-h6)em;	line-height: 1.285;	 }
 
 /* avoid collapsing margins on headings */
 h1:first-child, h2:first-child,
@@ -99,10 +99,12 @@ small,
 *	Text elements
 */
 
-p, .p 		{
-	font-size: 1em; 
+p 		{
 	margin-bottom: var(--vr)em; 
 	hyphens: auto;
+}
+p, .p 	{
+	font-size: 1em; 
 }
 
 /*Links*/
