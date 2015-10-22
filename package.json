@@ -9,6 +9,7 @@
     "grunt-contrib-watch": "*",
     "grunt-cssnext": "*",
     "grunt-svgmin": "*",
-    "grunt-webfont": "*"
+    "grunt-webfont": "*",
+    "grunt-nunjucks-2-html": "*"
   }
 }

@@ -147,6 +147,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-cssnext');
     grunt.loadNpmTasks('grunt-webfont');
+    grunt.loadNpmTasks('grunt-nunjucks-2-html');
 
 
     // Run plugins
