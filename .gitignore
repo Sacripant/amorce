@@ -1,9 +1,7 @@
-css/output/
-fonts/*
+build/css
+build/fonts/*
 node_modules/
 
-css/src/config.min.css
-css/src/your-project-icons.css
+src/css/config.min.css
 docs/your-project-icons.html
-css/your-project.min.css
-img/icons/*.svg
+build/img/icons/*.svg
