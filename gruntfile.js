@@ -86,9 +86,9 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'img/',
+                    cwd: 'src/img/',
                     src: '*.svg',
-                    dest: 'img/'
+                    dest: 'build/img/'
 
                 }]
             },
@@ -96,26 +96,26 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'img/icons/',
+                    cwd: 'src/img/icons/',
                     src: '*.svg',
-                    dest: 'img/icons/'
+                    dest: 'build/img/icons/'
                 }]
             }
         },
 
         webfont: {
             icons: {
-                src: 'img/icons/*.svg',
-                dest: 'fonts',
-                destCss: 'css/src',
+                src: 'build/img/icons/*.svg',
+                dest: 'build/fonts',
+                destCss: 'build/css/',
                 options: {
                     engine: 'node',
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'img/icons/icons-tmpl.css',
+                    template: 'src/img/icons/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'img/icons/demoicons-tmpl.html',
+                        htmlDemoTemplate: 'src/img/icons/demoicons-tmpl.html',
                         destHtml: 'docs'
                     }
                 }
