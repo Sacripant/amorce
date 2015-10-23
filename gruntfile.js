@@ -120,6 +120,22 @@ module.exports = function(grunt){
                 }
             }
         },
+
+        nunjucks: {
+            options: {
+                paths : 'src/'
+            },
+            render: {
+                files:[{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'src/',
+                    src: '*.html',
+                    dest: 'build/',
+                    ext: '.html'
+                }]
+            }
+        },
         
         watch: {
             options: {
