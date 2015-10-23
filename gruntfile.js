@@ -44,13 +44,13 @@ module.exports = function(grunt){
             combine: 
             {
                 files: {
-                    'css/<%= pkg.name %>.min.css' : '<%= files.css.output %>'
+                    'build/css/<%= pkg.name %>.min.css' : '<%= files.css.output %>'
                 }
             },
             vars:
             {
                 files: {
-                    'css/src/config.min.css' : 'css/src/config.css'
+                    'src/css/config.min.css' : 'src/css/config.css'
                 }
             }
         },
