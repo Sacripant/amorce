@@ -1,7 +1,7 @@
 module.exports = function(grunt){
-    
+
     grunt.initConfig({
-        
+
         pkg: grunt.file.readJSON('package.json'),
         
         files: {
@@ -137,7 +137,24 @@ module.exports = function(grunt){
                 }]
             }
         },
-        
+
+        modernizr: {
+
+            dist: {
+
+                 // Path to save out the built file
+                'dest' : 'build/js/modernizr-custom.js',
+                'options' : [
+                    'setClasses',
+                    'addTest',
+                    'html5printshiv',
+                    'testProp',
+                    'fnBind'
+                ],
+                // More settings go here
+            }
+        },
+
         watch: {
             options: {
                 livereload: true,
@@ -163,6 +180,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-cssnext');
     grunt.loadNpmTasks('grunt-webfont');
     grunt.loadNpmTasks('grunt-nunjucks-2-html');
+    grunt.loadNpmTasks("grunt-modernizr");
 
 
     // Run plugins

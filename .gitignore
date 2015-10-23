@@ -1,8 +1,12 @@
 build/*.html
 build/css
 build/fonts/*
+build/img/icons/*.svg
+build/js/modernizr-custom.js
+
+
 node_modules/
 
 src/css/config.min.css
+
 docs/your-project-icons.html
-build/img/icons/*.svg

@@ -8,6 +8,7 @@
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-watch": "*",
     "grunt-cssnext": "*",
+    "grunt-modernizr": "*",
     "grunt-nunjucks-2-html": "^0.2.10",
     "grunt-svgmin": "*",
     "grunt-webfont": "*"
