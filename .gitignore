@@ -1,3 +1,4 @@
+build/*.html
 build/css
 build/fonts/*
 node_modules/
