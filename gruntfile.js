@@ -59,13 +59,14 @@ module.exports = function(grunt){
             options: {
                 sourcemap: true,
                 map: { inline: false },
+                url: false,
                 features: {
                     calc: {
                         preserve: false,
                         // precision: 3
                     },
                     autoprefixer: {
-                        browsers: ['last 3 versions', 'Firefox ESR']
+                        browsers: ['last 3 versions', 'Firefox ESR', 'Firefox 28']
                     }    
                 }
             },
