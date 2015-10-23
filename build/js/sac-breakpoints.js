@@ -21,7 +21,7 @@ var breakpoint = (function($) {
 
 		init = function(){
 			$(window).resize(function () {
-  				refreshValue();
+  				refreshVal();
 				console.log(val);
 			}).resize();
 		};
