@@ -7,32 +7,30 @@ module.exports = function(grunt){
         files: {
             css : {
                 src : [
-                    'css/src/config.css',
-                    'css/src/reset.css',
-                    'css/src/your-project-icons.css',
-                    'css/src/typography+colors.css', 
-                    'css/src/forms.css', 
-                    'css/src/grid.css', 
-                    'css/src/utils.css', 
-                    'css/src/components.css', 
-                    'css/src/layout+skin.css'
+                    'src/css/config.css',
+                    'src/css/reset.css',
+                    'src/css/your-project-icons.css',
+                    'src/css/typography+colors.css', 
+                    'src/css/forms.css', 
+                    'src/css/grid.css', 
+                    'src/css/utils.css', 
+                    'src/css/components.css', 
+                    'src/css/layout+skin.css'
                 ],
                 output : [
-                    'css/output/reset.css', 
-                    'css/output/your-project-icons.css',
-                    'css/output/typography+colors.css', 
-                    'css/output/forms.css', 
-                    'css/output/grid.css', 
-                    'css/output/utils.css', 
-                    'css/output/components.css', 
-                    'css/output/layout+skin.css'
+                    'buid/css/reset.css', 
+                    'buid/css/your-project-icons.css',
+                    'buid/css/typography+colors.css', 
+                    'buid/css/forms.css', 
+                    'buid/css/grid.css', 
+                    'buid/css/utils.css', 
+                    'buid/css/components.css', 
+                    'buid/css/layout+skin.css'
                 ],
             },
             html : [
-                '*.html',
-                '*.php',
-                'includes/*.html',
-                'includes/*.php'
+                'src/*.html',
+                'src/includes/*.html'
             ],
             docs : [
                 'docs/*.html',
@@ -46,13 +44,13 @@ module.exports = function(grunt){
             combine: 
             {
                 files: {
-                    'css/<%= pkg.name %>.min.css' : '<%= files.css.output %>'
+                    'build/css/<%= pkg.name %>.min.css' : '<%= files.css.output %>'
                 }
             },
             vars:
             {
                 files: {
-                    'css/src/config.min.css' : 'css/src/config.css'
+                    'src/css/config.min.css' : 'src/css/config.css'
                 }
             }
         },
@@ -61,13 +59,14 @@ module.exports = function(grunt){
             options: {
                 sourcemap: true,
                 map: { inline: false },
+                url: false,
                 features: {
                     calc: {
                         preserve: false,
                         // precision: 3
                     },
                     autoprefixer: {
-                        browsers: ['last 3 versions', 'Firefox ESR']
+                        browsers: ['last 3 versions', 'Firefox ESR', 'Firefox 28']
                     }    
                 }
             },
@@ -76,7 +75,7 @@ module.exports = function(grunt){
                     expand: true,
                     flatten: true,
                     src  : '<%= files.css.src %>',
-                    dest : 'css/output/'
+                    dest : 'build/css/'
                 }]
             }
         },
@@ -87,9 +86,9 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'img/',
+                    cwd: 'src/img/',
                     src: '*.svg',
-                    dest: 'img/'
+                    dest: 'build/img/'
 
                 }]
             },
@@ -97,29 +96,45 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'img/icons/',
+                    cwd: 'src/img/icons/',
                     src: '*.svg',
-                    dest: 'img/icons/'
+                    dest: 'build/img/icons/'
                 }]
             }
         },
 
         webfont: {
             icons: {
-                src: 'img/icons/*.svg',
-                dest: 'fonts',
-                destCss: 'css/src',
+                src: 'build/img/icons/*.svg',
+                dest: 'build/fonts',
+                destCss: 'build/css/',
                 options: {
                     engine: 'node',
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'img/icons/icons-tmpl.css',
+                    template: 'src/img/icons/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'img/icons/demoicons-tmpl.html',
+                        htmlDemoTemplate: 'src/img/icons/demoicons-tmpl.html',
                         destHtml: 'docs'
                     }
                 }
+            }
+        },
+
+        nunjucks: {
+            options: {
+                paths : 'src/'
+            },
+            render: {
+                files:[{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'src/',
+                    src: '*.html',
+                    dest: 'build/',
+                    ext: '.html'
+                }]
             }
         },
         

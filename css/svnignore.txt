@@ -1,2 +1,0 @@
-output
-your-project.min.css
