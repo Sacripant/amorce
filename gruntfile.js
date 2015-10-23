@@ -74,7 +74,7 @@ module.exports = function(grunt){
                     expand: true,
                     flatten: true,
                     src  : '<%= files.css.src %>',
-                    dest : 'css/output/'
+                    dest : 'build/css/'
                 }]
             }
         },
