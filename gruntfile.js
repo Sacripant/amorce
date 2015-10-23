@@ -164,7 +164,8 @@ module.exports = function(grunt){
                 tasks : ['buildcss']
             },
             html : {
-                files : '<%= files.html %>'
+                files : '<%= files.html %>',
+                task : ['nunjucks']
             },
             docs : {
                 files: '<%= files.docs %>'     
@@ -180,12 +181,12 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-cssnext');
     grunt.loadNpmTasks('grunt-webfont');
     grunt.loadNpmTasks('grunt-nunjucks-2-html');
-    grunt.loadNpmTasks("grunt-modernizr");
+    grunt.loadNpmTasks('grunt-modernizr');
 
 
     // Run plugins
-    grunt.registerTask('default', ['cssmin:vars','cssnext']);
+    grunt.registerTask('default', ['watch']);
     grunt.registerTask('buildcss', ['cssmin:vars','cssnext', 'cssmin:combine']);
     grunt.registerTask('icons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('init', ['buildcss','icons']);
+    grunt.registerTask('init', ['nunjucks', 'buildcss', 'icons', 'moderizr']);
 };
