@@ -7,32 +7,30 @@ module.exports = function(grunt){
         files: {
             css : {
                 src : [
-                    'css/src/config.css',
-                    'css/src/reset.css',
-                    'css/src/your-project-icons.css',
-                    'css/src/typography+colors.css', 
-                    'css/src/forms.css', 
-                    'css/src/grid.css', 
-                    'css/src/utils.css', 
-                    'css/src/components.css', 
-                    'css/src/layout+skin.css'
+                    'src/css/config.css',
+                    'src/css/reset.css',
+                    'src/css/your-project-icons.css',
+                    'src/css/typography+colors.css', 
+                    'src/css/forms.css', 
+                    'src/css/grid.css', 
+                    'src/css/utils.css', 
+                    'src/css/components.css', 
+                    'src/css/layout+skin.css'
                 ],
                 output : [
-                    'css/output/reset.css', 
-                    'css/output/your-project-icons.css',
-                    'css/output/typography+colors.css', 
-                    'css/output/forms.css', 
-                    'css/output/grid.css', 
-                    'css/output/utils.css', 
-                    'css/output/components.css', 
-                    'css/output/layout+skin.css'
+                    'buid/css/reset.css', 
+                    'buid/css/your-project-icons.css',
+                    'buid/css/typography+colors.css', 
+                    'buid/css/forms.css', 
+                    'buid/css/grid.css', 
+                    'buid/css/utils.css', 
+                    'buid/css/components.css', 
+                    'buid/css/layout+skin.css'
                 ],
             },
             html : [
-                '*.html',
-                '*.php',
-                'includes/*.html',
-                'includes/*.php'
+                'src/*.html',
+                'src/includes/*.html'
             ],
             docs : [
                 'docs/*.html',
