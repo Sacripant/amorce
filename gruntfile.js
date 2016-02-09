@@ -188,5 +188,5 @@ module.exports = function(grunt){
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('buildcss', ['cssmin:vars','cssnext', 'cssmin:combine']);
     grunt.registerTask('icons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('init', ['nunjucks', 'buildcss', 'icons', 'moderizr']);
+    grunt.registerTask('init', ['nunjucks', 'buildcss', 'icons', 'modernizr']);
 };
