@@ -165,7 +165,7 @@ module.exports = function(grunt){
             },
             html : {
                 files : '<%= files.html %>',
-                task : ['nunjucks']
+                tasks : ['nunjucks']
             },
             docs : {
                 files: '<%= files.docs %>'     
