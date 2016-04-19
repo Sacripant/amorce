@@ -59,7 +59,7 @@ img[alt="placeholder"].town { background-image : url(../img/placeholder/town.jpg
 }
 
 /* center a block horizontally */
-.center-bloc {
+.centered-block {
     display: block;
     margin-right: auto; 
     margin-left: auto;
