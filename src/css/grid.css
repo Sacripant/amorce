@@ -60,7 +60,9 @@ body:before {
 
 /* table layout grid 
 ---------------------*/
-.tb-grid {
+.tb-grid,
+[class*="tb-grid--"] 
+{
     display: table;
     table-layout: fixed;
 
@@ -74,9 +76,17 @@ body:before {
     margin-left: -var(--gutter)em;
 }
 .tb-grid > *,
-.tb-grid > [class*=span] {
+[class*="tb-grid--"] > *,
+.tb-grid > [class*=span],
+[class*="tb-grid--"] > [class*=span]
+{
     display: table-cell;
+    /*vertical-align: bottom;*/
     float: none;
+}
+
+.tb-grid--auto {
+    table-layout: auto;
 }
 
 /* Grid (inline-block & f-left)
