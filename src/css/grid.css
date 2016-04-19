@@ -97,6 +97,7 @@ body:before {
 .fl-grid
 , .il-grid  
 { 
+    display: block;
     margin-left: -var(--gutter-half)rem; /*(1)*/
     margin-right: -var(--gutter-half)rem; /*(1)*/
 }
