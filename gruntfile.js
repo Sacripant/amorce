@@ -158,6 +158,6 @@ module.exports = function(grunt){
     grunt.registerTask('buildhtml', ['clean:html','nunjucks']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('build', ['buildcss', 'buildhtml', 'moder' 'buildicons']);
+    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons']);
     grunt.registerTask('init', ['build']);
 };
