@@ -1,94 +1,56 @@
 module.exports = function(grunt){
-
+    
     grunt.initConfig({
-
+        
         pkg: grunt.file.readJSON('package.json'),
         
         files: {
-            css : {
-                src : [
-                    'src/css/config.css',
-                    'src/css/reset.css',
-                    'src/css/your-project-icons.css',
-                    'src/css/typography+colors.css', 
-                    'src/css/forms.css', 
-                    'src/css/grid.css', 
-                    'src/css/utils.css', 
-                    'src/css/components.css', 
-                    'src/css/layout+skin.css'
-                ],
-                output : [
-                    'buid/css/reset.css', 
-                    'buid/css/your-project-icons.css',
-                    'buid/css/typography+colors.css', 
-                    'buid/css/forms.css', 
-                    'buid/css/grid.css', 
-                    'buid/css/utils.css', 
-                    'buid/css/components.css', 
-                    'buid/css/layout+skin.css'
-                ],
-            },
-            html : [
-                'src/*.html',
-                'src/includes/*.html'
-            ],
+            html : 'src/*.html',
             docs : [
                 'docs/*.html',
                 'docs/*.css',
                 'docs.*.js'
             ]
         },
-        
-        cssmin: 
-        {
-            combine: 
-            {
-                files: {
-                    'build/css/<%= pkg.name %>.min.css' : '<%= files.css.output %>'
-                }
-            },
-            vars:
-            {
-                files: {
-                    'src/css/config.min.css' : 'src/css/config.css'
-                }
-            }
-        },
 
-        cssnext: {
+        postcss: {
             options: {
-                sourcemap: true,
-                map: { inline: false },
-                url: false,
-                features: {
-                    calc: {
-                        preserve: false,
-                        // precision: 3
-                    },
-                    autoprefixer: {
+                map: {
+                    inline: false,
+                    annotation: 'build/css'
+                },
+
+                processors: [
+                    require('postcss-import')(),
+                    require("postcss-cssnext")({
                         browsers: ['last 3 versions', 'Firefox ESR', 'Firefox 28']
-                    }    
-                }
+                    }),
+                    require('cssnano')()                 
+                ]
             },
-            dist: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src  : '<%= files.css.src %>',
-                    dest : 'build/css/'
-                }]
-            }
+            css: {
+                expand: true,
+                cwd: 'src/css/',
+                src  : 'project.css',
+                dest : 'build/css/'
+            },
+            thirdParty: {
+                expand: true,
+                cwd: 'src/css/third-party',
+                src  : '*.css',
+                dest : 'build/css/third-party/'  
+            }            
         },
 
-        svgmin:
-        {
+
+        svgmin: {
             img:
             {
                 files: [{
                     expand: true,
                     cwd: 'src/img/',
                     src: '*.svg',
-                    dest: 'build/img/'
+                    dest: 'build/static/img/'
 
                 }]
             },
@@ -96,10 +58,25 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/img/icons/',
+                    cwd: 'src/img/icons',
                     src: '*.svg',
                     dest: 'build/img/icons/'
                 }]
+            }
+        },
+
+        modernizr: {
+            dist: {
+                 // Path to save out the built file
+                'dest' : 'build/js/modernizr-custom.js',
+                'options' : [
+                    'setClasses',
+                    'addTest',
+                    'html5printshiv',
+                    'testProp',
+                    'fnBind'
+                ],
+                // More settings go here
             }
         },
 
@@ -126,7 +103,7 @@ module.exports = function(grunt){
             options: {
                 paths : 'src/'
             },
-            render: {
+            tv: {
                 files:[{
                     expand: true,
                     flatten: true,
@@ -137,56 +114,50 @@ module.exports = function(grunt){
                 }]
             }
         },
-
-        modernizr: {
-
-            dist: {
-
-                 // Path to save out the built file
-                'dest' : 'build/js/modernizr-custom.js',
-                'options' : [
-                    'setClasses',
-                    'addTest',
-                    'html5printshiv',
-                    'testProp',
-                    'fnBind'
-                ],
-                // More settings go here
-            }
-        },
-
+        
         watch: {
             options: {
                 livereload: true,
             },              
             css : {
-                files: '<%= files.css.src %>',
-                tasks : ['buildcss']
+                files: 'src/css/**/*.css',
+                tasks: ['postcss:css']
             },
             html : {
-                files : '<%= files.html %>',
-                tasks : ['nunjucks']
+                files: '<%= files.html %>',
+                tasks: ['nunjucks:tv'] 
             },
             docs : {
                 files: '<%= files.docs %>'     
+            },
+            js : {
+                files: 'build/static/js/*.js'
             }
         },
+
+        clean: {
+            html : ['build/*.html'],
+            css: ['build/css/*']
+        }
       
     });
     
     // Load plugins
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-svgmin');
-    grunt.loadNpmTasks('grunt-cssnext');
     grunt.loadNpmTasks('grunt-webfont');
     grunt.loadNpmTasks('grunt-nunjucks-2-html');
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-modernizr');
 
 
-    // Run plugins
+
+    // Custom tasks -- Run plugins
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('buildcss', ['cssmin:vars','cssnext', 'cssmin:combine']);
-    grunt.registerTask('icons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('init', ['nunjucks', 'buildcss', 'icons', 'modernizr']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks']);
+    grunt.registerTask('buildcss', ['clean:css', 'postcss']);
+    grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
+    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons']);
+    grunt.registerTask('init', ['build']);
 };

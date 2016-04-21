@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------- 
+   
+  breakpoints.css
+  Define Breakpoints and add these values in body
+
+  These values will not show up in content, but can be 
+  queried by JavaScript to know which breakpoint is active. 
+  https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+
+  © sacripant.fr
+
+  REQUIRED :
+  * sac-breakpoint.js
+
+-------------------------------------------------------------- */
+
+/* define breakpoints with custom-medias */
+@custom-media --maxXS (max-width: 29.999em);
+@custom-media --minS (min-width: 30em);
+@custom-media --maxS (max-width: 47.999em);
+@custom-media --minM (min-width: 48em);
+@custom-media --maxM (max-width: 59.999em);
+@custom-media --minL (min-width: 60em);
+@custom-media --maxL (max-width: 79.999em);
+@custom-media --minXL (min-width: 80em);
+
+
+/* values in body */
+body:before {
+  content: "xs";
+  display: none; /* Prevent from displaying. */
+}
+@media (--minS) {
+  body:before {
+    content: "minS";
+  }
+}
+@media (--minM) {
+  body:before {
+    content: "minM";
+  }
+}
+@media (--minL) {
+  body:before {
+    content: "minL";
+  }
+}
+@media (--minXL) {
+  body:before {
+    content: "minXL";
+  }
+}

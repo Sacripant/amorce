@@ -1,11 +1,9 @@
-@import "config.min.css";
 /* --------------------------------------------------------------
     grid.css
         define grids system
         Amorce Framework
         © sacripant.fr
 
-        * Body breakpoints
         * Grids
         ** Table grid
         ** Float grid
@@ -18,38 +16,14 @@
         
 -------------------------------------------------------------- */ 
 
+:root {
+    /* gutter size (default based in typography vertical rythme )*/
+    --gutter : var(--vr);
+    --gutter-half : calc( var(--gutter) / 2 );
+}
 
-/*
-*   Define Breakpoints in Body.
-*   These values will not show up in content, but can be 
-*   queried by JavaScript to know which breakpoint is active.
-*   https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
-*/
 
-body:before {
-  content: "xs";
-  display: none; /* Prevent from displaying. */
-}
-@media (--minS) {
-  body:before {
-    content: "minS";
-  }
-}
-@media (--minM) {
-  body:before {
-    content: "minM";
-  }
-}
-@media (--minL) {
-  body:before {
-    content: "minL";
-  }
-}
-@media (--minXL) {
-  body:before {
-    content: "minXL";
-  }
-}
+
 
 
 /*

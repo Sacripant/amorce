@@ -1,0 +1,22 @@
+/* --------------------------------------------------------------
+    clearfix.css
+        clear class for floatting element
+        © sacripant.fr
+
+-------------------------------------------------------------- */ 
+
+.clear              { clear: both; }
+
+/* CLEARFIX 
+-------------*/
+.clearfix:before, .clearfix:after   { content: ""; display: table; }
+.clearfix:after                     { clear: both; }
+
+
+
+
+
+
+
+
+

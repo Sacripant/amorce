@@ -1,0 +1,17 @@
+/* -------------------------------------------------------------- 
+   
+    global-layout.css
+    Define globale and specific layout of primary block for your project
+    © sacripant.fr
+
+-------------------------------------------------------------- */
+
+.wrapper    	{  
+	max-width: 90%;
+	margin: 0 auto;
+}
+               
+.site-header	{  }
+.main-nav   	{  }
+main    		{  }
+.site-footer	{  }

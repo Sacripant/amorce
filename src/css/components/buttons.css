@@ -1,18 +1,10 @@
-@import "config.min.css";
-
-
 /* --------------------------------------------------------------
-	components.css
+	
+	buttons.css
 	© sacripant.fr
-	List of reusable design components
 
-	* buttons
-	* Item 2
 -------------------------------------------------------------- */ 
 
-/*
-*	Buttons
-*/
 .btn 
 , [class*=btn--]
 {
