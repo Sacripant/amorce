@@ -1,7 +1,13 @@
 @import 'config.css';
-@import 'reset.css';
-@import 'typography+colors.css';
-@import 'forms.css';
+
+/*
+*	Basics
+*/
+@import 'basics/reset.css';
+@import 'basics/typography+colors.css';
+@import 'basics/forms.css';
+
+
 @import 'grid.css';
 @import 'components.css';
 @import 'layout+skin.css';
