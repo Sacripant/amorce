@@ -9,8 +9,9 @@
 
 /* img Placeholder
 --------------------*/
-img[alt="placeholder"]      { background-size: cover; }
-img[alt="placeholder"].gray { background-color: #ddd; }
-img[alt="placeholder"].music{ background-image : url(../img/placeholder/music.jpg); }
-img[alt="placeholder"].food { background-image : url(../img/placeholder/food.jpg); }
-img[alt="placeholder"].town { background-image : url(../img/placeholder/town.jpg); }
+img[alt^="placeholder"]      { background-size: cover; }
+img[alt^="placeholder gray"] { background-color: #ddd; }
+img[alt^="placeholder music"]{ background-image : url(../img/placeholder/music.jpg); }
+img[alt^="placeholder food"] { background-image : url(../img/placeholder/food.jpg); }
+img[alt^="placeholder town"] { background-image : url(../img/placeholder/town.jpg); }
+img[alt^="placeholder flower"] { background-image : url(../img/placeholder/flower.jpg); }
