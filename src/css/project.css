@@ -9,6 +9,13 @@
 @import 'basics/forms.css';
 
 
+/* 
+*	utils 
+*/
+@import 'utils/typo-utils.css';
+
+
+
 @import 'grid.css';
 @import 'components.css';
 @import 'layout+skin.css';

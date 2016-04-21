@@ -215,30 +215,3 @@ caption {
 *	HR
 */
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-
-/*
-*	typographic utils class
-*/
-
-/*	Initialize list (remove list-type type and margin) */
-.nude { list-style-type: none; margin: 0; }
-
-
-/*	add ... for too long one line text  */
-.ellipsis {
-    overflow: hidden;        
-    white-space: nowrap;     
-    text-overflow: ellipsis;
-}
-
-/*	Texte align */
-.txt-left	{
-	text-align: left;
-}
-.txt-right {
-	text-align: right;
-}
-.txt-center {
-	text-align: center;
-}

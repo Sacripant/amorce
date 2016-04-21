@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------- 
+   
+	typo-utils.css
+	some typography utilities class
+	© sacripant.fr
+
+	REQUIRED :
+	* reset.css
+	* colors.css
+	* typography.css
+
+-------------------------------------------------------------- */
+
+
+/*	Initialize list (remove list-type type and margin) */
+.nude { list-style-type: none; margin: 0; }
+
+
+/*	add ... for too long one line text  */
+.txt-ellipsis {
+    overflow: hidden;        
+    white-space: nowrap;     
+    text-overflow: ellipsis;
+}
+
+/*	Texte align */
+.txt-left	{
+	text-align: left;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-center {
+	text-align: center;
+}
