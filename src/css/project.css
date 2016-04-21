@@ -8,6 +8,13 @@
 @import 'basics/typography.css';
 @import 'basics/forms.css';
 
+/*
+*	layout, grids & breakpoints
+*/
+
+@import 'layout/breakpoints.css';
+
+
 
 /* 
 *	utils 
