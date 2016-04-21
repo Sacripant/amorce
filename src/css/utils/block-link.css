@@ -1,0 +1,26 @@
+/* -------------------------------------------------------------- 
+   
+    bloc-link.css
+    extend a link to cover full parent block
+    © sacripant.fr
+
+-------------------------------------------------------------- */
+
+.bloc-link {
+    position: relative;
+}
+
+.a__bloc-link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bloc-link a:not(.a__bloc-link){
+    position: relative;
+    z-index: 2;
+}

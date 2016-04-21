@@ -1,0 +1,20 @@
+/* -------------------------------------------------------------- 
+   
+    layout-utils.css
+    some utils class for layout
+    © sacripant.fr
+
+-------------------------------------------------------------- */
+
+
+/* center a block horizontally */
+.centered-block {
+    display: block;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+/* Full size for inline-block, usefull for btn */
+.fit {
+    width: 100%;
+}

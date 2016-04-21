@@ -8,21 +8,25 @@
 @import 'basics/typography.css';
 @import 'basics/forms.css';
 
+
 /*
 *	layout, grids & breakpoints
 */
-
 @import 'layout/breakpoints.css';
-
+@import 'layout/grid.css';
+@import 'layout/layout-utils.css';
 
 
 /* 
 *	utils 
 */
 @import 'utils/typo-utils.css';
+@import 'utils/block-link.css';
+@import 'utils/clear.css';
+@import 'utils/hidden.css';
+@import 'utils/placeholder-imgs.css';
 
 
 
-@import 'grid.css';
 @import 'components.css';
 @import 'layout+skin.css';

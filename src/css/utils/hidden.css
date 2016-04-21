@@ -1,0 +1,59 @@
+/* -------------------------------------------------------------- 
+   
+    hidden.css
+    hidden class
+    © sacripant.fr
+
+    REQUIRED :
+    * breakpoints.css
+
+-------------------------------------------------------------- */
+
+
+.hide               { display: none; }
+.visuallyhidden     { border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px; }
+
+
+/*
+*   Responsive Hidden class
+*/
+@media (--maxXS) {
+    .hidden--maxXS {
+        display: none !important;
+    }
+}
+@media (--maxS) {
+    .hidden--maxS {
+        display: none !important;
+    }
+}
+@media (--maxM) {
+    .hidden--maxM {
+        display: none !important;
+    }
+}
+@media (--maxL) {
+    .hidden--maxL {
+        display: none !important;
+    }
+}
+@media (--minS) {
+    .hidden--minS {
+        display: none !important;
+    }
+}
+@media (--minM) {
+    .hidden--minM {
+        display: none !important;
+    }
+}
+@media (--minL) {
+    .hidden--minL {
+        display: none !important;
+    }
+}
+@media (--minXL) {
+    .hidden--minXL {
+        display: none !important;
+    }
+}
