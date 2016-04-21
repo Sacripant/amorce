@@ -1,13 +1,11 @@
 /* -------------------------------------------------------------- 
    
-	typography+colors.css
-	* Default colors class
+	typography.css
 	* Sets up some sensible default typography.
 	* Thanks to Boilerplate, Knacss and blueprint
 	© sacripant.fr
 
 	TOC :
-	* Colors
 	* Vertical rythme
 	* Default font settings
 	* Sizes
@@ -18,14 +16,11 @@
 	* hr
 	* typographic utils class
 
+	REQUIRED :
+	* reset.css
+	* colors.css
+
 -------------------------------------------------------------- */
-
-/*	
-*	Colors
-*/
-
-.txt-color	{ color: var(--txt-color); }
-.h-color	{ color: var(--h-color); }
 
 
 /*

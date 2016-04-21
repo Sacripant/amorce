@@ -4,7 +4,8 @@
 *	Basics
 */
 @import 'basics/reset.css';
-@import 'basics/typography+colors.css';
+@import 'basics/colors.css';
+@import 'basics/typography.css';
 @import 'basics/forms.css';
 
 
