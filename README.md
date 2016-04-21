@@ -3,7 +3,7 @@
 Amorce est un starter kit pour l'intégration de site internet.
 Il propose :
 
-* Un Framework CSS (reset, typo, forms, utils, grid)
+* Un Framework CSS (reset, typo, forms, utils, grid) découpé en modules.
 * Une documentation qu'il suffit de faire évoluer en style guide pour chaque projet.
 * Une série de task grunt
 	* cssnext
@@ -11,18 +11,18 @@ Il propose :
 	* svgmin
 	* webfont
 	* modernizr
+	* …
 
 ## Requiremement
 
-Le projet le *task runner* [GRUNT](http://gruntjs.com/).
+Le projet utilise le *task runner* [GRUNT](http://gruntjs.com/).
 *Grunt* necessite [nodeJS](https://nodejs.org/)
 
 * NodeJS >= 0.8.0
-* Grunt-cli
 
 Pour plus de détails pour l'installation sur votre machine : [Grunt getting started](http://gruntjs.com/getting-started)
 
-## Getting strated
+## Getting strarted
 
 Depuis un shell ou une console (placé à la racine de votre projet).
 
@@ -30,11 +30,11 @@ Depuis un shell ou une console (placé à la racine de votre projet).
 
 Pour installer les paquets necessaires.
 
-`grunt init`
+`grunt init` ou `grunt build`
 
 Pour faire une compilation manuelle des sources.
 
-## Compiler à la volée
+## Compilation à la volée
 
 `grunt`
 
@@ -50,11 +50,11 @@ Pour en profiter, il suffit d'installer l'[extension Livereload](http://liverelo
 
 Compile les fichiers CSS à l'aide du post-processeur [cssnext](http://cssnext.io/)
 
-`grunt icons`
+`grunt buildicons`
 
-Compile les fichiers .svg présents dans `src/static/img/icons/`: optimisations des images et génération d'une font icons. Cette tache utilise [grunt webfont](https://github.com/sapegin/grunt-webfont) et necessite d'installer `ttfautohint`.
+Compile les fichiers .svg présents dans `src/static/img/icons/`: optimisations des images et génération d'une font icons. Cette tache utilise [grunt webfont](https://github.com/sapegin/grunt-webfont).
 
-`grunt nunjucks`
+`grunt buildhtml`
 
 Compile les fichiers sources `.html` qui utilise le sytem de templating [nunjucks](http://mozilla.github.io/nunjucks/)
 
