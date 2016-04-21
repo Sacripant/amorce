@@ -27,6 +27,10 @@
 @import 'utils/placeholder-imgs.css';
 
 
+/*
+*	components
+*/
+@import 'components/button.css';
 
-@import 'components.css';
+
 @import 'layout+skin.css';
