@@ -6,35 +6,40 @@
   Web Designer : Thomas jund
   Site: http://www.sacripant.fr
   Twitter: @_sacripant
-  Location: Dakar — Senegal
+  Location: Rhone — France
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery, Amorce
+  Components: Modernizr, jQuery, Amorce Framework
   Software: Gruntjs
   
-
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        
+              ,*Wsmms_.
+           g@@@@@@@@@Dmms _
+         i@X@W@@@@K7*WKZ@WmZ .
+        g@@8@A~~`    ' ~/VP\gs_
+       _W@@f`              *@@*7`
+      ]@@@`             _ms.V@s
+      ]@@[            -f~  ~-KMs
+      @@@W  __gm.      iL~+- ][`
+     ,M@@@ iA~\_z.     '*`    Y.
+       M@@[].]~!A'            '[i
+        *@@ `                  `!
+         'A[        ,. e       i[
+          KVi     -_X_.gmmmmNm.][          ]
+          \ Y.  ,m*A**`~TX_mi               \s
+          '+_@s f'~TmY*f~` VK+Yze,.           t.
+              *`  g@Ai      ]~~V!t'\=.     =__!`   i
+   _.           ,/\A\       !c       `             [
+   , c        ,Z* `  !-     i_Z~==__               [
+      \       P     ,K.7G__g@@W__                  ]
+      ]           ,g*@@@@WWW@@f 'f*=                t.
+      ]         g*~  d@@@@***`    ,
+  i                gW@@            TY=m
+  'i            g!Y` A@           ,c-  Vz_.
+   [           '` ,_gWVb         v)`   '`/VM@@m_ -=__
+   [             ,d@MP '~~`  ,.c\'       [   ~~~W_  '~
+   [            '8@mA  _ -=2== `    i   ,[      M~*s.
+  g`           gW@A~                /   ]`      !i 'YW_
+ g`         ,gWM@A`                i!   ]        Y.  [~W_
+i`         m@@@.~                  Z    ]        'b  b M[\s
+f      =~ !*****                   !    Y         ]  ! !f  V=
