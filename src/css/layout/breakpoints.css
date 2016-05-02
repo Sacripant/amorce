@@ -27,26 +27,26 @@
 
 /* values in body */
 body:before {
-  content: "xs";
+  content: "XS";
   display: none; /* Prevent from displaying. */
 }
 @media (--minS) {
   body:before {
-    content: "minS";
+    content: "S";
   }
 }
 @media (--minM) {
   body:before {
-    content: "minM";
+    content: "M";
   }
 }
 @media (--minL) {
   body:before {
-    content: "minL";
+    content: "L";
   }
 }
 @media (--minXL) {
   body:before {
-    content: "minXL";
+    content: "XL";
   }
 }
