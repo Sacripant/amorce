@@ -105,10 +105,10 @@ h4 img, h5 img, h6 img {
 /*Complementary sizes*/
 
 small, 
-.small		{ font-size: var(--fs-small)em } /* *small size */
+.small		{ font-size: var(--fs-small)em }
 .xsmall		{ font-size: var(--fs-xsmall)em }
-.big		{ font-size: var(--fs-h6)em }
-.xbig		{ font-size: var(--fs-h5)em }
+.large		{ font-size: var(--fs-h6)em }
+.xlarge		{ font-size: var(--fs-h5)em }
 
 
 /* 
