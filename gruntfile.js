@@ -104,6 +104,16 @@ module.exports = function(grunt){
                     dest: 'build/',
                     ext: '.html'
                 }]
+            },            
+            docs: {
+                files:[{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'src/docs',
+                    src: '*.html',
+                    dest: 'docs/',
+                    ext: '.html'
+                }]
             }
 
         },
