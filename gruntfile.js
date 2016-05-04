@@ -30,13 +30,13 @@ module.exports = function(grunt){
             },
             css: {
                 expand: true,
-                cwd: 'src/css/',
+                cwd: 'src/templates/css/',
                 src  : 'project.css',
                 dest : 'build/css/'
             },
             thirdParty: {
                 expand: true,
-                cwd: 'src/css/third-party',
+                cwd: 'src/templates/css/third-party',
                 src  : '*.css',
                 dest : 'build/css/third-party/'  
             }            
@@ -48,7 +48,7 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/img/',
+                    cwd: 'src/templates/img/',
                     src: '*.svg',
                     dest: 'build/static/img/'
 
@@ -58,7 +58,7 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/img/icons',
+                    cwd: 'src/templates/img/icons',
                     src: '*.svg',
                     dest: 'build/img/icons/'
                 }]
@@ -103,36 +103,34 @@ module.exports = function(grunt){
             options: {
                 paths : 'src/'
             },
-            tv: {
+            template: {
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/',
+                    cwd: 'src/templates',
                     src: '*.html',
                     dest: 'build/',
                     ext: '.html'
                 }]
             }
+
         },
         
         watch: {
             options: {
                 livereload: true,
             },              
-            css : {
-                files: 'src/css/**/*.css',
-                tasks: ['postcss:css']
-            },
-            html : {
-                files: '<%= files.html %>',
-                tasks: ['nunjucks:tv'] 
-            },
-            docs : {
-                files: '<%= files.docs %>'     
-            },
-            js : {
-                files: 'build/static/js/*.js'
-            }
+            src_template_html : {
+                    files : 'src/templates/**/*.html',
+                    tasks : ['nunjucks:template']                
+                },
+                src_template_css : {
+                    files: 'src/templates/css/**/*.scss',
+                    tasks : ['postcss']
+                },
+                src_template_js: {
+                    files: 'build/js/*.js'
+                }
         },
 
         clean: {
