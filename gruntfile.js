@@ -4,14 +4,6 @@ module.exports = function(grunt){
         
         pkg: grunt.file.readJSON('package.json'),
         
-        files: {
-            html : 'src/*.html',
-            docs : [
-                'docs/*.html',
-                'docs/*.css',
-                'docs.*.js'
-            ]
-        },
 
         postcss: {
             options: {
@@ -135,7 +127,9 @@ module.exports = function(grunt){
 
         clean: {
             html : ['build/*.html'],
-            css: ['build/css/*']
+            css: ['build/css/*'],
+            icons: ['build/img/icons/*.svg'],
+            iconsfont: ['build/fonts/*-icons.*']
         }
       
     });
