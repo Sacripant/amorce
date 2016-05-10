@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<g>
-	<g>
-		<g>
-		</g>
-	</g>
-	<g>
-	</g>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px"
+	 height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g id="home">
+	<polygon points="255.46,110.139 73.105,242.151 73.105,448 204.561,448 204.561,311.511 306.361,311.511 306.361,448 437.816,448 
+		437.816,242.151 	"/>
+	<polygon points="437.816,153.782 437.816,21.822 374.613,21.822 374.613,108.061 255.428,21.822 0,207.488 27.629,245.487 
+		255.494,79.86 484.449,245.521 512,207.455 	"/>
 </g>
-<polygon fill="#000000" points="49.92,31.411 22.753,51.078 22.753,81.745 42.337,81.745 42.337,61.411 57.503,61.411   57.503,81.745 77.087,81.745 77.087,51.078 "/>
-<polygon fill="#000000" points="77.087,37.913 77.087,18.254 67.671,18.254 67.671,31.101 49.915,18.254 11.862,45.914   15.978,51.575 49.925,26.901 84.034,51.58 88.138,45.909 "/>
 </svg>
