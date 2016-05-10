@@ -22,6 +22,8 @@ $(function() {
         ,   codesHtml = []
         ;
 
+        // add language-markup class to manual .bloc-code
+        $('.bloc-code').addClass('language-markup')
         // récupe Codes
         codeDemo.each(function(i) {
             codesHtml.push(htmlEntities(this.innerHTML));
@@ -30,11 +32,14 @@ $(function() {
             ,   xcode = document.createElement('code')
             ;
         
-            xpre.setAttribute('class', 'bloc-code');
+            xpre.setAttribute('class', 'bloc-code language-markup');
+            // xcode.setAttribute('class', '');
             xcode.innerHTML = codesHtml[i];
             $(xpre).append(xcode);
             $(this).append($(xpre));
-        });     
+        });
+
+        Prism.highlightAll();    
     })();
     
     /*
