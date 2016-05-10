@@ -8,3 +8,5 @@ build/js/modernizr-custom.js
 node_modules/
 
 docs/*.html
+
+src/docs/*-icons.html
