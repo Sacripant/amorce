@@ -132,7 +132,11 @@ module.exports = function(grunt){
                 },
                 src_template_js: {
                     files: 'build/js/*.js'
-                }
+                },
+            src_docs : {
+                files : 'src/docs/*.html',
+                tasks : ['nunjucks:docs']                  
+            }
         },
 
         clean: {
@@ -157,9 +161,10 @@ module.exports = function(grunt){
 
     // Custom tasks -- Run plugins
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('buildhtml', ['clean:html','nunjucks']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks:template']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
+    grunt.registerTask('builddocs', ['nunjucks:docs']);
     grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons']);
     grunt.registerTask('init', ['build']);
 };
