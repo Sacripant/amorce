@@ -82,10 +82,10 @@ module.exports = function(grunt){
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'src/img/icons/icons-tmpl.css',
+                    template: 'src/templates/img/icons/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'src/img/icons/demoicons-tmpl.html',
-                        destHtml: 'docs'
+                        htmlDemoTemplate: 'src/templates/img/icons/demoicons-tmpl.html',
+                        destHtml: 'src/docs'
                     }
                 }
             }
@@ -165,6 +165,6 @@ module.exports = function(grunt){
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
     grunt.registerTask('builddocs', ['nunjucks:docs']);
-    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons']);
+    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons', 'builddocs']);
     grunt.registerTask('init', ['build']);
 };
