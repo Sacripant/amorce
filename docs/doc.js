@@ -15,13 +15,15 @@ $(function() {
         return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
-    function blocsCodes()
+    (function blocsCodes()
     {
         // console.log('start blocscodes');
         var codeDemo = $('.code-demo')
         ,   codesHtml = []
         ;
 
+        // add language-markup class to manual .bloc-code
+        $('.bloc-code').addClass('language-markup')
         // récupe Codes
         codeDemo.each(function(i) {
             codesHtml.push(htmlEntities(this.innerHTML));
@@ -30,12 +32,15 @@ $(function() {
             ,   xcode = document.createElement('code')
             ;
         
-            xpre.setAttribute('class', 'bloc-code');
+            xpre.setAttribute('class', 'bloc-code language-markup');
+            // xcode.setAttribute('class', '');
             xcode.innerHTML = codesHtml[i];
             $(xpre).append(xcode);
             $(this).append($(xpre));
-        });     
-    }
+        });
+
+        Prism.highlightAll();    
+    })();
     
     /*
     //  Display Colors
@@ -46,7 +51,7 @@ $(function() {
         return color;
     }
     
-    function colors() {
+    (function colors() {
         var colorsList = $('.ul-doc-colors li')
         // ,   colorbloc = $('<div class="color-bloc" />');
         ;
@@ -76,13 +81,13 @@ $(function() {
                 // $(this).prepend(colorbloc);
             });
         }       
-    }
+    })();
     
     /*
     **   Display Computed Style Font Size
     */
     
-    function fontSize() {
+    (function fontSize() {
         var Sizes = $('.font-size')
         ;
     
@@ -95,7 +100,7 @@ $(function() {
             $(this).html(content + ' / ' + Fsize);
         
         });     
-    }
+    })();
 
 
 
@@ -104,85 +109,85 @@ $(function() {
     **  Charge doc pages
     */ 
     
-    var ajaxWrapper = $('#ajax-wrapper')
-    ,   aToc   = $('.a__toc')
-    ,   pageHash = location.hash
-    ;
+    // var ajaxWrapper = $('#ajax-wrapper')
+    // ,   aToc   = $('.a__toc')
+    // ,   pageHash = location.hash
+    // ;
 
-    function changeHash(hash)
-    {
-        location.hash = hash;
-    }
+    // function changeHash(hash)
+    // {
+    //     location.hash = hash;
+    // }
     
-    function changePage(target)
-    {
-        // console.log(target);
-        if (target) 
-        {
-            // var target = target.href;
+    // function changePage(target)
+    // {
+    //     // console.log(target);
+    //     if (target) 
+    //     {
+    //         // var target = target.href;
 
-            ajaxWrapper.load(target, function(){
-                // Stuff to do after the page is loaded
-                blocsCodes();   
-                colors();
-                fontSize();
-            });         
-        }       
-    }
+    //         ajaxWrapper.load(target, function(){
+    //             // Stuff to do after the page is loaded
+    //             blocsCodes();   
+    //             colors();
+    //             fontSize();
+    //         });         
+    //     }       
+    // }
 
-    function changePagewHash(hash)
-    {
+    // function changePagewHash(hash)
+    // {
 
-        var nhash = hash.slice(1)
-        ,   regexp = new RegExp(nhash, 'g')
-        ;
+    //     var nhash = hash.slice(1)
+    //     ,   regexp = new RegExp(nhash, 'g')
+    //     ;
 
-        console.log(nhash);
+    //     console.log(nhash);
 
-        var checklink = aToc.filter(function() {
-                var href = this.getAttribute('href');
-                return regexp.test(href);
-            });
+    //     var checklink = aToc.filter(function() {
+    //             var href = this.getAttribute('href');
+    //             return regexp.test(href);
+    //         });
 
-        if (checklink.length) {
-            var newlink = checklink[0].href;
-            changePage(newlink);       
-        }
-    }
+    //     if (checklink.length) {
+    //         var newlink = checklink[0].href;
+    //         changePage(newlink);       
+    //     }
+    // }
 
 
-    // Toc click event : change URL hash
-    aToc.click(function() {
-        var link = this.href
-        ,   newhash = this.getAttribute('href').split('.')[0]
-        ;
+    // // Toc click event : change URL hash
+    // aToc.click(function() {
+    //     var link = this.href
+    //     ,   newhash = this.getAttribute('href').split('.')[0]
+    //     ;
 
-        changeHash(newhash, link);
+    //     changeHash(newhash, link);
 
-        return false;
+    //     return false;
          
-    });
+    // });
     
-    // Charge page when load page
-    (function activePage()
-    {
-        // console.log(pageHash);
-        if (pageHash) 
-        {
-            changePagewHash(pageHash); 
-        }
-        else
-        {
-            aToc.eq(0).click();
-        }
-    }());
+    // // Charge page when load page
+    // (function activePage()
+    // {
+    //     // console.log(pageHash);
+    //     if (pageHash) 
+    //     {
+    //         changePagewHash(pageHash); 
+    //     }
+    //     else
+    //     {
+    //         aToc.eq(0).click();
+    //     }
+    // }());
 
     
-    // Charge page when hash change
-    $(window).on('hashchange', function() {
-        var pageHash = location.hash;
-        changePagewHash(pageHash);
-    });
+    // // Charge page when hash change
+    // $(window).on('hashchange', function() {
+    //     var pageHash = location.hash;
+    //     changePagewHash(pageHash);
+    // });
    
     
 });

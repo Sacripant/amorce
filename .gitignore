@@ -7,4 +7,6 @@ build/js/modernizr-custom.js
 
 node_modules/
 
-docs/your-project-icons.html
+docs/*.html
+
+src/docs/*-icons.html

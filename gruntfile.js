@@ -4,14 +4,6 @@ module.exports = function(grunt){
         
         pkg: grunt.file.readJSON('package.json'),
         
-        files: {
-            html : 'src/*.html',
-            docs : [
-                'docs/*.html',
-                'docs/*.css',
-                'docs.*.js'
-            ]
-        },
 
         postcss: {
             options: {
@@ -30,13 +22,13 @@ module.exports = function(grunt){
             },
             css: {
                 expand: true,
-                cwd: 'src/css/',
+                cwd: 'src/templates/css/',
                 src  : 'project.css',
                 dest : 'build/css/'
             },
             thirdParty: {
                 expand: true,
-                cwd: 'src/css/third-party',
+                cwd: 'src/templates/css/third-party',
                 src  : '*.css',
                 dest : 'build/css/third-party/'  
             }            
@@ -48,7 +40,7 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/img/',
+                    cwd: 'src/templates/img/',
                     src: '*.svg',
                     dest: 'build/static/img/'
 
@@ -58,7 +50,7 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/img/icons',
+                    cwd: 'src/templates/img/icons',
                     src: '*.svg',
                     dest: 'build/img/icons/'
                 }]
@@ -90,10 +82,10 @@ module.exports = function(grunt){
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'src/img/icons/icons-tmpl.css',
+                    template: 'src/templates/img/icons/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'src/img/icons/demoicons-tmpl.html',
-                        destHtml: 'docs'
+                        htmlDemoTemplate: 'src/templates/img/icons/demoicons-tmpl.html',
+                        destHtml: 'src/docs'
                     }
                 }
             }
@@ -103,41 +95,55 @@ module.exports = function(grunt){
             options: {
                 paths : 'src/'
             },
-            tv: {
+            template: {
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/',
+                    cwd: 'src/templates',
                     src: '*.html',
                     dest: 'build/',
                     ext: '.html'
                 }]
+            },            
+            docs: {
+                files:[{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'src/docs',
+                    src: '*.html',
+                    dest: 'docs/',
+                    ext: '.html'
+                }]
             }
+
         },
         
         watch: {
             options: {
                 livereload: true,
             },              
-            css : {
-                files: 'src/css/**/*.css',
-                tasks: ['postcss:css']
-            },
-            html : {
-                files: '<%= files.html %>',
-                tasks: ['nunjucks:tv'] 
-            },
-            docs : {
-                files: '<%= files.docs %>'     
-            },
-            js : {
-                files: 'build/static/js/*.js'
+            src_template_html : {
+                    files : 'src/templates/**/*.html',
+                    tasks : ['nunjucks:template']                
+                },
+                src_template_css : {
+                    files: 'src/templates/css/**/*.scss',
+                    tasks : ['postcss']
+                },
+                src_template_js: {
+                    files: 'build/js/*.js'
+                },
+            src_docs : {
+                files : 'src/docs/*.html',
+                tasks : ['nunjucks:docs']                  
             }
         },
 
         clean: {
             html : ['build/*.html'],
-            css: ['build/css/*']
+            css: ['build/css/*'],
+            icons: ['build/img/icons/*.svg'],
+            iconsfont: ['build/fonts/*-icons.*']
         }
       
     });
@@ -155,9 +161,10 @@ module.exports = function(grunt){
 
     // Custom tasks -- Run plugins
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('buildhtml', ['clean:html','nunjucks']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks:template']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons']);
+    grunt.registerTask('builddocs', ['nunjucks:docs']);
+    grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons', 'builddocs']);
     grunt.registerTask('init', ['build']);
 };

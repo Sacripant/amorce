@@ -16,15 +16,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
    
 	
-	<title>Front-End Documentation</title>
+	<title>
+		{% block title%}{% endblock %}	
+		Front-End Documentation
+	</title>
 	
 <!-- affichage favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
 <!-- CSS -->
-
+	<!-- if icons -->
+	<link rel="stylesheet" href="../build/css/yourproject-icons.css" media="all" />
+	<!-- project CSS -->
 	<link rel="stylesheet" href="../build/css/project.css" media="all" />
-
+	<!-- only for this doc -->
+	<link rel="stylesheet" href="prism.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="doc.css" type="text/css" media="screen" />
 
 	<!--[if lte IE 8]>
@@ -39,7 +45,7 @@
 	
 	<div id="wrapper">
 		
-		<header role="banner">
+		<header role="banner" class="docs-header">
 			<h1 class="h6">Code Style Guide</h1>
 			<nav role="navigation" class="toc">
 				<ul>
@@ -50,23 +56,17 @@
 					<li><a class="a__toc" href="breakpoints.html">Breakpoints</a></li>
 					<li><a class="a__toc" href="grille.html">Grid</a></li>
 					<li><a class="a__toc" href="forms.html">Forms</a></li>
-					<li><a class="a__toc" href="your-project-icons.html">Icons</a></li>
+					<li><a class="a__toc" href="yourproject-icons.html">Icons</a></li>
 					<li><a class="a__toc" href="composants.html">Composants</a></li>
 				</ul>
 			</nav>
 		</header>
 	
-		<main id="section" role="main">
+		<main class="docs-main" role="main">
 
-			<section id="ajax-wrapper">
-				<!-- Load content with Ajax -->
-			</section>	
+			{% block main %}{% endblock %}
 			
 		</main>
-
-		<footer>
-
-		</footer>
 		
 	</div><!-- #wrapper -->
 
@@ -74,7 +74,10 @@
 <!-- Javascript bottom -->
 	<script src="../build/js/jquery-2.2.3.min.js"></script>	
 	<script src="tinycolor-min.js"></script>
+	<script src="prism.js" data-manual></script>
 	<script src="doc.js"></script>
+
+	{% block additional_JS %}{% endblock %}
 </body>
 
 </html>
