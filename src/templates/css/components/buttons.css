@@ -8,6 +8,7 @@
 .btn 
 , [class*=btn--]
 {
+	-moz-appearance: none;
 	color: var(--txt-color);
 	background-color: #fff;
 
