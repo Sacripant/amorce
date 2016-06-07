@@ -127,7 +127,7 @@ module.exports = function(grunt){
                     tasks : ['nunjucks:template']                
                 },
                 src_template_css : {
-                    files: 'src/templates/css/**/*.scss',
+                    files: 'src/templates/css/**/*.css',
                     tasks : ['postcss']
                 },
                 src_template_js: {
