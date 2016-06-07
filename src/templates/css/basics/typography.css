@@ -107,6 +107,7 @@ h4 img, h5 img, h6 img {
 small, 
 .small		{ font-size: var(--fs-small)em }
 .xsmall		{ font-size: var(--fs-xsmall)em }
+.medium		{ font-style: 1em; }
 .large		{ font-size: var(--fs-h6)em }
 .xlarge		{ font-size: var(--fs-h5)em }
 
@@ -115,12 +116,10 @@ small,
 *	Text elements
 */
 
-p 		{
+p, .p {
+	font-style: 1em;
 	margin-bottom: var(--vr)em; 
 	hyphens: auto;
-}
-p, .p 	{
-	font-size: 1em; 
 }
 
 /*Links*/
