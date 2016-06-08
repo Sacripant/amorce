@@ -1,4 +1,4 @@
-# Amorce
+# Amorce v.1606
 
 Amorce est un starter kit pour l'intégration de site internet.
 Il propose :
@@ -18,7 +18,7 @@ Il propose :
 Le projet utilise le *task runner* [GRUNT](http://gruntjs.com/).
 *Grunt* necessite [nodeJS](https://nodejs.org/)
 
-* NodeJS >= 0.8.0
+* NodeJS >= 4.4.3
 
 Pour plus de détails pour l'installation sur votre machine : [Grunt getting started](http://gruntjs.com/getting-started)
 
