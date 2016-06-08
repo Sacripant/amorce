@@ -7,7 +7,7 @@
 	
 	<p>
 		Toutes les tailles (espaces, textes et composants) sont gérées à partir des tailles des fonts définies dans <code>typography.css</code>.
-		Pour profiter de ce système, l'unité de référence devra être <code>em</code>, même pour les espaces (<code>padding</code> et <code>margin</code>).
+		Pour profiter de ce système, l'unité de référence devra être <code>em</code> pour les espaces (<code>padding</code>,  <code>margin</code>, <code>border</code>).
 	</p>
 
 	<p>
@@ -16,8 +16,8 @@
 	</p>
 
 	<p>
-		Les modificateurs de tailles <strong><code>.xsmall, .small, .medium, .large, .xlarge</code></strong> ne modifie que la valeur de <strong><code>font-size</code></strong>. <br/>
-		Les modificateurs de tailles <strong><code>.h6 -> .h1</code></strong> modifient <strong><code>font-size et line-height</code></strong> de manière à reproduire fidèlement les headers équivalements.
+		Les modificateurs de tailles <strong><code>.xsmall, .small, .medium, .large, .xlarge</code></strong> ne modifient que la valeur de <strong><kbd>font-size</kbd></strong>. <br/>
+		Les modificateurs de tailles <strong><code>.h6 -> .h1</code></strong> modifient <strong><code>font-size</code> et <code>line-height</code></strong> de manière à reproduire fidèlement les headers équivalemment.
 	</p>
 
 	<div id="sizes">
@@ -48,27 +48,27 @@
 
 		<h5 class="font-size">
 			<code>h5, .h5, .xlarge</code> <br>
-			Taille d'un h5
+			Taille d'un h5, ou d'un élément xlarge
 		</h5>
 
 		<h6 class="font-size">
 			<code>h6, .h6, .large</code> <br>
-			Taille d'un h6
+			Taille d'un h6 ou d'un élément large
 		</h6>
 
 		<p class="font-size">
 			<code>p, .p, .medium</code> <br>
-			Taille d'un p
+			Taille d'un p ou d'un élément medium
 		</p>
 
 		<small class="font-size">
 			<code>small, .small</code> <br>
-			Taille d'un small
+			Taille d'un élément small
 		</small>
 
 		<p class="font-size xsmall">
 			<code>.xsmall</code> <br>
-			Taille d'un x-small
+			Taille d'un élément x-small
 		</p>
 	</div>
 
@@ -90,16 +90,9 @@
 
 		<div class="code-demo">
 			
-<div>
-	<h5>Composant taille normal</h5>
-	<p>Voir un composant, composé d'un titre <code>h5</code> et d'un <code>p</code>.</p>
-</div>
-
-<hr>
-
-<div class="xsmall">
-	<h5>Même composant mais avec <code>.xsmall</code> sur le wrapper</h5>
-	<p>Du coup, le titre <code>h5</code> aura exactement la taille d'un <code>p</code> et le <code>p</code> la taille d'un <code>x-small</code>.</p>
+<div class="va-bottom">
+	<button class="btn small">Je suis un button small</button>
+	<button class="btn xlarge">Je suis un button extra large</button>
 </div>
 
 		</div>
