@@ -13,6 +13,14 @@
   * sac-breakpoint.js
 
 -------------------------------------------------------------- */
+:root {
+  --maxXS : 30em;
+  --maxS  : 48em;
+  --maxM  : 60em;
+  --maxL  : 80em;
+};
+
+
 
 /* define breakpoints with custom-medias */
 @custom-media --maxXS (width < 30em);

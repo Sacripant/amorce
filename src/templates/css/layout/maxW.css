@@ -1,0 +1,20 @@
+/* 
+	maxW 
+	fix max-width based on breakpoints
+
+	REQUIRED :
+  	* breakpoints.css
+*/
+
+.maxW--maxXS {
+	max-width: var(--maxXS);
+}
+.maxW--maxS {
+	max-width: var(--maxS);
+}
+.maxW--maxM {
+	max-width: var(--maxM);
+}
+.maxW--maxL {
+	max-width: var(--maxL);
+}

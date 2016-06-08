@@ -12,6 +12,7 @@
 */
 @import 'layout/breakpoints.css';
 @import 'layout/grid.css';
+@import 'layout/maxW.css';
 @import 'layout/layout-utils.css';
 
 
