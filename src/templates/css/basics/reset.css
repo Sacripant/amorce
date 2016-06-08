@@ -1,12 +1,27 @@
 /* -------------------------------------------------------------- 
   
-	reset.css for HTML5
-	Mélange maison de boilerplate & htlm5reset
-	© sacripant.fr
+	reset.css for AMORCE
+	https://github.com/Sacripant/amorce
+
+	Mélange maison de 
+		normalize : https://github.com/necolas/normalize.css	 
+	&	htlm5reset : https://github.com/murtaugh/HTML5-Reset/blob/master/assets/css/reset.css;
    
 -------------------------------------------------------------- */
 
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+/* Hard reset */
+html, body, body div, 
+span, 
+object, 
+iframe, 
+h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, 
+b, i, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, figure, footer, header, hgroup, menu, nav, 
+section, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -83,20 +98,29 @@ template, /* 1 */
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-img,video,object,embed { max-width: 100%; height: auto; }
+img, video, object, embed { 
+	max-width: 100%; height: auto; 
+}
 img { border-style: none; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
 /* SVG Corrects overflow displayed oddly in IE 9. */
 svg:not(:root) { overflow: hidden; }
+
 /* FIGURE Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
 figure { margin: 0; }
 
 /* force a vertical scrollbar to prevent a jumpy page */
-html {font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow-y: scroll;}
+html { overflow-y: scroll; }
 
-/*NAV*/
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+/* Force Nude list inside nav tag */
+nav ul, nav ol { 
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; 
+}
 
-/*Box model*/
+/* Box model to border-box */
 * { box-sizing: border-box; }
 
 
