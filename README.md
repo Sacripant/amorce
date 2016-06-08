@@ -70,9 +70,14 @@ Pour plus de précision, vous pouvez inspecter les fichiers `package.json` et `g
 ## Documentation
 
 
-Un style guide `docs/index.html` présentant le framework CSS utilisé et les modules developpés disponibles.
-C'est un bon point de départ pour comprendre la nomenclature employée et réutiliser les modules développées.
 
+Un style guide `docs/index.html` présentant le framework CSS utilisé et les modules developpés disponibles.
+C'est un bon point de départ pour comprendre la convention de nommage employée et réutiliser les modules développées.
+
+
+`grunt builddocs`
+
+Cette commande permet de compiler la documentation.
 
 
 
