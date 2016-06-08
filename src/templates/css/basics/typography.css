@@ -162,7 +162,7 @@ address     { margin-bottom: var(--vr)em; font-style: italic; }
 del         { color:#666; }
 
 /*Code / pre*/
-pre, code, kbd, samp 	{ font-family: monospace, monospace; font-size: larger; line-height: var(--vr);}
+pre, code, kbd, samp 	{ font-family: "Courier New", courier, monospace, serif; font-size: 1em; line-height: var(--vr);}
 pre 					{ margin-bottom: var(--vr)em;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 /* Addresses styling not present in IE 6/7/8/9. */
