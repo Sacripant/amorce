@@ -47,6 +47,7 @@
 	     tab-size : 4;
 	overflow: auto;
 	white-space: pre;
+	clear: both;
 }
 
 .code-demo > .bloc-code {
