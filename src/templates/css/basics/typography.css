@@ -118,7 +118,7 @@ small,
 */
 
 p, .p {
-	font-style: 1em;
+	font-size: 1em;
 	margin-bottom: var(--vr)em; 
 	hyphens: auto;
 }
