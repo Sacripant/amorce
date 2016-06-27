@@ -45,20 +45,6 @@
 }
 
 
-/*
-*   Vertical rythme
-*   Default vertical rythme
-*/
-.v-space,
-.vsapce
-{
-    margin-bottom: var(--vr)em;
-    margin-bottom: var(--vr)rem;
-}
-
-
-
-
 /* 
 *	Default font settings. 
 */
@@ -253,4 +239,21 @@ hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+}
+
+
+
+/*
+*   Vertical rythme
+*   Default vertical rythme
+*/
+.v-space,
+.vspace
+{
+    margin-bottom: var(--vr)em;
+    margin-bottom: var(--vr)rem;
+}
+/* Remove vertical rythme */
+.mb0, .no-vspace {
+	margin-bottom: 0;
 }
