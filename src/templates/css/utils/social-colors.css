@@ -1,0 +1,15 @@
+/* -------------------------------------------------------------- 
+   
+	social-colors.css
+	© sacripant.fr
+
+-------------------------------------------------------------- */
+
+/*	Social Colors variables	*/
+:root {
+	--facebook-color : hsl(221,42%,42%);
+	--google-color : hsl(7,71%,55%);
+	--linkedin-color : hsl(212,56%,46%);
+	--pinterest-color : hsl(4,78%,44%);
+	--twitter-color : hsl(203,69%,59%);
+}
