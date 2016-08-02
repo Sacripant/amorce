@@ -7,7 +7,7 @@
 	* Sets up some sensible default typography.
 
 	TOC :
-	* Vertical rythme
+	* variables configuration
 	* Default font settings
 	* Sizes
 	* Text elements
@@ -15,6 +15,8 @@
 	* Tables
 	* Texte selection
 	* hr
+	* Vertical rythme
+	* Typo for print
 
 	REQUIRED :
 	* reset.css
@@ -65,7 +67,7 @@ body {
 /* 
 *	Headings
 *	Define modules size
-* quotient : 1.1667 (http://instacalc.com/17574)
+* 	quotient : 1.1667 (http://instacalc.com/17574)
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6
@@ -89,7 +91,7 @@ h4 img, h5 img, h6 img {
 	margin: 0;
 }
 
-/*Complementary sizes*/
+/* Complementary sizes, usefull for components */
 
 small, 
 .small		{ font-size: var(--fs-small)em }
@@ -109,7 +111,7 @@ p, .p {
 	hyphens: auto;
 }
 
-/*Links*/
+/* Links */
 a:focus 		{ outline: thin dotted; }
 a:active,a:hover
 				{ outline-width: 0; }
@@ -122,7 +124,7 @@ a           {
 	text-decoration: none; 
 }
 
-/*citations*/
+/* citations */
 blockquote, q 	{ quotes: none; }
 blockquote:before, blockquote:after, 
 q:before, q:after 
@@ -256,4 +258,89 @@ hr {
 /* Remove vertical rythme */
 .mb0, .no-vspace {
 	margin-bottom: 0;
+}
+
+
+
+/* 
+*	Print styles.
+*	Inlined to avoid the additional HTTP request:
+*	http://www.phpied.com/delay-loading-your-print-css/
+*	source: https://html5boilerplate.com/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body { 
+		font-size: 11pt;
+		line-height: 1.3;
+	}
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        /*border: 1px solid #999;*/
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
