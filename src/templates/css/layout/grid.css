@@ -210,7 +210,7 @@
 .span--auto                         { width: auto; }
 
 
-@media only screen and (--minS) {
+@media (--minS) {
     .s-span--1-7                                { width: 14.285%; }
     .s-span--1-6                                { width: 16.666%; }
     .s-span--1-5                                { width: 20%; }
@@ -236,7 +236,7 @@
 }
 
 
-@media only screen and (--minM) {
+@media (--minM) {
     .m-span--1-7                                { width: 14.285%; }
     .m-span--1-6                                { width: 16.666%; }
     .m-span--1-5                                { width: 20%; }
@@ -260,7 +260,7 @@
     .m-span--auto                               { width: auto; }
  
 }
-@media only screen and (--minL) {
+@media (--minL) {
     .l-span--1-7                                { width: 14.285%; }
     .l-span--1-6                                { width: 16.666%; }
     .l-span--1-5                                { width: 20%; }
@@ -284,7 +284,7 @@
     .l-span--auto                               { width: auto; }
  
 }
-@media only screen and (--minXL) {
+@media (--minXL) {
     .xl-span--1-7                                { width: 14.285%; }
     .xl-span--1-6                                { width: 16.666%; }
     .xl-span--1-5                                { width: 20%; }
