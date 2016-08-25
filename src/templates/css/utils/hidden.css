@@ -90,3 +90,13 @@
         display: none !important;
     }
 }
+
+/*
+*   Print hidden class
+*/
+
+@media print {
+    .hidden-print {
+        display: none !important;
+    }
+}
