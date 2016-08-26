@@ -44,3 +44,12 @@
     width: 100%;
     border-collapse: collapse;    
 }
+
+/* half gutter */
+.tb-grid.half-gutter 
+, .tb-grid--auto.half-gutter 
+{
+    width: calc( 100% + var(--gutter)em );
+    margin-left: -var(--gutter-half)em;
+    border-spacing: var(--gutter-half)em 0;
+}
