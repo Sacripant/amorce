@@ -8,14 +8,28 @@
 -------------------------------------------------------------- */
 
 
-/* center a block horizontally */
+/* 
+*	center a block horizontally 
+*/
 .centered-block {
     display: block;
     margin-right: auto; 
     margin-left: auto;
 }
 
-/* Full size for inline-block, usefull for btn */
+/* 
+*	Full size
+*	usefull for inline-block, for btn 
+*/
 .fit {
     width: 100%;
 }
+
+/*	
+*	vertical-align 
+*	usefull for table and inline grid
+*/
+.va-top > *     { vertical-align: top; }
+.va-bottom > *  { vertical-align: bottom; }
+.va-middle > *  { vertical-align: middle; }
+
