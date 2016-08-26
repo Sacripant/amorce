@@ -12,8 +12,6 @@
   --maxL  : 80em;
 };
 
-
-
 /* define breakpoints with custom-medias */
 @custom-media --maxXS (width < 30em);
 @custom-media --minS (width >= 30em);
