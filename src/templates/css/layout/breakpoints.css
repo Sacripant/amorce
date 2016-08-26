@@ -1,16 +1,8 @@
 /* -------------------------------------------------------------- 
    
   breakpoints.css
-  Define Breakpoints and add these values in body:before
-
-  These values will not show up in content, but can be 
-  queried by JavaScript to know which breakpoint is active. 
-  https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
-
-  © sacripant.fr
-
-  REQUIRED :
-  * sac-breakpoint.js
+  Define Breakpoints
+  Part of Amorce starter kit © sacripant.fr
 
 -------------------------------------------------------------- */
 :root {
@@ -31,30 +23,3 @@
 @custom-media --minL (width >= 60em);
 @custom-media --maxL (width < 80em);
 @custom-media --minXL (width >= 80em);
-
-
-/* values in body */
-body:before {
-  content: "XS";
-  display: none; /* Prevent from displaying. */
-}
-@media (--minS) {
-  body:before {
-    content: "S";
-  }
-}
-@media (--minM) {
-  body:before {
-    content: "M";
-  }
-}
-@media (--minL) {
-  body:before {
-    content: "L";
-  }
-}
-@media (--minXL) {
-  body:before {
-    content: "XL";
-  }
-}
