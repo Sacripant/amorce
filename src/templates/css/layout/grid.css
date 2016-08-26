@@ -16,14 +16,6 @@
         
 -------------------------------------------------------------- */ 
 
-:root {
-    /* gutter size (default based in typography vertical rythme )*/
-    --gutter : var(--vr);
-    --gutter-half : calc( var(--gutter) / 2 );
-}
-
-
-
 
 
 /*

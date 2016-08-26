@@ -11,6 +11,7 @@
 *	layout, grids & breakpoints
 */
 @import 'layout/breakpoints.css';
+@import 'layout/gutter.css';
 @import 'layout/grid.css';
 @import 'layout/maxW.css';
 @import 'layout/layout-utils.css';
