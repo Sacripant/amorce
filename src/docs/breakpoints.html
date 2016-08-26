@@ -5,8 +5,8 @@
 	<h1>Breakpoints</h1>
 
 	<p>
-		4 breakpoints sont définis à travers des <em>custom-medias</em> en <code>em</code> dans le fichier source <code>config.css</code>.
-		Ces 4 breakpoints permettent de gérer l'affiche sur des écrans de taille :
+		5 breakpoints sont définis à travers des <em>custom-medias</em> en <code>em</code> dans le fichier source <code>layout/breakpoints.css</code>.
+		Ces 5 breakpoints permettent de gérer l'affiche sur des écrans de taille :
 	</p>
 
 	<ul>
@@ -107,24 +107,6 @@
           <td class="notif error">Hidden</td>
         </tr>
     </table>
-
-
-	<h3>
-		Detect Breakpoint in JS
-	</h3>
-
-	<p>
-		Dans <code>utils.css</code> des <code>::before content</code> sont ajoutés en fonction des <code>custom-medias</code> <br/>
-		<code>sac-breakpoint.js</code> détecte cette valeur et la stock dans la variable <code>breakpoint.val</code>. Utilisable dans vos codes JS. <br/>
-		Nécessite <code>sac-breakpoint.js</code>
-	</p>
-
-	<pre class="bloc-code">
-if( breakpoint.val === 'minM' )
-{
-	console.log('user displays website in minM viewport')
-}
-	</pre>
 
 
 	
