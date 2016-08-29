@@ -1,94 +1,88 @@
-<!doctype html>
-<html class="no-js" lang="fr">
+{% extends 'docs/base.html' %}
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="author" content="Jund Thomas" />
-	<meta name="copyright" content="© sacripant.fr" />
-	<meta name="description" content="Site style Guide, based to Amorce (a html/Css framework by Sacripant)" />
+
+
+{% block main %}
+<h1>Amorce v.1606</h1>
+
+
+<p>
+	Amorce est un starter kit pour l'intégration de site internet. <br/>
+	Il propose :
+</p>
+
+<ul>
+	<li> Un Framework CSS (reset, typo, forms, utils, grid) découpé en modules.</li>
+	<li> Une documentation qu'il suffit de faire évoluer en style guide pour chaque projet.</li>
+	<li> Une série de task grunt 
+		<ul>
+			<li> <a href="http://cssnext.io/">cssnext</a> (compilation du code CSS4 en CSS3)</li>
+			<li> <a href="http://mozilla.github.io/nunjucks/">nunjucks</a> (language de templating inspiré de <em>Jinja</em></li>
+			<li> svgmin (Optimisation des images SVG)</li>
+			<li> webfont (génération de webfont à partir d'un dossier d'icons SVG)</li>
+			<li> modernizr </li>
+			<li> … </li>
+		</ul>
+	</li>	
+</ul>
+
+<h2> Requiremements </h2>
+
+<ul>
+	<li>Le projet utilise le <em>task runner</em> <a href="http://gruntjs.com/">GRUNT</a>.</li>
+	<li><em>Grunt</em> necessite <a href="https://nodejs.org/">nodeJS</a> >= 4.4.3.</li>
+</ul>
+
+<p>
+	Pour plus de détails pour l'installation sur votre machine : <a href="http://gruntjs.com/getting-started">Grunt getting started</a>
+</p>
+
+<h2> Getting strarted </h2>
+
+<p>
+	Depuis un shell ou une console (placé à la racine de votre projet), lancez les commandes suivantes :	
+</p>
+
+<ul>
+	<li><code>npm install</code> pour télécharger et installer les paquets nodeJS necessaires.</li>
+	<li><code>grunt init</code> ou <code>grunt build</code> pour faire une compilation manuelle des sources.</li>
+</ul>
+
+
+<h2>Compilation à la volée</h2> 
+
+<p>
+	La commande <code>grunt</code> ou <code>grunt watch</code> est paramétrée pour lancer un <em>watcher</em> sur les fichiers sources. Ainsi à chaque modification d'un fichier source html ou css, les fichiers seront compilés à la volée.
+</p>
+<p>
+	De plus un serveur <a href="http://livereload.com">livereload</a> est également lancé permettant de rafraichir votre browser à chaque modification.
+	Pour en profiter, il suffit d'installer l'<a href="http://livereload.com/extensions/">extension Livereload</a> correspondant à votre navigateur.
 	
-	<!-- Viewport for Iphone ipad -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-   
-	
-	<title>
-		{% block title%}{% endblock %}	
-		Amorce, web starter kit
-	</title>
-	
-<!-- affichage favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
-<!-- CSS -->
-	<!-- if icons -->
-	<link rel="stylesheet" href="../build/css/yourproject-icons.css" media="all" />
-	<!-- project CSS -->
-	<link rel="stylesheet" href="../build/css/project.css" media="all" />
-	<!-- only for this doc -->
-	<link rel="stylesheet" href="assets/prism.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="assets/doc.css" type="text/css" media="screen" />
-
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<![endif]-->
+</p>
 
 
-</head>
+<h2>Commandes de compilation manuelles</h2> 
 
+<ul>
+	<li>
+		<code>grunt buildcss</code> : compile les fichiers CSS à l'aide de <a href="http://cssnext.io/">cssnext</a>.
+	</li>
+	<li>
+		<code>grunt buildicons</code> : compile les fichiers <code>.svg</code> présents dans <code>src/static/img/icons/</code>`: optimisations des images et génération d'une font icons.
+	</li>
+	<li>
+		<code>grunt buildhtml</code> : compile les fichiers sources <code>.html</code> qui utilise le sytem de templating _nunjucks_
+	</li>
+	<li>
+		<code>grunt modernizr</code> : inspecte les fichiers CSS et JS du projet et compile un fichier <code>modernizr-custom.js</code>.
+	</li>
+	<li>
+		<code>grunt builddocs</code> : compile les fichiers de la présente documentation
+	</li>
+</ul>
 
-<body id="home">
-	
-	<div id="wrapper">
-		
-		<header role="banner" class="docs-header">
-			<h1 class="h6">Code Style Guide</h1>
-			<nav role="navigation" class="docs-toc">
-				<ul>
-					<li><a class="a__toc" href="nomenclature.html">Nomenclature</a></li>
-				</ul>
+<p>
+	Pour plus de précision, vous pouvez inspecter les fichiers <code>package.json</code> et <code>gruntfile.js</code>.
+</p>
 
-				<h6 class="h__docs-toc">Base</h6>
-				<ul>
-					<li><a class="a__toc" href="size.html">Sizes</a></li>
-					<li><a class="a__toc" href="typo.html">Typography</a></li>
-					<li><a class="a__toc" href="colors.html">Colors</a></li>
-					<li><a class="a__toc" href="forms.html">Forms</a></li>
-				</ul>
-
-				<h6 class="h__docs-toc">Utils</h6>
-				<ul>
-					<li><a class="a__toc" href="yourproject-icons.html">Icons</a></li>
-				</ul>
-
-				<h6 class="h__docs-toc">Layout</h6>
-				<ul>
-					<li><a class="a__toc" href="breakpoints.html">Breakpoints</a></li>
-					<li><a class="a__toc" href="grille.html">Grid</a></li>
-				</ul>
-
-				<h6 class="h__docs-toc">Composants</h6>
-				<ul>
-					<li><a class="a__toc" href="composants.html">Composants</a></li>
-				</ul>
-			</nav>
-		</header>
-	
-		<main class="docs-main" role="main">
-
-			{% block main %}{% endblock %}
-			
-		</main>
-		
-	</div><!-- #wrapper -->
-
-
-<!-- Javascript bottom -->
-	<script src="../build/js/jquery-2.2.3.min.js"></script>	
-	<script src="assets/tinycolor-min.js"></script>
-	<script src="assets/prism.js" data-manual></script>
-	<script src="assets/doc.js"></script>
-
-	{% block additional_JS %}{% endblock %}
-</body>
-
-</html>
+{% endblock %}
