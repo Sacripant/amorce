@@ -14,3 +14,10 @@
 	--twitter-color : hsl(203,69%,59%);
 	--youtube-color : hsl(3,76%,50%);
 }
+
+.facebook-color		{ color: var(--facebook-color); }
+.google-color		{ color: var(--google-color); }
+.linkedin-color 	{ color: var(--linkedin-color); }
+.pinterest-color 	{ color: var(--pinterest-color); }
+.twitter-color		{ color: var(--twitter-color); }
+.youtube-color		{ color: var(--youtube-color); }
