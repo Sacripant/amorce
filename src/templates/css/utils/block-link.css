@@ -6,11 +6,11 @@
 
 -------------------------------------------------------------- */
 
-.bloc-link {
+.block-link {
     position: relative;
 }
 
-.a__bloc-link:before {
+.a__block-link:before {
     content: "";
     display: block;
     position: absolute;
@@ -20,7 +20,7 @@
     left: 0;
 }
 
-.bloc-link a:not(.a__bloc-link){
+.block-link a:not(.a__block-link){
     position: relative;
     z-index: 2;
 }
