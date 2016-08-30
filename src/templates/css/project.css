@@ -27,7 +27,7 @@
 @import 'utils/block-link.css';
 @import 'utils/clear.css';
 @import 'utils/hidden.css';
-/* @import 'utils/social-colors.css'; */
+@import 'utils/social-colors.css'; 
 @import 'utils/placeholder-imgs.css';
 
 
