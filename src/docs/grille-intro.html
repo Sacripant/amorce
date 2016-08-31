@@ -1,0 +1,84 @@
+{% extends 'docs/base.html' %}
+
+{% block main %}
+<section id="doc-grille" class="doc-section">
+	<h1>Grilles - introduction</h1>
+
+	<p>
+		3 systèmes de grilles sont disponibles : 
+	</p>
+
+	<ul>
+		<li> <code>.fl-grid</code> Basée sur un <em>float left layout</em>.</li>
+		<li> <code>.tb-grid</code> Basée sur un <em>table layout</em>.</li>
+		<li> <code>.il-grid</code> Basée sur un <em>inline-block layout</em>.</li>
+	</ul>
+
+	<h2>Gouttière</h2>
+
+	<p>
+		La taille de la gouttière est par défaut équivalente au rythme vertical. <br/>
+		Cette valeur est gérée par la <code>var(--gutter)</code> (cf gutter.css)
+	</p>
+	
+	<h2>Taille des Colonnes <code>span</code></h2>
+
+	<p>
+		Les grilles permettent diverses compositions avec un système de 2 à 7 colonnes imbricables. <br />
+		Les tailles des colonnes sont gérés grâce aux class <code>span--*</code>. <br/>
+		La taille de la colonne s'ajoute en option. Ex: <code>span--1-3</code>. <br/>
+		<strong>Astuce :</strong> cette class est optionnelle (voir exemples). <br/> 
+		Une class <code>span--auto</code> est également disponible.
+	</p>
+
+	<h3>Responsive design</h3>
+
+	<p>
+		Il est possible de définir une taille différente de colonne pour chaque breakpoints. 
+		Il suffit d'ajouter le préfixe du breakpoint a la class <code>span--*</code>. 
+		Dans la logique du <em>mobile first</em>, une taille donnée sera valable à partir du breakpoint indiqué et au delà.
+	</p>
+
+	<ul>
+	 	<li><code>span--*</code> pour tous les breakpoints</li>
+	 	<li><code>s-span--*</code> breakpoint S (small) et +</li>
+	 	<li><code>m-span--*</code> breakpoint M (medium) et +</li>
+	 	<li><code>l-span--*</code> breakpoint L (large) et +</li>
+	 	<li><code>xl-span--*</code> breakpoint XL (extra-large) et +</li>
+	</ul>
+
+	<h4>Exemple</h4>
+
+	<p>
+		Une colonne avec une <code>[class*='span--']</code> aura par défaut une largeur de 100%. <br/>
+		Dans l'exemple ci-dessous, les colonnes feront :
+	</p>
+
+	<ul>
+		<li>100% pour les tailles de viewport XS et S</li>
+		<li>50% pour les tailles de viewport M</li>
+		<li>25% pour les tailles de viewport L et +</li>
+	</ul>
+	
+	<div class="demo-grid code-demo">
+<div class="il-grid">
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+</div>
+	</div>
+
+	<h2>Options</h2>
+
+	<ul>
+		<li><code>.no-gutter</code> pour une grille sans gouttière</li>
+		<li><code>.half-gutter</code> pour des tailles de gouttières réduites de moitier</li>
+		<li>
+			<code>.va-top .va-middle .va-top</code> pour modifier l'alignement vertical des colonnes. <br/>
+			Fonctionne uniquement avec les <code>table grid</code> et <code>inline gird</code>.
+		</li>
+	</ul>
+	
+</section>
+{% endblock %}

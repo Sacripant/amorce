@@ -64,25 +64,22 @@ pre[class*="language-"] {
 *	grid demo
 */
 
-.demo-grid .fl-grid > div:before 
-, .demo-grid .il-grid > div:before 
-, .demo-grid .tb-grid > div
+.demo-grid .fl-grid > *
+, .demo-grid .il-grid > *
+, .demo-grid .tb-grid > *
 {
-	background-color: #ddd;
-	border: 1px solid #aaa;
-	padding: 0.4em;
-	line-height: 1.2em;	
-}
-
-.demo-grid .fl-grid > div:before 
-, .demo-grid .il-grid > div:before 
-{
-	display: block;
-	content: "." attr(class);
-}
-
-.demo-grid [class*="span--"] {
+	background-image: linear-gradient( 90deg, hsla(0, 0%, 75%, .5), hsla(0, 0%, 75%, .5));
+	background-origin: content-box;
+	background-repeat: no-repeat;
 	word-wrap: break-word;
+	margin-bottom: 1rem;
+}
+
+.demo-grid .fl-grid > *:before 
+, .demo-grid .il-grid > *:before 
+, .demo-grid .tb-grid > *:before 
+{
+	content: "." attr(class);
 }
 
 
