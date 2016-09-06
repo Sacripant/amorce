@@ -134,7 +134,7 @@ module.exports = function(grunt){
                     files: 'build/js/*.js'
                 },
             src_docs : {
-                files : 'src/docs/*.html',
+                files : 'src/docs/**/*',
                 tasks : ['nunjucks:docs']                  
             }
         },

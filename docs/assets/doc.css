@@ -2,7 +2,9 @@
 *	docs layout
 */
 
-#docs-wrapper {
+#logo {
+	width: 400px;
+	max-width: 100%;
 }
 .docs-header {
 	float: left;
