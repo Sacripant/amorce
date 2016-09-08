@@ -35,9 +35,14 @@
 
 
 <body>
-	<div id="wrapper">
+	<div class="docs-wrapper">
+
+		<input type="checkbox" class="ckb__toggle-header hidden" id="ckb__toggle-header" />
+		<label class="btn__toggle-header" for="ckb__toggle-header" role="button" aria-label="Open close Table of content">
+			<abbr title="Table of content">TOC</abbr>
+		</label>
 		
-		<header role="banner" class="docs-header">
+		<header role="banner" class="docs-header small">
 			{% block header_title %}
 			<h1 class="h6">
 				{% include 'docs/includes/logo-amorce.svg' %}
