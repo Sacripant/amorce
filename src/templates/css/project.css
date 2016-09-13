@@ -1,6 +1,6 @@
 /*
-*	Basics
-*/
+ *	Basics
+ */
 @import 'basics/reset.css';
 @import 'basics/colors.css';
 @import 'basics/typography.css';
@@ -8,8 +8,8 @@
 
 
 /*
-*	layout, grids & breakpoints
-*/
+ *	layout, grids & breakpoints
+ */
 @import 'layout/breakpoints.css';
 @import 'layout/gutter.css';
 @import 'layout/tb-grid.css';
@@ -21,8 +21,8 @@
 
 
 /* 
-*	utils 
-*/
+ *	utils 
+ */
 @import 'utils/typo-utils.css';
 @import 'utils/block-link.css';
 @import 'utils/clear.css';
@@ -32,12 +32,12 @@
 
 
 /*
-*	components
-*/
+ *	components
+ */
 @import 'components/buttons.css';
 
 
 /*
-*	Specific
-*/
+ *	Specific
+ */
 @import 'specific/global-layout.css'

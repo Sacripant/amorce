@@ -1,10 +1,18 @@
-/* -------------------------------------------------------------- 
-   
-  breakpoints.css
-  Define Breakpoints
-  Part of Amorce starter kit © sacripant.fr
+/*  ======
 
--------------------------------------------------------------- */
+    Layout - breakpoints.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Define breakpoints
+  
+====== */
+
+/* 
+ *	breakpoints vars
+ */
 :root {
   --maxXS : 30em;
   --maxS  : 48em;
@@ -12,7 +20,9 @@
   --maxL  : 80em;
 };
 
-/* define breakpoints with custom-medias */
+/* 
+ *	define breakpoints with custom-medias 
+ */
 @custom-media --maxXS (width < 30em);
 @custom-media --minS (width >= 30em);
 @custom-media --maxS (width < 48em);

@@ -1,17 +1,19 @@
 {% extends 'docs/extends/base.html' %}
 
-{% block title%}
+{% block title %}
   Block link —
 {% endblock %}  
 
 {% block additionalCSS %}
-  .block-link {
-    background-color: LightCyan;
-  }
+  <style>
+    .block-link {
+      background-color: LightCyan;
+    }
 
-  .block-link:hover {
-    background-color: NavajoWhite;
-  }
+    .block-link:hover {
+      background-color: NavajoWhite;
+    }
+  </style>
 {% endblock %}
 
 {% block main %}

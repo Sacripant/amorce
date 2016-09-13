@@ -1,23 +1,42 @@
-/* --------------------------------------------------------------
-	forms.css
-		define default form styles
-		* Thanks boilerplate for Normalize Form CSS
-		© sacripant.fr
--------------------------------------------------------------- */ 
+/*  ======
+
+    Basics - forms.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    
+    Thanks boilerplate for Normalize Form CSS
+    -------------------
+
+    Define default form styles
+
+    TOC:
+    * Reset
+    * Normalizr
+    * Fieldset & legend
+    * Form item wrapper
+    * Label
+    * Form fields
+    * No label option
+    * Input group
+    * form notifications
+    * Required field
+  
+====== */
 
 
 /*
-//	RESET FORMS
-*/
+ *  RESET FORMS
+ */
 
 /* hand cursor on clickable elements */
 .clickable, label, [type=button], [type=submit], button {cursor: pointer; line-height: normal;}
 button[disabled], input[disabled] { cursor: default; }
 
 /* 
-*	Some Form Normalizr 
-*	https://github.com/necolas/normalize.css
-*/
+ *  Some Form Normalizr 
+ *  https://github.com/necolas/normalize.css
+ */
 button, input, select, textarea { font: inherit; margin: 0; vertical-align: baseline; color: inherit; }
 button, input { overflow: visible; }
 button, select { text-transform: none; }
@@ -30,66 +49,70 @@ button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focus
 ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
 
 /*
-//	Fieldset + legend
-*/
+ *  Fieldset & legend
+ */
 
-/*Default fieldset : as a title*/
+/* Default fieldset : as a title */
 fieldset    { 
-	margin-bottom: var(--vr)em;
+    margin-bottom: var(--vr)em;
 }
 legend      { 
-	font-size: var(--fs-h6);
-	white-space: nowrap; 
-	border-bottom: 1px solid;
-	display: block;
-	width: 100%;
-	padding-bottom: 0.33em;
+    font-size: var(--fs-h6);
+    white-space: nowrap; 
+    border-bottom: 1px solid;
+    display: block;
+    width: 100%;
+    padding-bottom: 0.33em;
 }
-/*Fieldset border*/
+/* Fieldset border */
 .fieldset-border {
-	/*margin: 0 0 1.5em 0; */
-	border: 1px solid #ccc; 
-	padding: 0 1em 0.66em 1em;	
+    /*margin: 0 0 1.5em 0; */
+    border: 1px solid #ccc; 
+    padding: 0 1em 0.66em 1em;  
 }
 .fieldset-border legend {
-	border-bottom: 0 none;
-	padding-bottom: 0;
-	width: auto;
+    border-bottom: 0 none;
+    padding-bottom: 0;
+    width: auto;
 }
 
 
 /* 
-//	Form item 
-*/
+ *  Form item wrapper
+ */
 
-.form-item	{ 
-	margin-bottom: calc( var(--vr) / 3 )em;
-	margin-top: calc( var(--vr) / 3 )em; 
+.form-item  { 
+    margin-bottom: calc( var(--vr) / 3 )em;
+    margin-top: calc( var(--vr) / 3 )em; 
 }
+
+/*
+ *  Label
+ */
 
 label       { 
-	/*text-transform: uppercase; */
-	font-size: var(--fs-small)em;
-	color: #666;
-	line-height: normal;
+    /*text-transform: uppercase; */
+    font-size: var(--fs-small)em;
+    color: #666;
+    line-height: normal;
 }
 
 
 /* 
-//	Form fields
+//  Form fields
 */
 
 input
 , textarea
 , select 
 {
-	min-width: 100%; max-width: 100%;
-	padding: 0.33em;
-	border: 1px solid #ccc;
-	height: 2em;
+    min-width: 100%; max-width: 100%;
+    padding: 0.33em;
+    border: 1px solid #ccc;
+    height: 2em;
 }
 select {
-	width: 100%;
+    width: 100%;
 }
 optgroup {
   font-weight: bold;
@@ -100,7 +123,7 @@ input:focus
 , textarea:focus
 , select:focus 
 {
-	border-color: #666;
+    border-color: #666;
 }
 
 /* no min-width for checkbox, radio & form btn */
@@ -109,14 +132,14 @@ input[type=checkbox]
 , input[type=submit]
 , input[type="reset"] 
 {
-	min-width: 0;
-	max-width: none;
+    min-width: 0;
+    max-width: none;
 }
 
 
 textarea {
-	font: inherit;
-	resize: vertical;
+    font: inherit;
+    resize: vertical;
 }
 
 /* Height auto for checkbox, radio, select[multiple] & textarea */
@@ -125,92 +148,95 @@ input[type=checkbox]
 , textarea
 , select[multiple]
 {
-	height: auto;	
+    height: auto;   
 }
 
-/* file */ 
+/* input type file */ 
 input[type=file] { 
-	border: 0 none; padding: 0; width: 100%;/*for firefox display*/ 
+    border: 0 none; padding: 0; width: 100%; /*for firefox display*/ 
 }
 
-/* date */
+/* input type date */
 input[type=date] { 
-	font: inherit; /*for chrome display*/
+    font: inherit; /*for chrome display*/
 }
 
 
-/*For correct input alignement with sibling form-item if no label (for submit per ex)*/
-.no-label input	{
-	margin-top: var(--vr)em; /*cf typo line-height*/
+/*  
+ *  No label
+ *  For correct input alignement with sibling form-item if no label 
+ *  (for submit btn per ex) 
+ */
+.no-label input {
+    margin-top: var(--vr)em; /*cf typo line-height*/
 }
 
 
 
 /* 
-//	Form item inline
-*/
+ *  Inline Form
+ *  Align label & input
+ */
 .inline-form input, .inline-form textarea, .inline-form select { 
-	min-width: 0;
-	width: auto;
+    min-width: 0;
+    width: auto;
 }
 
 
 /* 
-//	Input group
-*/
+ *  Input group
+ */
 
 .input-group {
-	display: table;
-	width: 100%;
+    display: table;
+    width: 100%;
 }
 .input-group > * {
-	display: table-cell;
-	vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 .input-group input {
-	width: 100%;
+    width: 100%;
 }
 .input-addon {
-	width: 1%;
-	background-color: #ddd;
-	/*border: 1px solid #999;*/
+    width: 1%;
+    background-color: #ddd;
+    /*border: 1px solid #999;*/
 }
 span.input-addon {
-	padding: 0 0.33em;	
+    padding: 0 0.33em;  
 }
 .input-addon button 
 , .input-addon input[type=submit]
 {
-	background: none;
-	border: 0 none;
-	width: auto;
-	margin-bottom: -2px;
+    background: none;
+    border: 0 none;
+    width: auto;
+    margin-bottom: -2px;
 }
 
 
 
 /*
-*	Notifications
-*	* Error
-*	* notif
-*	* success
+*   Notifications
+*   * Error
+*   * notif
+*   * success
 */
 
-/*colors*/
 
-
-.notif	{ 
-	padding: .5em; 
-	margin-bottom: 1em; 
-	border: 1px solid; 
+.notif  { 
+    padding: .5em; 
+    margin-bottom: 1em; 
+    border: 1px solid; 
 }
 
 /* ERROR */
-.color-error		{ color: var(--color-error); }
-.color-error-bg		{ color: var(--color-error-bg); }
+.color-error        { color: var(--color-error); }
+.color-error-bg     { color: var(--color-error-bg); }
 
-.error		{ 
-	color: var(--color-error);
+.error      { 
+    color: var(--color-error);
 }
 
 .notif.error 
@@ -218,31 +244,31 @@ span.input-addon {
 , .error textarea
 , .error select
 {
-	background: var(--color-error-bg); 	
+    background: var(--color-error-bg);  
 }
 
 /* NOTICE */
-.color-notice		{ color: var(--color-notice); }
-.color-notice-bg	{ color: var(--color-notice-bg); }
+.color-notice       { color: var(--color-notice); }
+.color-notice-bg    { color: var(--color-notice-bg); }
 
 .notif.notice
-{ 
-	background-color: var(--color-notice-bg);
-	color: var(--color-notice); 
+{
+    background-color: var(--color-notice-bg);
+    color: var(--color-notice); 
 }
 
 /* SUCCESS */
-.color-success		{ color: var(--color-success); }
-.color-success-bg	{ color: var(--color-success-bg); }
+.color-success      { color: var(--color-success); }
+.color-success-bg   { color: var(--color-success-bg); }
 
-.notif.success	{ 
-	background-color: var(--color-success-bg); 
-	color: var(--color-success); 
+.notif.success  { 
+    background-color: var(--color-success-bg); 
+    color: var(--color-success); 
 }
 
 /* 
-//	Required field
-//	add * after label.required 
-*/
+ *  Required field
+ *  add * after label.required 
+ */
 
-label.required:after	{ content: " *"; color: red;}
+label.required:after    { content: " *"; color: red;}

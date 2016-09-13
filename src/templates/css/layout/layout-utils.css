@@ -1,16 +1,19 @@
-/* -------------------------------------------------------------- 
-   
-    layout-utils.css
-    some utils class for layout
-     
-    Part of Amorce starter kit © sacripant.fr
+/*  ======
 
--------------------------------------------------------------- */
+    Layout - layout-utils.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Some utils class for Layout
+      
+====== */
 
 
 /* 
-*	center a block horizontally 
-*/
+ *  center a block horizontally 
+ */
 .centered-block {
     display: block;
     margin-right: auto; 
@@ -18,17 +21,17 @@
 }
 
 /* 
-*	Full size
-*	usefull for inline-block, for btn 
-*/
+ *  Fit (Full parent width)
+ *  usefull for inline-block, for btn 
+ */
 .fit {
     width: 100%;
 }
 
-/*	
-*	vertical-align 
-*	usefull for table and inline grid
-*/
+/*  
+ *  vertical-align 
+ *  usefull for table and inline grid
+ */
 .va-top > *     { vertical-align: top; }
 .va-bottom > *  { vertical-align: bottom; }
 .va-middle > *  { vertical-align: middle; }

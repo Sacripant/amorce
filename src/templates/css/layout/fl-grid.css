@@ -1,20 +1,27 @@
-/* --------------------------------------------------------------
+/*  ======
 
-    fl-grid.css
-    flaot left layout grid system
+    Layout - fl-grid.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
 
-    Part of Amorce starter kit © sacripant.fr
+    Float left grid system
+    Options:
+    * No gutter
+    * Half gutter
 
-    Requirements :
-   	* gutter.css
-           
--------------------------------------------------------------- */ 
+    REQUIRED:
+    * layout/gutter.css
+      
+====== */
 
 /* 
-** Calcul de la gouttière en %
-** (1) margin neg = x%
+** Calc of gutter in %
+** (1) wrapper margin neg = x%
 ** (2) padding = x*(100+2x)/100
 -------------------------------*/
+
 .fl-grid { 
     display: block;
     margin-left: -var(--gutter-half)rem; /*(1)*/
@@ -36,8 +43,8 @@
 
 
 /* 
-*	Unguttered grid (no gutter) option
-*/
+ *  Unguttered grid (no gutter) option
+ */
 .fl-grid.no-gutter {
     margin-left: 0;
     margin-right: 0;
@@ -50,8 +57,8 @@
 }
 
 /*  
-*	half-gutter option
-*/
+ *  half-gutter option
+ */
 .fl-grid.half-gutter {
     margin-left: -calc(var(--gutter-half) / 2)rem; /*(2)*/
     margin-right: -calc(var(--gutter-half) / 2)rem; /*(2)*/

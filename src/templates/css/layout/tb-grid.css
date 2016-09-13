@@ -1,11 +1,22 @@
-/* --------------------------------------------------------------
+/*  ======
 
-    tb-grid.css
-    table layout grid system
+    Layout - tb-grid.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
 
-    Part of Amorce starter kit © sacripant.fr
-           
--------------------------------------------------------------- */ 
+    Table layout grid system
+    Options:
+    * Table layout auto
+    * No gutter
+    * Half gutter
+
+    REQUIRED:
+    * layout/gutter.css
+      
+====== */
+
 
 .tb-grid,
 [class*="tb-grid--"] 
@@ -17,7 +28,7 @@
     border-spacing: var(--gutter)em 0; /* don't work with % */
 
 
-    /*delet visualy border between table and cells*/
+    /* delet visualy border between table and cells */
     width: 100%;
     width: calc( 100% + 3em );
     margin-left: -var(--gutter)em;

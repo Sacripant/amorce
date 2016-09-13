@@ -1,27 +1,30 @@
-/* -------------------------------------------------------------- 
-   
-	colors.css
-	© sacripant.fr
+/*  ======
 
--------------------------------------------------------------- */
+    Basics - colors.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+        
+====== */
 
-/*	Colors variables	*/
+
+/*  Colors variables */
 :root {
 
-	--txt-color : hsl(0, 0%, 30%);
-	--h-color : hsl(0, 0%, 15%);
+    --txt-color : hsl(0, 0%, 30%);
+    --h-color : hsl(0, 0%, 15%);
 
-	/*Colors notifs*/
-	--color-error   : hsl(0, 75%, 45%);
-	--color-error-bg: hsl(0, 35%, 90%);
+    /* Colors notifs */
+    --color-error   : hsl(0, 75%, 45%);
+    --color-error-bg: hsl(0, 35%, 90%);
 
-	--color-notice   : hsl(30, 85%, 38%);
-	--color-notice-bg: hsl(40, 35%, 90%);
+    --color-notice   : hsl(30, 85%, 38%);
+    --color-notice-bg: hsl(40, 35%, 90%);
 
-	--color-success   : hsl(91, 77%, 15%);
-	--color-success-bg: hsl(72, 58%, 85%);
+    --color-success   : hsl(91, 77%, 15%);
+    --color-success-bg: hsl(72, 58%, 85%);
 }
 
 
-.txt-color	{ color: var(--txt-color); }
-.h-color	{ color: var(--h-color); }
+.txt-color  { color: var(--txt-color); }
+.h-color    { color: var(--h-color); }
