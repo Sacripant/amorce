@@ -1,6 +1,18 @@
-/*********
-*   SPAN
-**********/
+/*  ======
+
+    Layout - grid-span.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Responsive Grid spans width for fl-grid, il-grid & tb-grid
+    1 to 7 cols
+
+    REQUIRED:
+    * tb-grid.css || fl-grid.css || il-grid.css 
+      
+====== */
 
 [class*=span--]  {
     width: 100%;

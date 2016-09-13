@@ -1,35 +1,40 @@
-/* -------------------------------------------------------------- 
-   
-	typo-utils.css
-	some typography utilities class
-	© sacripant.fr
+/*  ======
 
-	REQUIRED :
-	* reset.css
-	* colors.css
-	* typography.css
+    Utils - typo-utils.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
 
--------------------------------------------------------------- */
+    Some typography utilities class
+      
+====== */
 
-
-/*	Initialize list (remove list-type type and margin) */
+/*  
+ *  Nude
+ *  Initialize list (remove list-type type and margin) 
+ */
 .nude { list-style-type: none; margin: 0; }
 
 
-/*	add ... for too long one line text  */
+/*  
+ *  Ellipsis - add ... for too long one line text  
+ */
 .txt-ellipsis {
     overflow: hidden;        
     white-space: nowrap;     
     text-overflow: ellipsis;
 }
 
-/*	Texte align */
-.txt-left	{
-	text-align: left;
+/*  
+ * Texte align 
+ */
+.txt-left   {
+    text-align: left;
 }
 .txt-right {
-	text-align: right;
+    text-align: right;
 }
 .txt-center {
-	text-align: center;
+    text-align: center;
 }

@@ -1,33 +1,94 @@
 /*
-*	docs layout
+*	Doc layout
+*/
+
+body {
+	/*width: 100%;*/
+	/*overflow-x: hidden;*/
+}
+
+
+.btn__toggle-header,
+.docs-header {
+	position: fixed;
+	top: 0;
+	transform: translateX(0em);
+	transition: transform cubic-bezier(.65,.63,.07,1.18) 500ms;
+}
+
+/* open close TOC BTN */
+.btn__toggle-header {
+	z-index: 1;
+	left: 0;
+	background-color: #666;
+	color: #fff;
+	padding: .66em;
+	padding-top: .33em;
+}
+.btn__toggle-header::before {
+	content: 'Open';
+}
+.btn__toggle-header:hover	{ background-color: #444; }
+.btn__toggle-header:active	{ background-color: #222; }
+
+/* Header sidebar */
+.docs-header {
+	left: -12em;
+
+	height: 100vh;
+	width: 12em;
+	padding: 2em 1em 1em 1em;
+
+	background-color: #fff;
+	border-right: 5px solid #666;
+	overflow: auto;
+}
+
+/* main */
+.docs-main {
+	padding: 2em 1em 1em 1em;
+	max-width: 45em;
+}
+
+/* Open close TOC animation */
+.ckb__toggle-header:checked + .btn__toggle-header,
+.ckb__toggle-header:checked ~ .docs-header {
+	transform: translateX(12em);
+}	
+.ckb__toggle-header:checked + .btn__toggle-header::before {
+	content :"Close";
+}
+
+@media (min-width: 50em) {
+	.docs-header {
+		left: 0;
+	}
+	.docs-main {
+		margin-left: 12em;
+	}
+	.btn__toggle-header {
+		display: none;
+	}
+}
+
+
+/* 
+*	Table of content 
+*/
+.docs-toc 		{ padding-bottom: 2em;}
+.h__docs-toc	{ font-size: 1em; font-weight: normal; margin: .66em 0 .33em}
+.a__docs-toc 	{ }
+
+
+
+/*
+*	logo
 */
 
 #logo {
 	width: 400px;
 	max-width: 100%;
 }
-.docs-header {
-	float: left;
-	top: 0; left: 0;
-	min-height: 100vh;
-	width: 10em;
-	padding: 3em 1em 0 1em;
-	margin-right: 1em;
-}
-
-.docs-main {
-	float: left;
-	padding-top: 3em;
-	margin-right: 1em;
-	width: calc(100% - 12em);
-	max-width: 45em;
-}
-
-/* doc table of content */
-.docs-toc { font-size: .9em;}
-.h__docs-toc { font-size: 1em; font-weight: normal; margin: .66em 0 .33em}
-.a__docs-toc { }
-
 
 /*
 *	exemple & blocs de code 

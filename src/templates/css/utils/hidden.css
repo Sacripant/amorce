@@ -1,16 +1,24 @@
-/* -------------------------------------------------------------- 
-   
-    hidden.css
-    hidden class
-    © sacripant.fr
+/*  ======
+
+    Layout - hidden.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+ 
+    Hidden elements
+    * for display but not screen reader
+    * when not focusable
+    * for some breakpoints
+    * for Print
 
     REQUIRED :
     * breakpoints.css
+      
+====== */
 
--------------------------------------------------------------- */
 
-
-.hide, .hidden      { display: none; }
+.hide, .hidden  { display: none; }
 
 
 /*
@@ -48,8 +56,8 @@
 }
 
 /*
-*   Responsive Hidden class
-*/
+ *  Responsive Hidden class
+ */
 @media (--maxXS) {
     .hidden--maxXS {
         display: none !important;
@@ -92,8 +100,8 @@
 }
 
 /*
-*   Print hidden class
-*/
+ *  Print hidden class
+ */
 
 @media print {
     .hidden-print {
