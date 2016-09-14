@@ -7,11 +7,11 @@
 	
 	<p>
 		Toutes les tailles (espaces, textes et composants) sont gérées à partir des tailles des fonts définies dans <code>typography.css</code>.
-		Pour profiter de ce système, l'unité de référence devra être <code>em</code> pour les espaces (<code>padding</code>,  <code>margin</code>, <code>border</code>).
+		Pour profiter de ce système, l'unité de référence devra être <code>em</code>.
 	</p>
 
 	<p>
-		La taille de base est laissé à l’appréciation de l'internaute en laissant un valeur de <code>100%</code> sur l'élément <code>html</code>.
+		La font-size :root est laissé à l’appréciation de l'internaute en laissant un valeur de <code>100%</code> sur l'élément <code>html</code>.
 		Les tailles utilisent un ratio unique entre elles, ce qui permet de réduire ou agrandir la taille de tous les élément d'un composant vers la taille supérieur ou inférieur.
 	</p>
 
@@ -20,8 +20,7 @@
 		Les modificateurs de tailles <strong><code>.h6 -> .h1</code></strong> modifient <strong><code>font-size</code> et <code>line-height</code></strong> de manière à reproduire fidèlement les headers équivalemment.
 	</p>
 
-	<div id="sizes">
-		<h2>Les tailles avec un ration de <code>1.1667</code></h2>
+		<h2>Les tailles avec un ratio de <code>1.1667</code></h2>
 
 		<p>Un tableau de calcul permettant de faire varié ce ratio est disponible sur <a href="http://instacalc.com/17574">instacalc</a></p>
 
@@ -70,14 +69,10 @@
 			<code>.xsmall</code> <br>
 			Taille d'un élément x-small
 		</p>
-	</div>
 
-	<div id="size-exemples">
 		<h2>Exemple</h3>
 
-		<h3>Adaptation de la taille d'un texte sans touché à sa sémantique</h3>
-
-		<p>La première utilisation des class de taille, permet de visuellement donner une taille différente tout en conservant la bonne sémantique à l'élément</p>
+		<h3>Adaptation de la taille d'un titre sans modifier sa sémantique</h3>
 
 		<div class="code-demo">
 			
@@ -85,7 +80,7 @@
 
 		</div>
 
-		<h3>Exemple d'un composant réduit avec <code>.x-small</code></h3>
+		<h3>Exemple d'un composant modifié avec <code>.small</code> et <code>.xlarge</code></h3>
 
 
 		<div class="code-demo">
@@ -97,7 +92,6 @@
 
 		</div>
 
-	</div>
 
 
 </section>
