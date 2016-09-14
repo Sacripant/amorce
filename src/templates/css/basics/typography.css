@@ -73,8 +73,12 @@ body {
  *  quotient : 1.1667 (http://instacalc.com/17574)
  */
 
-h1,h2,h3,h4,h5,h6
-    { font-weight: normal; color: var(--h-color); margin-bottom: var(--vr)rem; }
+h1,h2,h3,h4,h5,h6 { 
+    font-weight: normal; 
+    color: var(--h-color); 
+    margin-bottom: var(--vr)rem;
+    margin-top: calc( var(--vr) * 1.5 )rem;
+}
 
 h1, .h1 { font-size: var(--fs-h1)em;    line-height: 1;      }
 h2, .h2 { font-size: var(--fs-h2)em;    line-height: 1.1;    }
