@@ -68,7 +68,8 @@ module.exports = function(grunt){
                     'testProp',
                     'fnBind'
                 ],
-                // More settings go here
+                'uglify': true,
+                'classPrefix': 'mzr_'
             }
         },
 
