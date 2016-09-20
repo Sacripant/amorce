@@ -5,14 +5,21 @@
 	<h1>Grilles - introduction</h1>
 
 	<p>
-		3 systèmes de grilles sont disponibles : 
+		4 systèmes de grilles sont disponibles : 
 	</p>
 
 	<ul>
-		<li> <code>.fl-grid</code> Basée sur un <em>float left layout</em>.</li>
-		<li> <code>.tb-grid</code> Basée sur un <em>table layout</em>.</li>
-		<li> <code>.il-grid</code> Basée sur un <em>inline-block layout</em>.</li>
+		<li> <a href="Flex-grid.html">flex grid</a> Basée sur un <em>flexbox layout</em>.</li>
+		<li> <a href="Float-grid.html">float grid</a> Basée sur un <em>float left layout</em>.</li>
+		<li> <a href="Table-grid.html">table grid</a> Basée sur un <em>table layout</em>.</li>
+		<li> <a href="Inline-grid.html">inline grid</a> Basée sur un <em>inline-block layout</em>. </li>
 	</ul>
+
+	<p>
+		Dans le cas d'un <strong>support IE10+</strong>. la <a href="flex-grid.html">flex grid</a>, combinée aux <a href="flex-utils.html">flex utils class</a> sont suffisants. Inutile de charger les autres grilles. <br/>
+		Dans le cas d'un <strong>support IE9+</strong>, la combinaison des grilles <a href="table-grid.html">table grid</a> et <a href="inline-grid.html">inline grid</a> sont un bon compromis. <br/>
+		Dans le cas d'un <strong>support IE8+</strong>, vous devrez vous contenter de l'utilisation de <a href="float-grid.html">float grid</a> et <a href="table-grid.html">table grid</a>.
+	</p>
 
 	<h2>Gouttière</h2>
 
