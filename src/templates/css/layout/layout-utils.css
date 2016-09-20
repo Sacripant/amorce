@@ -21,11 +21,28 @@
 }
 
 /* 
- *  Fit (Full parent width)
+ *  Fit 
+ *  Full parent width
  *  usefull for inline-block, for btn 
  */
 .fit {
     width: 100%;
+}
+
+/*
+ *  Fit height
+ *  Full parent height
+ */
+.fit--height {
+    height: 100%;
+}
+
+/* 
+ *  Fit viewport
+ */
+.fit--viewport {
+    height: 100vh;
+    width: 100vw;
 }
 
 /*  
