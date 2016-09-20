@@ -35,6 +35,8 @@
     flex-wrap : wrap;
     margin-left: -var(--gutter-half)rem; /*(1)*/
     margin-right: -var(--gutter-half)rem; /*(1)*/
+    /* if flex item are list-items */
+    list-style-type: none;
 }
 
 .fx-grid  > *,
