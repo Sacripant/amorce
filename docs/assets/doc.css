@@ -130,6 +130,7 @@ pre[class*="language-"] {
 .demo-grid .fl-grid > *
 , .demo-grid .il-grid > *
 , .demo-grid .tb-grid > *
+, .demo-grid .fx-grid > *
 {
 	background-image: linear-gradient( 90deg, hsla(0, 0%, 75%, .5), hsla(0, 0%, 75%, .5));
 	background-origin: content-box;
@@ -141,6 +142,7 @@ pre[class*="language-"] {
 .demo-grid .fl-grid > *:before 
 , .demo-grid .il-grid > *:before 
 , .demo-grid .tb-grid > *:before 
+, .demo-grid .fx-grid > *:before 
 {
 	content: "." attr(class);
 }
