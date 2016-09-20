@@ -12,6 +12,8 @@
  */
 @import 'layout/breakpoints.css';
 @import 'layout/gutter.css';
+@import 'layout/flex-utils.css';
+@import 'layout/fx-grid.css';
 @import 'layout/tb-grid.css';
 @import 'layout/fl-grid.css';
 @import 'layout/il-grid.css';
