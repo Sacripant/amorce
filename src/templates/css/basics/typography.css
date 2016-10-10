@@ -119,17 +119,17 @@ p, .p {
 }
 
 /* Links */
+a           { 
+    background-color: transparent; /* Remove the gray background on active links in IE 10. */
+    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+*/
+    color: var(--a-color); 
+    text-decoration: none; 
+}
 a:focus         { outline: thin dotted; }
 a:active,a:hover
                 { outline-width: 0; }
 a:focus, 
-a:hover     { color: #000; text-decoration: underline; }
-a           { 
-    background-color: transparent; /* Remove the gray background on active links in IE 10. */
-    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+*/
-    color: #009; 
-    text-decoration: none; 
-}
+a:hover         { color: color(var(--a-color) s(-15%) l(-15%)); text-decoration: underline; }
 
 /* citations */
 blockquote, q   { quotes: none; }
@@ -236,7 +236,7 @@ caption {
  *  Text-selection colors 
  *  * remove any text shadows: twitter.com/miketaylr/status/12228805301) 
  */
-::selection { background: #fcd700; color: #fff; text-shadow: none; }
+::selection { background: var(--select-color); color: #fff; text-shadow: none; }
 
 /**
  * HR
