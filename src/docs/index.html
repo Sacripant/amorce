@@ -26,7 +26,7 @@
 
 <p>
 	Amorce est un starter kit pour l'intégration de site internet. <br/>
-	Il est <em>style-agnostic</em>, léger et modulaire (utilisez uniquement le nécessaire).
+	Il se veut <em lang="en">style-agnostic</em>, léger et modulaire (utilisez uniquement le nécessaire).
 </p>
 
 <p>
@@ -36,12 +36,12 @@
 <ul>
 	<li> Un Framework CSS (reset, typo, forms, utils, grids, etc) découpé en modules.</li>
 	<li> Une documentation qu'il suffit de faire évoluer en <em>style guide</em> pour chaque projet.</li>
-	<li> Une convention de nommage claire</li>
+	<li> Une convention de nommage claire.</li>
 	<li> Le langage de templating <a href="http://mozilla.github.io/nunjucks/">nunjucks</a> pour modulariser vos pages HTML et faciliter la communication avec les développeurs.</li>
 	<li> La génération automatique d'une font icons à partir des images SVG présents dans le dossier <code>img/icons</code></li>
-	<li> La possibilité d'utiliser les fonctions CSS du future (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://cssnext.io/">cssnext</a> (un plugin pour PostCSS)</li>
+	<li> La possibilité d'utiliser les fonctions CSS <del>du future</del> <add>en cours de normalisation</add> (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://cssnext.io/">cssnext</a> (un plugin pour PostCSS)</li>
 	<li> Le préfixage automatique des propriétés CSS (PostCSS auto-prefixer)</li>
-	<li> Une série de <em>tasks Grunt</em> pour une compilation & un rafraichissement automatique du navigateur.</li>	
+	<li> Une série de <em>tasks Grunt</em> pour une compilation & un rafraichissement automatique (live refresh) du navigateur.</li>	
 </ul>
 
 <h2> Requirements </h2>
@@ -59,12 +59,17 @@
 
 <p>
 	Téléchargez la <a href="https://github.com/Sacripant/amorce/releases">dernière version stable de Amorce</a>.
-	Depuis un shell ou un terminal (placé à la racine de votre projet), lancez les commandes suivantes :	
+	Depuis un shell/terminal (placé à la racine de votre projet), installer les paquets nodeJS requis avec la commande :	
 </p>
 
 <ul>
-	<li><code>npm install</code> pour télécharger et installer les paquets nodeJS nécessaires.</li>
-	<li><code>grunt init</code> ou <code>grunt build</code> pour faire une compilation manuelle des sources.</li>
+	<li><code>npm install</code></li>
+</ul>
+
+<p>Puis compilez une première fois les fichiers sources avec la commande</p>
+
+<ul>
+	<li><code>grunt init</code> ou <code>grunt build</code></li>
 </ul>
 
 
@@ -74,7 +79,7 @@
 	La commande <code>grunt</code> ou <code>grunt watch</code> est paramétrée pour lancer un <em>watcher</em> sur les fichiers sources. Ainsi à chaque modification d'un fichier source html ou css, les fichiers seront compilés à la volée.
 </p>
 <p>
-	De plus un serveur <a href="http://livereload.com">livereload</a> est également lancé permettant de rafraichir votre browser à chaque modification.
+	De plus, un serveur <a href="http://livereload.com">livereload</a> est également lancé permettant de rafraichir votre browser à chaque modification.
 	Pour en profiter, il suffit d'installer l'<a href="http://livereload.com/extensions/">extension Livereload</a> correspondant à votre navigateur.
 </p>
 
@@ -92,7 +97,7 @@
 	</li>
 	<li>
 		<code>grunt buildhtml</code> : 
-		compile les fichiers sources <code>.html</code> qui utilise le sytem de templating _nunjucks_
+		compile les fichiers sources <code>.html</code> qui utilise le system de templating _nunjucks_.
 	</li>
 	<li>
 		<code>grunt modernizr</code> : 
@@ -100,7 +105,7 @@
 	</li>
 	<li>
 		<code>grunt builddocs</code> : 
-		compile les fichiers de la présente documentation
+		compile les fichiers de la présente documentation.
 	</li>
 </ul>
 
