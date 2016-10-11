@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Jund Thomas" />
+	<meta name="copyright" content="© sacripant.fr" />
+	<meta name="description" content="Amorce documentation: a web starter kit" />
+	
+	<!-- Viewport for Iphone ipad -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   
+	
+	<title>
+		{% block title%}{% endblock %}	
+		Amorce, web starter kit
+	</title>
+	
+<!-- affichage favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<!-- CSS -->
+	<!-- if icons -->
+	<link rel="stylesheet" href="../build/css/yourproject-icons.css" media="all" />
+	<!-- project CSS -->
+	<link rel="stylesheet" href="../build/css/project.css" media="all" />
+	<!-- only for this doc -->
+	<link rel="stylesheet" href="assets/prism.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/doc.css" type="text/css" media="screen" />
+
+	{% block additionalCSS %}{% endblock %}
+
+
+</head>
+
+
+<body>
+	<div class="docs-wrapper">
+
+		<input type="checkbox" class="ckb__toggle-header hidden" id="ckb__toggle-header" />
+		<label class="btn__toggle-header" for="ckb__toggle-header" role="button" aria-label="Open close Table of content">
+			<abbr title="Table of content">TOC</abbr>
+		</label>
+		
+		<header role="banner" class="docs-header small">
+			{% block header_title %}
+			<h1 class="h6">
+				{% include 'docs/includes/logo-amorce.svg' %} <br/>
+				<span class="small">v. 1610</span>
+				<!-- Code Style Guide -->
+			</h1>
+			{% endblock %}
+			<nav role="navigation" class="docs-toc">
+				<h1 class="h6">
+					<abbr title="Table of content">TOC</abbr>
+				</h1>
+				<ul>
+					<li><a class="a__toc" href="index.html">Introduction</a></li>
+					<li><a class="a__toc" href="nomenclature.html">Nomenclature</a></li>
+				</ul>
+
+				<h6 class="h__docs-toc">Bases</h6>
+				<ul>
+					<li><a class="a__toc" href="size.html">Sizes</a></li>
+					<li><a class="a__toc" href="typo.html">Typography</a></li>
+					<li><a class="a__toc" href="colors.html">Colors</a></li>
+					<li><a class="a__toc" href="forms.html">Forms</a></li>
+				</ul>
+
+				<h6 class="h__docs-toc">Layout</h6>
+				<ul>
+					<li><a class="a__toc" href="breakpoints.html">Breakpoints</a></li>
+					<li><a class="a__toc" href="flex-utils.html">Flex utils</a></li>
+					<li><a class="a__toc" href="grille-intro.html">Grids intro</a></li>
+					<li><a class="a__toc" href="flex-grid.html">Flex grid</a></li>
+					<li><a class="a__toc" href="float-grid.html">Float grid</a></li>
+					<li><a class="a__toc" href="table-grid.html">Table grid</a></li>
+					<li><a class="a__toc" href="inline-grid.html">Inline grid</a></li>
+				</ul>
+
+				<h6 class="h__docs-toc">Utils</h6>
+				<ul>
+					<li><a class="a__toc" href="hidden.html">Hidden</a></li>
+					<li><a class="a__toc" href="block-link.html">Block link</a></li>
+					<li><a class="a__toc" href="social-colors.html">Social colors</a></li>
+					<li><a class="a__toc" href="yourproject-icons.html">Icons</a></li>
+					<li><a class="a__toc" href="placeholder-imgs.html">Placeholder images</a></li>
+				</ul>
+
+				<h6 class="h__docs-toc">Composants</h6>
+				<ul>
+					<li><a class="a__toc" href="buttons.html">Buttons</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+		<main class="docs-main" role="main">
+
+			{% block main %}{% endblock %}
+
+		</main>
+		
+	</div><!-- #wrapper -->
+
+
+<!-- Javascript bottom -->
+	<script src="../build/js/jquery-3.1.0.min.js"></script>	
+	<script src="assets/tinycolor-min.js"></script>
+	<script src="assets/prism.js" data-manual></script>
+	<script src="assets/doc.js"></script>
+
+	{% block additional_JS %}{% endblock %}
+</body>
+
+</html>

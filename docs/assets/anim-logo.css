@@ -1,0 +1,73 @@
+@keyframes etincelleSize {
+		0% {
+		transform: scale(1);
+		opacity: .6;
+		}
+		100% {
+		transform: scale(.5);
+		opacity: 1;
+		}
+}
+
+@keyframes reduceMeche {
+	0% {
+		transform: rotate(0);
+	}
+	80% {
+		transform: rotate(-65deg);
+	}
+	100% {
+		transform: rotate(-65deg) translateX(-14px) scale(.7);
+	}
+}
+
+@keyframes toRed {
+	to {
+		fill: #a42c2c;
+	}
+}
+
+@keyframes bomb {
+	80% {
+		transform :rotate(-15deg) translateZ(0);
+	}
+	81% {
+		transform :rotate(-15deg) scale(6) translate(8px, 23px);
+	}
+	100% {
+		transform :rotate(-15deg) scale(6) translate(8px, 23px);
+		fill: red;
+	}
+}
+
+/* ETINCELLES */ 
+.run #etincelle-rouge,
+.run #etincelle-jaune {
+	transform-origin: 180px 16px;
+	animation-name: etincelleSize;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.run #etincelle-jaune {
+	animation-duration: 150ms, 400ms;
+}
+.run #etincelle-rouge {
+	animation-duration: 250ms, 400ms;
+}
+
+/* MECHE */
+.run #meche {
+	transform-origin: 191px 49px;
+	animation: 5s ease-in 1 forwards reduceMeche ;
+}
+
+.run #corps {
+	fill: black;
+	animation: 2s steps(8, end) 4.5s 1 forwards toRed;
+}
+
+.run #bomb {
+	transform-origin: 173px 140px;
+	animation: 9s ease-in 1 forwards bomb;
+}

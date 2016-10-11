@@ -68,7 +68,8 @@ module.exports = function(grunt){
                     'testProp',
                     'fnBind'
                 ],
-                // More settings go here
+                'uglify': true,
+                'classPrefix': 'mzr_'
             }
         },
 
@@ -133,9 +134,12 @@ module.exports = function(grunt){
                 src_template_js: {
                     files: 'build/js/*.js'
                 },
-            src_docs : {
-                files : 'src/docs/*.html',
+            src_docs_html : {
+                files : 'src/docs/**/*',
                 tasks : ['nunjucks:docs']                  
+            },
+            src_docs_css_js : {
+                files : ['docs/assets/doc.css', 'docs/assets/doc.js']
             }
         },
 

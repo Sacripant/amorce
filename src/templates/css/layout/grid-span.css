@@ -1,186 +1,18 @@
-/* --------------------------------------------------------------
-    grid.css
-        define grids system
-        Amorce Framework
-        © sacripant.fr
+/*  ======
 
-        * Grids
-        ** Table grid
-        ** Float grid
-        ** Inline grid
-        * Options 
-        ** vertical-align colonnes
-        ** unguttered
-        ** half-gutter
+    Layout - grid-span.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
 
-        
--------------------------------------------------------------- */ 
+    Responsive Grid spans width for fl-grid, il-grid & tb-grid
+    1 to 7 cols
 
-:root {
-    /* gutter size (default based in typography vertical rythme )*/
-    --gutter : var(--vr);
-    --gutter-half : calc( var(--gutter) / 2 );
-}
-
-
-
-
-
-/*
-*   Grids
-*   - table, float & inline-block grids
-*   - 1 à 7 colonnes imbricable
-*/
-
-/* table layout grid 
----------------------*/
-.tb-grid,
-[class*="tb-grid--"] 
-{
-    display: table;
-    table-layout: fixed;
-
-    border-collapse: separate;
-    border-spacing: var(--gutter)em 0; /* don't work with % */
-
-    width: 100%;
-
-    /*delet visualy border between table and cells*/
-    width: calc( 100% + 3em );
-    margin-left: -var(--gutter)em;
-}
-.tb-grid > *,
-[class*="tb-grid--"] > *,
-.tb-grid > [class*=span],
-[class*="tb-grid--"] > [class*=span]
-{
-    display: table-cell;
-    /*vertical-align: bottom;*/
-    float: none;
-}
-
-.tb-grid--auto {
-    table-layout: auto;
-}
-
-/* Grid (inline-block & f-left)
-** Calcul de la gouttière en %
-** (1) margin neg = x%
-** (2) padding = x*(100+2x)/100
--------------------------------*/
-.fl-grid
-, .il-grid  
-{ 
-    display: block;
-    margin-left: -var(--gutter-half)rem; /*(1)*/
-    margin-right: -var(--gutter-half)rem; /*(1)*/
-}
-
-.fl-grid  > *
-, .fl-grid  > [class*=span--]
-, .il-grid  > *
-, .il-grid  > [class*=span--]
-{
-    padding-left: var(--gutter-half)em; /*(2)*/
-    padding-right: var(--gutter-half)em; /*(2)*/
-}
-
-
-
-/* Float-left grid
---------------------*/
-
-/*CLEARFIX for float grid*/
-.fl-grid:before, .fl-grid:after { content: ""; display: table; }
-.fl-grid:after                  { clear: both; }
-
-.fl-grid > [class*=span--] {
-    float: left;
-    display: block;
-}
-
-
-
-/* Inline-block grid
-----------------------*/
-.il-grid {
-    font-size: 0; 
-}
-.il-grid > * 
-, .il-grid > [class*=span--] 
-{
-    font-size: 1rem; 
-    display: inline-block;
-    float: none;
-}
-
-
-/*
-*   Grids Option
-*/
-
-/*vertical-align for table and inline grid
--------------------------------------------*/
-.va-top > *     { vertical-align: top; }
-.va-bottom > *  { vertical-align: bottom; }
-.va-middle > *  { vertical-align: middle; }
-
-
-/* Unguttered grid (no gutter)
------------------------------*/
-
-.no-gutter
-, .fl-grid.no-gutter
-, .il-grid.no-gutter
-, .tb-grid.no-gutter
-{
-    margin-left: 0;
-    margin-right: 0;
-}
-.tb-grid.no-gutter {
-    width: 100%;
-    border-collapse: collapse;    
-}
-
-.no-gutter > *  
-, .no-gutter > [class*=span--]  
-{
-    padding: 0;
-}
-
-/*  half-gutter
------------------------*/
-.half-gutter
-, .fl-grid.half-gutter
-, .il-grid.half-gutter
-{
-    margin-left: -calc(var(--gutter-half) / 2)rem; /*(2)*/
-    margin-right: -calc(var(--gutter-half) / 2)rem; /*(2)*/
-}
-
-.il-grid.half-gutter > *  
-, .fl-grid.half-gutter > *  
-, .il-grid.half-gutter > [class*=span--]  
-, .fl-grid.half-gutter > [class*=span--]  
-{
-    padding-left: calc(var(--gutter-half) / 2)rem; /*(2)*/
-    padding-right: calc(var(--gutter-half) / 2)rem; /*(2)*/
-}
-
-.tb-grid.half-gutter 
-, .tb-grid--auto.half-gutter 
-{
-    width: calc( 100% + var(--gutter)em );
-    margin-left: -var(--gutter-half)em;
-    border-spacing: var(--gutter-half)em 0;
-}
-
-
-
-
-/*********
-*   SPAN
-**********/
+    REQUIRED:
+    * tb-grid.css || fl-grid.css || il-grid.css 
+      
+====== */
 
 [class*=span--]  {
     width: 100%;
@@ -232,9 +64,7 @@
     .s-span--4-4, .s-span--5-5, .s-span--6-6,
     .s-span--7-7                                { width: 100%; }
     .s-span--auto                               { width: auto; }
-        
 }
-
 
 @media (--minM) {
     .m-span--1-7                                { width: 14.285%; }
@@ -258,8 +88,8 @@
     .m-span--4-4, .m-span--5-5, .m-span--6-6,
     .m-span--7-7                                { width: 100%; }
     .m-span--auto                               { width: auto; }
- 
 }
+
 @media (--minL) {
     .l-span--1-7                                { width: 14.285%; }
     .l-span--1-6                                { width: 16.666%; }
@@ -282,8 +112,8 @@
     .l-span--4-4, .l-span--5-5, .l-span--6-6,
     .l-span--7-7                                { width: 100%; }
     .l-span--auto                               { width: auto; }
- 
 }
+
 @media (--minXL) {
     .xl-span--1-7                                { width: 14.285%; }
     .xl-span--1-6                                { width: 16.666%; }
@@ -307,5 +137,3 @@
     .xl-span--7-7                                { width: 100%; }
     .xl-span--auto                               { width: auto; }
 }
-
-

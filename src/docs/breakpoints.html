@@ -1,130 +1,27 @@
-{% extends 'docs/index.html' %}
+{% extends 'docs/extends/base.html' %}
+
+{% block title%}
+  Breakpoints —
+{% endblock %}  
+
 
 {% block main %}
 <section id="doc-breakpoint" class="doc-section">
 	<h1>Breakpoints</h1>
 
 	<p>
-		4 breakpoints sont définis à travers des <em>custom-medias</em> en <code>em</code> dans le fichier source <code>config.css</code>.
-		Ces 4 breakpoints permettent de gérer l'affiche sur des écrans de taille :
+		5 breakpoints sont définis à travers des <em>custom-medias</em> en <code>em</code> dans le fichier source <code>layout/breakpoints.css</code>.
+		Ces 5 breakpoints permettent de gérer le layout sur des écrans de taille :
 	</p>
 
 	<ul>
-		<li>XS</li>
-		<li>S</li>
-		<li>M</li>
-		<li>L</li>
-		<li>XL</li>
+		<li>XS (extra-small)</li>
+		<li>S (small)</li>
+		<li>M (medium)</li>
+		<li>L (large)</li>
+		<li>XL (extra-large)</li>
 	</ul>
 
-
-	<h3>
-		hidden class
-	</h3>
-
-<table>
-      <thead>
-        <tr>
-          <th></th>
-          <th> XS </th>
-          <th> S </th>
-          <th> M </th>
-          <th> L </th> 
-          <th> XL </th> 
-      </tr>
-      </thead>
-      <tbody>
-      	<!-- maxXS -->
-        <tr>
-          <th scope="row"><code>.hidden--maxXS</code></th>
-          <td class="notif error">Hidden</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-        </tr>
-      	<!-- maxS -->
-        <tr>
-          <th scope="row"><code>.hidden--maxS</code></th>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-        </tr>
-      	<!-- maxM -->
-        <tr>
-          <th scope="row"><code>.hidden--maxM</code></th>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-        </tr>
-      	<!-- maxL -->
-        <tr>
-          <th scope="row"><code>.hidden--maxL</code></th>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif success">Visible</td>
-        </tr>
-      	<!-- minS -->
-        <tr>
-          <th scope="row"><code>.hidden--minS</code></th>
-          <td class="notif success">Visible</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-        </tr>
-      	<!-- minM -->
-        <tr>
-          <th scope="row"><code>.hidden--minM</code></th>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-        </tr>
-      	<!-- minL -->
-        <tr>
-          <th scope="row"><code>.hidden--minL</code></th>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif error">Hidden</td>
-          <td class="notif error">Hidden</td>
-        </tr>
-      	<!-- minXL -->
-        <tr>
-          <th scope="row"><code>.hidden--minL</code></th>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif success">Visible</td>
-          <td class="notif error">Hidden</td>
-        </tr>
-    </table>
-
-
-	<h3>
-		Detect Breakpoint in JS
-	</h3>
-
-	<p>
-		Dans <code>utils.css</code> des <code>::before content</code> sont ajoutés en fonction des <code>custom-medias</code> <br/>
-		<code>sac-breakpoint.js</code> détecte cette valeur et la stock dans la variable <code>breakpoint.val</code>. Utilisable dans vos codes JS. <br/>
-		Nécessite <code>sac-breakpoint.js</code>
-	</p>
-
-	<pre class="bloc-code">
-if( breakpoint.val === 'minM' )
-{
-	console.log('user displays website in minM viewport')
-}
-	</pre>
 
 
 	

@@ -1,0 +1,170 @@
+/*
+*	Doc layout
+*/
+
+body {
+	/*width: 100%;*/
+	/*overflow-x: hidden;*/
+}
+
+
+.btn__toggle-header,
+.docs-header {
+	position: fixed;
+	top: 0;
+	transform: translateX(0em);
+	transition: transform cubic-bezier(.65,.63,.07,1.18) 500ms;
+}
+
+/* open close TOC BTN */
+.btn__toggle-header {
+	z-index: 1;
+	left: 0;
+	background-color: #666;
+	color: #fff;
+	padding: .66em;
+	padding-top: .33em;
+}
+.btn__toggle-header::before {
+	content: 'Open';
+}
+.btn__toggle-header:hover	{ background-color: #444; }
+.btn__toggle-header:active	{ background-color: #222; }
+
+/* Header sidebar */
+.docs-header {
+	left: -12em;
+
+	height: 100vh;
+	width: 12em;
+	padding: 2em 1em 1em 1em;
+
+	background-color: #fff;
+	border-right: 5px solid #666;
+	overflow: auto;
+}
+
+/* main */
+.docs-main {
+	padding: 2em 1em 1em 1em;
+	max-width: 45em;
+}
+
+/* Open close TOC animation */
+.ckb__toggle-header:checked + .btn__toggle-header,
+.ckb__toggle-header:checked ~ .docs-header {
+	transform: translateX(12em);
+}	
+.ckb__toggle-header:checked + .btn__toggle-header::before {
+	content :"Close";
+}
+
+@media (min-width: 50em) {
+	.docs-header {
+		left: 0;
+	}
+	.docs-main {
+		margin-left: 12em;
+	}
+	.btn__toggle-header {
+		display: none;
+	}
+}
+
+
+/* 
+*	Table of content 
+*/
+.docs-toc 		{ padding-bottom: 2em;}
+.h__docs-toc	{ font-size: 1em; font-weight: normal; margin: .66em 0 .33em}
+.a__docs-toc 	{ }
+
+
+
+/*
+*	logo
+*/
+
+#logo {
+	width: 400px;
+	max-width: 100%;
+}
+
+/*
+*	exemple & blocs de code 
+*/
+
+.code-demo {
+	margin-bottom: 1.5em;
+	padding: 1em 1em 0;
+	border: 1px solid #ccc;
+}
+
+.bloc-code {
+	background-color: #EBEEDC;
+	padding: 0 1em;
+	/*border: 1px solid #ccc;*/
+	/*border-width: 1px 0 0 0;*/
+	font-size: 0.8em;
+	-moz-tab-size : 4;
+	     tab-size : 4;
+	overflow: auto;
+	white-space: pre;
+	clear: both;
+}
+
+.code-demo > .bloc-code {
+	margin: 1em -1.25em 0 -1.25em;	
+}
+
+/*Upgrade prism styles*/
+pre[class*="language-"] {
+	border-radius: 0;
+	border: 0 none;
+}
+
+/*
+*	grid demo
+*/
+
+.demo-grid .fl-grid > *
+, .demo-grid .il-grid > *
+, .demo-grid .tb-grid > *
+, .demo-grid .fx-grid > *
+{
+	background-image: linear-gradient( 90deg, hsla(0, 0%, 75%, .5), hsla(0, 0%, 75%, .5));
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	word-wrap: break-word;
+	margin-bottom: 1rem;
+}
+
+.demo-grid .fl-grid > *:before 
+, .demo-grid .il-grid > *:before 
+, .demo-grid .tb-grid > *:before 
+, .demo-grid .fx-grid > *:before 
+{
+	content: "." attr(class);
+}
+
+
+/*
+**	Color blocs
+*/
+.ul-doc-colors li {
+	margin-bottom: 1em;
+}
+.bloc-color {
+	height: 50px;
+}
+
+/*
+**	Icons list
+*/
+.i__icons {
+	max-width: 10em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+

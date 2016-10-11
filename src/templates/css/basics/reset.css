@@ -1,13 +1,15 @@
-/* -------------------------------------------------------------- 
-  
-	reset.css for AMORCE
-	https://github.com/Sacripant/amorce
+/*  ======
 
-	Mélange maison de 
-		normalize : https://github.com/necolas/normalize.css	 
-	&	htlm5reset : https://github.com/murtaugh/HTML5-Reset/blob/master/assets/css/reset.css;
+    Basics - reset.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    
+    Thanks to 
+        normalize : https://github.com/necolas/normalize.css     
+        htlm5reset : https://github.com/murtaugh/HTML5-Reset/blob/master/assets/css/reset.css;
    
--------------------------------------------------------------- */
+====== */
 
 /* Hard reset */
 html, body, body div, 
@@ -22,13 +24,13 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, 
 article, aside, figure, footer, header, hgroup, menu, nav, 
 section, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 
@@ -65,7 +67,7 @@ audio,
 canvas,
 progress,
 video {
-  display: inline-block;
+    display: inline-block;
 }
 
 /**
@@ -73,8 +75,8 @@ video {
  */
 
 audio:not([controls]) {
-  display: none;
-  height: 0;
+    display: none;
+    height: 0;
 }
 
 /**
@@ -82,7 +84,7 @@ audio:not([controls]) {
  */
 
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 /**
@@ -92,14 +94,14 @@ progress {
 
 template, /* 1 */
 [hidden] {
-  display: none;
+    display: none;
 }
 
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
 img, video, object, embed { 
-	max-width: 100%; height: auto; 
+    max-width: 100%; height: auto; 
 }
 img { border-style: none; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
@@ -114,13 +116,11 @@ html { overflow-y: scroll; }
 
 /* Force Nude list inside nav tag */
 nav ul, nav ol { 
-	list-style: none; 
-	list-style-image: none; 
-	margin: 0; 
-	padding: 0; 
+    list-style: none; 
+    list-style-image: none; 
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Box model to border-box */
 * { box-sizing: border-box; }
-
-

@@ -1,0 +1,53 @@
+{% extends 'docs/extends/base.html' %}
+
+{% block title %}
+  Block link —
+{% endblock %}  
+
+{% block additionalCSS %}
+  <style>
+    .block-link {
+      background-color: LightCyan;
+    }
+
+    .block-link:hover {
+      background-color: NavajoWhite;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+
+	<h3>
+		Block link
+	</h3>
+
+  <p>
+    Permet d'étendre la zone de clique d'un lien sur tout un block. <br/>
+    Ajouter la class <code>block-link</code> au block et <code>a__block-link</code> au lien. <br/>
+  </p>
+
+  <p class="notif notice">
+      <strong>Remarque</strong> : 
+      ce module ne fonctionnera que si <code>block-link</code> est l'ancêtre positionné de <code>a__block-link</code>.
+  </p>
+
+  <div class="code-demo demo-block-link">
+    <div class="block-link">
+      <div class="tb-grid va-middle">
+        <div class="span--1-3">
+          <img src="../build/img/placeholder/picture-3x4.svg" alt="placeholder music"/>
+        </div>
+        <div class="span--2-3">
+          <h5>
+            <a href="#" class="a__block-link">Titre lien du block</a>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus ipsa voluptatibus, accusantium, iure harum commodi architecto tempora labore impedit eos vero autem facere, reiciendis sint ipsum inventore velit officia.
+          </p>
+        </div>        
+      </div> 
+    </div>
+  </div>
+
+{% endblock %}

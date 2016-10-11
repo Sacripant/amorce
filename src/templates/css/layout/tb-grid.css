@@ -1,0 +1,66 @@
+/*  ======
+
+    Layout - tb-grid.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Table layout grid system
+    Options:
+    * Table layout auto
+    * No gutter
+    * Half gutter
+
+    REQUIRED:
+    * layout/gutter.css
+      
+====== */
+
+
+.tb-grid,
+[class*="tb-grid--"] 
+{
+    display: table;
+    table-layout: fixed;
+
+    border-collapse: separate;
+    border-spacing: var(--gutter)em 0; /* don't work with % */
+
+
+    /* delet visualy border between table and cells */
+    width: 100%;
+    width: calc( 100% + 3em );
+    margin-left: -var(--gutter)em;
+}
+
+.tb-grid > *,
+[class*="tb-grid--"] > *,
+.tb-grid > [class*=span],
+[class*="tb-grid--"] > [class*=span]
+{
+    display: table-cell;
+    float: none;
+}
+
+
+/* force layout auto for table */
+.tb-grid--auto {
+    table-layout: auto;
+}
+
+/* Unguttered grid (no gutter) */
+.tb-grid.no-gutter {
+    margin-left: 0;
+    width: 100%;
+    border-collapse: collapse;    
+}
+
+/* half gutter */
+.tb-grid.half-gutter 
+, .tb-grid--auto.half-gutter 
+{
+    width: calc( 100% + var(--gutter)em );
+    margin-left: -var(--gutter-half)em;
+    border-spacing: var(--gutter-half)em 0;
+}

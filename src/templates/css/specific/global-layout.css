@@ -1,17 +1,21 @@
-/* -------------------------------------------------------------- 
-   
-    global-layout.css
+/*  ======
+
+    Specific - global-layout.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
     Define globale and specific layout of primary block for your project
-    © sacripant.fr
+      
+====== */
 
--------------------------------------------------------------- */
-
-.wrapper    	{  
-	max-width: 90%;
-	margin: 0 auto;
+.wrapper        {  
+    max-width: 90%;
+    margin: 0 auto;
 }
                
-.site-header	{  }
-.main-nav   	{  }
-main    		{  }
-.site-footer	{  }
+.site-header    {  }
+.main-nav       {  }
+main            {  }
+.site-footer    {  }
