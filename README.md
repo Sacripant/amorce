@@ -1,6 +1,13 @@
 # Amorce v.1610
 
 Amorce est un starter kit pour l'intégration de site internet.
+
+-----
+
+[Documentation complète](http://amorce.sacripant.fr/docs)
+
+------
+
 Il propose :
 
 * Un Framework CSS (reset, typo, forms, utils, grids, etc) découpé en modules.
