@@ -236,7 +236,11 @@ caption {
  *  Text-selection colors 
  *  * remove any text shadows: twitter.com/miketaylr/status/12228805301) 
  */
-::selection { background: var(--select-color); color: #fff; text-shadow: none; }
+::selection { 
+    background: var(--select-color); 
+    color: #fff; 
+    text-shadow: none; 
+}
 
 /**
  * HR
