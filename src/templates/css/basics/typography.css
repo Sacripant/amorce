@@ -101,16 +101,6 @@ h4, .h4 { font-size: var(--fs-h4)em;    line-height: 1.2;    }
 h5, .h5 { font-size: var(--fs-h5)em;    line-height: 1.2;    }
 h6, .h6 { font-size: var(--fs-h6)em;    line-height: 1.285;  }
 
-/* avoid collapsing margins on headings */
-h1:first-child, h2:first-child,
-h3:first-child, h4:first-child,
-h5:first-child, h6:first-child {
-    margin-top: 0;
-}
-h1 img, h2 img, h3 img, 
-h4 img, h5 img, h6 img {
-    margin: 0;
-}
 
 /* Complementary sizes, usefull for components */
 
