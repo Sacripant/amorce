@@ -50,6 +50,12 @@
 
     /* Fonts family */
     --ff-arial : Arial,"Helvetica Neue", Helvetica, sans-serif;
+
+    /* text colors */
+    --h-color: var(--gray-darker);
+    --txt-color: var(--gray-dark);
+    --a-color: var(--blue);
+    --select-color: var(--blue-soft);
 }
 
 
