@@ -47,6 +47,9 @@
 
     /* Vertical rythme */
     --vr: 1.5;
+
+    /* Fonts family */
+    --ff-arial : Arial,"Helvetica Neue", Helvetica, sans-serif;
 }
 
 
@@ -60,7 +63,7 @@ html {
 body { 
     font-size: 1em;
     line-height: var(--vr);
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: var(--ff-arial);
 
     color: var(--txt-color); 
     background: #fff;
@@ -261,8 +264,7 @@ hr {
  *  Default vertical rythme
  */
 .v-space,
-.vspace
-{
+.vspace {
     margin-bottom: var(--vr)em;
     margin-bottom: var(--vr)rem;
 }
