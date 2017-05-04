@@ -119,7 +119,6 @@ small,
 p, .p {
     font-size: 1em;
     margin-bottom: var(--vr)em; 
-    hyphens: auto;
 }
 
 /* Links */
