@@ -12,6 +12,7 @@ body {
 .docs-header {
 	box-sizing: border-box;
 	position: fixed;
+	z-index: 10;
 	top: 0;
 	transform: translateX(0em);
 	transition: transform cubic-bezier(.65,.63,.07,1.18) 500ms;
@@ -19,7 +20,6 @@ body {
 
 /* open close TOC BTN */
 .btn__toggle-header {
-	z-index: 1;
 	left: 0;
 	background-color: #666;
 	color: #fff;
