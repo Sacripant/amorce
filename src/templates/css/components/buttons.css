@@ -10,6 +10,25 @@
       
 ====== */
 
+:root {
+    /* 
+     *  Reset Button default Style
+     */
+    --reset-button {
+        appearance: none;
+        height: auto;
+        background: none;
+        border: 0 none;
+        padding: 0;
+        line-height: inherit;
+    }
+}
+
+
+.reset-btn {
+    @apply --reset-button
+}
+
 .btn 
 , [class*=btn--]
 {
