@@ -28,21 +28,15 @@
     border: 0 none;
     box-shadow: inset 0 0 .1em currentColor;
 
-}
-.btn:hover
-, .btn:focus
-, [class*=btn--]:hover
-, [class*=btn--]:focus
-{   
-    text-decoration: none;
-}
 
-.btn:active
-,.btn.active
-,.btn.selected
-, [class*=btn--]:active
-, [class*=btn--].active
-, [class*=btn--].selected
-{
-    box-shadow: inset 0 .1em .2em currentColor;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+
+    &:active,
+    &.active,
+    &.selected {
+        box-shadow: inset 0 .1em .2em currentColor;
+    }
+
 }
