@@ -31,7 +31,10 @@
  *  Typographic vars configuration
  */
 :root {
-    /* font-size ratio */
+    /*  font-size ratio
+     *  Define modules size
+     *  quotient : 1.1667 (http://instacalc.com/17574)
+     */
     --fs-ratio : 1.1667;
 
     /* Size */
@@ -56,6 +59,10 @@
     --txt-color: var(--gray-dark);
     --a-color: var(--blue);
     --select-color: var(--blue-soft);
+
+    /* custom selector */
+    @custom-selector :--headers h1,h2,h3,h4,h5,h6 
+
 }
 
 
@@ -78,11 +85,9 @@ body {
 
 /* 
  *  Headings
- *  Define modules size
- *  quotient : 1.1667 (http://instacalc.com/17574)
  */
 
-h1,h2,h3,h4,h5,h6 { 
+:--headers { 
     font-weight: normal; 
     color: var(--h-color); 
     margin-bottom: var(--vr)rem;
