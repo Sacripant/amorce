@@ -39,6 +39,7 @@
 
 /* 
  *  Fit viewport
+ *  !! viewport units include sidebar !!
  */
 .fit--viewport {
     height: 100vh;
