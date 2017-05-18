@@ -119,10 +119,7 @@ module.exports = function(grunt){
 
         },
         
-        watch: {
-            options: {
-                livereload: true,
-            },              
+        watch: {             
             src_template_html : {
                     files : 'src/templates/**/*.html',
                     tasks : ['nunjucks:template']                
@@ -137,11 +134,20 @@ module.exports = function(grunt){
             src_docs_html : {
                 files : 'src/docs/**/*',
                 tasks : ['nunjucks:docs']                  
-            },
-            src_docs_css_js : {
-                files : ['docs/assets/doc.css', 'docs/assets/doc.js']
             }
         },
+
+
+        browserSync: {
+            bsFiles: {
+                src : 'build/**/*'
+            },
+            options: {
+                watchTask: true,
+                server: './build'
+            }
+        },
+
 
         clean: {
             html : ['build/*.html'],
@@ -160,11 +166,12 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
 
 
     // Custom tasks -- Run plugins
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['browserSync','watch']);
     grunt.registerTask('buildhtml', ['clean:html','nunjucks:template']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
