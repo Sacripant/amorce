@@ -119,22 +119,23 @@ module.exports = function(grunt){
 
         },
         
-        watch: {             
-            src_template_html : {
+        watch: {
+            template : {
+                src_html : {
                     files : 'src/templates/**/*.html',
                     tasks : ['nunjucks:template']                
                 },
-                src_template_css : {
+                src_css : {
                     files: 'src/templates/css/**/*.css',
                     tasks : ['postcss']
-                },
-                src_template_js: {
-                    files: 'build/js/*.js'
-                },
-            src_docs_html : {
-                files : 'src/docs/**/*',
-                tasks : ['nunjucks:docs']                  
-            }
+                }
+            },
+            docs : {
+                src_html : {
+                    files : 'src/docs/**/*',
+                    tasks : ['nunjucks:docs']                  
+                }                
+            }       
         },
 
 
