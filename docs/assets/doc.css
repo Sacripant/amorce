@@ -20,6 +20,7 @@ body {
 
 /* open close TOC BTN */
 .btn__toggle-header {
+	z-index: 1;
 	left: 0;
 	background-color: #666;
 	color: #fff;
@@ -47,6 +48,7 @@ body {
 
 /* main */
 .docs-main {
+	display: block;
 	padding: 2em 1em 1em 1em;
 	max-width: 45em;
 }
