@@ -25,13 +25,13 @@ module.exports = function(grunt){
                 cwd: 'src/templates/css/',
                 src  : 'project.css',
                 dest : 'build/css/'
-            },
-            thirdParty: {
-                expand: true,
-                cwd: 'src/templates/css/third-party',
-                src  : '*.css',
-                dest : 'build/css/third-party/'  
-            }            
+            }
+            // thirdParty: {
+            //     expand: true,
+            //     cwd: 'src/templates/css/third-party',
+            //     src  : '*.css',
+            //     dest : 'build/css/third-party/'  
+            // }            
         },
 
 
@@ -86,7 +86,8 @@ module.exports = function(grunt){
                     template: 'src/templates/img/icons/icons-tmpl.css',
                     templateOptions: {
                         htmlDemoTemplate: 'src/templates/img/icons/demoicons-tmpl.html',
-                        destHtml: 'src/docs'
+                        destHtml: 'src/docs',
+                        htmlDemoFilename: 'iconsFont'
                     }
                 }
             }
@@ -96,12 +97,12 @@ module.exports = function(grunt){
             options: {
                 paths : 'src/'
             },
-            template: {
+            templates: {
                 files:[{
                     expand: true,
                     flatten: true,
                     cwd: 'src/templates',
-                    src: '*.html',
+                    src: '*.njk',
                     dest: 'build/',
                     ext: '.html'
                 }]
@@ -111,7 +112,7 @@ module.exports = function(grunt){
                     expand: true,
                     flatten: true,
                     cwd: 'src/docs',
-                    src: '*.html',
+                    src: ['*.njk', '*.html'],
                     dest: 'docs/',
                     ext: '.html'
                 }]
@@ -120,22 +121,18 @@ module.exports = function(grunt){
         },
         
         watch: {
-            template : {
-                src_html : {
-                    files : 'src/templates/**/*.html',
-                    tasks : ['nunjucks:template']                
-                },
-                src_css : {
-                    files: 'src/templates/css/**/*.css',
-                    tasks : ['postcss']
-                }
+            tmpl_njk : {
+                files : 'src/templates/**/*.njk',
+                tasks : ['nunjucks:templates']                
             },
-            docs : {
-                src_html : {
-                    files : 'src/docs/**/*',
-                    tasks : ['nunjucks:docs']                  
-                }                
-            }       
+            tmpl_css : {
+                files: 'src/templates/css/**/*.css',
+                tasks : ['postcss']                
+            },
+            docs_njk : {
+                files : 'src/docs/**/.njk',
+                tasks : ['nunjucks:docs']                  
+            }    
         },
 
 
@@ -154,7 +151,8 @@ module.exports = function(grunt){
             html : ['build/*.html'],
             css: ['build/css/*'],
             icons: ['build/img/icons/*.svg'],
-            iconsfont: ['build/fonts/*-icons.*']
+            iconsfont: ['build/fonts/*-icons.*'],
+            docs: ['docs/*.html']
         }
       
     });
@@ -173,10 +171,10 @@ module.exports = function(grunt){
 
     // Custom tasks -- Run plugins
     grunt.registerTask('default', ['browserSync','watch']);
-    grunt.registerTask('buildhtml', ['clean:html','nunjucks:template']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks:templates']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('builddocs', ['nunjucks:docs']);
+    grunt.registerTask('builddocs', ['clean:docs','nunjucks:docs']);
     grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons', 'builddocs']);
     grunt.registerTask('init', ['build']);
 };
