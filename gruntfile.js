@@ -9,7 +9,7 @@ module.exports = function(grunt){
             options: {
                 map: {
                     inline: false,
-                    annotation: 'build/css'
+                    annotation: 'build/templates/css'
                 },
 
                 processors: [
@@ -24,7 +24,7 @@ module.exports = function(grunt){
                 expand: true,
                 cwd: 'src/templates/css/',
                 src  : 'project.css',
-                dest : 'build/css/'
+                dest : 'build/templates/css/'
             }
             // thirdParty: {
             //     expand: true,
@@ -42,7 +42,7 @@ module.exports = function(grunt){
                     expand: true,
                     cwd: 'src/templates/img/',
                     src: '*.svg',
-                    dest: 'build/static/img/'
+                    dest: 'build/templates/img/'
 
                 }]
             },
@@ -52,7 +52,7 @@ module.exports = function(grunt){
                     expand: true,
                     cwd: 'src/templates/img/icons',
                     src: '*.svg',
-                    dest: 'build/img/icons/'
+                    dest: 'build/templates/img/icons/'
                 }]
             }
         },
@@ -60,7 +60,7 @@ module.exports = function(grunt){
         modernizr: {
             dist: {
                  // Path to save out the built file
-                'dest' : 'build/js/modernizr-custom.js',
+                'dest' : 'build/templates/js/modernizr-custom.js',
                 'options' : [
                     'setClasses',
                     'addTest',
@@ -75,9 +75,9 @@ module.exports = function(grunt){
 
         webfont: {
             icons: {
-                src: 'build/img/icons/*.svg',
-                dest: 'build/fonts',
-                destCss: 'build/css/',
+                src: 'build/templates/img/icons/*.svg',
+                dest: 'build/templates/fonts',
+                destCss: 'build/templates/css/',
                 options: {
                     engine: 'node',
                     font: '<%= pkg.name %>-icons',
@@ -103,7 +103,7 @@ module.exports = function(grunt){
                     flatten: true,
                     cwd: 'src/templates',
                     src: '*.njk',
-                    dest: 'build/',
+                    dest: 'build/templates',
                     ext: '.html'
                 }]
             },            
@@ -113,7 +113,7 @@ module.exports = function(grunt){
                     flatten: true,
                     cwd: 'src/docs',
                     src: ['*.njk', '*.html'],
-                    dest: 'docs/',
+                    dest: 'build/docs/',
                     ext: '.html'
                 }]
             }
@@ -148,11 +148,11 @@ module.exports = function(grunt){
 
 
         clean: {
-            html : ['build/*.html'],
-            css: ['build/css/*'],
-            icons: ['build/img/icons/*.svg'],
-            iconsfont: ['build/fonts/*-icons.*'],
-            docs: ['docs/*.html']
+            html : ['build/templates/*.html'],
+            css: ['build/templates/css/*'],
+            icons: ['build/templates/img/icons/*.svg'],
+            iconsfont: ['build/templates/fonts/*-icons.*'],
+            docs: ['build/docs/*.html']
         }
       
     });

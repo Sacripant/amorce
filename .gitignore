@@ -1,12 +1,12 @@
-build/*.html
-build/css
-build/fonts/*
-build/img/icons/*.svg
-build/js/modernizr-custom.js
+build/templates/*.html
+build/templates/css
+build/templates/fonts/*
+build/templates/img/icons/*.svg
+build/templates/js/modernizr-custom.js
 
 
 node_modules/
 
-docs/*.html
+build/docs/*.html
 
 src/docs/iconsFont.html
