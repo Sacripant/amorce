@@ -3,13 +3,23 @@ module.exports = function(grunt){
     grunt.initConfig({
         
         pkg: grunt.file.readJSON('package.json'),
-        
+    
+        path: {
+            templates: {
+                src: 'src/templates/',
+                build: 'build/templates/'
+            },
+            docs: {
+                src: 'src/docs/',
+                build: 'build/docs/'
+            }
+        },
 
         postcss: {
             options: {
                 map: {
                     inline: false,
-                    annotation: 'build/templates/css'
+                    annotation: '<%= path.templates.build %>css'
                 },
 
                 processors: [
@@ -22,15 +32,15 @@ module.exports = function(grunt){
             },
             css: {
                 expand: true,
-                cwd: 'src/templates/css/',
+                cwd: '<%= path.templates.src %>css/',
                 src  : 'project.css',
-                dest : 'build/templates/css/'
+                dest : '<%= path.templates.build %>css/'
             }
             // thirdParty: {
             //     expand: true,
-            //     cwd: 'src/templates/css/third-party',
+            //     cwd: '<%= path.templates.src %>css/third-party',
             //     src  : '*.css',
-            //     dest : 'build/css/third-party/'  
+            //     dest : '<%= path.templates.build %>css/third-party/'  
             // }            
         },
 
@@ -40,9 +50,9 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/templates/img/',
+                    cwd: '<%= path.templates.src %>img/',
                     src: '*.svg',
-                    dest: 'build/templates/img/'
+                    dest: '<%= path.templates.build %>img/'
 
                 }]
             },
@@ -50,9 +60,9 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/templates/img/icons',
+                    cwd: '<%= path.templates.src %>img/icons',
                     src: '*.svg',
-                    dest: 'build/templates/img/icons/'
+                    dest: '<%= path.templates.build %>img/icons/'
                 }]
             }
         },
@@ -60,7 +70,7 @@ module.exports = function(grunt){
         modernizr: {
             dist: {
                  // Path to save out the built file
-                'dest' : 'build/templates/js/modernizr-custom.js',
+                'dest' : '<%= path.templates.build %>js/modernizr-custom.js',
                 'options' : [
                     'setClasses',
                     'addTest',
@@ -75,18 +85,18 @@ module.exports = function(grunt){
 
         webfont: {
             icons: {
-                src: 'build/templates/img/icons/*.svg',
-                dest: 'build/templates/fonts',
-                destCss: 'build/templates/css/',
+                src: '<%= path.templates.build %>img/icons/*.svg',
+                dest: '<%= path.templates.build %>fonts',
+                destCss: '<%= path.templates.build %>css/',
                 options: {
                     engine: 'node',
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'src/templates/img/icons/icons-tmpl.css',
+                    template: '<%= path.templates.src %>img/icons/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'src/templates/img/icons/demoicons-tmpl.html',
-                        destHtml: 'src/docs',
+                        htmlDemoTemplate: '<%= path.templates.src %>img/icons/demoicons-tmpl.html',
+                        destHtml: '<%= path.docs.src %>',
                         htmlDemoFilename: 'iconsFont'
                     }
                 }
@@ -107,9 +117,9 @@ module.exports = function(grunt){
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/templates',
+                    cwd: '<%= path.templates.src %>',
                     src: '*.njk',
-                    dest: 'build/templates',
+                    dest: '<%= path.templates.build %>',
                     ext: '.html'
                 }]
             },            
@@ -117,9 +127,9 @@ module.exports = function(grunt){
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/docs',
+                    cwd: '<%= path.docs.src %>',
                     src: ['*.njk', '*.html'],
-                    dest: 'build/docs/',
+                    dest: '<%= path.docs.build %>',
                     ext: '.html'
                 }]
             }
@@ -132,15 +142,15 @@ module.exports = function(grunt){
                 tasks: ['nunjucks:toc']
             },
             tmpl_njk : {
-                files : 'src/templates/**/*.njk',
+                files : '<%= path.templates.src %>**/*.njk',
                 tasks : ['nunjucks:templates']                
             },
             tmpl_css : {
-                files: 'src/templates/css/**/*.css',
+                files: '<%= path.templates.src %>css/**/*.css',
                 tasks : ['postcss']                
             },
             docs_njk : {
-                files : 'src/docs/**/.njk',
+                files : '<%= path.docs.src %>**/.njk',
                 tasks : ['nunjucks:docs']                  
             }    
         },
@@ -158,10 +168,10 @@ module.exports = function(grunt){
 
 
         clean: {
-            html : ['build/templates/*.html'],
-            css: ['build/templates/css/*'],
-            icons: ['build/templates/img/icons/*.svg'],
-            iconsfont: ['build/templates/fonts/*-icons.*'],
+            html : ['<%= path.templates.build %>*.html'],
+            css: ['<%= path.templates.build %>css/*'],
+            icons: ['<%= path.templates.build %>img/icons/*.svg'],
+            iconsfont: ['<%= path.templates.build %>fonts/*-icons.*'],
             docs: ['build/docs/*.html']
         }
       
