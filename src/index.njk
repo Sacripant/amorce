@@ -1,0 +1,38 @@
+{% set base_path = "templates/" %}
+
+{% extends "templates/extends/base.njk" %}
+
+{% block headTitle %}
+	Table of content — {{ super() }}
+{% endblock %}
+
+{% block main %}
+
+	<h1>
+		v.{{ version }} {{ base_path }}
+	</h1>
+
+	<h2>
+		Templates
+	</h2>
+
+	<ul>
+		<li>
+			<a href="templates/index.html">Homepage</a>
+		</li>
+		<li>
+			<a href="templates/404.html">Error 404 page</a>
+		</li>
+	</ul>
+
+	<h2>
+		Documentation
+	</h2>
+
+	<ul>
+		<li>
+			<a href="docs/index.html">Front-end documentation</a>
+		</li>
+	</ul>
+	
+{% endblock %}

@@ -95,7 +95,13 @@ module.exports = function(grunt){
 
         nunjucks: {
             options: {
-                paths : 'src/'
+                paths : 'src/',
+                data : '<%= pkg %>'
+            },
+            toc: {
+                files:{
+                    'build/index.html': 'src/index.njk'
+                }
             },
             templates: {
                 files:[{
@@ -121,6 +127,10 @@ module.exports = function(grunt){
         },
         
         watch: {
+            toc : {
+                files: 'src/index.njk',
+                tasks: ['nunjucks:toc']
+            },
             tmpl_njk : {
                 files : 'src/templates/**/*.njk',
                 tasks : ['nunjucks:templates']                
@@ -171,7 +181,7 @@ module.exports = function(grunt){
 
     // Custom tasks -- Run plugins
     grunt.registerTask('default', ['browserSync','watch']);
-    grunt.registerTask('buildhtml', ['clean:html','nunjucks:templates']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks:templates','nunjucks:toc']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
     grunt.registerTask('builddocs', ['clean:docs','nunjucks:docs']);
