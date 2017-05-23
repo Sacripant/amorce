@@ -1,0 +1,77 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  Naming convention —
+{% endblock %} 
+
+{% block main %}
+<section id="doc-nomenclature" class="doc-section">
+	<h1>Convention de nommage des class CSS</h1>
+
+	<p>
+		Le system de nomenclature de class CSS utilisé est un dérivé du système BEM (Block__Element--modifier) <br>
+
+		Il utilise l'<em>élément</em> en préfixe qui est inspiré de la sémantique des balise HTML. <br>
+		<code>.element__block--modifier</code>
+		L'<em>élément</em> (préfixe) est séparé par 2 <em>underscores</em> du nom du bloc (<code>__</code>). <br>
+		Le nom du block peut être composé de <em>tiret</em>. Ex: <code>main-nav</code>. <br/>
+		Le modificateur, utilisé en suffixe est séparé par 2 <em>tirets</em> du nom du bloc (<code>--</code>).
+	</p>
+
+	<h2>Liste des préfixes <em>élément</em> utilisés couramment</h2>
+
+	<ul>
+		<li><strong>h</strong> : pour le titre principal du bloc</li>
+		<li><strong>l</strong> : pour une liste de blocs</li>
+		<li><strong>i</strong> : pour l'item d'une liste de blocs</li>
+		<li><strong>a</strong> : pour le lien principal du bloc</li>
+		<li><strong>img</strong> : image du bloc</li>
+		<li><strong>metas</strong> : pour le <em>wrapper</em> listant les metas de l'item (date, auteur, catégories, …)</li>
+	</ul>
+
+	<p>D'autres préfixes pourront être créés pour les besoins du projet</p>
+
+
+
+	<h2>Exemples</h2>
+
+	<h3>Bloc de menu principal</h3>
+
+	<pre class="bloc-code">
+		<code>
+&lt;nav class=&quot;main-nav&quot;&gt;
+	&lt;ul class=&quot;l__main_nav&quot;&gt;
+		&lt;li class=&quot;i__main-nav&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;a__main-nav&quot;&gt;Link&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</code>
+	</pre>
+	
+
+	<h3>Liste d'articles</h3>
+
+	<pre class="bloc-code">
+		<code>
+&lt;section class=&quot;articles&quot;&gt;
+	&lt;h1 class=&quot;h__articles&quot;&gt;Derniers articles&lt;/h1&gt;
+	&lt;ul class=&quot;l__articles&quot;&gt;
+		&lt;li class=&quot;i__articles&quot;&gt;
+			&lt;article class=&quot;article&quot;&gt;
+				&lt;h2 class=&quot;h__article&quot;&gt;Titre de l&#039;article&lt;/h2&gt;
+				&lt;div class=&quot;img__article&quot;&gt;
+					&lt;img src=&quot;#&quot; alt=&quot;#&quot; /&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;metas__article&quot;&gt;
+					Auteur + Date
+				&lt;/div&gt;
+			&lt;/article&gt;
+		&lt;/li&gt;
+		&lt;li&gt; &hellip;
+	&lt;/ul&gt;
+&lt;/section&gt;
+		</code>
+	</pre>
+</section>
+
+{% endblock %}

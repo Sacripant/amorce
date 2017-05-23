@@ -1,0 +1,208 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  flex-utils —
+{% endblock %} 
+
+
+{% block additionalCSS %}
+<style>
+	.ticket > * {
+		background-color: #eee;
+		padding: 1rem;
+	}
+	.img__ticket {
+		max-width: 28%;
+		border-radius: 50%;
+		margin-right: -1rem;
+	}
+	.img__ticket > img {
+		border-radius: 50%;
+	}
+	.header__ticket {
+		flex-basis: 10em;
+	}
+	.tarif__ticket {
+		margin: 0;
+	}
+	.desc__ticket {
+		border-left: 5px dotted #fff;
+	}
+</style>
+{% endblock %}
+
+{% block main %}
+<section id="doc-grille" class="doc-section">
+	<h1>Flex Utils</h1>
+
+	<p>
+		Permet d'appliquer rapidement le layout flexbox à un container et ces items.<br/>
+		Module très pratique pour du prototypage rapide.
+	</p>
+
+	<h2>Utilisation</h2>
+
+	<p>
+		Ajouter la class <code>.fx</code> (pour activer <code>display:flex</code>) suivit des options choisies en modificateurs : <br/>
+		<code>fx--option1--option2--option3</code> <br/>
+		L'ordre des options n'a pas d'importance.
+	</p>
+
+	<h2>Options</h2>
+
+	<div class="notif notice">
+		<ul>
+			<li>Les valeurs par défaut s'appliquent si l'option n'est pas utilisée. </li>
+			<li>Pour chaque option, une seule valeur doit être utilisée.</li>
+		</ul>
+	</div>
+
+	<h3>flex-wrap</h3>
+	<p>
+		Défaut: <code>nowrap</code>
+	</p>
+
+	<ul>
+		<li><code>--wrap</code></li>
+		<li><code>--wrap-reverse</code></li>
+	</ul>
+
+
+    <h3>flex-direction</h3>
+    <p>
+    	Défaut: <code>row</code>
+    </p>
+
+    <ul>
+    	<li><code>--row-reverse</code></li>
+    	<li><code>--column</code></li>
+    	<li><code>--column-reverse</code></li>
+    </ul>
+
+
+    <h3>justify-content</h3>
+    <p>
+    	Défaut: <code>flex-start</code>
+    </p>
+
+    <ul>
+    	<li><code>--justify-center</code></li>
+    	<li><code>--justify-end</code></li>
+    </ul>
+
+
+    <h3>align-items</h3>
+    <p>
+    	Défaut: <code>stretch</code>
+    </p>
+
+    <ul>
+    	<li><code>--alignI-start</code></li>
+    	<li><code>--alignI-end</code></li>
+    	<li><code>--alignI-center</code></li>
+    </ul>
+
+
+    <h3>align-content</h3>
+    <p>
+    	Défaut: <code>stretch</code>
+    </p>
+
+    <ul>
+    	<li><code>--alignC-start</code></li>
+    	<li><code>--alignC-end</code></li>
+    	<li><code>--alignC-center</code></li>
+    </ul>
+
+
+    <h3>grow</h3>
+    <p>
+    	Défaut: <code>0</code> <br/>
+    	En appliquant l'option <code>--grow</code> sur le container, <code>flex-grow: 1</code> s'appliquera sur tous les items. <br/>
+		Vous pouvez également utiliser cette option sur l'item voulu avec la class <code>i__fx--grow</code>
+    </p>
+
+    <ul>
+    	<li><code>--grow</code> pour le container: <code>fx--grow</code></li>
+    	<li><code>--grow</code> pour l'item: <code>i__fx--grow</code></li>
+    </ul>
+
+
+    <h3>no shrink</h3>
+    <p>
+    	Shrink a une valeur par défaut de <code>1</code> sur les items. <br/> 
+    	Cette option permet de la supprimer (<code>0</code>).
+    	En appliquant l'option <code>--no-shrink</code> sur le container, <code>flex-shrink: 0</code> s'appliquera sur tous les items. <br/>
+		Vous pouvez également appliquer l'option sur l'item voulu avec la class <code>i__fx--no-shrink</code>
+    </p>
+
+    <ul>
+    	<li><code>--no-shrink</code> pour le container: <code>fx--no-shrink</code></li>
+    	<li><code>--no-shrink</code> pour l'item: <code>i__fx--no-shrink</code></li>
+    </ul>
+
+
+	<h3>align-self</h3>
+
+	<p>
+		Cette option est applicable uniquement sur les items, en option à la class <code>i__fx</code>
+		Défaut: <code>auto</code>
+	</p>
+
+
+	<ul>
+    	<li><code>--start</code></li>
+    	<li><code>--center</code></li>
+    	<li><code>--end</code></li>
+    </ul>
+
+
+    <h2>Exemple</h2>
+
+    <div class="code-demo">
+<div class="ticket fx--grow">
+	<div class="img__ticket i__fx--center">
+		<img src="../templates/img/placeholder/picture-1x1.svg" alt="placeholder music"/>
+	</div>
+	<header class="header__ticket i__fx--no-shrink fx--column--justify-center txt-center">
+		<h1 class="h__ticket h4">Sacripant en concert</h1>
+		<h2 class="tarif__ticket h6">50 €</h2>
+	</header>
+	<div class="desc__ticket fx--column--justify-center">
+		<p class="txt-center">
+			21 et 22 août <br/>
+			au bistrot des gars & des garces.
+		</p>
+		<p class="small no-vspace">
+			Lorem ipsum Reprehenderit minim nulla voluptate officia laborum aliquip reprehenderit proident pariatur culpa labore culpa minim Excepteur consequat aliqua ex in labore elit.
+		</p>
+	</div>
+</div>
+	</div>
+
+	<h3 class="h6">Commentaires</h3>
+
+	<ul>
+		<li>
+			Class <code>fx--grow</code> sur le container principal <code>ticket</code> : active <code>grow:1</code> sur tous les items.
+		</li>
+		<li>
+			Class <code>i__fx--center</code> sur l'item <code>img__ticket</code> pour lui donner un <code>self-align: center</code>.
+		</li>
+		<li>
+			Class <code>i__fx--no-shrink</code> sur l'item <code>header__ticket</code></li> pour lui appliquer un <code>flex-shrink: 0</code>.
+		</li>
+		<li>
+			Class <code>fx--column--justify-center</code> sur les items <code>header__ticket & desc__ticket</code> pour qu'ils deviennent à leur tour flex container. 
+			Avec ajout des options <code>flex-direction: column</code> et <code>justify-content: center</code>.
+		</li>
+		<li>
+			Les autres class utilisées (<code>txt-center</code>, <code>no-vspace</code>) sont d'autres class utilitaires documentés dans <code>utils/typo-utils.css</code>.
+		</li>
+
+	</ul>
+
+
+
+</section>
+{% endblock %}

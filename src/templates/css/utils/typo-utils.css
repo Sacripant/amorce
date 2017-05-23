@@ -6,28 +6,49 @@
         https://github.com/Sacripant/amorce
     -------------------
 
-    Some typography utilities class
+    Some typography utilities class and custom properties
       
 ====== */
 
-/*  
- *  Nude
- *  Initialize list (remove list-type type and margin) 
- */
-.nude { list-style-type: none; margin: 0; }
 
+/* Custpm properties */
+:root {
 
-/*  
- *  Ellipsis - add ... for too long one line text  
- */
-.txt-ellipsis {
-    overflow: hidden;        
-    white-space: nowrap;     
-    text-overflow: ellipsis;
+    /*  
+     *  Nude
+     *  Initialize list (remove list-type type and margin) 
+     */
+    --nude { 
+        list-style-type: none; 
+        margin: 0; 
+    }
+    
+
+    /*  
+     *  Ellipsis - add ... for too long one line text  
+     */
+    --txt-ellipsis {
+        overflow: hidden;        
+        white-space: nowrap;     
+        text-overflow: ellipsis;
+    }
 }
 
+
+
+
+.nude { 
+    @apply --nude;
+}
+
+.txt-ellipsis {
+    @apply --txt-ellipsis;
+}
+
+
+
 /*  
- * Texte align 
+ * Text align 
  */
 .txt-left   {
     text-align: left;

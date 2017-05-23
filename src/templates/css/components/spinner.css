@@ -1,0 +1,40 @@
+/*  ======
+
+    Components - spinner.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Base for spinner styles
+      
+====== */
+
+:root {
+	--spinner-color:  var(--blue);
+}
+    
+.spinner {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+
+    border: .2em solid color( var(--spinner-color) alpha(.2));
+    border-top-color: var(--spinner-color);
+
+    animation: .9s ease 0 spin;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*rotate animation*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }   
+}

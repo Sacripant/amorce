@@ -3,13 +3,23 @@ module.exports = function(grunt){
     grunt.initConfig({
         
         pkg: grunt.file.readJSON('package.json'),
-        
+    
+        path: {
+            templates: {
+                src: 'src/templates/',
+                build: 'build/templates/'
+            },
+            docs: {
+                src: 'src/docs/',
+                build: 'build/docs/'
+            }
+        },
 
         postcss: {
             options: {
                 map: {
                     inline: false,
-                    annotation: 'build/css'
+                    annotation: '<%= path.templates.build %>css'
                 },
 
                 processors: [
@@ -22,27 +32,32 @@ module.exports = function(grunt){
             },
             css: {
                 expand: true,
-                cwd: 'src/templates/css/',
+                cwd: '<%= path.templates.src %>css/',
                 src  : 'project.css',
-                dest : 'build/css/'
-            },
-            thirdParty: {
-                expand: true,
-                cwd: 'src/templates/css/third-party',
-                src  : '*.css',
-                dest : 'build/css/third-party/'  
-            }            
+                dest : '<%= path.templates.build %>css/'
+            }
+            // thirdParty: {
+            //     expand: true,
+            //     cwd: '<%= path.templates.src %>css/third-party',
+            //     src  : '*.css',
+            //     dest : '<%= path.templates.build %>css/third-party/'  
+            // }            
         },
 
 
         svgmin: {
+            options: {
+                plugins: [
+                    {convertPathData: false}
+                ]
+            },
             img:
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/templates/img/',
+                    cwd: '<%= path.templates.src %>img/',
                     src: '*.svg',
-                    dest: 'build/static/img/'
+                    dest: '<%= path.templates.build %>img/'
 
                 }]
             },
@@ -50,17 +65,18 @@ module.exports = function(grunt){
             {
                 files: [{
                     expand: true,
-                    cwd: 'src/templates/img/icons',
+                    cwd: '<%= path.templates.src %>img/icons',
                     src: '*.svg',
-                    dest: 'build/img/icons/'
+                    dest: '<%= path.templates.build %>img/icons/'
                 }]
             }
         },
 
         modernizr: {
             dist: {
+                'crawl': false,
                  // Path to save out the built file
-                'dest' : 'build/js/modernizr-custom.js',
+                'dest' : '<%= path.templates.build %>js/modernizr-custom.js',
                 'options' : [
                     'setClasses',
                     'addTest',
@@ -69,24 +85,25 @@ module.exports = function(grunt){
                     'fnBind'
                 ],
                 'uglify': true,
-                'classPrefix': 'mzr_'
+                'enableJSClass': true
             }
         },
 
         webfont: {
             icons: {
-                src: 'build/img/icons/*.svg',
-                dest: 'build/fonts',
-                destCss: 'build/css/',
+                src: '<%= path.templates.build %>img/icons/*.svg',
+                dest: '<%= path.templates.build %>fonts',
+                destCss: '<%= path.templates.build %>css/',
                 options: {
                     engine: 'node',
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: 'src/templates/img/icons/icons-tmpl.css',
+                    template: '<%= path.templates.src %>img/icons/fontcustom-config/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: 'src/templates/img/icons/demoicons-tmpl.html',
-                        destHtml: 'src/docs'
+                        htmlDemoTemplate: '<%= path.templates.src %>img/icons/fontcustom-config/demoicons-tmpl.html',
+                        destHtml: '<%= path.docs.src %>',
+                        htmlDemoFilename: 'iconsFont'
                     }
                 }
             }
@@ -94,15 +111,21 @@ module.exports = function(grunt){
 
         nunjucks: {
             options: {
-                paths : 'src/'
+                paths : 'src/',
+                data : '<%= pkg %>'
             },
-            template: {
+            toc: {
+                files:{
+                    'build/index.html': 'src/index.njk'
+                }
+            },
+            templates: {
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/templates',
-                    src: '*.html',
-                    dest: 'build/',
+                    cwd: '<%= path.templates.src %>',
+                    src: '*.njk',
+                    dest: '<%= path.templates.build %>',
                     ext: '.html'
                 }]
             },            
@@ -110,9 +133,9 @@ module.exports = function(grunt){
                 files:[{
                     expand: true,
                     flatten: true,
-                    cwd: 'src/docs',
-                    src: '*.html',
-                    dest: 'docs/',
+                    cwd: '<%= path.docs.src %>',
+                    src: ['*.njk', '*.html'],
+                    dest: '<%= path.docs.build %>',
                     ext: '.html'
                 }]
             }
@@ -120,34 +143,42 @@ module.exports = function(grunt){
         },
         
         watch: {
-            options: {
-                livereload: true,
-            },              
-            src_template_html : {
-                    files : 'src/templates/**/*.html',
-                    tasks : ['nunjucks:template']                
-                },
-                src_template_css : {
-                    files: 'src/templates/css/**/*.css',
-                    tasks : ['postcss']
-                },
-                src_template_js: {
-                    files: 'build/js/*.js'
-                },
-            src_docs_html : {
-                files : 'src/docs/**/*',
-                tasks : ['nunjucks:docs']                  
+            toc : {
+                files: 'src/index.njk',
+                tasks: ['nunjucks:toc']
             },
-            src_docs_css_js : {
-                files : ['docs/assets/doc.css', 'docs/assets/doc.js']
+            tmpl_njk : {
+                files : '<%= path.templates.src %>**/*.njk',
+                tasks : ['nunjucks:templates']                
+            },
+            tmpl_css : {
+                files: '<%= path.templates.src %>css/**/*.css',
+                tasks : ['postcss']                
+            },
+            docs_njk : {
+                files : '<%= path.docs.src %>**/*.njk',
+                tasks : ['nunjucks:docs']                  
+            }    
+        },
+
+
+        browserSync: {
+            bsFiles: {
+                src : 'build/**/*'
+            },
+            options: {
+                watchTask: true,
+                server: './build'
             }
         },
 
+
         clean: {
-            html : ['build/*.html'],
-            css: ['build/css/*'],
-            icons: ['build/img/icons/*.svg'],
-            iconsfont: ['build/fonts/*-icons.*']
+            html : ['<%= path.templates.build %>*.html'],
+            css: ['<%= path.templates.build %>css/*'],
+            icons: ['<%= path.templates.build %>img/icons/*.svg'],
+            iconsfont: ['<%= path.templates.build %>fonts/*-icons.*'],
+            docs: ['build/docs/*.html']
         }
       
     });
@@ -160,15 +191,16 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
 
 
     // Custom tasks -- Run plugins
-    grunt.registerTask('default', ['watch']);
-    grunt.registerTask('buildhtml', ['clean:html','nunjucks:template']);
+    grunt.registerTask('default', ['browserSync','watch']);
+    grunt.registerTask('buildhtml', ['clean:html','nunjucks:templates','nunjucks:toc']);
     grunt.registerTask('buildcss', ['clean:css', 'postcss']);
     grunt.registerTask('buildicons', ['svgmin:icons','webfont:icons']);
-    grunt.registerTask('builddocs', ['nunjucks:docs']);
+    grunt.registerTask('builddocs', ['clean:docs','nunjucks:docs']);
     grunt.registerTask('build', ['buildcss', 'buildhtml', 'modernizr', 'buildicons', 'builddocs']);
     grunt.registerTask('init', ['build']);
 };

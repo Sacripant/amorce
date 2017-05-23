@@ -29,7 +29,7 @@
  */
 
 /* hand cursor on clickable elements */
-.clickable, label, [type=button], [type=submit], button {cursor: pointer; line-height: normal;}
+.clickable, label, [type=button], [type=submit], button {cursor: pointer; line-height: inherit;}
 button[disabled], input[disabled] { cursor: default; }
 
 /* 

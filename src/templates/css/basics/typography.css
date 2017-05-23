@@ -31,7 +31,10 @@
  *  Typographic vars configuration
  */
 :root {
-    /* font-size ratio */
+    /*  font-size ratio
+     *  Define modules size
+     *  quotient : 1.1667 (http://instacalc.com/17574)
+     */
     --fs-ratio : 1.1667;
 
     /* Size */
@@ -47,6 +50,19 @@
 
     /* Vertical rythme */
     --vr: 1.5;
+
+    /* Fonts family */
+    --ff-arial : Arial,"Helvetica Neue", Helvetica, sans-serif;
+
+    /* text colors */
+    --h-color: var(--gray-darker);
+    --txt-color: var(--gray-dark);
+    --a-color: var(--blue);
+    --select-color: var(--blue-soft);
+
+    /* custom selector */
+    @custom-selector :--headers h1,h2,h3,h4,h5,h6 
+
 }
 
 
@@ -60,7 +76,7 @@ html {
 body { 
     font-size: 1em;
     line-height: var(--vr);
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: var(--ff-arial);
 
     color: var(--txt-color); 
     background: #fff;
@@ -69,11 +85,9 @@ body {
 
 /* 
  *  Headings
- *  Define modules size
- *  quotient : 1.1667 (http://instacalc.com/17574)
  */
 
-h1,h2,h3,h4,h5,h6 { 
+:--headers { 
     font-weight: normal; 
     color: var(--h-color); 
     margin-bottom: var(--vr)rem;
@@ -87,16 +101,6 @@ h4, .h4 { font-size: var(--fs-h4)em;    line-height: 1.2;    }
 h5, .h5 { font-size: var(--fs-h5)em;    line-height: 1.2;    }
 h6, .h6 { font-size: var(--fs-h6)em;    line-height: 1.285;  }
 
-/* avoid collapsing margins on headings */
-h1:first-child, h2:first-child,
-h3:first-child, h4:first-child,
-h5:first-child, h6:first-child {
-    margin-top: 0;
-}
-h1 img, h2 img, h3 img, 
-h4 img, h5 img, h6 img {
-    margin: 0;
-}
 
 /* Complementary sizes, usefull for components */
 
@@ -115,7 +119,6 @@ small,
 p, .p {
     font-size: 1em;
     margin-bottom: var(--vr)em; 
-    hyphens: auto;
 }
 
 /* Links */
@@ -236,7 +239,11 @@ caption {
  *  Text-selection colors 
  *  * remove any text shadows: twitter.com/miketaylr/status/12228805301) 
  */
-::selection { background: var(--select-color); color: #fff; text-shadow: none; }
+::selection { 
+    background: var(--select-color); 
+    color: #fff; 
+    text-shadow: none; 
+}
 
 /**
  * HR
@@ -257,8 +264,7 @@ hr {
  *  Default vertical rythme
  */
 .v-space,
-.vspace
-{
+.vspace {
     margin-bottom: var(--vr)em;
     margin-bottom: var(--vr)rem;
 }

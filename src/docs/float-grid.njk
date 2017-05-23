@@ -1,0 +1,52 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  float-grid —
+{% endblock %} 
+
+{% block main %}
+<section id="doc-grille" class="doc-section">
+	<h1>Float Grid</h1>
+
+	<p>
+		Simple grille en float left. <br/>
+	</p>
+
+	<h2>Exemples</h2>
+
+	<h3>Grille auto</h3>
+
+	<p>
+		Lorsque aucune largeur de span n'est définie. les <em>enfants</em> du block <code>fl-grid</code> seront positionnés en largeur auto avec gouttière.
+	</p>
+
+	<div class="demo-grid code-demo">
+<ul class="fl-grid">
+	<li>item 1 est long</li>
+	<li>item 2</li>
+	<li>item 3</li>
+</ul>
+	</div>
+	
+	<h3>Avec largeur de span définie</h3>
+	
+	<div class="demo-grid code-demo">
+<div class="fl-grid">
+	<div class="span--1-5"></div>
+	<div class="span--2-5"></div>
+	<div class="span--2-5"></div>
+</div>		
+	</div>
+
+	<h3>Sans gouttière</h3>
+
+		<div class="demo-grid code-demo">
+<div class="fl-grid no-gutter">
+	<div class="span--2-7"></div>
+	<div class="span--2-7"></div>
+	<div class="span--3-7"></div>
+</div>		
+	</div>
+
+</section>
+{% endblock %}
