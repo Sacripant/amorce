@@ -46,6 +46,11 @@ module.exports = function(grunt){
 
 
         svgmin: {
+            options: {
+                plugins: [
+                    {convertPathData: false}
+                ]
+            },
             img:
             {
                 files: [{
