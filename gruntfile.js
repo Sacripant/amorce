@@ -150,7 +150,7 @@ module.exports = function(grunt){
                 tasks : ['postcss']                
             },
             docs_njk : {
-                files : '<%= path.docs.src %>**/.njk',
+                files : '<%= path.docs.src %>**/*.njk',
                 tasks : ['nunjucks:docs']                  
             }    
         },
