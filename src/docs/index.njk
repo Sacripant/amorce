@@ -10,7 +10,7 @@
 {% block main %}
 <h1>
 	{% include 'docs/includes/logo-amorce.svg' %} <br/>
-	<span class="xsmall">v. 1610</span>
+	<span class="xsmall">v. 1705</span>
 </h1>
 
 
@@ -76,11 +76,14 @@
 <h2>Compilation à la volée</h2> 
 
 <p>
-	La commande <code>grunt</code> ou <code>grunt watch</code> est paramétrée pour lancer un <em>watcher</em> sur les fichiers sources. Ainsi à chaque modification d'un fichier source html ou css, les fichiers seront compilés à la volée.
+	<code>grunt</code>
+</p>
+
+<p>
+	La commande <code>grunt</code> est paramétrée pour lancer un <em>watcher</em> sur les fichiers sources. Ainsi, à chaque modification d'un fichier source html ou css, les fichiers seront compilés automatiquement.
 </p>
 <p>
-	De plus, un serveur <a href="http://livereload.com">livereload</a> est également lancé permettant de rafraichir votre browser à chaque modification.
-	Pour en profiter, il suffit d'installer l'<a href="http://livereload.com/extensions/">extension Livereload</a> correspondant à votre navigateur.
+	De plus un serveur <a href="https://www.browsersync.io/">browsersync</a> est également lancé permettant de rafraichir automatiquement votre browser à chaque modification.
 </p>
 
 
@@ -97,7 +100,7 @@
 	</li>
 	<li>
 		<code>grunt buildhtml</code> : 
-		compile les fichiers sources <code>.html</code> qui utilise le system de templating _nunjucks_.
+		compile les fichiers sources <code>.njk</code> qui utilise le system de templating _nunjucks_ en templates <code>html</code>.
 	</li>
 	<li>
 		<code>grunt modernizr</code> : 
@@ -105,8 +108,7 @@
 	</li>
 	<li>
 		<code>grunt builddocs</code> : 
-		compile les fichiers de la présente documentation.
-	</li>
+		Compile les fichiers sources <code>njk</code> pour générer la documentation au format <code>html</code>.</li>
 </ul>
 
 <p>

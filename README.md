@@ -1,4 +1,4 @@
-# Amorce v.1610
+# Amorce v.1705
 
 Amorce est un starter kit pour l'intégration de site internet.
 
@@ -42,12 +42,11 @@ Pour faire une compilation manuelle des sources.
 
 ## Compilation à la volée
 
-`grunt` ou `grunt watch`
+`grunt`
 
-La commande `grunt` est paramétrée pour lancer un *watcher* sur les fichiers source. Ainsi à chaque modification d'un fichier source html ou css, les fichiers seront compilés automatiquement.
+La commande `grunt` est paramétrée pour lancer un *watcher* sur les fichiers source. Ainsi, à chaque modification d'un fichier source html ou css, les fichiers seront compilés automatiquement.
 
-De plus un serveur [livereload](http://livereload.com) est également lancé permettant de rafraichir votre browser à chaque modification.
-Pour en profiter, il suffit d'installer l'[extension Livereload](http://livereload.com/extensions/) correspondant à votre navigateur.
+De plus un serveur [browsersync](https://www.browsersync.io/) est également lancé permettant de rafraichir votre browser automatiquement à chaque modification.
 
 
 ## Commandes de compilation manuelles
@@ -62,12 +61,15 @@ Compile les fichiers .svg présents dans `src/static/img/icons/`: optimisations 
 
 `grunt buildhtml`
 
-Compile les fichiers sources `.html` qui utilise le sytem de templating [nunjucks](http://mozilla.github.io/nunjucks/)
+Compile les fichiers sources `.njk` qui utilisent le sytème de templating [nunjucks](http://mozilla.github.io/nunjucks/) en templates `html`.
 
 `grunt modernizr`
 
-Inspecte les fichiers CSS et JS du projet et compile un fichier `modernizr-custom.js` sur mesure.
+Inspecte les fichiers CSS et JS du projet et compile un fichier `modernizr-custom.js` sur mesure. cf [Modernizr grunt config](https://modernizr.com/docs/#grunt-config).
 
+`grunt builddocs`
+
+Compile les fichiers sources `njk` pour générer la documentation au format `html`.
 
 
 Pour plus de précision, vous pouvez inspecter les fichiers `package.json` et `gruntfile.js`.
@@ -79,7 +81,7 @@ La documentation peut être compilée à l'aide de la commande.
 
 `grunt builddocs`
 
-La version HTML sera alors disponible : `docs/index.html`.
+La version HTML sera alors disponible : `build/docs/index.html`.
 C'est un bon point de départ pour comprendre la convention de nommage employée et réutiliser les modules développées.
 
 [La documentation de la dernière version stable est également disponible en ligne](http://amorce.sacripant.fr/docs/). 
