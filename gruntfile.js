@@ -69,6 +69,7 @@ module.exports = function(grunt){
 
         modernizr: {
             dist: {
+                'crawl': false,
                  // Path to save out the built file
                 'dest' : '<%= path.templates.build %>js/modernizr-custom.js',
                 'options' : [
@@ -79,7 +80,7 @@ module.exports = function(grunt){
                     'fnBind'
                 ],
                 'uglify': true,
-                'classPrefix': 'mzr_'
+                'enableJSClass': true
             }
         },
 
