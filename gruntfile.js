@@ -93,9 +93,9 @@ module.exports = function(grunt){
                     font: '<%= pkg.name %>-icons',
                     hashes: true,
                     syntax: 'bootstrap',
-                    template: '<%= path.templates.src %>img/icons/icons-tmpl.css',
+                    template: '<%= path.templates.src %>img/icons/fontcustom-config/icons-tmpl.css',
                     templateOptions: {
-                        htmlDemoTemplate: '<%= path.templates.src %>img/icons/demoicons-tmpl.html',
+                        htmlDemoTemplate: '<%= path.templates.src %>img/icons/fontcustom-config/demoicons-tmpl.html',
                         destHtml: '<%= path.docs.src %>',
                         htmlDemoFilename: 'iconsFont'
                     }
