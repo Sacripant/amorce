@@ -10,6 +10,7 @@
     Define default form styles
 
     TOC:
+    * config
     * Form Reset
     * Form Normalizr
     * Fieldset & legend
@@ -22,6 +23,10 @@
     * Required field
   
 ====== */
+
+:root {
+    --fields-height:  2em;
+}
 
 
 /*
@@ -116,7 +121,7 @@ input
     padding: 0.33em;
     border: 1px solid #ccc;
     background-color: #fff;
-    height: 2em;
+    height: var(--fields-height);
 
     &:focus {
         border-color: #666;
