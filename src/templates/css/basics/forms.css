@@ -149,6 +149,7 @@ textarea {
 /* Height auto for checkbox, radio, select[multiple] & textarea */
 input[type=checkbox]
 , input[type=radio]
+, input[type=file]
 , textarea
 , select[multiple]
 {
