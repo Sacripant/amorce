@@ -86,8 +86,8 @@ legend      {
  */
 
 .form-item  { 
-    margin-bottom: calc( var(--vr) / 3 )em;
-    margin-top: calc( var(--vr) / 3 )em; 
+    margin-bottom: calc( var(--vr) / 2 )em;
+    margin-top: calc( var(--vr) / 2 )em; 
 }
 
 /*
