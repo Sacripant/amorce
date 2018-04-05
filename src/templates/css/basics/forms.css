@@ -210,7 +210,6 @@ input[type=date] {
 
 .input-group {
     display: table;
-    width: 100%;
 }
 .input-group > * {
     display: table-cell;
@@ -221,19 +220,14 @@ input[type=date] {
 }
 .input-addon {
     width: 1%;
-    background-color: #ddd;
-    /*border: 1px solid #999;*/
 }
 span.input-addon {
+    background-color: #ddd;
     padding: 0 0.33em;  
 }
-.input-addon button 
-, .input-addon input[type=submit]
-{
-    background: none;
-    border: 0 none;
-    width: auto;
-    margin-bottom: -2px;
+
+.input-addon [type=submit] {
+    border-left: 0 none;
 }
 
 
