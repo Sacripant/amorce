@@ -51,9 +51,14 @@ button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focus
  *  Fieldset & legend
  */
 
-/* Default fieldset : as a title */
+/* 
+ * Default fieldset : as a title 
+ * [1] input[size] no expend beyond the parent fieldset width (default min-width: min-content)
+ */
+
 fieldset    { 
     margin-bottom: var(--vr)em;
+    min-width: 0; /* [1] */
 }
 legend      { 
     font-size: var(--fs-h6);
