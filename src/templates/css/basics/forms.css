@@ -197,10 +197,12 @@ input[type=date] {
 /* 
  *  Inline Form
  *  Align label & input
+ *  [1] patch for IE11
  */
 .inline-form input, .inline-form textarea, .inline-form select { 
     min-width: 0;
     width: auto;
+    vertical-align: middle; /* [1] */
 }
 
 
