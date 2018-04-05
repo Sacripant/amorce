@@ -68,6 +68,7 @@ legend      {
     width: 100%;
     padding-bottom: 0.33em;
 }
+
 /* Fieldset border */
 .fieldset-border {
     /*margin: 0 0 1.5em 0; */
@@ -103,12 +104,13 @@ label       {
 
 
 /* 
-//  Form fields
-*/
+ *  Form fields
+ */
 
 input
 , textarea
-, select {
+, select 
+, button[type=submit] {
     min-width: 100%; 
     max-width: 100%;
     padding: 0.33em;
@@ -135,6 +137,7 @@ input[type=checkbox]
 , input[type=radio]
 , input[type=submit]
 , input[type="reset"] 
+, button[type=submit]
 {
     min-width: 0;
     max-width: none;
@@ -166,6 +169,14 @@ input[type=file] {
 /* input type date */
 input[type=date] { 
     font: inherit; /*for chrome display*/
+}
+
+/* submit btns */
+input[type=submit]
+, button[type=submit] {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #eee;
 }
 
 
