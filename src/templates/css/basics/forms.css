@@ -110,7 +110,7 @@ label       {
 input
 , textarea
 , select 
-, button[type=submit] {
+, [type=submit] {
     min-width: 100%; 
     max-width: 100%;
     padding: 0.33em;
@@ -135,9 +135,8 @@ optgroup {
 /* no min-width for checkbox, radio & form btns */
 input[type=checkbox]
 , input[type=radio]
-, input[type=submit]
 , input[type="reset"] 
-, button[type=submit]
+, [type=submit]
 {
     min-width: 0;
     max-width: none;
@@ -172,8 +171,7 @@ input[type=date] {
 }
 
 /* submit btns */
-input[type=submit]
-, button[type=submit] {
+[type=submit] {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #eee;
