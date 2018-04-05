@@ -108,29 +108,28 @@ label       {
 
 input
 , textarea
-, select 
-{
-    min-width: 100%; max-width: 100%;
+, select {
+    min-width: 100%; 
+    max-width: 100%;
     padding: 0.33em;
     border: 1px solid #ccc;
     height: 2em;
+
+    &:focus {
+        border-color: #666;
+    }
 }
+
 select {
     width: 100%;
 }
+
 optgroup {
   font-weight: bold;
 }
 
-/* Focus style */ 
-input:focus
-, textarea:focus
-, select:focus 
-{
-    border-color: #666;
-}
 
-/* no min-width for checkbox, radio & form btn */
+/* no min-width for checkbox, radio & form btns */
 input[type=checkbox]
 , input[type=radio]
 , input[type=submit]
@@ -157,7 +156,9 @@ input[type=checkbox]
 
 /* input type file */ 
 input[type=file] { 
-    border: 0 none; padding: 0; width: 100%; /*for firefox display*/ 
+    border: 0 none; 
+    padding: 0; 
+    width: 100%; /*for firefox display*/ 
 }
 
 /* input type date */
