@@ -137,15 +137,19 @@ optgroup {
 }
 
 
-/* no min-width for checkbox, radio & form btns */
+/*  NO MIN-WIDTH 
+ *  for checkbox, radio, input[size] & form btns 
+ */
 input[type=checkbox]
 , input[type=radio]
 , input[type="reset"] 
 , [type=submit]
+, input[size]
 {
     min-width: 0;
-    max-width: none;
 }
+
+
 
 
 textarea {
@@ -153,12 +157,16 @@ textarea {
     resize: vertical;
 }
 
-/* Height auto for checkbox, radio, select[multiple] & textarea */
+/* 
+ * Height AUTO 
+ * for checkbox, radio, select[multiple], select[size] & textarea 
+ */
 input[type=checkbox]
 , input[type=radio]
 , input[type=file]
 , textarea
 , select[multiple]
+, select[size]
 {
     height: auto;   
 }
