@@ -18,14 +18,14 @@
     --blue-soft : hsl(220, 40%, 60%);
 
     /* Colors notifs */
-    --color-error   : hsl(0, 75%, 45%);
-    --color-error-bg: hsl(0, 35%, 90%);
+    --color-error   : hsl(0, 75%, 40%);
+    --color-error-bg: hsl(20, 35%, 90%);
 
-    --color-notice   : hsl(30, 85%, 38%);
-    --color-notice-bg: hsl(40, 35%, 90%);
+    --color-notice   : hsl(30, 85%, 35%);
+    --color-notice-bg: hsl(55, 40%, 92%);
 
     --color-success   : hsl(91, 77%, 15%);
-    --color-success-bg: hsl(72, 58%, 85%);
+    --color-success-bg: hsl(65, 58%, 85%);
 }
 
 
