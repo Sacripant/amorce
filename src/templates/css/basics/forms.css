@@ -128,14 +128,6 @@ input
     }
 }
 
-select {
-    width: 100%;
-}
-
-optgroup {
-  font-weight: bold;
-}
-
 
 /*  NO MIN-WIDTH 
  *  for checkbox, radio, input[size] & form btns 
@@ -147,14 +139,6 @@ input[type=checkbox]
 , input[size]
 {
     min-width: 0;
-}
-
-
-
-
-textarea {
-    font: inherit;
-    resize: vertical;
 }
 
 /* 
@@ -170,6 +154,29 @@ input[type=checkbox]
 {
     height: auto;   
 }
+
+
+
+/* 
+ *  SPECIFIC 
+ */
+
+/* Select */
+select {
+    width: 100%;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+
+/* Textarea */
+textarea {
+    font: inherit;
+    resize: vertical;
+}
+
 
 /* input type file */ 
 input[type=file] { 
