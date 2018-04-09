@@ -204,6 +204,7 @@ input[type=date] {
     font-size: var(--fs-small)em;
     font-style: italic;
     color: var(--gray);
+    margin-bottom: 0;
 }
 
 
