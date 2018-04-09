@@ -29,7 +29,16 @@
 }
 
 
-.gray-dark      { color: var(--gray-dark); }
-.gray-darker    { color: var(--gray-darker); } 
-.blue           { color: var(--blue); }
-.blue-soft      { color: var(--blue-soft); }
+.color-gray-dark      { color: var(--gray-dark); }
+.color-gray-darker    { color: var(--gray-darker); } 
+.color-blue           { color: var(--blue); }
+.color-blue-soft      { color: var(--blue-soft); }
+
+.color-error        { color: var(--color-error); }
+.color-error-bg     { color: var(--color-error-bg); }
+
+.color-success      { color: var(--color-success); }
+.color-success-bg   { color: var(--color-success-bg); }
+
+.color-notice       { color: var(--color-notice); }
+.color-notice-bg    { color: var(--color-notice-bg); }

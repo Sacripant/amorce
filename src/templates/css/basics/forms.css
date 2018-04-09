@@ -262,8 +262,7 @@ span.input-addon {
 }
 
 /* ERROR */
-.color-error        { color: var(--color-error); }
-.color-error-bg     { color: var(--color-error-bg); }
+
 
 .error      { 
     color: var(--color-error);
@@ -278,9 +277,6 @@ span.input-addon {
 }
 
 /* NOTICE */
-.color-notice       { color: var(--color-notice); }
-.color-notice-bg    { color: var(--color-notice-bg); }
-
 .notif.notice
 {
     background-color: var(--color-notice-bg);
@@ -288,8 +284,6 @@ span.input-addon {
 }
 
 /* SUCCESS */
-.color-success      { color: var(--color-success); }
-.color-success-bg   { color: var(--color-success-bg); }
 
 .notif.success  { 
     background-color: var(--color-success-bg); 
