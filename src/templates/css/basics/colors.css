@@ -10,7 +10,7 @@
 
 /*  Colors variables */
 :root {
-
+    --gray:  hsl(0, 0%, 55%);
     --gray-dark : hsl(0, 0%, 30%);
     --gray-darker : hsl(0, 0%, 15%);
 
@@ -28,7 +28,7 @@
     --color-success-bg: hsl(65, 58%, 85%);
 }
 
-
+.color-gray           { color:  var(--gray); }
 .color-gray-dark      { color: var(--gray-dark); }
 .color-gray-darker    { color: var(--gray-darker); } 
 .color-blue           { color: var(--blue); }
