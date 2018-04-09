@@ -103,7 +103,7 @@ legend      {
 label       { 
     /*text-transform: uppercase; */
     font-size: var(--fs-small)em;
-    color: #666;
+    color: var(--gray-draker);
     line-height: normal;
 }
 
@@ -119,12 +119,12 @@ input
     min-width: 100%; 
     max-width: 100%;
     padding: 0.33em;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray);
     background-color: #fff;
     height: var(--fields-height);
 
     &:focus {
-        border-color: #666;
+        border-color: var(--gray-darker);
     }
 }
 
@@ -195,6 +195,15 @@ input[type=date] {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #eee;
+}
+
+
+/* Help text */
+.help__form-item {
+    display: inline-block;
+    font-size: var(--fs-small)em;
+    font-style: italic;
+    color: var(--gray);
 }
 
 
