@@ -1,0 +1,124 @@
+<h1>
+	Form test page
+</h1>
+
+<form action="index_submit" method="get" accept-charset="utf-8">
+	<fieldset>
+		<legend>Inputs type text</legend>
+
+		<div class="form-item">
+			<label for="inputText1">Input type text</label>
+			<input name="inputText1" value="" />
+		</div>
+
+		<div class="form-item">
+			<label for="inputText2" class="required">Input type text required</label>
+			<input name="inputText2" value="" required/>
+		</div>
+
+		<div class="form-item">
+			<label for="inputText3">Input type w placeholder</label>
+			<input name="inputText3" value="" placeholder="Any placeholder" />
+		</div>
+
+		<div class="form-item">
+			<label for="inputText4">Input type w help</label>
+			<input name="inputText4" value="" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item inline-form">
+			<label for="inputText6">Input type text w help // inline mode</label>
+			<input name="inputText6" value="" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextSize">Input type text w/ size="30" attr</label>
+			<input name="inputText1" value="" size="30" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextSize">Input type text w/ size="100" attr</label>
+			<input name="inputText1" value="" size="100" />
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextSize">Input type text w/ size="" attr</label>
+			<input name="inputText1" value="" size="" />
+		</div>
+
+	</fieldset>
+
+
+	<fieldset>
+		<legend>Selects</legend>
+		<div class="form-item">
+			<label for="select1">Select</label>
+			<select name="select1" id="select1">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ size="3" attr</label>
+			<select name="selectSize" id="selectSize" size="3">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ blank size="" attr</label>
+			<select name="selectSize" id="selectSize" size="">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ multiple attr</label>
+			<select name="selectSize" id="selectSize" multiple>
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+	</fieldset>
+
+
+
+		<div class="form-item">
+			<label for="textarea1">Textarea</label>
+			<textarea name="textarea1" id="textarea1"></textarea>
+		</div>					
+		<div class="form-item">
+			<label for="inputFile1">Input type file</label>
+			<input name="inputFile1" type="file" id="inputFile1">
+		</div>					
+		<div class="form-item">
+			<ul class="inline-form il-grid">
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+			</ul>						
+		</div>
+
+		<div class="form-item">
+			<input type="submit" value="send" title="send">				
+		</div>
+</form>	
