@@ -103,7 +103,7 @@ legend      {
 label       { 
     /*text-transform: uppercase; */
     font-size: var(--fs-small)em;
-    color: var(--gray-draker);
+    color: var(--gray-darker);
     line-height: normal;
 }
 
@@ -260,14 +260,17 @@ span.input-addon {
 
 
 /*
-*   Notifications
-*   * Error
+*   Form validation
+*   * Error / invalid
 *   * notif
 *   * success
 */
 
 
-.notif  { 
+.notif
+, [class^="notif--"] 
+, [class*=" notif--"] 
+{ 
     padding: .5em; 
     margin-bottom: 1em; 
     /* border: 1px solid; */
@@ -289,20 +292,21 @@ span.input-addon {
 /* ERROR */
 
 
-.error      { 
+.error
+, [class*="--error"]
+, .invalid      
+{ 
     color: var(--color-error);
-}
+    background: var(--color-error-bg);
 
-.notif.error 
-, .error input
-, .error textarea
-, .error select
-{
-    background: var(--color-error-bg);  
+    & + .help__form-item {
+        color: var(--color-error);
+    }
 }
 
 /* NOTICE */
-.notif.notice
+.notice
+, [class*="--notice"]      
 {
     background-color: var(--color-notice-bg);
     color: var(--color-notice); 
@@ -310,7 +314,8 @@ span.input-addon {
 
 /* SUCCESS */
 
-.notif.success  { 
+.success,
+[class*="--success"]  { 
     background-color: var(--color-success-bg); 
     color: var(--color-success); 
 }
