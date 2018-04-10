@@ -10,9 +10,11 @@
 
 /*  Colors variables */
 :root {
+    --gray-xlight:  hsl(0, 0%, 90%);
+    --gray-light:  hsl(0, 0%, 80%);
     --gray:  hsl(0, 0%, 55%);
     --gray-dark : hsl(0, 0%, 30%);
-    --gray-darker : hsl(0, 0%, 15%);
+    --gray-xdark : hsl(0, 0%, 15%);
 
     --blue : hsl(220, 60%, 35%);
     --blue-soft : hsl(220, 40%, 60%);
@@ -28,9 +30,11 @@
     --color-success-bg: hsl(65, 58%, 85%);
 }
 
+.color-gray-xlight    { color:  var(--gray-xlight); }
+.color-gray-light     { color:  var(--gray-light); }
 .color-gray           { color:  var(--gray); }
 .color-gray-dark      { color: var(--gray-dark); }
-.color-gray-darker    { color: var(--gray-darker); } 
+.color-gray-xdark     { color: var(--gray-xdark);  } 
 .color-blue           { color: var(--blue); }
 .color-blue-soft      { color: var(--blue-soft); }
 

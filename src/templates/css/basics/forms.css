@@ -103,7 +103,7 @@ legend      {
 label       { 
     /*text-transform: uppercase; */
     font-size: var(--fs-small)em;
-    color: var(--gray-darker);
+    color: var(--gray-xdark);
     line-height: normal;
 }
 
@@ -124,7 +124,7 @@ input
     height: var(--fields-height);
 
     &:focus {
-        border-color: var(--gray-darker);
+        border-color: var(--gray-xdark);
     }
 }
 
