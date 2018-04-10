@@ -7,46 +7,41 @@
 		<legend>Inputs type text</legend>
 
 		<div class="form-item">
-			<label for="inputText1">Input type text</label>
-			<input name="inputText1" value="" />
+			<label for="inputText">input[type=text][value]</label>
+			<input id="inputText" value="Default Value" />
 		</div>
 
 		<div class="form-item">
-			<label for="inputText2" class="required">Input type text required</label>
-			<input name="inputText2" value="" required/>
+			<label for="inputTextRequired" class="required">label.required + input[type=text][required]</label>
+			<input id="inputTextRequired" required />
 		</div>
 
 		<div class="form-item">
-			<label for="inputText3">Input type w placeholder</label>
-			<input name="inputText3" value="" placeholder="Any placeholder" />
+			<label for="inputTextPlaceholder">input[type=text][placeholder]</label>
+			<input id="inputTextPlaceholder" placeholder="Any placeholder" />
 		</div>
 
 		<div class="form-item">
-			<label for="inputText4">Input type w help</label>
-			<input name="inputText4" value="" />
+			<label for="inputText+Help">input[type=text] + help</label>
+			<input id="inputText+Help" />
 			<p class="help__form-item">A small help text</p>
 		</div>
 
 		<div class="form-item inline-form">
-			<label for="inputText6">Input type text w help // inline mode</label>
-			<input name="inputText6" value="" />
+			<label for="inputText+Help-inline">Input[type=text] + help in .inline-form</label>
+			<input id="inputText+Help-inline" />
 			<p class="help__form-item">A small help text</p>
 		</div>
 
 		<div class="form-item">
-			<label for="inputTextSize">Input type text w/ size="30" attr</label>
-			<input name="inputText1" value="" size="30" />
+			<label for="inputTextSize30+Help">input[type=text][size=30] + help</label>
+			<input id="inputTextSize30+Help" size="30" />
 			<p class="help__form-item">A small help text</p>
 		</div>
 
 		<div class="form-item">
-			<label for="inputTextSize">Input type text w/ size="1000" attr</label>
-			<input name="inputText1" value="" size="1000" />
-		</div>
-
-		<div class="form-item">
-			<label for="inputTextSize">Input type text w/ size="" attr</label>
-			<input name="inputText1" value="" size="" />
+			<label for="inputTextSize1000">input[type=text][size=1000]</label>
+			<input id="inputTextSize1000" size="1000" />
 		</div>
 
 	</fieldset>
@@ -118,7 +113,17 @@
 			</ul>						
 		</div>
 
-		<div class="form-item">
-			<input type="submit" value="send" title="send">				
-		</div>
+		<fieldset>
+			<legend>Submit &amp; buttons</legend>
+	
+			<div class="form-item">
+				<label for="inputSubmit">Input[type=submit]</label>
+				<input type="submit" value="send" title="send" id="inputSubmit">
+			</div>
+			<div class="form-item">
+				<label for="inputSubmitDisabled">Input[type=submit][disabled]</label>
+				<input type="submit" value="send" title="send" id="inputSubmitDisabled" disabled />
+			</div>
+		</fieldset>
+
 </form>	
