@@ -126,6 +126,12 @@ input
     &:focus {
         border-color: var(--gray-xdark);
     }
+
+    &:disabled {
+        background-color: var(--gray-light);
+        color:  var(--gray);
+        border-color: var(--gray);
+    }
 }
 
 
@@ -195,7 +201,9 @@ input[type=date] {
 [type=submit] {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #eee;
+    background-color: var(--blue);
+    color:  #fff;
+    border-color: currentcolor;
 }
 
 
