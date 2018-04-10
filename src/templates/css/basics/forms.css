@@ -34,7 +34,7 @@
  */
 
 /* hand cursor on clickable elements */
-.clickable, label, [type=button], [type=submit], button {cursor: pointer; line-height: inherit;}
+.clickable, label, [type=button], [type=submit], [type=reset], button {cursor: pointer; line-height: inherit;}
 button[disabled], input[disabled] { cursor: default; }
 
 /* 
@@ -115,7 +115,9 @@ label       {
 input
 , textarea
 , select 
-, [type=submit] {
+, [type=submit] 
+, [type=reset] 
+{
     min-width: 100%; 
     max-width: 100%;
     padding: 0.33em;
@@ -141,7 +143,7 @@ input
  */
 input[type=checkbox]
 , input[type=radio]
-, input[type="reset"] 
+, [type="reset"] 
 , [type=submit]
 , input[size] /* [1] */
 {
@@ -197,14 +199,29 @@ input[type=date] {
     font: inherit; /*for chrome display*/
 }
 
-/* submit btns */
-[type=submit] {
+/* 
+ *  Btns
+ */
+
+[type=submit]
+,[type=reset] 
+{
     padding-top: 0;
     padding-bottom: 0;
+}
+
+[type=submit] {
     background-color: var(--blue);
     color:  #fff;
-    border-color: currentcolor;
+    border: none;    
 }
+
+[type=reset] {
+    background-color: #fff;
+    color: inherit;
+    border:  1px solid;
+}
+
 
 
 /* Help text */
