@@ -130,13 +130,14 @@ input
 
 
 /*  NO MIN-WIDTH 
- *  for checkbox, radio, input[size] & form btns 
+ *  for checkbox, radio, input[size] & form btns
+ *  [1] in Some old browser (FF28), size attribut has priority on max-width value   
  */
 input[type=checkbox]
 , input[type=radio]
 , input[type="reset"] 
 , [type=submit]
-, input[size]
+, input[size] /* [1] */
 {
     min-width: 0;
 }
@@ -321,7 +322,7 @@ span.input-addon {
 }
 
 /* 
- *  Required field
+ *  Required label
  *  add * after label.required 
  */
 
