@@ -9,6 +9,7 @@ build/templates/js/modernizr-custom.js
 build/docs/*.html
 
 node_modules/
+package-lock.json
 
 
 src/docs/iconsFont.html
