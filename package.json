@@ -16,10 +16,12 @@
     "grunt-webfont": "~1.6.0",
     "postcss-cli": "^5.0.0",
     "postcss-cssnext": "~3.1.0",
-    "postcss-import": "~10.0.0"
+    "postcss-import": "~10.0.0",
+    "svgo": "^1.0.5"
   },
   "scripts": {
     "env": "env",
-    "build:css": "postcss src/templates/css/$npm_package_name.css -c postcss.config.js -o build/templates/css/$npm_package_name.css"
+    "build:css": "postcss src/templates/css/$npm_package_name.css -c postcss.config.js -o build/templates/css/$npm_package_name.css",
+    "optim:icons": "svgo -f src/templates/img/icons -o build/templates/img/icons"
   }
 }
