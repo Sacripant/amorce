@@ -3,6 +3,7 @@ build/index.html
 build/templates/*.html
 build/templates/css
 build/templates/fonts/*
+build/templates/img/icons-sprite.svg
 build/templates/img/icons/*.svg
 build/templates/js/modernizr-custom.js
 
