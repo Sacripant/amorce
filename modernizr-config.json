@@ -1,0 +1,9 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses",
+    "addTest",
+    "html5printshiv"
+  ],
+  "feature-detects": []
+}
