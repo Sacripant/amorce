@@ -3,11 +3,20 @@
  */
 
 
+
+/*
+ *	config 
+ */
+@import '_config/config-colors.css';
+@import '_config/config-typography.css';
+@import '_config/config-breakpoints.css';
+@import '_config/config-grids.css';
+
+
 /*
  *	Basics
  */
 @import 'basics/reset.css';
-@import 'basics/colors.css';
 @import 'basics/typography.css';
 @import 'basics/forms.css';
 
@@ -15,8 +24,6 @@
 /*
  *	layout, grids & breakpoints
  */
-@import 'layout/breakpoints.css';
-@import 'layout/gutter.css';
 @import 'layout/flex-utils.css';
 @import 'layout/fx-grid.css';
 @import 'layout/tb-grid.css';
