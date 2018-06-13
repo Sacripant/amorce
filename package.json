@@ -20,6 +20,7 @@
   },
   "scripts": {
     "env": "env",
+    "clean:docs" : "rm build/docs/*.html",
     "build:css": "postcss src/css/project.css -c postcss.config.js -o build/templates/css/$npm_package_name.css",
     "optim:icons": "svgo -f src/templates/img/icons -o build/templates/img/icons",
     "build:modernizr": "modernizr -c modernizr-config.json -d build/templates/js/modernizr-custom.js",
