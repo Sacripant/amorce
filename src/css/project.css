@@ -53,6 +53,6 @@
 
 
 /*
- *	Specific
+ *	templates
  */
-@import 'specific/global-layout.css';
+@import '../templates/global-layout.css';
