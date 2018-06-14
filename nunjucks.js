@@ -11,8 +11,10 @@ const data = require('./package.json');
 let opts = {
 	basePath : argv.path || ".",
 	files: [],
-	dirOut: argv.out || "build"
+	dirOut: argv.out || "build",
+	flatten: argv.flattenPath || false
 };
+
 
 /*
  *	Nunjucks configuration
@@ -41,8 +43,14 @@ const render = () => {
 
 			// replace .njk extension with .html
 			const outputBasename = file.replace(path.extname(file), ".html");
+			let outputFile;
 			// new file dest
-			const outputFile = path.resolve(opts.dirOut, outputBasename);
+
+			if (opts.flatten) {
+				outputFile = opts.dirOut + "/" + path.basename(outputBasename);
+			} else {
+				outputFile = path.resolve(opts.dirOut, outputBasename);			
+			}
 
 			// write file
 			fs.writeFile(outputFile, res, (err) => {

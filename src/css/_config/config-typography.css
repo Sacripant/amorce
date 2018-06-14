@@ -1,0 +1,37 @@
+/*
+ *  Typographic vars configuration
+ */
+:root {
+    /*  font-size ratio
+     *  Define modules size
+     *  quotient : 1.1667 (http://instacalc.com/17574)
+     */
+    --fs-ratio : 1.1667;
+
+    /* Size */
+    --fs-h6 : var(--fs-ratio);
+    --fs-h5 : calc( var(--fs-ratio) * var(--fs-h6) );
+    --fs-h4 : calc( var(--fs-ratio) * var(--fs-h5) );
+    --fs-h3 : calc( var(--fs-ratio) * var(--fs-h4) );
+    --fs-h2 : calc( var(--fs-ratio) * var(--fs-h3) );
+    --fs-h1 : calc( var(--fs-ratio) * var(--fs-h2) );
+    --fs-h0 : calc( var(--fs-ratio) * var(--fs-h1) );
+    --fs-small : calc( 1 / var(--fs-ratio) );
+    --fs-xsmall : calc( var(--fs-small) / var(--fs-ratio) );
+
+    /* Vertical rythme */
+    --vr: 1.5;
+
+    /* Fonts family */
+    --ff-arial : Arial,"Helvetica Neue", Helvetica, sans-serif;
+
+    /* text colors */
+    --h-color: var(--gray-xdark);
+    --txt-color: var(--gray-dark);
+    --a-color: var(--blue);
+    --select-color: var(--blue-soft);
+
+    /* custom selector */
+    @custom-selector :--headers h1,h2,h3,h4,h5,h6 
+
+}
