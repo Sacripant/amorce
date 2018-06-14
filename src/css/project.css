@@ -48,8 +48,8 @@
 /*
  *	components
  */
-@import '../components/buttons.css';
-@import '../components/spinner.css';
+@import '../components/buttons/buttons.css';
+@import '../components/spinner/spinner.css';
 
 
 /*
