@@ -27,7 +27,7 @@
     "build:iconsSprite": "svgstore -o build/templates/img/icons-sprite.svg build/templates/img/icons/*.svg",
     "nunjucks": "node nunjucks.js --path=src",
     "build:toc": "npm run nunjucks -- --files=index.njk --out=build",
-    "build:templates": "npm run nunjucks -- --files=pages/*.njk --out=build/templates --flatterPath",
+    "build:templates": "npm run nunjucks -- --files=pages/*.njk --out=build/templates --flattenPath",
     "build:docs": "npm run nunjucks -- --files=**/*.doc.njk --out=build/docs --flattenPath",
     "watch:docs": "chokidar 'src/docs/**/*.njk' -c 'npm run build:docs'",
     "watch:templates": "chokidar 'src/templates/**/*.njk' -c 'npm run build:templates'",
