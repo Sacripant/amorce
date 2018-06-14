@@ -30,6 +30,7 @@
     "build:templates": "npm run nunjucks -- --files=pages/*.njk --out=build/templates --flattenPath",
     "build:docs": "npm run nunjucks -- --files=**/*.doc.njk --out=build/docs --flattenPath",
     "watch:docs": "chokidar 'src/docs/**/*.njk' -c 'npm run build:docs'",
+    "watch:toc": "chokidar 'src/index.njk' -c 'npm run build:toc'",
     "watch:templates": "chokidar 'src/templates/**/*.njk' -c 'npm run build:templates'",
     "watch:css": "chokidar 'src/templates/**/*.css' -c 'npm run build:css'",
     "serve": "browser-sync build -w",
