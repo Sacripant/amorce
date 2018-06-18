@@ -1,0 +1,14 @@
+/* 
+ *	default CSS for icons 
+ */
+
+.icon,
+[class^="icon__"],
+[class*=" icon__"],
+[class^="icon--"],
+[class*=" icon--"] {
+	width:  1em;
+	height: 1em;
+	fill:  currentColor;
+	vertical-align: middle;
+}
