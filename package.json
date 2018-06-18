@@ -22,7 +22,7 @@
     "env": "env",
     "clean:docs" : "rm build/docs/*.html",
     "build:css": "postcss src/css/project.css -c postcss.config.js -o build/templates/css/$npm_package_name.css",
-    "optim:icons": "svgo -f src/img/icons -o build/templates/img/icons",
+    "optim:icons": "svgo --disable=removeViewBox -f src/img/icons -o build/templates/img/icons",
     "prebuild:iconsSprite": "npm run optim:icons",
     "build:iconsSprite": "svgstore -o build/templates/img/icons-sprite.svg build/templates/img/icons/*.svg",
     "build:modernizr": "modernizr -c modernizr-config.json -d build/templates/js/modernizr-custom.js",
