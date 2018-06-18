@@ -33,7 +33,7 @@
     "watch:docs": "chokidar 'src/**/*.doc.njk' -c 'npm run build:docs'",
     "watch:toc": "chokidar 'src/index.njk' -c 'npm run build:toc'",
     "watch:templates": "chokidar 'src/templates/**/*.njk' -c 'npm run build:templates'",
-    "watch:css": "chokidar 'src/templates/**/*.css' -c 'npm run build:css'",
+    "watch:css": "chokidar 'src/**/*.css' -c 'npm run build:css'",
     "serve": "browser-sync build -w",
     "dev": "run-p -l watch:* serve"
   }
