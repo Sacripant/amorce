@@ -4,7 +4,7 @@ build/templates/*.html
 build/templates/css
 build/templates/fonts/*
 build/templates/img/icons-sprite.svg
-build/templates/img/icons/*.svg
+build/templates/img/icons/
 build/templates/js/modernizr-custom.js
 
 build/docs/*.html

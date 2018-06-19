@@ -20,9 +20,10 @@
   },
   "scripts": {
     "env": "env",
-    "clean:docs" : "rm build/docs/*.html",
+    "clean:docs" : "rm -f build/docs/*.html",
+    "clean": "run-s clean:*",
     "build:css": "postcss src/css/project.css -c postcss.config.js -o build/templates/css/$npm_package_name.css",
-    "optim:icons": "svgo --disable=removeViewBox -f src/img/icons -o build/templates/img/icons",
+    "optim:icons": "mkdir -p build/templates/img/icons && svgo --disable=removeViewBox -f src/img/icons -o build/templates/img/icons",
     "prebuild:iconsSprite": "npm run optim:icons",
     "build:iconsSprite": "svgstore -o build/templates/img/icons-sprite.svg build/templates/img/icons/*.svg",
     "build:modernizr": "modernizr -c modernizr-config.json -d build/templates/js/modernizr-custom.js",
@@ -30,11 +31,13 @@
     "build:toc": "npm run nunjucks -- --files=index.njk --out=build",
     "build:templates": "npm run nunjucks -- --files=pages/*.njk --out=build/templates --flattenPath",
     "build:docs": "npm run nunjucks -- --files=**/*.doc.njk --out=build/docs --flattenPath",
+    "build": "run-s build:*",
     "watch:docs": "chokidar 'src/**/*.doc.njk' 'src/docs/extends/base.njk' -c 'npm run build:docs'",
     "watch:toc": "chokidar 'src/index.njk' -c 'npm run build:toc'",
     "watch:templates": "chokidar 'src/**/*.njk' -i 'src/**/*.doc.njk' -c 'npm run build:templates'",
     "watch:css": "chokidar 'src/**/*.css' -c 'npm run build:css'",
     "serve": "browser-sync build -w",
-    "dev": "run-p -l watch:* serve"
+    "dev": "run-p -l watch:* serve",
+    "prod": "NODE_ENV=production run-s clean build"
   }
 }
