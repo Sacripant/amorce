@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "author": "Thomas Jund — sacripant.fr",
   "private": true,
+  "amorce_version": "1806",
+  "amorce_sources": "https://github.com/Sacripant/amorce",
+  "amorce_releases": "https://github.com/Sacripant/amorce/releases",
+  "amorce_doc": "http://amorce.sacripant.fr",
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "chokidar-cli": "^1.2.0",

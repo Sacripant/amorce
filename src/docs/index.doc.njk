@@ -10,15 +10,15 @@
 {% block main %}
 <h1>
 	{% include 'docs/includes/logo-amorce.svg' %} <br/>
-	<span class="xsmall">v. 1705</span>
+	<span class="xsmall">v. {{ amorce_version }}</span>
 </h1>
 
 
 <p class="large">
-	<a href="https://github.com/Sacripant/amorce/releases" target="_blank" class="btn">
+	<a href="{{ amorce_releases }}" target="_blank" class="btn">
 		Download
 	</a>
-	<a href="https://github.com/Sacripant/amorce" target="_blank" class="btn">
+	<a href="{{ amorce_sources }}" target="_blank" class="btn">
 		Sources
 	</a>
 </p>
