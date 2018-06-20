@@ -20,7 +20,8 @@
   },
   "scripts": {
     "env": "env",
-    "clean:docs" : "rm -f build/docs/*.html",
+    "clean:docs": "rm -f build/docs/*.html",
+    "clean:css": "rm -rf build/templates/css",
     "clean": "run-s clean:*",
     "build:css": "postcss src/css/project.css -c postcss.config.js -o build/templates/css/$npm_package_name.css",
     "optim:icons": "mkdir -p build/templates/img/icons && svgo --disable=removeViewBox -f src/img/icons -o build/templates/img/icons",
