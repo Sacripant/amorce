@@ -112,22 +112,24 @@
 
 {% block additionalJS %}
 <script>
-(function($) {
+(function() {
 	'use strict';
 
-	$(document).ready(function($) {
-		var logo = $('#logo');
-		logo.addClass('run');
-		logo.on('animationend', '#bomb', function(event) {
+	document.addEventListener("DOMContentLoaded", function() {
+		const logo = document.getElementById('logo');
+		const bomb = logo.getElementById('bomb');
+
+		logo.classList.add('run');
+
+		bomb.addEventListener('animationend', function(event) {
 			// console.log(event.target.id);
 			if (event.target.id === "bomb") {
-				logo.removeClass('run');
+				logo.classList.remove('run');
 			};
 		});
-	});
+  	});
 
-
-})(jQuery);
+})();
 </script>
 
 
