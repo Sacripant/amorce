@@ -20,7 +20,7 @@
     height: 1em;
     border-radius: 50%;
 
-    border: .2em solid color( var(--spinner-color) alpha(.2));
+    border: .4em solid color( var(--spinner-color) alpha(.2));
     border-top-color: var(--spinner-color);
 
     animation: .9s ease 0 spin;

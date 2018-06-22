@@ -1,0 +1,22 @@
+{# ---------------
+	BUTTONS
+	----------
+	type : "a"(default) || "button" || "submit"
+	modificator : undefined (default)
+	class : undefined (default)
+	href : "#" (default) // only if type === 'a'
+	text :  
+	title : 
+
+--------------- #}
+{% macro btn(type='a', href='#', text='My button', modificator, class, title) %}
+	<{{ type }} 
+		{% if type == 'a' %}href="{{ href }}"{% endif %}
+		{% if type == 'button' %}type="button"{% endif %}
+		{% if type == 'submit' %}type="submit"{% endif %}
+		class="btn{% if modificator %}--{{ modificator }}{% endif %} {{ class }}"
+		{% if title %}title='{{ title }}'{% endif %}
+	>
+		{{ text }}
+	</{{ type }}>
+{% endmacro %}
