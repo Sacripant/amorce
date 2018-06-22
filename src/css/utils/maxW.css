@@ -1,28 +1,38 @@
 /*  ======
 
-    Layout - maxW.css
+    Utils - maxW.css
     -------------------
     part of AMORCE starter kit
         https://github.com/Sacripant/amorce
     -------------------
-
+    
+    default centered wrapper 
     Fix max-width, based on breakpoints
-
-    REQUIRED :
-    * breakpoints.css
 
 ====== */
 
 
-.maxW--maxXS {
+.wrapper        {  
+    max-width: 100%;
+    padding-left:  var(--vr);
+    padding-right: var(--vr);
+    margin: 0 auto;
+}
+
+
+.maxW--maxXS,
+.wrapper--maxXS {
     max-width: var(--maxXS);
 }
-.maxW--maxS {
+.maxW--maxS,
+.wrapper--maxS {
     max-width: var(--maxS);
 }
-.maxW--maxM {
+.maxW--maxM,
+.wrapper--maxM {
     max-width: var(--maxM);
 }
-.maxW--maxL {
+.maxW--maxL,
+.wrapper--maxL {
     max-width: var(--maxL);
 }
