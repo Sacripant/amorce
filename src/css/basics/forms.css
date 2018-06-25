@@ -351,4 +351,4 @@ span.input-addon {
  *  add * after label.required 
  */
 
-label.required:after    { content: " *"; color: red;}
+label.required::after    { content: " *"; color: red;}

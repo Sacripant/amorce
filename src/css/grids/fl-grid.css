@@ -12,7 +12,8 @@
     * Half gutter
 
     REQUIRED:
-    * config-grids.css
+    * _config/config-grids.css
+    * grids/grid-span.css
       
 ====== */
 
@@ -38,8 +39,8 @@
 }
 
 /* force CLEARFIX for grid */
-.fl-grid:before, .fl-grid:after { content: " "; display: table; }
-.fl-grid:after                  { clear: both; }
+.fl-grid::before, .fl-grid::after { content: " "; display: table; }
+.fl-grid::after                  { clear: both; }
 
 
 /* 
