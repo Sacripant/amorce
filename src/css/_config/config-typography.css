@@ -1,6 +1,14 @@
-/*
- *  Typographic vars configuration
- */
+/*  ======
+
+    config - typography.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Define typgraphic project vars
+    
+====== */
 :root {
     /*  font-size ratio
      *  Define modules size
