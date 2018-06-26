@@ -95,8 +95,8 @@ a:hover         { color: color(var(--a-color) s(-15%) l(-15%)); text-decoration:
 
 /* citations */
 blockquote, q   { quotes: none; }
-blockquote:before, blockquote:after, 
-q:before, q:after 
+blockquote::before, blockquote::after, 
+q::before, q::after 
                 { content: ''; content: none; }
 blockquote      { margin: var(--vr)em; color: #666; font-style: italic; }
 
@@ -241,8 +241,8 @@ hr {
 
 @media print {
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
@@ -262,11 +262,11 @@ hr {
             text-decoration: underline;
         }
 
-        a[href]:after {
+        a[href]::after {
             content: " (" attr(href) ")";
         }
 
-        abbr[title]:after {
+        abbr[title]::after {
             content: " (" attr(title) ")";
         }
 
@@ -275,8 +275,8 @@ hr {
          * or use the `javascript:` pseudo protocol
          */
 
-        a[href^="#"]:after,
-        a[href^="javascript:"]:after {
+        a[href^="#"]::after,
+        a[href^="javascript:"]::after {
             content: "";
         }
 
