@@ -93,6 +93,10 @@ body {
 	max-width: 100%;
 }
 
+.docs-header #logo {
+	height: 50px;
+}
+
 /*
 *	exemple & blocs de code 
 */
