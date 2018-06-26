@@ -66,12 +66,12 @@
  *  half-gutter option
  */
 .fx-grid.half-gutter {
-    margin-left: calc( var(--gutter-half) / -2rem ); /*(2)*/
-    margin-right: calc( var(--gutter-half) / -2rem ); /*(2)*/
+    margin-left: calc( var(--gutter-half) / 2  * -1rem ); /*(2)*/
+    margin-right: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
 }
 
 .fx-grid.half-gutter > *, 
 .fx-grid.half-gutter > [class*=span--] {
-    padding-left: calc( var(--gutter-half) / 2rem ); /*(2)*/
-    padding-right: calc( var(--gutter-half) / 2rem ); /*(2)*/
+    padding-left: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+    padding-right: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
 }
