@@ -26,13 +26,13 @@
     table-layout: fixed;
 
     border-collapse: separate;
-    border-spacing: var(--gutter)em 0; /* don't work with % */
+    border-spacing: calc( var(--gutter) * 1rem) 0; /* don't work with % */
 
 
     /* delet visualy border between table and cells */
     width: 100%;
     width: calc( 100% + 3em );
-    margin-left: -var(--gutter)em;
+    margin-left: calc( var(--gutter) * -1rem );
 }
 
 .tb-grid > *,
@@ -61,7 +61,7 @@
 .tb-grid.half-gutter 
 , .tb-grid--auto.half-gutter 
 {
-    width: calc( 100% + var(--gutter)em );
-    margin-left: -var(--gutter-half)em;
-    border-spacing: var(--gutter-half)em 0;
+    width: calc( 100% + var(--gutter)*1rem );
+    margin-left: calc( var(--gutter-half) * -1rem );
+    border-spacing: calc( var(--gutter-half) * 1rem ) 0;
 }

@@ -11,38 +11,22 @@
 ====== */
 
 
-/* Custom properties */
-:root {
-
-    /*  
-     *  Nude
-     *  Initialize list (remove list-type type and margin) 
-     */
-    --nude { 
-        list-style-type: none; 
-        margin: 0; 
-    }
-    
-
-    /*  
-     *  Ellipsis - add ... for too long one line text  
-     */
-    --txt-ellipsis {
-        overflow: hidden;        
-        white-space: nowrap;     
-        text-overflow: ellipsis;
-    }
-}
-
-
-
-
+/*  
+ *  Nude
+ *  Initialize list (remove list-type type and margin) 
+ */
 .nude { 
-    @apply --nude;
+    list-style-type: none; 
+    margin: 0; 
 }
 
+/*  
+ *  Ellipsis - add ... for too long one line text  
+ */
 .txt-ellipsis {
-    @apply --txt-ellipsis;
+    overflow: hidden;        
+    white-space: nowrap;     
+        text-overflow: ellipsis;
 }
 
 

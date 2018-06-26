@@ -35,16 +35,16 @@
 .fx-grid { 
     display: flex;
     flex-wrap : wrap;
-    margin-left: -var(--gutter-half)rem; /*(1)*/
-    margin-right: -var(--gutter-half)rem; /*(1)*/
+    margin-left: calc( var(--gutter-half) * -1rem ); /*(1)*/
+    margin-right: calc( var(--gutter-half) * -1rem ); /*(1)*/
     /* if flex item are list-items */
     list-style-type: none;
 }
 
 .fx-grid  > *,
 .fx-grid  > [class*=span--] {
-    padding-left: var(--gutter-half)em; /*(2)*/
-    padding-right: var(--gutter-half)em; /*(2)*/
+    padding-left: calc( var(--gutter-half) * 1rem ); /*(2)*/
+    padding-right: calc( var(--gutter-half) * 1rem ); /*(2)*/
 }
 
 /* 
@@ -66,13 +66,12 @@
  *  half-gutter option
  */
 .fx-grid.half-gutter {
-    margin-left: -calc(var(--gutter-half) / 2)rem; /*(2)*/
-    margin-right: -calc(var(--gutter-half) / 2)rem; /*(2)*/
+    margin-left: calc( var(--gutter-half) / -2rem ); /*(2)*/
+    margin-right: calc( var(--gutter-half) / -2rem ); /*(2)*/
 }
 
 .fx-grid.half-gutter > *, 
-.fx-grid.half-gutter > [class*=span--]  
-{
-    padding-left: calc(var(--gutter-half) / 2)rem; /*(2)*/
-    padding-right: calc(var(--gutter-half) / 2)rem; /*(2)*/
+.fx-grid.half-gutter > [class*=span--] {
+    padding-left: calc( var(--gutter-half) / 2rem ); /*(2)*/
+    padding-right: calc( var(--gutter-half) / 2rem ); /*(2)*/
 }

@@ -49,26 +49,26 @@ body {
 :--headers { 
     font-weight: normal; 
     color: var(--h-color); 
-    margin-bottom: var(--vr)rem;
-    margin-top: calc( var(--vr) * 1.5 )rem;
+    margin-bottom: calc( var(--vr) * 1rem );
+    margin-top: calc( var(--vr) * 1.5rem );
 }
 
-h1, .h1 { font-size: var(--fs-h1)em;    line-height: 1;      }
-h2, .h2 { font-size: var(--fs-h2)em;    line-height: 1.1;    }
-h3, .h3 { font-size: var(--fs-h3)em;    line-height: 1.1;    }
-h4, .h4 { font-size: var(--fs-h4)em;    line-height: 1.2;    }
-h5, .h5 { font-size: var(--fs-h5)em;    line-height: 1.2;    }
-h6, .h6 { font-size: var(--fs-h6)em;    line-height: 1.285;  }
+h1, .h1 { font-size: calc( var(--fs-h1) * 1em );    line-height: 1;      }
+h2, .h2 { font-size: calc( var(--fs-h2) * 1em );    line-height: 1.1;    }
+h3, .h3 { font-size: calc( var(--fs-h3) * 1em );    line-height: 1.1;    }
+h4, .h4 { font-size: calc( var(--fs-h4) * 1em );    line-height: 1.2;    }
+h5, .h5 { font-size: calc( var(--fs-h5) * 1em );    line-height: 1.2;    }
+h6, .h6 { font-size: calc( var(--fs-h6) * 1em );    line-height: 1.285;  }
 
 
 /* Complementary sizes, usefull for components */
 
 small, 
-.small      { font-size: var(--fs-small)em }
-.xsmall     { font-size: var(--fs-xsmall)em }
+.small      { font-size: calc( var(--fs-small) * 1em ) }
+.xsmall     { font-size: calc( var(--fs-xsmall) * 1em ) }
 .medium     { font-style: 1em; }
-.large      { font-size: var(--fs-h6)em }
-.xlarge     { font-size: var(--fs-h5)em }
+.large      { font-size: calc( var(--fs-h6) * 1em ) }
+.xlarge     { font-size: calc( var(--fs-h5) * 1em ) }
 
 
 /* 
@@ -91,7 +91,7 @@ a:focus         { outline: thin dotted; }
 a:active,a:hover
                 { outline-width: 0; }
 a:focus, 
-a:hover         { color: color(var(--a-color) s(-15%) l(-15%)); text-decoration: underline; }
+a:hover         { color: color-mod(var(--a-color) s(-15%) l(-15%)); text-decoration: underline; }
 
 /* citations */
 blockquote, q   { quotes: none; }

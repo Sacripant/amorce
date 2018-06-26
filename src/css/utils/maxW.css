@@ -14,8 +14,8 @@
 
 .wrapper        {  
     max-width: 100%;
-    padding-left:  var(--vr);
-    padding-right: var(--vr);
+    padding-left:  calc( var(--vr) * 1rem );
+    padding-right: calc( var(--vr) * 1rem );
     margin: 0 auto;
 }
 

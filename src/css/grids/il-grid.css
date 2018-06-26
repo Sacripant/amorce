@@ -26,8 +26,8 @@
 .il-grid  
 { 
     display: block;
-    margin-left: -var(--gutter-half)rem; /*(1)*/
-    margin-right: -var(--gutter-half)rem; /*(1)*/
+    margin-left: calc( var(--gutter-half) * -1rem ); /*(1)*/
+    margin-right: calc( var(--gutter-half) * -1rem ); /*(1)*/
 
     font-size: 0;
 }
@@ -35,8 +35,8 @@
 .il-grid  > *, 
 .il-grid  > [class*=span--]
 {
-    padding-left: var(--gutter-half)em; /*(2)*/
-    padding-right: var(--gutter-half)em; /*(2)*/
+    padding-left: calc( var(--gutter-half) * 1rem ); /*(2)*/
+    padding-right: calc( var(--gutter-half) * 1rem ); /*(2)*/
 
     font-size: 1rem; 
     display: inline-block;
@@ -63,13 +63,13 @@
  *  half-gutter option
  */
 .il-grid.half-gutter {
-    margin-left: -calc(var(--gutter-half) / 2)rem; /*(2)*/
-    margin-right: -calc(var(--gutter-half) / 2)rem; /*(2)*/
+    margin-left: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
+    margin-right: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
 }
 
 .il-grid.half-gutter > *, 
 .il-grid.half-gutter > [class*=span--]  
 {
-    padding-left: calc(var(--gutter-half) / 2)rem; /*(2)*/
-    padding-right: calc(var(--gutter-half) / 2)rem; /*(2)*/
+    padding-left: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+    padding-right: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
 }
