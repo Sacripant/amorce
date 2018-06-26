@@ -11,7 +11,10 @@
 
 ====== */
 
-img[alt^="placeholder"]         { background-size: cover; }
+img[alt^="placeholder"]         { 
+	background-size: cover;
+	height: 100%; /* IE fix */ 
+}
 img[alt^="placeholder gray"]    { background-color: #ddd; }
 img[alt^="placeholder music"]   { background-image : url(../img/placeholder/music.jpg); }
 img[alt^="placeholder food"]    { background-image : url(../img/placeholder/food.jpg); }
