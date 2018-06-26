@@ -13,13 +13,15 @@
 //       }
 
 //     }),
-//     require('postcss-calc')()
+//     require('postcss-calc')({
+//       warnWhenCannotResolve: true
+//     })
 //     // require('cssnano')()
 //   ]
 // }
 
 // console.log(ctx);
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 
 module.exports = ctx => ({
   map: process.env.NODE_ENV === "production" ? false : true,
@@ -35,7 +37,9 @@ module.exports = ctx => ({
         },
       }
     },
-    'postcss-calc': {},
+    'postcss-calc': {
+      warnWhenCannotResolve: true
+    },
     cssnano: process.env.NODE_ENV === "production" ? {
       preset: 'default'
     } : false
