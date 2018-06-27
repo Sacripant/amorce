@@ -138,6 +138,7 @@ pre[class*="language-"] {
 , .demo-grid .il-grid > *
 , .demo-grid .tb-grid > *
 , .demo-grid .fx-grid > *
+, .demo-grid [class*="fx-grid--"] > *
 {
 	background-image: linear-gradient( 90deg, hsla(0, 0%, 75%, .5), hsla(0, 0%, 75%, .5));
 	background-origin: content-box;
@@ -146,10 +147,11 @@ pre[class*="language-"] {
 	margin-bottom: 1rem;
 }
 
-.demo-grid .fl-grid > *:before 
-, .demo-grid .il-grid > *:before 
-, .demo-grid .tb-grid > *:before 
-, .demo-grid .fx-grid > *:before 
+.demo-grid .fl-grid > *::before 
+, .demo-grid .il-grid > *::before 
+, .demo-grid .tb-grid > *::before 
+, .demo-grid .fx-grid > *::before 
+, .demo-grid [class*="fx-grid--"] > *::before 
 {
 	content: "." attr(class);
 }

@@ -17,8 +17,11 @@
 ====== */
 
 .fx,
+.fx-grid,
 [class^="fx--"], 
-[class*=" fx--"] {
+[class*=" fx--"],
+[class^="fx-grid--"], 
+[class*=" fx-grid--"] {
     display: flex;
 
 

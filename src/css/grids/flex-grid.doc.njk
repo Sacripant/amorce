@@ -36,20 +36,34 @@
 </ul>
 	</div>
 
-	<h3>En combinaison avec les flex-utils class</h3>
+	<p>
+		<code>span--grow</code>
+	</p>
+	
+	<div class="demo-grid code-demo">
+<ul class="fx-grid">
+	<li>item 1 est long</li>
+	<li>item 2</li>
+	<li class="span--grow"> item 3</li>
+</ul>
+	</div>
+
+	<h3>En combinaison avec les flex-utils modificateurs</h3>
+
+	<h4><code>--justify-* & --grow</code> modificators & <code>span--auto</code></h4>
 
 	<div class="demo-grid code-demo">
-		<ul class="fx-grid fx--justify-end">
+		<ul class="fx-grid--justify-end">
 			<li>item 1 est long</li>
 			<li>item 2</li>
 			<li>item 3</li>
 		</ul>
-		<ul class="fx-grid fx--justify-center">
+		<ul class="fx-grid--justify-center">
 			<li>item 1 est long</li>
 			<li>item 2</li>
 			<li>item 3</li>
 		</ul>
-		<ul class="fx-grid fx--grow">
+		<ul class="fx-grid--grow">
 			<li>item 1 est long</li>
 			<li>item 2</li>
 			<li>item 3</li>
@@ -57,10 +71,10 @@
 	</div>
 
 	
-	<h3>Avec largeur de spans définies et flex-utils class <code>--alignI-center</code> et <code>i__fx--end</code></h3>
+	<h4><code>--alignI-center</code> & <code>i__fx--end</code></h4>
 	
 	<div class="demo-grid code-demo">
-<div class="fx-grid fx--alignI-center">
+<div class="fx-grid--alignI-center">
 	<div class="span--1-4">
 		Lorem ipsum Et laborum nisi mollit quis sed.
 	</div>
@@ -117,7 +131,7 @@
 	</p>
 
 		<div class="demo-grid code-demo">
-<div class="fx-grid fx--justify-center">
+<div class="fx-grid--justify-center">
 	<div class="m-span--1-2 l-span--1-4"></div>
 	<div class="m-span--1-2 l-span--1-4"></div>
 	<div class="m-span--1-2 l-span--1-4"></div>

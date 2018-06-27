@@ -32,46 +32,52 @@
 ** (2) padding = x*(100+2x)/100
 -------------------------------*/
 
-.fx-grid { 
+.fx-grid,
+[class^="fx-grid--"], 
+[class*=" fx-grid--"] { 
     display: flex;
     flex-wrap : wrap;
     margin-left: calc( var(--gutter-half) * -1rem ); /*(1)*/
     margin-right: calc( var(--gutter-half) * -1rem ); /*(1)*/
     /* if flex item are list-items */
     list-style-type: none;
-}
-
-.fx-grid  > *,
-.fx-grid  > [class*=span--] {
-    padding-left: calc( var(--gutter-half) * 1rem ); /*(2)*/
-    padding-right: calc( var(--gutter-half) * 1rem ); /*(2)*/
-}
-
-/* 
- *  Unguttered grid (no gutter) option
- */
-.fx-grid.no-gutter {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.fx-grid.no-gutter > *  
-, .fx-grid.no-gutter > [class*=span--]  
-{
-    padding: 0;
-}
 
 
-/*  
- *  half-gutter option
- */
-.fx-grid.half-gutter {
-    margin-left: calc( var(--gutter-half) / 2  * -1rem ); /*(2)*/
-    margin-right: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
+    &  > *,
+    &  > [class*=span--] {
+        padding-left: calc( var(--gutter-half) * 1rem ); /*(2)*/
+        padding-right: calc( var(--gutter-half) * 1rem ); /*(2)*/
+    }
+
+    
+    /* 
+     *  Unguttered grid (no gutter) option
+     */
+    &.no-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.no-gutter > *, 
+    &.no-gutter > [class*=span--]  
+    {
+        padding: 0;
+    }
+
+    /*  
+     *  half-gutter option
+     */
+    &.half-gutter {
+        margin-left: calc( var(--gutter-half) / 2  * -1rem ); /*(2)*/
+        margin-right: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
+    }
+
+    &.half-gutter > *, 
+    &.half-gutter > [class*=span--] {
+        padding-left: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+        padding-right: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+    }
 }
 
-.fx-grid.half-gutter > *, 
-.fx-grid.half-gutter > [class*=span--] {
-    padding-left: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
-    padding-right: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
-}
+
+
