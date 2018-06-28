@@ -124,7 +124,7 @@ module.exports = function(grunt){
                     expand: true,
                     flatten: true,
                     cwd: '<%= path.templates.src %>',
-                    src: '*.njk',
+                    src: ['*.njk', '*.html'],
                     dest: '<%= path.templates.build %>',
                     ext: '.html'
                 }]
@@ -148,7 +148,7 @@ module.exports = function(grunt){
                 tasks: ['nunjucks:toc']
             },
             tmpl_njk : {
-                files : '<%= path.templates.src %>**/*.njk',
+                files : ['<%= path.templates.src %>**/*.njk', '<%= path.templates.src %>**/*.html'],
                 tasks : ['nunjucks:templates']                
             },
             tmpl_css : {

@@ -1,0 +1,19 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  spinner —
+{% endblock %} 
+
+{% block main %}
+<section id="doc-components" class="doc-section">
+	<h1>spinner</h1>
+
+
+	{% import './spinner.njk' as spinner %}
+
+	<div class="code-demo">
+{{ spinner.spinner() }}
+	</div>
+
+</section>
+{% endblock %}

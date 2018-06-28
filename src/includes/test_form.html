@@ -1,0 +1,146 @@
+<h1>
+	Form test page
+</h1>
+
+<form action="index_submit" method="get" accept-charset="utf-8">
+	<fieldset>
+		<legend>Inputs type text</legend>
+
+		<div class="form-item">
+			<label for="inputText">input[type=text][value]</label>
+			<input id="inputText" value="Default Value" />
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextRequired" class="required">label.required + input[type=text][required]</label>
+			<input id="inputTextRequired" required />
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextPlaceholder">input[type=text][placeholder]</label>
+			<input id="inputTextPlaceholder" placeholder="Any placeholder" />
+		</div>
+
+		<div class="form-item">
+			<label for="inputText+Help">input[type=text] + help</label>
+			<input id="inputText+Help" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextDisabled">input[type=text][disabled][value]</label>
+			<input id="inputTextDisabled" value="disabled input" disabled />
+		</div>
+
+		<div class="form-item inline-form">
+			<label for="inputText+Help-inline">Input[type=text] + help in .inline-form</label>
+			<input id="inputText+Help-inline" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextSize30+Help">input[type=text][size=30] + help</label>
+			<input id="inputTextSize30+Help" size="30" />
+			<p class="help__form-item">A small help text</p>
+		</div>
+
+		<div class="form-item">
+			<label for="inputTextSize1000">input[type=text][size=1000]</label>
+			<input id="inputTextSize1000" size="1000" />
+		</div>
+
+	</fieldset>
+
+
+	<fieldset>
+		<legend>Selects</legend>
+		<div class="form-item">
+			<label for="select1">Select</label>
+			<select name="select1" id="select1">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ size="3" attr</label>
+			<select name="selectSize" id="selectSize" size="3">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ blank size="" attr</label>
+			<select name="selectSize" id="selectSize" size="">
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+
+		<div class="form-item">
+			<label for="selectSize">Select w/ multiple attr</label>
+			<select name="selectSize" id="selectSize" multiple>
+				<option value="">option 1</option>
+				<option value="">option 2</option>
+				<option value="">option 3</option>
+				<option value="">option 4</option>
+				<option value="">option 5</option>
+			</select>
+		</div>
+	</fieldset>
+
+
+
+		<div class="form-item">
+			<label for="textarea1">Textarea</label>
+			<textarea name="textarea1" id="textarea1"></textarea>
+		</div>					
+		<div class="form-item">
+			<label for="inputFile1">Input type file</label>
+			<input name="inputFile1" type="file" id="inputFile1">
+		</div>					
+		<div class="form-item">
+			<ul class="inline-form il-grid">
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+				<li><label><input type="checkbox" name="checkbox-01"> Checkbox 01</label></li>
+			</ul>						
+		</div>
+
+		<fieldset>
+			<legend>Submit &amp; buttons</legend>
+	
+			<div class="form-item">
+				<label for="inputSubmit">input[type=submit]</label>
+				<input type="submit" value="send" title="Send" id="inputSubmit">
+			</div>
+			<div class="form-item">
+				<label for="buttonSubmit">button[type=submit]</label>
+				<button id="buttonSubmit" type="submit">Send</button>
+			</div>
+			<div class="form-item">
+				<label for="inputSubmitDisabled">Input[type=submit][disabled]</label>
+				<input type="submit" value="send" title="send" id="inputSubmitDisabled" disabled />
+			</div>
+			<div class="form-item">
+				<label for="inputReset">Input[type=reset]</label>
+				<input type="reset" value="Reset input" id="inputReset" />
+			</div>
+			<div class="form-item">
+				<label for="buttonReset">Button[type=reset]</label>
+				<button id="buttonReset" type="reset">Reset Btn</button>
+			</div>
+		</fieldset>
+
+</form>	

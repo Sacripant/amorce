@@ -1,0 +1,11 @@
+{# ---------------
+	SPINNER
+--------------- #}
+
+{% macro spinner(modificator, class) %}
+	<div 
+		class="spinner{% if modificator %}--{{ modificator }}{% endif %} {{ class }}"
+		aria-label="En chargement"
+	>
+	</div>
+{% endmacro %}

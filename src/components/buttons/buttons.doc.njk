@@ -1,0 +1,30 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  buttons —
+{% endblock %} 
+
+{% block main %}
+<section id="doc-components" class="doc-section">
+	<h1><code>.reset-btn</code></h1>
+
+	<p>Reset default button browser styles</p>
+
+	<div class="code-demo">
+<button class="reset-btn">Reset default button style</button>
+	</div>
+
+	<h1>Buttons</h1>
+
+	<h2>Default</h2>
+
+	{% import "./buttons.njk" as btns %}
+
+	<div class="demo-btn code-demo">
+{{ btns.btn(type='a', text="link .btn") }}
+{{ btns.btn(type='button', text="button .btn") }}
+{{ btns.btn(type='submit', text="submit .btn") }}
+	</div>
+
+</section>
+{% endblock %}

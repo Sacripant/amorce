@@ -1,0 +1,48 @@
+/*  ======
+
+    config - colors.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+        
+====== */
+
+
+/*  Colors variables */
+:root {
+    --gray-xlight:  hsl(0, 0%, 90%);
+    --gray-light:  hsl(0, 0%, 80%);
+    --gray:  hsl(0, 0%, 55%);
+    --gray-dark : hsl(0, 0%, 30%);
+    --gray-xdark : hsl(0, 0%, 15%);
+
+    --blue : hsl(220, 60%, 35%);
+    --blue-soft : hsl(220, 40%, 60%);
+
+    /* Colors notifs */
+    --color-error   : hsl(0, 75%, 40%);
+    --color-error-bg: hsl(20, 35%, 90%);
+
+    --color-notice   : hsl(30, 85%, 35%);
+    --color-notice-bg: hsl(55, 40%, 92%);
+
+    --color-success   : hsl(91, 77%, 15%);
+    --color-success-bg: hsl(65, 58%, 85%);
+}
+
+.color-gray-xlight    { color:  var(--gray-xlight); }
+.color-gray-light     { color:  var(--gray-light); }
+.color-gray           { color:  var(--gray); }
+.color-gray-dark      { color: var(--gray-dark); }
+.color-gray-xdark     { color: var(--gray-xdark);  } 
+.color-blue           { color: var(--blue); }
+.color-blue-soft      { color: var(--blue-soft); }
+
+.color-error        { color: var(--color-error); }
+.color-error-bg     { color: var(--color-error-bg); }
+
+.color-success      { color: var(--color-success); }
+.color-success-bg   { color: var(--color-success-bg); }
+
+.color-notice       { color: var(--color-notice); }
+.color-notice-bg    { color: var(--color-notice-bg); }

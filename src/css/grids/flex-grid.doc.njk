@@ -1,0 +1,144 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  Flex-grid —
+{% endblock %} 
+
+{% block main %}
+<section id="doc-grille" class="doc-section">
+	<h1>Flex Grid</h1>
+
+	<p>
+		Grille utilisant le layout CSS <code>display: flex</code> et <code>flex-wrap: wrap</code>. <br/>
+		Cette grille remplace les trios <em>table grid</em>, <em>inline grid</em> et <em>float grid</em> 
+		dans le cas où votre projet peut limiter son support à IE10+
+	</p>
+
+	<p>
+		La class <em>fx-grid</em> initie le layout flexbox en multiligne par défault (<code>flex-wrap: wrap</code>) avec gouttières. <br/>
+		Elle est prévue pour fonctionner en <code>flex-direction: row</code>.
+		Vous pouvez la combiner avec les <a href="flex-utils.html">flex utils class</a>.
+	</p>
+
+	<h2>Exemples</h2>
+
+	<h3>Grille auto</h3>
+
+	<p>
+		lorsque aucune option ni largeur de colonne ne sont définies.
+	</p>
+
+	<div class="demo-grid code-demo">
+<ul class="fx-grid">
+	<li>item 1 est long</li>
+	<li>item 2</li>
+	<li>item 3</li>
+</ul>
+	</div>
+
+	<p>
+		<code>span--grow</code>
+	</p>
+	
+	<div class="demo-grid code-demo">
+<ul class="fx-grid">
+	<li>item 1 est long</li>
+	<li>item 2</li>
+	<li class="span--grow"> item 3</li>
+</ul>
+	</div>
+
+	<h3>En combinaison avec les flex-utils modificateurs</h3>
+
+	<h4><code>--justify-* & --grow</code> modificators & <code>span--auto</code></h4>
+
+	<div class="demo-grid code-demo">
+		<ul class="fx-grid--justify-end">
+			<li>item 1 est long</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+		<ul class="fx-grid--justify-center">
+			<li>item 1 est long</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+		<ul class="fx-grid--grow">
+			<li>item 1 est long</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+	</div>
+
+	
+	<h4><code>--alignI-center</code> & <code>i__fx--end</code></h4>
+	
+	<div class="demo-grid code-demo">
+<div class="fx-grid--alignI-center">
+	<div class="span--1-4">
+		Lorem ipsum Et laborum nisi mollit quis sed.
+	</div>
+	<div class="span--2-4">
+		Lorem ipsum Tempor ea occaecat dolor veniam officia incididunt nulla fugiat esse esse Excepteur nulla dolor exercitation anim eu nisi dolore irure ad anim aliqua quis consectetur reprehenderit in Duis mollit ut sint adipisicing irure dolore eu ut cupidatat.
+	</div>
+	<div class="span--1-4">
+		Lorem ipsum Quis reprehenderit consequat aliqua laboris sint dolor nisi dolore occaecat esse cillum enim minim adipisicing non aliqua eiusmod incididunt.
+	</div>
+	<div class="span--1-3">
+		Lorem ipsum Tempor ea occaecat dolor veniam officia incididunt nulla fugiat esse esse Excepteur nulla dolor exercitation anim eu nisi dolore irure ad anim aliqua quis consectetur reprehenderit in Duis mollit ut sint adipisicing irure dolore eu ut cupidatat.
+	</div>
+	<div class="span--2-3 i__fx--end">
+		Lorem ipsum Et laborum nisi mollit quis sed.
+	</div>
+</div>		
+	</div>
+
+	<h3>Sans gouttière</h3>
+
+	<div class="demo-grid code-demo">
+<div class="fx-grid no-gutter">
+	<div class="span--2-7"></div>
+	<div class="span--2-7"></div>
+	<div class="span--3-7"></div>
+</div>		
+	</div>
+
+	<h3>Grilles imbriqués avec demi-gouttières</h3>
+
+	<div class="demo-grid code-demo">
+<div class="fx-grid">
+	<div class="span--1-2">
+		<div class="fx-grid half-gutter">
+			<div class="span--1-3"></div>
+			<div class="span--2-3"></div>		
+		</div>
+	</div>
+	<div class="span--1-2">
+		<div class="fx-grid half-gutter">
+			<div class="span--1-5"></div>
+			<div class="span--2-5"></div>
+			<div class="span--2-5"></div>
+		</div>	
+	</div>
+</div>	
+	</div>
+
+	<h3>RWD: modification des tailles de colonnes en fonction des breakpoints</h3>
+
+	<p>
+		Utilisation volontaire d'un nombre impaire d'items dans une grille 4 colonnes 
+		pour tester un alignement centré du dernier item à l'aide de l'option <code>--justify-center</code>
+	</p>
+
+		<div class="demo-grid code-demo">
+<div class="fx-grid--justify-center">
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+	<div class="m-span--1-2 l-span--1-4"></div>
+</div>
+	</div>
+
+</section>
+{% endblock %}

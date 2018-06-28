@@ -1,0 +1,312 @@
+/*  ======
+
+    Basics - typography.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    Sets up some sensible default typography.
+
+    TOC :
+    * Default font settings
+    * Sizes
+    * Text elements
+    * Lists
+    * Tables
+    * Texte selection
+    * hr
+    * Vertical rythme
+    * Typo for print
+
+    REQUIRED :
+    * config - colors.css
+    * basics - reset.css
+  
+====== */
+
+/* 
+ *  Default font settings. 
+ */
+html {
+    font-size: 100%; /* default 16px */
+    text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in IE and iOS */
+}
+body { 
+    font-size: 1em;
+    line-height: var(--vr);
+    font-family: var(--ff-arial);
+
+    color: var(--txt-color); 
+    background: #fff;
+}
+
+
+/* 
+ *  Headings
+ */
+
+:--headers { 
+    font-weight: normal; 
+    color: var(--h-color); 
+    margin-bottom: calc( var(--vr) * 1rem );
+    margin-top: calc( var(--vr) * 1.5rem );
+}
+
+h1, .h1 { font-size: calc( var(--fs-h1) * 1em );    line-height: 1;      }
+h2, .h2 { font-size: calc( var(--fs-h2) * 1em );    line-height: 1.1;    }
+h3, .h3 { font-size: calc( var(--fs-h3) * 1em );    line-height: 1.1;    }
+h4, .h4 { font-size: calc( var(--fs-h4) * 1em );    line-height: 1.2;    }
+h5, .h5 { font-size: calc( var(--fs-h5) * 1em );    line-height: 1.2;    }
+h6, .h6 { font-size: calc( var(--fs-h6) * 1em );    line-height: 1.285;  }
+
+/* Complementary sizes, usefull for components */
+
+small, 
+.small      { font-size: calc( var(--fs-small) * 1em ) }
+.xsmall     { font-size: calc( var(--fs-xsmall) * 1em ) }
+.medium     { font-style: 1em; }
+.large      { font-size: calc( var(--fs-h6) * 1em ) }
+.xlarge     { font-size: calc( var(--fs-h5) * 1em ) }
+
+
+/* 
+ *  Text elements
+ */
+
+p, .p {
+    font-size: 1em;
+    margin-bottom: var(--vr)em; 
+}
+
+/* Links */
+a           { 
+    background-color: transparent; /* Remove the gray background on active links in IE 10. */
+    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+*/
+    color: var(--a-color); 
+    text-decoration: none; 
+}
+a:focus         { outline: thin dotted; }
+a:active,a:hover
+                { outline-width: 0; }
+a:focus, 
+a:hover         { color: color-mod(var(--a-color) s(-15%) l(-15%)); text-decoration: underline; }
+
+/* citations */
+blockquote, q   { quotes: none; }
+blockquote::before, blockquote::after, 
+q::before, q::after 
+                { content: ''; content: none; }
+blockquote      { margin: var(--vr)em; color: #666; font-style: italic; }
+
+
+b, strong   { font-weight: bolder; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+
+sub, sup    { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup         { top: -0.5em; }
+sub         { bottom: -0.25em; }
+        
+abbr        { 
+    border-bottom: none; /* Remove the bottom border in Firefox 39-. */
+    /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+    text-decoration: underline; 
+    text-decoration: underline dotted;
+}
+address     { margin-bottom: var(--vr)em; font-style: italic; }
+del         { color:#666; }
+
+/* Code / pre */
+pre, code, kbd, samp    { font-family: "Courier New", courier, monospace, serif; font-size: 1em; line-height: var(--vr);}
+pre                     { margin-bottom: var(--vr)em;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Addresses styling not present in IE 6/7/8/9. */
+mark { background: #ff0; color: #000; }
+
+
+/* 
+ *  Lists
+ */
+
+li ul, 
+li ol       { margin:0 var(--vr)em; }
+ul, ol      { margin: 0 var(--vr)em var(--vr)em var(--vr)em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 var(--vr)em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: var(--vr)em;}
+
+/* avoid margins on nested elements */
+li p,
+li ul,
+li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* 
+ *  Tables
+ */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: var(--vr)em;
+    width: 100%
+}
+
+table,td,th {
+    vertical-align:middle
+}
+thead th {
+    border-bottom: 1px solid;
+}
+
+th,td,caption {
+    text-align:left;
+    font-weight:400;
+    padding:4px 10px 4px 5px
+}
+th {
+    font-weight:700;
+}
+
+tr.even td {
+    background: hsla(0, 0%, 0%, 0.05);
+}
+
+tfoot {
+    font-style:italic
+}
+
+caption {
+    font-size: var(--fs-small)em;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+}
+
+
+
+
+/* 
+ *  Text-selection colors 
+ *  * remove any text shadows: twitter.com/miketaylr/status/12228805301) 
+ */
+::selection { 
+    background: var(--select-color); 
+    color: #fff; 
+    text-shadow: none; 
+}
+
+/**
+ * HR
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+
+
+/*
+ *  Vertical rythme
+ *  Default vertical rythme
+ */
+.v-space,
+.vspace {
+    margin-bottom: var(--vr)em;
+    margin-bottom: var(--vr)rem;
+}
+/* Remove vertical rythme */
+.mb0, .no-vspace {
+    margin-bottom: 0;
+}
+
+
+
+/* 
+ *  Typography Print styles.
+ *  Tanks to: https://html5boilerplate.com/
+ */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body { 
+        font-size: 11pt;
+        line-height: 1.3;
+    }
+    
+    main, article {
+
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+
+        a[href]::after {
+            content: " (" attr(href) ")";
+        }
+
+        abbr[title]::after {
+            content: " (" attr(title) ")";
+        }
+
+        /*
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
+
+        a[href^="#"]::after,
+        a[href^="javascript:"]::after {
+            content: "";
+        }
+
+        pre,
+        blockquote {
+            page-break-inside: avoid;
+        }
+        /*
+         * Printing Tables:
+         * http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
+
+        thead {
+            display: table-header-group;
+        }
+
+        tr,
+        img {
+            page-break-inside: avoid;
+        }
+
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
+
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
+    }
+}

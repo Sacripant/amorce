@@ -1,0 +1,90 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block additionalCSS %}
+	<style>
+		.icon {
+			width:  4em;
+			height: 4em;
+		}
+	</style>
+{% endblock %}
+
+{% block main %}
+		<h1>{{ name }}-icons</h1>
+
+
+		<ul class="l__icons il-grid v_space" id="icons">
+			<!-- Spite icons injected by JS -->
+		</ul>
+
+		<h2>Usage</h2>
+
+		<pre class="bloc-code language-markup">
+			<code>
+				&lt;svg class="icon"&gt;
+					&lt;use xlink:href="img/icons-sprite.svg#iconID" /&gt;	
+				&lt;/svg&gt;
+			</code>
+		</pre>
+
+		<h2>Ajouter une icone</h2>
+		
+		<p>
+			Le <em>sprite SVG</em> est généré automatiquement par <em>svgstore</em> à partir des icones SVG situées dans le dossier <code>src/img/icons</code>.
+			Ces icones doivent avoir un attribut <code>viewBox</code> pour s'afficher correctement. 
+		</p>
+
+		
+{% endblock %}
+
+
+
+{% block additionalJS %}
+	<script>
+		const parseSVG = file => {
+			const parser = new DOMParser();
+			return parser.parseFromString(file, "image/svg+xml");
+		};
+
+		const getSVGsprite = () => {
+			fetch('{{ templates_path }}img/icons-sprite.svg')
+				.then( response => {
+					// console.log(response);
+					// console.log(response.text());
+					return response.text();
+				})
+				.then( svg => {
+					const parsedSVG = parseSVG(svg);
+					console.log(parsedSVG); 
+					const symbols = parsedSVG.getElementsByTagName("symbol");
+					console.log(symbols);
+
+					// Array.prototype.forEach.call(symbols, function(el, i){
+					// 	console.log(el, i);
+					// });
+
+					let htmlPreview = "";
+
+					for(const el of symbols) {
+
+						htmlPreview += `
+							<li class="i__icons ">
+								<svg class="icon">
+									<use xlink:href="{{ templates_path }}img/icons-sprite.svg#${el.id}" />	
+								</svg>
+								<p>${el.id}</p>
+							</li>
+						`;
+					}
+
+					document.getElementById("icons").innerHTML = htmlPreview;
+				})
+				.catch(error => console.error('Error', error)
+			);
+		};
+
+
+
+		getSVGsprite()	
+	</script>
+{% endblock %}

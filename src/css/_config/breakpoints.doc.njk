@@ -1,0 +1,42 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+  Breakpoints —
+{% endblock %}  
+
+
+{% block main %}
+<section id="doc-breakpoint" class="doc-section">
+	<h1>Breakpoints</h1>
+
+	<p>
+		5 breakpoints (XS -> XL) sont définis à travers des <em>custom-medias</em> en <code>em</code> dans le fichier source <code>css/_config/config-breakpoints.css</code>.
+		Ces 5 breakpoints permettent de gérer le layout sur des écrans de taille :
+	</p>
+
+	<ul>
+		<li>XS (extra-small)</li>
+		<li>S (small)</li>
+		<li>M (medium)</li>
+		<li>L (large)</li>
+		<li>XL (extra-large)</li>
+	</ul>
+	
+	<h2>Usage</h2>
+
+	<pre class="bloc-code language-css">
+		<code>
+			.module {
+				/* CSS for all sizes  */
+
+				@media (--minM) {
+					/* CSS for minimum M breakpoint */
+				}
+			}
+		</code>
+	</pre>
+
+
+	
+</section>
+{% endblock %}

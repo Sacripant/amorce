@@ -1,0 +1,83 @@
+/*  ======
+
+    grids - fx-grid.css
+    -------------------
+    part of AMORCE starter kit
+        https://github.com/Sacripant/amorce
+    -------------------
+
+    flexbox grid system
+    for multilines grid
+
+    It's a good replacement of il-grid, fl-grid & tb-grid if you want controle gutter size and spans sizes.
+    For other cases, it's better to directly use flex-utils.css
+    In addition, flex-utils options can be use.
+    
+    Options:
+    * No gutter
+    * Half gutter
+
+    REQUIRED:
+    * _config/config-grids.css
+    * grids/grid-span.css
+
+    OPTIONNAL:
+    * utils/flex-utils.css
+      
+====== */
+
+/* 
+** Calc of gutter in %
+** (1) wrapper margin neg = x%
+** (2) padding = x*(100+2x)/100
+-------------------------------*/
+
+.fx-grid,
+[class^="fx-grid--"], 
+[class*=" fx-grid--"] { 
+    display: flex;
+    flex-wrap : wrap;
+    margin-left: calc( var(--gutter-half) * -1rem ); /*(1)*/
+    margin-right: calc( var(--gutter-half) * -1rem ); /*(1)*/
+    /* if flex item are list-items */
+    list-style-type: none;
+
+
+    &  > *,
+    &  > [class*=span--] {
+        padding-left: calc( var(--gutter-half) * 1rem ); /*(2)*/
+        padding-right: calc( var(--gutter-half) * 1rem ); /*(2)*/
+    }
+
+    
+    /* 
+     *  Unguttered grid (no gutter) option
+     */
+    &.no-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.no-gutter > *, 
+    &.no-gutter > [class*=span--]  
+    {
+        padding: 0;
+    }
+
+    /*  
+     *  half-gutter option
+     */
+    &.half-gutter {
+        margin-left: calc( var(--gutter-half) / 2  * -1rem ); /*(2)*/
+        margin-right: calc( var(--gutter-half) / 2 * -1rem ); /*(2)*/
+    }
+
+    &.half-gutter > *, 
+    &.half-gutter > [class*=span--] {
+        padding-left: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+        padding-right: calc( var(--gutter-half) / 2 * 1rem ); /*(2)*/
+    }
+}
+
+
+
