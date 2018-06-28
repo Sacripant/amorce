@@ -25,8 +25,8 @@
 
 
 <p>
-	Amorce est un starter kit pour l'intégration de site internet. <br/>
-	Il se veut <em lang="en">style-agnostic</em>, léger et modulaire (utilisez uniquement le nécessaire).
+	Amorce est un starter kit pour l'intégration web. <br/>
+	Il se veut <em lang="en">style-agnostic</em>, léger et modulaire.
 </p>
 
 <p>
@@ -36,12 +36,12 @@
 <ul>
 	<li> Un Framework CSS (reset, typo, forms, utils, grids, etc) découpé en modules.</li>
 	<li> Une documentation qu'il suffit de faire évoluer en <em>style guide</em> pour chaque projet.</li>
-	<li> Une convention de nommage claire basé sur BEM.</li>
+	<li> Une convention de nommage inspiré de BEM.</li>
 	<li> Le langage de templating <a href="http://mozilla.github.io/nunjucks/">nunjucks</a> pour modulariser vos templates en composants et faciliter la communication avec les développeurs.</li>
 	<li> La génération automatique d'un <em>sprite SVG</em> à partir des images SVG présents dans le dossier <code>img/icons</code></li>
-	<li> La possibilité d'utiliser les fonctions CSS <del>du future</del> <add>en cours de normalisation</add> (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://cssnext.io/">cssnext</a> (un plugin pour PostCSS)</li>
+	<li> La possibilité d'utiliser les fonctions CSS <del>du future</del> <add>en cours de normalisation</add> (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://postcss.org/">postCSS</a> est particulièrement son plugin pour <a href="https://preset-env.cssdb.org/">postcss-preset-env</a></li>
 	<li> Le préfixage automatique des propriétés CSS (PostCSS auto-prefixer)</li>
-	<li> Une série de <em>scripts NPM</em> la compilation des fichiers source & un rafraichissement automatique (live refresh) du navigateur.</li>	
+	<li> Une série de <em>scripts NPM</em> permettant la compilation des fichiers source & un rafraichissement automatique (live refresh) du navigateur.</li>	
 </ul>
 
 <h2> Requirements </h2>
@@ -64,7 +64,7 @@
 <p>Puis compilez une première fois les fichiers sources avec la commande</p>
 
 <ul>
-	<li><code>npm run build</code> ou <code>grunt build</code></li>
+	<li><code>npm run build</code></li>
 </ul>
 
 
@@ -75,7 +75,7 @@
 </p>
 
 <p>
-	La commande <code>npm run dev</code> est paramétrée pour lancer des <em>watchers</em> sur les fichiers sources et lancer un serveur <a href="https://www.browsersync.io/">browsersync</a>. Ainsi, à chaque modification d'un fichier source html ou css, les fichiers seront compilés automatiquement et le navigateur rafraichi.
+	La commande <code>npm run dev</code> est paramétrée pour lancer des <em>watchers</em> sur les fichiers sources et lancer un serveur <a href="https://www.browsersync.io/">browsersync</a>. Ainsi, à chaque modification d'un fichier source .njk ou .css, les fichiers seront compilés automatiquement et le navigateur rafraichi.
 </p>
 
 <h2>Commandes de compilation manuelles</h2> 
@@ -83,23 +83,27 @@
 <ul>
 	<li>
 		<code>npm run build:css</code> : 
-		compile les fichiers CSS à l'aide de <a href="http://cssnext.io/">cssnext</a>.
+		compile les fichiers CSS à l'aide de <a href="http://postcss.org/">postcss</a>.
 	</li>
 	<li>
 		<code>npm run build:icons</code> : 
-		compile les fichiers <code>.svg</code> présents dans <code>src/static/img/icons/</code>`: optimisations des images et génération d'un <em>sprite SVG</em>.
+		compile les fichiers <code>.svg</code> présents dans <code>src/static/img/icons/</code>: optimisations des images et génération d'un <em>sprite SVG</em>.
 	</li>
 	<li>
 		<code>npm build:templates</code> : 
-		compile les fichiers sources <code>.njk</code> des templates qui utilise le system de templating _nunjucks_ en templates <code>html</code>.
+		compile les fichiers sources <code>.njk</code> (templates _nunjucks_) en templates <code>html</code>.
 	</li>
 	<li>
 		<code>npm run build:modernizr</code> : 
 		compile un fichier <code>modernizr-custom.js</code> en fonction des options présentes dans le fichier <code>modernizr-config.json</code>.
 	</li>
 	<li>
-		<code>grunt run build:docs</code> : 
+		<code>npm run build:docs</code> : 
 		Compile les fichiers sources <code>njk</code> pour générer la documentation au format <code>html</code>.
+	</li>
+	<li>
+		<code>npm run prod</code> : 
+		Compile les fichiers avec une minification du CSS.
 	</li>
 </ul>
 
