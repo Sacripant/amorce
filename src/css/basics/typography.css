@@ -60,7 +60,6 @@ h4, .h4 { font-size: calc( var(--fs-h4) * 1em );    line-height: 1.2;    }
 h5, .h5 { font-size: calc( var(--fs-h5) * 1em );    line-height: 1.2;    }
 h6, .h6 { font-size: calc( var(--fs-h6) * 1em );    line-height: 1.285;  }
 
-
 /* Complementary sizes, usefull for components */
 
 small, 

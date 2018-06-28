@@ -297,16 +297,23 @@ span.input-addon {
 , [class^="notif--"] 
 , [class*=" notif--"] 
 { 
-    padding: .5em; 
-    margin-bottom: 1em; 
+    padding: calc( var(--vr) * 1em ); 
+    margin-bottom: var(--vr)rem; 
     /* border: 1px solid; */
 
     & :last-child {
         margin-bottom: 0;
     }
 
-    & a {
+    & :first-child {
+        margin-top: 0;
+    }
+
+    & * {
         color:  inherit;
+    }
+
+    & a {
         font-weight: bold;
 
         &:hover {
