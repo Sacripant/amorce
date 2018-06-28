@@ -9,20 +9,11 @@ Each component folder contains
 * a documentation file that import and test component.
 * eventually a JS file
 
-
-<<<<<<< HEAD
     component/
         |_ component.njk
         |_ compoent.doc.njk
         |_ component.css
         |_ component.js
-=======
-	component/
-		|_ component.njk
-		|_ compoent.doc.njk
-		|_ component.css
-		|_ component.js
->>>>>>> origin/next
 
 
 
