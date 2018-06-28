@@ -19,8 +19,9 @@
         const codeDemo = document.querySelectorAll('.code-demo');
         
         // récupe Codes
-        for (const el of codeDemo) {
-
+        // for (const el of codeDemo) {
+        // }
+        Array.prototype.forEach.call(codeDemo, function(el, i){
             const xpre = document.createElement('pre');
             const xcode = document.createElement('code');
             
@@ -28,7 +29,8 @@
             xcode.innerHTML = htmlEntities(el.innerHTML);
             xpre.appendChild(xcode);
             el.appendChild(xpre);
-        }
+
+        });
 
         Prism.highlightAll();    
     })();
@@ -54,7 +56,9 @@
         if (colorsList.length) {
 
             // colorsList.each(function() {
-            for ( const el of colorsList ) {
+            // for ( const el of colorsList ) {
+            // }
+            Array.prototype.forEach.call(colorsList, function(el, i){
 
                 const c = getColor(el)
                 ,     classN = el.className
@@ -79,7 +83,7 @@
 
                 el.className = 'small';
                 // $(this).prepend(colorbloc);
-            }
+            });
         }       
     })();
     
@@ -91,14 +95,16 @@
         // var Sizes Sizes = $('.font-size')
         const Sizes = document.querySelectorAll('.font-size');
 
-        for (const el of Sizes) {
+        // for (const el of Sizes) {
+        // }   
+        Array.prototype.forEach.call(Sizes, function(el, i){
             const styles = window.getComputedStyle(el,null)
             ,     Fsize = styles.getPropertyValue('font-size')
             ,     content = el.innerHTML
             ;
             
             el.innerHTML = content + ' / ' + Fsize;
-        }   
+        });
     })();   
     
 })();
