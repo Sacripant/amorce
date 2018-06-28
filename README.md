@@ -1,7 +1,7 @@
-# Amorce v.1705
+# Amorce v.1806-beta
 
-Amorce est un starter kit pour l'intégration de site internet.
-
+Amorce est un starter kit pour l'intégration web. <br/>
+Il se veut *style-agnostic*, léger et modulaire.
 -----
 
 [Documentation complète](http://amorce.sacripant.fr/docs)
@@ -12,81 +12,66 @@ Il propose :
 
 * Un Framework CSS (reset, typo, forms, utils, grids, etc) découpé en modules.
 * Une documentation qu'il suffit de faire évoluer en <em>style guide</em> pour chaque projet.
-* Une convention de nommage claire.
+* Une convention de nommage inspiré de BEM.
 * Le langage de templating <a href="http://mozilla.github.io/nunjucks/">nunjucks</a> pour modulariser vos pages HTML et faciliter la communication avec les développeurs.
-* La génération automatique d'une font icons à partir des images SVG présents dans le dossier <code>img/icons</code>
-* La possibilité d'utiliser les fonctions CSS du future (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://cssnext.io/">cssnext</a> (un plugin pour PostCSS)
-* Le préfixage automatique des propriétés CSS (PostCSS auto-prefixer)
-* Une série de <em>tasks Grunt</em> pour une compilation un rafraichissement automatique du navigateur.
+* La génération automatique d'un <em>sprite SVG</em> à partir des images SVG présents dans le dossier <code>img/icons</code>.
+* La possibilité d'utiliser les fonctions CSS <del>du future</del> <add>en cours de normalisation</add> (custom-properties, custom media queries, customs selectors, color(), etc) grâce à <a href="http://postcss.org/">postCSS</a> est particulièrement son plugin pour <a href="https://preset-env.cssdb.org/">postcss-preset-env</a>.
+* Le préfixage automatique des propriétés CSS (PostCSS auto-prefixer).
+*  Une série de <em>scripts NPM</em> permettant la compilation des fichiers source & un rafraichissement automatique (live refresh) du navigateur.
 
 ## Requiremement
 
-Le projet utilise le *task runner* [GRUNT](http://gruntjs.com/).
-*Grunt* et les plugins utilisés nécessitent [nodeJS](https://nodejs.org/)
 
-* NodeJS >= 4.4.3
+* <a href="https://nodejs.org/">nodeJS</a> et <a href="https://www.npmjs.com/">NPM</a>
 
 Détails sur l'installation de GruntJS : [Grunt getting started](http://gruntjs.com/getting-started)
 
 ## Getting started
-
-Depuis un shell ou une console (placé à la racine de votre projet).
+Téléchargez la <a href="https://github.com/Sacripant/amorce/releases">dernière version stable de Amorce</a>.
+Depuis un shell/terminal (placé à la racine de votre projet), installer les paquets nodeJS requis avec la commande :
 
 `npm install`
 
-Pour installer les paquets necessaires.
+Puis compilez une première fois les fichiers sources avec la commande
 
-`grunt init` ou `grunt build`
+`npm run build`
 
-Pour faire une compilation manuelle des sources.
 
 ## Compilation à la volée
 
-`grunt`
+`npm run dev`
 
-La commande `grunt` est paramétrée pour lancer un *watcher* sur les fichiers source. Ainsi, à chaque modification d'un fichier source html ou css, les fichiers seront compilés automatiquement.
-
-De plus un serveur [browsersync](https://www.browsersync.io/) est également lancé permettant de rafraichir votre browser automatiquement à chaque modification.
+La commande <code>npm run dev</code> est paramétrée pour lancer des <em>watchers</em> sur les fichiers sources et lancer un serveur <a href="https://www.browsersync.io/">browsersync</a>. Ainsi, à chaque modification d'un fichier source .njk ou .css, les fichiers seront compilés automatiquement et le navigateur rafraichi.
 
 
 ## Commandes de compilation manuelles
 
-`grunt buildcss`
+`npm run build:css`
 
-Compile les fichiers CSS à l'aide du post-processeur [cssnext](http://cssnext.io/)
+Compile les fichiers CSS à l'aide du post-processeur [postcss](http://postcss.org/).
 
-`grunt buildicons`
+`npm run build:icons`
 
-Compile les fichiers .svg présents dans `src/static/img/icons/`: optimisations des images et génération d'une font icons. Cette tache utilise [grunt webfont](https://github.com/sapegin/grunt-webfont).
+Compile les fichiers <code>.svg</code> présents dans <code>src/static/img/icons/</code>: optimisations des images et génération d'un <em>sprite SVG</em>.
 
-`grunt buildhtml`
+`npm build:templates`
 
-Compile les fichiers sources `.njk` qui utilisent le sytème de templating [nunjucks](http://mozilla.github.io/nunjucks/) en templates `html`.
+Compile les fichiers sources <code>.njk</code> (templates _nunjucks_) en templates <code>html</code>.
 
-`grunt modernizr`
+`npm run build:modernizr`
 
-Inspecte les fichiers CSS et JS du projet et compile un fichier `modernizr-custom.js` sur mesure. cf [Modernizr grunt config](https://modernizr.com/docs/#grunt-config).
+Compile un fichier <code>modernizr-custom.js</code> en fonction des options présentes dans le fichier <code>modernizr-config.json</code>.
 
-`grunt builddocs`
+`npm run build:docs`
 
-Compile les fichiers sources `njk` pour générer la documentation au format `html`.
+Compile les fichiers sources <code>njk</code> pour générer la documentation au format <code>html</code>.
 
+`npm run prod`
 
-Pour plus de précision, vous pouvez inspecter les fichiers `package.json` et `gruntfile.js`.
-
-
-## Documentation
-
-La documentation peut être compilée à l'aide de la commande.
-
-`grunt builddocs`
-
-La version HTML sera alors disponible : `build/docs/index.html`.
-C'est un bon point de départ pour comprendre la convention de nommage employée et réutiliser les modules développées.
-
-[La documentation de la dernière version stable est également disponible en ligne](http://amorce.sacripant.fr/docs/). 
+Compile les fichiers avec une minification du CSS.
 
 
+Pour plus de précision, vous pouvez inspecter le fichiers `package.json`.
 
 
 
