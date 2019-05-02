@@ -38,6 +38,14 @@
 }
 
 
+/* 
+ * break 
+ */
+
+ .txt-break {
+    word-break: break-all;
+ }
+
 
 /*  
  * Text align 
