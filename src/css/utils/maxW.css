@@ -12,7 +12,9 @@
 ====== */
 
 
-.wrapper        {  
+.wrapper,
+[class^="wrapper--"],         
+[class*="wrapper--"] {  
     max-width: 100%;
     padding-left:  calc( var(--vr) * 1rem );
     padding-right: calc( var(--vr) * 1rem );
