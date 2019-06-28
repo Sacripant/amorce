@@ -21,17 +21,17 @@
 }
 
 /*  
- *  Ellipsis - add ... for too long one line text  
+ *  Ellipsis - add … for too long one line text          
  */
 .txt-ellipsis {
     overflow: hidden;        
     white-space: nowrap;     
-        text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 
 /* 
- * no wrap 
+ *  No wrap 
  */
 .txt-nowrap {
     white-space: nowrap;
@@ -39,7 +39,7 @@
 
 
 /* 
- * break 
+ *  Break 
  */
 
  .txt-break {
@@ -48,7 +48,7 @@
 
 
 /*  
- * Text align 
+ *  Text align 
  */
 .txt-left   {
     text-align: left;
