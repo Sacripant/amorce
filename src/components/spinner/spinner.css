@@ -20,10 +20,10 @@
     height: 1em;
     border-radius: 50%;
 
-    border: .4em solid color( var(--spinner-color) alpha(.2));
+    border: .35em solid gray(30 / 0.2);
     border-top-color: var(--spinner-color);
 
-    animation: .9s ease 0 spin;
+    animation: .9s ease-out 0 spin;
     animation-iteration-count: infinite;
 }
 
@@ -32,9 +32,9 @@
 /*rotate animation*/
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(15deg);
     }
     100% {
-        transform: rotate(359deg);
+        transform: rotate(374deg);
     }   
 }
