@@ -1,0 +1,89 @@
+{% extends 'docs/extends/base.njk' %}
+
+{% block title%}
+    typo utils —
+{% endblock %}
+
+{% block main %}
+<section id="doc-typo-utils" class="doc-section">
+    <h1>Typo utils</h1>
+
+    <p>
+        Permet de fixer quelques caractéristiques typographiques souvent utiles
+    </p>
+
+    <h2><code>.nude</code></h2>
+
+    <p>
+        La class <code>.nude</code> permet de supprimer les styles par défaut des navigateurs appliqués sur les listes (bullets, margins).
+    </p>
+
+    <div class="code-demo">
+        <ul class="nude">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+
+    <h2>
+        <code>.txt_ellipsis</code>
+    </h2>
+
+    <p>
+        Cette class force le texte sur une seule ligne et ajoute un point de suspension si la ligne de texte est plus long que le container
+    </p>
+
+    <div class="code-demo">
+        <p class="txt-ellipsis"> 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam maiores eos culpa delectus nesciunt, excepturi maxime tempore cum quas, cumque laborum eum, saepe eveniet repudiandae quam nobis! Dicta, sunt, voluptas.
+        </p>
+    </div>
+
+    <h2>
+        <code>.txt-nowrap</code>
+    </h2>
+
+    <p>
+        Empêche le retour automatique à la ligne (force le text sur une seule ligne).
+    </p>
+
+    <div class="code-demo">
+        <p class="txt-nowrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui, numquam natus eveniet, asperiores pariatur blanditiis at a mollitia aliquam cupiditate accusantium suscipit tempora hic recusandae doloremque aperiam iusto, officia!
+        </p>
+    </div>
+
+    <h2><code>.txt-break</code></h2>
+
+    <p>
+        Permet à un mot d'être coupé s'il est plus long que son container (coupe brute, différent d'une césure)
+    </p>
+
+    <div class="code-demo">
+        <p class="txt-break">
+            HyperMegaLongMotQuiIraÀLaLigneSiSonConteneurEstTropPetit.LePlusSouventEnViewportMobileOuDansUneColonesÉtroite.
+        </p>
+    </div>
+
+    <h2>Alignement</h2>
+
+    <p>
+        Les class
+        <code>.txt-left</code>,
+        <code>.txt-right</code>,
+        <code>.txt-center</code>,
+        permettent de modifier l'alignement d'un texte. Très utile avec l'utilisation d'une grille de type <em>inline-block</em>.
+    </p>
+
+    <div class="code-demo">
+        <p class="txt-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+       <p class="txt-right">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+    </div>
+</section> <!-- #doc-forms -->
+{% endblock %}
+
